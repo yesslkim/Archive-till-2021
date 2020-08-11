@@ -102,6 +102,10 @@
 }
 
 /*                                                                                                  side banner */
+
+.side_banner {
+    height: 400px;
+}
 .side_banner_item {
     float: left;
     width: 25%;
@@ -126,4 +130,28 @@
     margin-right: 20px;
     font-size: 0.7em;
     text-align: center;
+}
+/*                                                                                                 customer-review*/
+.customer_review {
+    height: 150px;
+}
+
+.customer_review_title {
+    margin-bottom: 20px;
+}
+
+.customer_review_list {
+    float: left;
+    width: 25%;
+    font-size: 0.7em;
+}
+
+.customer_review_img {
+    float: left;
+    width: 20%;
+    margin-right: 10px;
+}
+
+.customer_review_date {
+    color: blue;
 }
