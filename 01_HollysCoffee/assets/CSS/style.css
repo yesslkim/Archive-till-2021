@@ -10,7 +10,7 @@
      margin: 0 auto;
 }
 
-/*header */
+/*                                                                                                    header */
 
 .nav-top {
     height: 20px;
@@ -50,8 +50,40 @@
     margin-right: 0;
 }
 
-/*main */
-/*main banner */
+/*                                                                                                    main */
+/*                                                                                                    main banner */
 .main_banner_img { 
     display: block;
 }
+
+/*                                                                                                    company info*/
+.company_info {
+    padding: 10px 0;
+    height: 300px;
+}
+
+.company_info_item {
+    float: left;
+    width: 33.33%;
+}
+
+.company_info_title {
+    margin-bottom: 10px;
+}
+
+
+.company_info_desc {
+    margin-bottom: 80px ;
+    font-size: 0.8rem;
+}
+
+.company_mall_item {
+    float: left;
+    margin-right: 5px;
+}
+
+.company_mall_item:first-child {
+    margin-left: 20px;
+}
+
+/*                                                                                                    company card */
