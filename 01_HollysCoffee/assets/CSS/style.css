@@ -1,0 +1,48 @@
+/*layout of page */
+
+#wrap {
+    width: 980px;
+    margin: 0 auto;
+}
+
+
+
+/*header */
+
+.nav-top {
+    height: 20px;
+    margin: 10px  0;
+}
+
+.nav-topleft {
+    float: left;
+}
+
+.nav-topright {
+    float: right;
+
+}
+
+.nav_item-top {
+    float: left;
+    margin-right: 5px;
+    
+}
+
+.title_logo {
+    width: 27.65%;
+    margin: 0 auto 10px;
+}
+
+.nav-main {
+    padding: 0 110px;
+}
+
+.nav_item-main {
+    display: inline-block;
+    margin-right: 40px;
+}
+
+.nav_item-main:last-child {
+    margin-right: 0;
+}
