@@ -1,11 +1,14 @@
 /*layout of page */
 
-#wrap {
+
+#header,
+.company_info,
+.company_card,
+.side_banner,
+.customer_review {
     width: 980px;
-    margin: 0 auto;
+     margin: 0 auto;
 }
-
-
 
 /*header */
 
@@ -45,4 +48,10 @@
 
 .nav_item-main:last-child {
     margin-right: 0;
+}
+
+/*main */
+/*main banner */
+.main_banner_img { 
+    display: block;
 }
