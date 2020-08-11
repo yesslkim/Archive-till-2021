@@ -59,31 +59,45 @@
 /*                                                                                                    company info*/
 .company_info {
     padding: 10px 0;
-    height: 300px;
+    height: 250px;
 }
 
 .company_info_item {
     float: left;
-    width: 33.33%;
+}
+
+.info_item_1 {
+    width: 24%;
+}
+
+.info_item_2 {
+    width: 48%;
 }
 
 .company_info_title {
     margin-bottom: 10px;
 }
 
-
 .company_info_desc {
-    margin-bottom: 80px ;
+    margin-bottom: 40px ;
     font-size: 0.8rem;
 }
 
 .company_mall_item {
     float: left;
-    margin-right: 5px;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 0.7em;
 }
 
 .company_mall_item:first-child {
-    margin-left: 20px;
+    margin-left: 90px;
 }
 
 /*                                                                                                    company card */
+
+.company_card_item {
+    float: left;
+}
+
+/*                                                                                                  side banner */
