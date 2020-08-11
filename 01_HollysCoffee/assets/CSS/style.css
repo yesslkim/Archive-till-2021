@@ -98,6 +98,32 @@
 
 .company_card_item {
     float: left;
+    margin: 0 5px 20px 0;
 }
 
 /*                                                                                                  side banner */
+.side_banner_item {
+    float: left;
+    width: 25%;
+    padding-right: 50px;
+    font-size: 0.7em;
+}
+
+.side_banner_title {
+    margin-bottom: 5px;
+}
+
+.side_banner_desc {
+    margin-bottom: 15px;
+}
+
+.news_date {
+    float: right;
+}
+
+.side_banner_inquiry {
+    float: left;
+    margin-right: 20px;
+    font-size: 0.7em;
+    text-align: center;
+}
