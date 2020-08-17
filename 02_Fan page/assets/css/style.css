@@ -80,5 +80,50 @@
 .nav-main_list:first-child::before {
     display: none;
 }
+/*                                                                                                              main*/
+
+/*main slides */
+.main_slides {
+    background-color: #d0d0ce;
+}
+
+.main_slides_img {
+    display: block;
+    max-height: 1100px;
+    margin: 0 auto;
+}
+
+/*main menu*/
+
+.main_wrap {
+    padding: 50px 0;
+}
+.menu_fan-only,
+.menu_gallery,
+.menu_community{
+    position: relative;
+    float: left;
+    width: 340px;
+    height: 100px;
+    margin-right: 25px;
+    background-color: #e1dad4;
+}
+
+.menu_img {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    
+}
+
+.menu_text {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 800;
+    color: #6e6d6d;
+}
 
 
