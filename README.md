@@ -30,6 +30,7 @@ HTML 및 CSS는 **네이버 블로그**를 통해 기록했습니다.
   - [Variables and Constants](Javascript/Basics/2.Variables-and-Constants.md)
   - [Operators](Javascript/Basics/3.Operators.md)
   - [Data Types](Javascript/Basics/4.Data-Types.md)
+  - [Function](Javascript/Basics/5.Function.md)
 
 ## Small Practices
 
@@ -40,3 +41,5 @@ HTML 및 CSS는 **네이버 블로그**를 통해 기록했습니다.
 - JavaScript
   - [2020.08.15] Practice about Variables, Operators, and Data Types
     - HTML, CSS 제공됨 / JS문제풀이
+  - [2020.08.18] Daily Practice
+    - 간단히 빈칸에 정답하는 방식. 기본 개념을 확인하기 위한 문제풀이
