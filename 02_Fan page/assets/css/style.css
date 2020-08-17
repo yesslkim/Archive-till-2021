@@ -1,0 +1,84 @@
+/*                                                                                                                 website layout*/
+.header_wrap,
+.nav-main,
+.main_wrap,
+.footer_wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+/*                                                                                                                 header*/
+.header {
+    background-color: #43351c;
+    padding: 30px;
+}
+
+.header_logo {
+    float: left;
+}
+
+.menu_toggle_btn {
+    float: right;
+    position: relative;
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/mnu_vw_narrow.gif);
+    background-position: -2px 0;
+    background-color: #dc8e2a;
+}
+
+.menu_title {
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+}
+
+.nav-top {
+    float: right;
+}
+
+.nav-top_list  {
+    float: left;
+    color: #b7b795;
+    font-size: 13px;
+}
+
+.nav-top_link {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.nav-top_list::after {
+    display: inline-block;
+    content: "|";
+    font-size: 10px;
+}
+
+.nav-top_list:last-child::after {
+    display: none;
+}
+
+.nav-main {
+    background-color: white;
+}
+
+.nav-main_list {
+    float: left;
+    padding: 10px 0;
+}
+
+.nav-main_link {
+     padding: 0 51px;
+    color: #6f6f6f;
+}
+
+.nav-main_list::before {
+    display: inline-block;
+    content: url(../img/nav_sepe_line.gif);   
+}
+
+.nav-main_list:first-child::before {
+    display: none;
+}
+
+
