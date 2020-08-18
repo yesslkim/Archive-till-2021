@@ -1,0 +1,14 @@
+/*                                                                                     common & layout */
+/*common*/
+body,
+button {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/*layout*/
+.inner-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/*                                                                                                      header */
+
