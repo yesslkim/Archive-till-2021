@@ -215,6 +215,7 @@ button {
 }
 
 /*best seller */
+.content_body {
     position: relative;
 }
 
@@ -291,5 +292,87 @@ button {
     border: 1px solid #666666;
     font-size: 12px;
     color: #737373;
-    
-/*news section */
+}
+/*news  & addvertisment section */
+.notice {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news {
+    width: 48%;
+}
+
+
+.news_title {
+    padding: 20px 0;
+    border-top: 3px solid #000;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.news_text {
+    color: #666;
+    font-size: 15px;
+    line-height: 2em;
+}
+
+.news-imgbox {
+    position: relative;
+}
+
+.news-imgbox_img {
+    display: block;
+}
+
+.news-imgbox_text {
+    position: absolute;
+    left: 57px;
+    top: 50px;
+    color: #63463d;
+    font-size: 25px;
+}
+
+.news-imgbox_text span {
+    font-weight: 800;
+}
+
+.news-imgbox_link {
+    position: absolute;
+    left: 60px;
+    bottom: 80px;
+    padding: 8px 10px;
+    border: 1px solid #735c53;
+    font-size: 13px;
+        color: #735c53;
+}
+
+.news-imgbox_link::after {
+    display: inline-block;
+    content: '';
+     width: 12px;
+    height: 12px;
+ background-image: url(../img/spr_icn.png);
+    background-position: -190px -269px;
+}
+
+.addvertisment {
+    width: 48%;
+}
+
+.addvertisment_img {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.addvertisment_link > span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #777;
+}
+
+.addvertisment_link>h3 {
+    font-weight: 400;
+    font-size: 17px;
+}
