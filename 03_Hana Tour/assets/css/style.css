@@ -40,7 +40,7 @@ button {
     height: 710px;
     background-image: url(../img/header_background.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
 }
 
 /*aside-nav */
@@ -435,6 +435,92 @@ button {
    background-image: url(../img/spr_icn.png); 
        background-position: -185px -255px;
 }
+
+/*board */
+.board-list {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 50px 0 100px;
+}
+
+.board-list_item {
+    position: relative;
+    width: 300px;
+    height: 130px;
+    border-right: 1px solid #e7e7e7;
+}
+
+.board-list_item:last-child {
+    border-right: none;
+}
+
+.board-list_link {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.board-list_item>h3::after {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    left: 3px;
+    content: '';
+    width: 10px;
+    height: 16px;
+    background-image: url(../img/spr_icn.png);
+    background-position: -193px -254px;
+    
+}
+
+.question-title::before {
+    display: block;
+    width: 34px;
+    height: 34px;
+    margin: 0 auto 10px;
+    content: '';
+    background-image: url(../img/spr_icn.png);
+    background-position: -202px -254px; 
+}
+
+.board-list_desc {
+    color: #8f8f8f;
+    font-size: 13px;
+}
+
+.pros-title::before {
+    display: block;
+    width: 34px;
+    height: 34px;
+    margin: 0 auto 10px;
+    content: '';
+    background-image: url(../img/spr_icn.png);
+    background-position: -235px -254px; 
+}
+
+.cons-title::before {
+    display: block;
+    width: 34px;
+    height: 34px;
+    margin: 0 auto 10px;
+    content: '';
+    background-image: url(../img/spr_icn.png);
+    background-position: -268px -253px; 
+}
+
+.consult-title::before {
+    display: block;
+    width: 34px;
+    height: 34px;
+    margin: 0 auto 10px;
+    content: '';
+    background-image: url(../img/spr_icn.png);
+    background-position: -300px -252px; 
+}
+
+/*footer */
 
 
 
