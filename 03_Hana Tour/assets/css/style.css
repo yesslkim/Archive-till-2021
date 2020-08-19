@@ -5,10 +5,132 @@ button {
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+.clear-fix::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
 /*layout*/
-.inner-wrap {
+.inner-wrap,
+.bottom-navbar {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 /*                                                                                                      header */
+.header {
+    position: relative;
+    height: 710px;
+    background-image: url(../img/header_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*aside-nav */
+
+.aside-nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.aside-nav_link {
+    display: block;
+    padding: 10px;
+    font-size: 12px;
+    color: #fff;
+}
+
+/*top-header */
+
+.top-header_title {
+    float: left;
+    width: 112px;
+    height: 44px;
+    background-image: url(../img/ico-zeus-logo.png);
+    background-repeat: no-repeat;
+}
+
+.main-nav {
+    float: right;
+}
+
+.main-nav_item {
+    float: left;
+    margin: 0 25px;
+}
+
+.main-nav_item:last-child {
+    margin-right: 9px;
+}
+
+.main-nav_link {
+    color: #fff;
+    font-weight: 800;
+}
+
+/*bottom-nav */
+
+.bottom-navbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+.bottom-nav_item {
+    float: left;
+    width: 33.33%;
+}
+
+.bottom-nav_link {
+    display: block;
+    padding: 20px;
+    color: rgba(255,255,255,0.7);
+    font-size: 14px;
+    text-align: center;
+}
+
+.bottom-nav_link:hover {
+    border-top: 3px solid #fff;
+    color: rgb(255,255,255);
+    font-weight: 700;
+}
+
+/*slide button*/
+.slides_btn {
+    position: absolute;
+    top: 383px;
+    left: 386px;
+}
+
+.slides_btn a {
+    display: inline-block;
+    width: 29px;
+    height: 30px;
+    border: 1px solid #fff;
+}
+
+.prev-btn {
+    background-image: url('../img/spr_com.png') no-repeat;
+    background-position: -402px -182px;
+}
+
+.next-btn {
+    
+}
+
+.play-btn {
+    
+}
 
