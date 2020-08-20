@@ -40,7 +40,7 @@ button {
     height: 710px;
     background-image: url(../img/header_background.jpg);
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
 }
 
 /*aside-nav */
@@ -68,7 +68,8 @@ button {
 }
 
 .main-nav {
-    float: right;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .main-nav_item {
@@ -130,12 +131,12 @@ button {
 }
 
 .slides_btn a::before {
-     display: block;
-    content:'';
+    display: block;
+    content: '';
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 14px;
     height: 14px;
     background-image: url(../img/spr_com.png);
@@ -150,7 +151,7 @@ button {
 }
 
 .play-btn::before {
-     background-position: -430px -182px;
+    background-position: -430px -182px;
 }
 
 /*                                                                                                      main */
@@ -175,7 +176,7 @@ button {
 .recommend_list {
     overflow: hidden;
     position: relative;
-    width: 384px;
+    width: 33.33%;
     height: 520px;
 }
 
@@ -247,13 +248,13 @@ button {
 
 .content-prev {
     left: -16px;
-    top: 180px;
+    top: 30%;
     background-position: -135px -180px;
 }
 
 .content-next {
     right: -16px;
-    top: 180px;
+    top: 30%;
     background-position: -186px -181px;
 }
 
@@ -263,8 +264,7 @@ button {
 }
 
 .carousel_item {
-    width: 588px;
-    height: 574px;
+    width: 50%;
     margin: 10px;
 }
 
@@ -275,7 +275,7 @@ button {
 .carousel_text {
     position: relative;
     bottom: 50px;
-    width: 508px;
+    max-width: 508px;
     height: 183px;
     margin: 0 auto;
     padding: 10px 20px;
@@ -343,6 +343,8 @@ button {
 
 .news-imgbox_img {
     display: block;
+    width: 100%;
+    min-height: 250px;
 }
 
 .news-imgbox_text {
@@ -382,6 +384,7 @@ button {
 
 .addvertisment_img {
     display: block;
+    width: 100%;
     margin-bottom: 10px;
 }
 
@@ -421,6 +424,10 @@ button {
     margin-bottom: 20px;
 }
 
+.brochure-list_link > img {
+    width: 100%;
+}
+
 .brochure-list_link > span {
     display: block;
     padding: 20px 0 15px;
@@ -442,7 +449,7 @@ button {
     text-align: left;
 }
 
-.brochure-btn>span::after {
+.brochure-btn > span::after {
     display: inline-block;
     position: absolute;
     right: 25px;
@@ -450,8 +457,8 @@ button {
     content: '';
     width: 9px;
     height: 9px;
-   background-image: url(../img/spr_icn.png); 
-       background-position: -185px -255px;
+    background-image: url(../img/spr_icn.png);
+    background-position: -185px -255px;
 }
 
 /*board */
@@ -480,7 +487,7 @@ button {
     font-weight: 400;
 }
 
-.board-list_item>h3::after {
+.board-list_item > h3::after {
     display: inline-block;
     position: relative;
     top: 2px;
@@ -490,7 +497,7 @@ button {
     height: 16px;
     background-image: url(../img/spr_icn.png);
     background-position: -193px -254px;
-    
+
 }
 
 .question-title::before {
@@ -500,7 +507,7 @@ button {
     margin: 0 auto 10px;
     content: '';
     background-image: url(../img/spr_icn.png);
-    background-position: -202px -254px; 
+    background-position: -202px -254px;
 }
 
 .board-list_desc {
@@ -515,7 +522,7 @@ button {
     margin: 0 auto 10px;
     content: '';
     background-image: url(../img/spr_icn.png);
-    background-position: -235px -254px; 
+    background-position: -235px -254px;
 }
 
 .cons-title::before {
@@ -525,7 +532,7 @@ button {
     margin: 0 auto 10px;
     content: '';
     background-image: url(../img/spr_icn.png);
-    background-position: -268px -253px; 
+    background-position: -268px -253px;
 }
 
 .consult-title::before {
@@ -535,8 +542,9 @@ button {
     margin: 0 auto 10px;
     content: '';
     background-image: url(../img/spr_icn.png);
-    background-position: -300px -252px; 
+    background-position: -300px -252px;
 }
+
 /*                                                                                                     footer */
 /*footer */
 
@@ -546,8 +554,8 @@ button {
 
 .footer-head {
     display: flex;
-     padding: 20px 0;
-     font-size: 13px;
+    padding: 20px 0;
+    font-size: 13px;
 }
 
 .footer-nav {
@@ -556,14 +564,14 @@ button {
 
 .footer-nav_item::after {
     display: inline-block;
-    content:'|';
-    padding:0 10px;
+    content: '|';
+    padding: 0 10px;
     color: #ccc;
     font-size: 12px;
 }
 
 .footer-nav_item:last-child::after {
-       content:'';
+    content: '';
 }
 
 
@@ -583,14 +591,14 @@ button {
 }
 
 .company-info_item::after {
-    content:'|';
-    padding:0 10px;
+    content: '|';
+    padding: 0 10px;
     color: #ccc;
     font-size: 10px;
 }
 
 .company-info_item:last-child::after {
-    content:'';
+    content: '';
 }
 
 .phone,
@@ -601,8 +609,8 @@ button {
 }
 
 .phone-title::before {
-    display:inline-block;
-    content:url(../img/ico-callcenter.png);
+    display: inline-block;
+    content: url(../img/ico-callcenter.png);
     vertical-align: middle;
 }
 
@@ -612,52 +620,188 @@ button {
 }
 
 .travel-caution {
-    font-size:  18px;
-        margin-bottom: 40px;
+    font-size: 18px;
+    margin-bottom: 40px;
 }
 
-.travel-caution>span {
+.travel-caution > span {
     display: inline-block;
     text-indent: 5px;
 }
 
-.travel-caution>span::before {
+.travel-caution > span::before {
     display: inline-block;
-    content:'|';
+    content: '|';
     padding-right: 10px;
-    color:#ddd;
+    color: #ddd;
 }
 
 .footer-copyright {
     font-size: 12px;
-   margin-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 /*                                                                                                      media-query */
-@media screen and (max-width: 1200px) {
-    .content_body {
-        flex-direction: column;
-        align-items: center;
+@media screen and (max-width: 960px) {
+
+    /*    header */
+    .header {
+        padding-top: 20px;
     }
+
+    .aside-nav {
+        display: none;
+    }
+
+    .top-header_title {
+        float: none;
+        margin: 0 10px 20px auto;
+    }
+
+    .main-nav {
+        flex-direction: column;
+    }
+
+    .slides_btn {
+        display: none;
+    }
+
+    /*    main : recommend section */
+    .content_body {
+        flex-wrap: wrap;
+    }
+
     .recommend_list {
-        width: 100%;
+        width: 90%;
+        max-height: 520px;
+        margin-bottom: 20px;
+    }
+
+    .recommend_text {
+        width: 70%;
+        bottom: -160px;
+    }
+
+    /*    main: best seller section */
+    .content-prev,
+    .content-next {
+        display: none;
+    }
+
+    .carousel {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .carousel_item {
+        width: 90%;
+    }
+
+    .carousel_item img {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .carousel_text {
+        bottom: 60px;
+        max-width: 100%;
+        box-shadow: 1px 1px 5px #ddd;
+        border-radius: 0 0 10px 10px;
+    }
+
+    /* main: news  & addvertisment section */
+    .notice {
+        flex-wrap: wrap;
+    }
+
+    .news {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .addvertisment {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    /*    main: brochure section*/
+    .brochure-list {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .brochure-list_item {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+
+    /*    board */
+    .board-list {
+        flex-wrap: wrap;
+    }
+
+    .board-list_item {
+        border-right: none;
+    }
+
+    /*footer - content */
+    .consult-num {
+        font-size: 11px;
+    }
+
+    .company-info {
+        display: none;
+    }
+
+    .travel-caution {
+        font-size: 100%;
+    }
+
+    .footer-copyright {
+        font-size: 12px;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    /*bottom-nav */
+
+    .bottom-navbar {
+        display: none;
     }
     
-    .recommend_img {
-    object-fit: cover;
+    .recommend_text {
+    width: 70%;
+    bottom: -200px;
+    }
+
+    /*    brochure*/
+    .brochure-list {
+        flex-direction: column;
+    }
+
+    .brochure-list_item {
+        width: 100%;
+    }
+
+    /*footer */
+
+    .footer-head {
+        flex-direction: column;
+    }
+
+    .footer-nav {
+        flex-wrap: wrap;
+    }
+
+    .footer-nav_item::after {
+        display: inline-block;
+        content: '';
+        padding: 0 10px;
+        color: #ccc;
+        font-size: 0;
+    }
+
+    .consult-num {
+        margin-left: 0;
+    }
 }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
