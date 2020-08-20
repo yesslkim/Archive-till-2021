@@ -41,6 +41,25 @@ button {
     background-image: url(../img/header_background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    animation: background 5s linear infinite;
+}
+
+@keyframes background {
+    49% {
+        background-image: url(../img/header_background.jpg);
+    }
+
+    50% {
+        background-image: url(../img/header_background2.jpg);
+    }
+
+    99% {
+        background-image: url(../img/header_background2.jpg);
+    }
+
+    100% {
+        background-image: url(../img/header_background3.jpg);
+    }
 }
 
 /*aside-nav */
@@ -53,6 +72,7 @@ button {
 .aside-nav_link {
     display: block;
     padding: 10px;
+    margin-bottom: 10px;
     font-size: 12px;
     color: #fff;
 }
@@ -127,19 +147,19 @@ button {
     display: inline-block;
     width: 29px;
     height: 30px;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
 }
 
 .slides_btn a::before {
-    display: block;
-    content: '';
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    display: block;
     width: 14px;
     height: 14px;
     background-image: url(../img/spr_com.png);
+    content: '';
 }
 
 .prev-btn::before {
@@ -620,8 +640,8 @@ button {
 }
 
 .travel-caution {
-    font-size: 18px;
     margin-bottom: 40px;
+    font-size: 18px;
 }
 
 .travel-caution > span {
@@ -631,14 +651,14 @@ button {
 
 .travel-caution > span::before {
     display: inline-block;
-    content: '|';
     padding-right: 10px;
     color: #ddd;
+    content: '|';
 }
 
 .footer-copyright {
-    font-size: 12px;
     margin-bottom: 50px;
+    font-size: 12px;
 }
 
 /*                                                                                                      media-query */
@@ -768,10 +788,10 @@ button {
     .bottom-navbar {
         display: none;
     }
-    
+
     .recommend_text {
-    width: 70%;
-    bottom: -200px;
+        width: 70%;
+        bottom: -200px;
     }
 
     /*    brochure*/
