@@ -39,9 +39,9 @@ let substring = "green eggs and ham";
 // Add your code here
 
 const quoteLength = quote.length;
-const index = quote.indexOf("green eggs and ham");
+const index = quote.indexOf("green eggs and ham"); // const index = quote.indexOf(substring); 이 더 깔끔함.
 const revisedQuote = quote.slice(0, quoteLength - 30);
-
+// let revisedQuote = `${quote.slice(0, index)}${substring}.`; <- codepen에서 다른 사람이 쓴 내용 굳이 몇글자 부터 잘라야하는지 셀 필요없음!!
 // Don't edit the code below here!
 
 section.innerHTML = " ";
@@ -67,7 +67,20 @@ let quote = "I dO nOT lIke gREen eGgS anD HAM";
 // Add your code here
 let fixedQuote = quote.toLowerCase();
 fixedQuote = fixedQuote.replace(fixedQuote[0], "I"); // fixedQuote = fixedQuote.replace(fixedQuote[0],fixedQuote[0].toUpperCase()); 이렇게도 가능
-finalQuote = fixedQuote.replace("ham", "ham.");
+fixedQuote = fixedQuote.replace(
+  "green eggs and ham",
+  "red beans and an egg plant"
+);
+finalQuote = fixedQuote.replace("plant", "plant.");
+
+// 다른 사람이 한 것
+/* let lower = quote.toLowerCase();
+  let fixedQuote = lower.replace("i", "I");
+  let finalQuote = fixedQuote.replace("green eggs and ham", "shrimp" + ".");
+
+  나는 무조건 1번부터 순서대로 해야한다고 생각해서 전체를 풀어 썼는데, 이렇게 줄여서 하는게 맞다는 생각이 들었다
+
+*/
 
 // Don't edit the code below here!
 
