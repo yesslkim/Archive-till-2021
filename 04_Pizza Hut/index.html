@@ -10,7 +10,8 @@
 </head>
 
 <body>
-    <header class="header">
+   <div id="wrap">
+           <header id="header">
         <div class="inner-wrap header-top">
             <h1 class="main-logo">
                 <a href="#">
@@ -19,16 +20,17 @@
             </h1>
             <nav>
                 <ul class="top-nav">
-                    <li class="top-nav_list"><a href="#" class="top-nav_link border-red">피자헛 Biz</a></li>
-                    <li class="top-nav_list"><a href="#" class="top-nav_link">English</a></li>
-                    <li class="top-nav_list"><a href="#" class="top-nav_link">매장찾기</a></li>
+                    <li class="top-nav_list"><a href="#" class="top-nav_link border-red hidden">피자헛 Biz</a></li>
+                    <li class="top-nav_list"><a href="#" class="top-nav_link hidden">English</a></li>
+                    <li class="top-nav_list"><a href="#" class="top-nav_link hidden">매장찾기</a></li>
+                   <li class="top-nav_list"><a href="#" class="top-nav_link border-red">BEST 10</a></li>
                 </ul>
             </nav>
             <nav>
                 <ul class="personal-nav">
-                    <li class="personal-nav_list"><a href="#" class="personal-nav_link divide-line">회원가입</a></li>
-                    <li class="personal-nav_list"><a href="#" class="personal-nav_link divide-line">로그인</a></li>
-                    <li class="personal-nav_list"><a href="#" class="personal-nav_link">주문조회</a></li>
+                    <li class="personal-nav_list"><a href="#" class="personal-nav_link divide-line hidden">회원가입</a></li>
+                    <li class="personal-nav_list"><a href="#" class="personal-nav_link divide-line border-grey">로그인</a></li>
+                    <li class="personal-nav_list"><a href="#" class="personal-nav_link hidden">주문조회</a></li>
                     <li class="personal-nav_list">
                         <a href="#" class="personal-nav_link">
                             <img src="./assets/img/basket.png" alt="장바구니">
@@ -40,7 +42,7 @@
             <nav class="inner-wrap gnb">
                 <ul class="main-nav">
                     <li class="main-nav_item">      
-                        <a href="#" class="main-nav_link nav-btn">
+                        <a href="#" class="main-nav_link nav-btn hidden">
                         <span class="blind">전체메뉴</span>
                         </a>
                     <li class="main-nav_item">
@@ -50,7 +52,9 @@
                         <a href="#" class="main-nav_link">신제품 세트</a>
                     </li>
                     <li class="main-nav_item">
-                        <a href="#" class="main-nav_link">사이드&amp;음료</a>
+                        <a href="#" class="main-nav_link">
+                        사이드<span class="hidden">&amp;음료</span>
+                        </a>
                     </li>
                     <li class="main-nav_item">
                         <a href="#" class="main-nav_link">이벤트&amp;할인</a>
@@ -73,8 +77,10 @@
             </nav>
         </div>
     </header>
-    <main class="main">
+    <main  id="main">
     </main>
-    <footer class="footer">
+    <footer  id="footer">
     </footer>
+   </div>
+
 </body></html>
