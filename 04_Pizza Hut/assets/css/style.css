@@ -7,7 +7,6 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-
 .inner-wrap {
     min-width: 1024px;
     width: 80%;
@@ -46,6 +45,12 @@ clear::after {
     width: 22px;
     height: 26px;
     background-repeat: no-repeat;
+}
+
+button {
+    border: 0;
+    outline: 0;
+    cursor: pointer;
 }
 
 
@@ -188,6 +193,55 @@ clear::after {
     color: #000;
 }
 
+/*                                                                                     main section */
+/*visual section*/
+.visual {
+    height: auto;
+    background-image: url(../img/wh_new_bg.jpg)
+}
+
+.visual-img {
+    min-width: 1024px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.visual-img > img {
+    display: block;
+    width: 100%
+}
+
+.visual-btn {
+    padding: 10px;
+    text-align: center;
+}
+
+.prev-btn {
+    background-image: url(../img/slide_btn_l.png);
+    width: 29px;
+    height: 29px;
+}
+
+.slide-btn {
+    position: relative;
+    bottom: 8px;
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.slide-btn:hover {
+    background-color: #c10a28;
+}
+
+.next-btn {
+    background-image: url(../img/slide_btn_r.png);
+    width: 29px;
+    height: 29px;
+}
+
 /*                                                                                     media query */
 
 @media screen and (max-width: 1024px) {
@@ -243,5 +297,10 @@ clear::after {
 
     .order-nav {
         display: none;
+    }
+
+    /*    visual image*/
+    .visual-img {
+        min-width: 100%;
     }
 }
