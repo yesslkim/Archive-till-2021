@@ -12,7 +12,9 @@
 
 // Add your code here
 
-let quoteStart = "Don't judge each day by the harvest you reap"; // 같은 따옴표를 사용하여서 don까지밖에 인식이 안되고 error가 뜨기 때문에 이를 escaping character로 고쳤다.
+let quoteStart = "Don't judge each day by the harvest you reap";
+// 같은 따옴표를 사용하여서 don까지밖에 인식이 안되고 error가 뜨기 때문에 이를 escaping character로 고침
+// 추가 +) vscode는 저장버튼을 누르니 따옴표를 자동으로 다르게 바꿔줌
 const quoteEnd = "but by the seeds that you plant";
 const finalQuote = `${quoteStart} ${quoteEnd}`;
 // Don't edit the code below here!
@@ -42,6 +44,8 @@ const quoteLength = quote.length;
 const index = quote.indexOf("green eggs and ham"); // const index = quote.indexOf(substring); 이 더 깔끔함.
 const revisedQuote = quote.slice(0, quoteLength - 30);
 // let revisedQuote = `${quote.slice(0, index)}${substring}.`; <- codepen에서 다른 사람이 쓴 내용 굳이 몇글자 부터 잘라야하는지 셀 필요없음!!
+// let revisedQuote = quote.slice(0, index + substring.length + 1); // 0부터 index까지면 green의 g바로 앞까지 + substring의 길이니까 substring포함에 .까지 한 것.
+
 // Don't edit the code below here!
 
 section.innerHTML = " ";
@@ -73,12 +77,16 @@ fixedQuote = fixedQuote.replace(
 );
 finalQuote = fixedQuote.replace("plant", "plant.");
 
-// 다른 사람이 한 것
-/* let lower = quote.toLowerCase();
+/* 다른 사람이 한 것
+  let lower = quote.toLowerCase();
   let fixedQuote = lower.replace("i", "I");
   let finalQuote = fixedQuote.replace("green eggs and ham", "shrimp" + ".");
 
   나는 무조건 1번부터 순서대로 해야한다고 생각해서 전체를 풀어 썼는데, 이렇게 줄여서 하는게 맞다는 생각이 들었다
+
+  마지막 라인 또 다른 방법
+
+  let finalQuote = fixedQuote + '.';
 
 */
 
