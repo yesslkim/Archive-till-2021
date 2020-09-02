@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <title>Making a Small Pop-up</title>
+</head>
+
+<body>
+  <header id="header">
+    <h1><a href="#">Z Shopping Mall</a></h1>
+  </header>
+  <main id="main">
+    <h2>팝업창 만들기</h2>
+    <p class="text">
+      일상 생활에 볼 수 있는 팝업창을 만들어 보았다.
+      '내용 바로가기' 버튼을 누르면 팝업창이 나오고,
+      x버튼을 누르면 닫히는 간단한 팝업창.
+    </p>
+    <button class="pop-up-btn">내용 바로보기</button>
+    <div class="pop-up-wrapper">
+      <div class="pop-up">
+        <button type="button" class="pop-up-close"><span class="sr-only">닫기</span></button>
+        <h2 class="pop-up-title">좋아요 누르고 할인받자!</h2>
+        <p class="pop-up-text">
+          ㅇㅇ쇼핑몰의 좋아요를 누르고 댓글을 남기면<br />
+          최대 70%할인 쿠폰 증정~
+        </p>
+        <a href="#" class="pop-up-link">인스타그램 바로가기</a>
+      </div>
+    </div>
+  </main>
+  <footer id="footer">
+    <p>copyright 2020. yesslkim</p>
+  </footer>
+  <script src="./main.js"></script>
+</body>
+
+</html>
