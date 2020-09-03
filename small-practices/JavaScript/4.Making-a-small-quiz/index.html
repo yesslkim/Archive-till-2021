@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <title>Small Math Quiz</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header id="header">
+      <h1 class="title">
+        재밌는 수학교실 Quiz
+      </h1>
+      <p class="result">당신의 점수는 <span class="result-score">0%</span>입니다!</p>
+    </header>
+    <main id="main">
+      <form action="#" method="GET" class="form">
+        <ol>
+          <li>
+            <p class="question">1. 30 + 93의 답은 무엇인가요?</p>
+            <input type="radio" id="answer1-1" name="question1" value="answer1">
+            <label for="answer1-1">120</label>
+            <input type="radio" id="answer1-2" name="question1" value="answer2">
+            <label for="answer1-2">123</label>
+          </li>
+          <li>
+            <p class="question">2. 12345 + 98765의 답은 무엇인가요?</p>
+            <input type="radio" id="answer2-1" name="question2" value="answer1">
+            <label for="answer1-1">111110</label>
+            <input type="radio" id="answer2-2" name="question2" value="answer2">
+            <label for="answer1-2">1111110</label>
+          </li>
+          <li>
+            <p class="question">3. 95 - 920 + 93의 답은 무엇인가요?</p>
+            <input type="radio" id="answer3-1" name="question3" value="answer1">
+            <label for="answer3-1">732</label>
+            <input type="radio" id="answer3-2" name="question3" value="answer2">
+            <label for="answer3-2">777</label>
+          </li>
+          <li>
+            <p class="question">4. 200 x 9654의 답은 무엇인가요?</p>
+            <input type="radio" id="answer4-1" name="question4" value="answer1">
+            <label for="answer4-1">96540</label>
+            <input type="radio" id="answer4-2" name="question4" value="answer2">
+            <label for="answer4-2">96650</label>
+          </li>
+        </ol>
+        <button type="submit" class="submit">제출하기</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>
