@@ -6,7 +6,7 @@
 
 ---
 
-![popup](img/quiz.jpg)
+![quiz](img/quiz.JPG)
 
 ```javascript
 const form = document.querySelector(".form");
