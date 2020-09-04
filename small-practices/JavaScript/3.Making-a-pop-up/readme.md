@@ -6,7 +6,7 @@
 
 ---
 
-![popup](img/popup.jpg)
+![popup](img/popup.JPG)
 
 ```javascript
 const openPopUp = document.querySelector(".pop-up-btn");
