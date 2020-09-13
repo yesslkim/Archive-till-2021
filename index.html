@@ -10,51 +10,53 @@
 </head>
 
 <body>
-  <header>
-    <h1>TODO List</h1>
-  </header>
-  <main>
-    <form action="#" method="POST" class="search-form">
-      <label for="search" class="sr-only">search</label>
-      <input type="text" id="search" name="search">
-    </form>
-    <ul class="todo">
-      <li class="todo-list">
-        <p class="list-text">1. write to do list ↓ there</p>
-        <button type="button" class="check-btn">
-          <span class="sr-only">list is done</span>
-        </button>
-        <button type="button" class="delete-btn">
-          <span class="sr-only">delete the list</span>
-        </button>
-      </li>
-      <li class="todo-list">
-        <p class="list-text"> 2. search the list</p>
-        <button type="button" class="check-btn">
-          <span class="sr-only">list is done</span>
-        </button>
-        <button type="button" class="delete-btn">
-          <span class="sr-only">delete the list</span>
-        </button>
-      </li>
-      <li class="todo-list">
-        <p class="list-text">3. enjoy :)</p>
-        <button type="button" class="check-btn">
-          <span class="sr-only">list is done</span>
-        </button>
-        <button type="button" class="delete-btn">
-          <span class="sr-only">delete the list</span>
-        </button>
-      </li>
-    </ul>
-    <form action="#" method="POST" class="add-form">
-      <label for="add" class="sr-only">add to do list</label>
-      <input type="text" id="add" name="add">
-    </form>
-  </main>
-  <footer>
-    <p>Copyright&copy;2020 yesslkim All right reserved.</p>
-  </footer>
+  <div class="wrap">
+    <header class="header">
+      <h1 class="header-title">TODO List</h1>
+    </header>
+    <main class="main">
+      <form action="#" method="POST" class="search-form">
+        <label for="search" class="sr-only">search</label>
+        <input type="text" id="search" name="search">
+      </form>
+      <ul class="todo">
+        <li class="todo-list">
+          <p class="list-text">1. write to do list ↓ there</p>
+          <button type="button" class="check-btn">
+            <span class="sr-only">list is done</span>
+          </button>
+          <button type="button" class="delete-btn">
+            <span class="sr-only">delete the list</span>
+          </button>
+        </li>
+        <li class="todo-list">
+          <p class="list-text"> 2. search the list</p>
+          <button type="button" class="check-btn">
+            <span class="sr-only">list is done</span>
+          </button>
+          <button type="button" class="delete-btn">
+            <span class="sr-only">delete the list</span>
+          </button>
+        </li>
+        <li class="todo-list">
+          <p class="list-text">3. enjoy :)</p>
+          <button type="button" class="check-btn">
+            <span class="sr-only">list is done</span>
+          </button>
+          <button type="button" class="delete-btn">
+            <span class="sr-only">delete the list</span>
+          </button>
+        </li>
+      </ul>
+      <form action="#" method="POST" class="add-form">
+        <label for="add" class="sr-only">add to do list</label>
+        <input type="text" id="add" name="add">
+      </form>
+    </main>
+    <footer>
+      <p>Copyright&copy;2020 yesslkim All right reserved.</p>
+    </footer>
+  </div>
 </body>
 
 </html>
