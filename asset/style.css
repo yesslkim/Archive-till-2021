@@ -68,3 +68,43 @@ body {
   font-size: 100px;
   text-align: center;
 }
+
+.search-input {
+  margin-bottom: 67px;
+}
+
+.todo-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  background-color: #fff;
+}
+
+.todo-list:last-child {
+  margin-bottom: 100px;
+}
+
+.list-text {
+  float: left;
+  padding: 17px 18px;
+}
+
+.todo-btn {
+  float: right;
+}
+
+.btn {
+  width: 30px;
+  height: 30px;
+  background: url(./img/sprite.png) no-repeat;
+  background-size: 200%;
+}
+
+.check-btn {
+  background-position: 6px 5px;
+}
+
+.delete-btn {
+  background-position: 6px -41px;
+}
