@@ -39,6 +39,14 @@ input {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
 }
 
+.search-form,
+.todo-list,
+.add-form,
+.footer {
+  max-width: 728px;
+  margin: 0 auto;
+}
+
 /* style css */
 body {
   background-color: #faee5a;
@@ -59,29 +67,4 @@ body {
   color: #4b89ac;
   font-size: 100px;
   text-align: center;
-}
-
-.search-form,
-.todo-list,
-.add-form,
-.footer {
-  max-width: 728px;
-  margin: 0 auto;
-}
-
-.search-input {
-  margin-bottom: 67px;
-}
-
-.todo-list {
-  margin-bottom: 16px;
-  background-color: #fff;
-}
-
-.todo-list:last-child {
-  margin-bottom: 100px;
-}
-
-.list-text {
-  padding: 17px 18px;
 }
