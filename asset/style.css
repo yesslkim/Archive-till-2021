@@ -33,7 +33,6 @@ button {
 
 input {
   width: 100%;
-  max-width: 728px;
   height: 30px;
   border: none;
   border-radius: 5px;
@@ -52,11 +51,37 @@ body {
 }
 
 .header {
-  margin-bottom: 53px;
+  width: 613px;
+  margin: 0 auto 53px;
 }
 
 .header-title {
   color: #4b89ac;
   font-size: 100px;
   text-align: center;
+}
+
+.search-form,
+.todo-list,
+.add-form,
+.footer {
+  max-width: 728px;
+  margin: 0 auto;
+}
+
+.search-input {
+  margin-bottom: 67px;
+}
+
+.todo-list {
+  margin-bottom: 16px;
+  background-color: #fff;
+}
+
+.todo-list:last-child {
+  margin-bottom: 100px;
+}
+
+.list-text {
+  padding: 17px 18px;
 }
