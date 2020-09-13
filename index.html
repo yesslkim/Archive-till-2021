@@ -16,36 +16,46 @@
     </header>
     <main class="main">
       <form action="#" method="POST" class="search-form">
-        <label for="search" class="sr-only">search</label>
-        <input type="text" id="search" name="search">
+        <label for="search">
+          <span class="sr-only">search</span>
+        </label>
+        <input type="text" id="search" name="search" class="search-input">
       </form>
       <ul class="todo">
-        <li class="todo-list">
+        <li class="todo-list clear-flx">
           <p class="list-text">1. write to do list ↓ there</p>
-          <button type="button" class="check-btn">
-            <span class="sr-only">list is done</span>
-          </button>
-          <button type="button" class="delete-btn">
-            <span class="sr-only">delete the list</span>
-          </button>
+          <div class="todo-btn">
+            <button type="button" class="check-btn btn">
+              <span class="sr-only">list is done</span>
+            </button>
+            <button type="button" class="delete-btn btn">
+              <span class="sr-only">delete the list</span>
+            </button>
+          </div>
         </li>
-        <li class="todo-list">
+        <li class="todo-list clear-flx">
           <p class="list-text"> 2. search the list</p>
-          <button type="button" class="check-btn">
-            <span class="sr-only">list is done</span>
-          </button>
-          <button type="button" class="delete-btn">
-            <span class="sr-only">delete the list</span>
-          </button>
+          <div class="todo-btn">
+            <button type="button" class="check-btn btn">
+              <span class="sr-only">list is done</span>
+            </button>
+            <button type="button" class="delete-btn btn">
+              <span class="sr-only">delete the list</span>
+            </button>
+          </div>
+
         </li>
-        <li class="todo-list">
+        <li class="todo-list clear-flx">
           <p class="list-text">3. enjoy :)</p>
-          <button type="button" class="check-btn">
-            <span class="sr-only">list is done</span>
-          </button>
-          <button type="button" class="delete-btn">
-            <span class="sr-only">delete the list</span>
-          </button>
+          <div class="todo-btn">
+            <button type="button" class="check-btn btn">
+              <span class="sr-only">list is done</span>
+            </button>
+            <button type="button" class="delete-btn btn">
+              <span class="sr-only">delete the list</span>
+            </button>
+          </div>
+
         </li>
       </ul>
       <form action="#" method="POST" class="add-form">
@@ -53,7 +63,7 @@
         <input type="text" id="add" name="add">
       </form>
     </main>
-    <footer>
+    <footer class="footer">
       <p>Copyright&copy;2020 yesslkim All right reserved.</p>
     </footer>
   </div>
