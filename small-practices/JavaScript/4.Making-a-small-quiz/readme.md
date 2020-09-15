@@ -39,4 +39,4 @@ form.addEventListener("submit", (e) => {
 
 ### 구현해볼 예정인 것
 
-- [ ] `setInterval`을 이용해 점수판이 0점부터 유저가 받은 점수로 올라가는 것.
+- [x] `setInterval`을 이용해 점수판이 0점부터 유저가 받은 점수로 올라가는 것.
