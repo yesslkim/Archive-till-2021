@@ -10,6 +10,7 @@ form.addEventListener("submit", (e) => {
     form.question3.value,
     form.question4.value,
   ];
+
   let score = 0;
 
   correctAnswer.forEach((answer, index) => {
@@ -18,7 +19,16 @@ form.addEventListener("submit", (e) => {
     }
   });
 
+  let output = 0;
+  const timer = setInterval(() => {
+    result.querySelector(".result-score").textContent = `${output}%`;
+    if (output === score) {
+      clearInterval(timer);
+    } else {
+      output++;
+    }
+  }, 20);
+
   const result = document.querySelector(".result");
   result.style.display = "block";
-  result.querySelector(".result-score").textContent = `${score}%`;
 });
