@@ -8,7 +8,27 @@ prevButton.addEventListener("click", () => {
   slides.forEach((slide) => {
     slide.classList.add("hidden");
   });
-
   slideContainer.firstElementChild.classList.remove("hidden");
-  console.log(firstSlide);
 });
+
+nextButton.addEventListener("click", () => {
+  slideContainer.prepend(slideContainer.lastElementChild);
+  slides.forEach((slide, index) => {
+    slide.classList.add("hidden");
+  });
+  slideContainer.firstElementChild.classList.remove("hidden");
+});
+
+// 자동 이미지 슬라이드
+
+/*
+  const slideLength = slideContainer.children.length;
+  const firstSlide = slideContainer.children[0];
+  let position = 0;
+  setInterval(() => {
+    position = (position + 1) % slideLength;
+
+    firstSlide.style.marginRight = `${-position * 500}px`;
+  }, 1500);
+
+*/
