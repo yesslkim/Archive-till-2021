@@ -56,3 +56,58 @@ accent - 2c2d2d;
 	font-size: 25px;
 	text-align: center;
 }
+
+/*main*/
+
+/* section layout */
+
+.review,
+.exhibition-area,
+.program-area,
+.notice-area{
+	display: grid;
+	grid:  repeat(3, 1fr) 10fr 1fr / 24px repeat(4, 1fr) 24px;
+	height: 100vh;
+}
+
+/*신청방법 & 리뷰 */
+
+.review-left{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	grid-area: 4/2/5/4;
+}
+
+.review-title {
+	position: absolute;
+	left: 0;
+	top:-67px;
+	font-size: 60px;
+	letter-spacing: 0.1em;
+}
+
+.review-title > strong {
+	color: #1525fc;
+}
+
+.review-left > img {
+	display: block;
+	width: 80%;
+	max-width: 500px;
+}
+
+.review-right {
+	grid-area: 4/4/5/6;
+}
+
+.review-right > h3 {
+	font-size: 40px;
+}
+
+.review-right > p {
+	font-size: 20px;
+	margin-bottom: 48px;
+}
+
