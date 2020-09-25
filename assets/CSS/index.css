@@ -269,3 +269,57 @@ accent - 2c2d2d;
 	bottom: 0;
 }
 
+/*공지사항 */
+
+.notice-area {
+	position: relative;
+}
+
+.prev-btn::before {
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	content: '\f053';
+	color: #2c2d2d;
+	font-size: 45px;
+}
+
+.notice {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	grid-area: 3/2/5/6;
+}
+
+.notice-item {
+	position: relative;
+	border-radius: 20px;
+	background-color: #fff;
+	box-shadow: 2px 2px 20px #ddd;
+}
+
+.notice-img > img {
+	border-radius: 20px;
+}
+
+.notice-item p {
+	position: absolute;
+	max-width: 400px;
+	height: 300px;
+	bottom: 0px;
+	border-radius: 0 0 20px 20px;
+	padding: 10px;
+	background-color: rgba(255,255,255,0.6)
+}
+
+.next-btn::before {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	content: '\f054';
+	color: #2c2d2d;
+	font-size: 45px;
+}
+
