@@ -64,15 +64,15 @@ accent - 2c2d2d;
 .review,
 .exhibition-area,
 .program-area,
-.notice-area{
+.notice-area {
 	display: grid;
-	grid:  repeat(3, 1fr) 10fr 1fr / 24px repeat(4, 1fr) 24px;
+	grid: repeat(3, 1fr) 10fr 1fr / 60px repeat(4, 1fr) 60px;
 	height: 100vh;
 }
 
 /*신청방법 & 리뷰 */
 
-.review-left{
+.review-left {
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -83,7 +83,7 @@ accent - 2c2d2d;
 .review-title {
 	position: absolute;
 	left: 0;
-	top:-67px;
+	top: -67px;
 	font-size: 60px;
 	letter-spacing: 0.1em;
 }
@@ -111,3 +111,76 @@ accent - 2c2d2d;
 	margin-bottom: 48px;
 }
 
+/*새로나온 전시회 */
+
+.exhibition-title {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	grid-area: 2/4/4/6;
+	margin-right: 10px;
+	font-size: 40px;
+	text-align: right;
+}
+
+.exhibition-title a {
+	padding: 0 10px;
+}
+
+.exhibition-title span:nth-child(1) {
+	display: block;
+	background-color: #fff;
+	color: #1525fc;
+}
+
+.exhibition-title span:nth-child(2) {
+	padding: 10px;
+	background-color: #1525fc;
+	color: #fff;
+}
+
+
+.exhibition {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-area: 4/2/6/6;
+}
+
+.exhibition-item {
+	position: relative;
+}
+
+.exhibition-item > img {
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.exhibition-info {
+	position: absolute;
+	bottom: 0;
+	height: 250px;
+	padding: 0 25px;
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+.exhibition-info > h3 {
+	margin: 10px 0;
+	text-align: center;
+}
+
+.exhibition-info > div,
+.exhibition-info > p {
+	margin-bottom: 10px;
+}
+
+.exhibition-info > a {
+	display: block;
+	width: 70px;
+	padding: 5px 10px;
+	border-radius: 10px;
+	background-color: #1525fc;
+	color: #fff;
+	text-align: center;
+}
