@@ -277,11 +277,11 @@ accent - 2c2d2d;
 
 .prev-btn::before {
 	position: absolute;
-	left: 10px;
+	left: 30px;
 	top: 50%;
 	transform: translateY(-50%);
 	content: '\f053';
-	color: #2c2d2d;
+	color: #1525fc;
 	font-size: 45px;
 }
 
@@ -294,12 +294,14 @@ accent - 2c2d2d;
 
 .notice-item {
 	position: relative;
+	display: block;
 	border-radius: 20px;
 	background-color: #fff;
 	box-shadow: 2px 2px 20px #ddd;
 }
 
 .notice-img > img {
+	display: block;
 	border-radius: 20px;
 }
 
@@ -315,11 +317,43 @@ accent - 2c2d2d;
 
 .next-btn::before {
 	position: absolute;
-	right: 10px;
+	right: 30px;
 	top: 50%;
 	transform: translateY(-50%);
 	content: '\f054';
-	color: #2c2d2d;
+	color: #1525fc;
 	font-size: 45px;
 }
 
+/*footer */
+
+.footer {
+	padding: 60px 60px 30px;
+}
+
+.quick-menu > ul {
+	display: flex;
+}
+
+
+.quick-menu li::after {
+	display: inline-block;
+	content: '|';
+	padding: 0 10px;
+}
+
+.company-info > dl {
+	display: flex;
+}
+
+.company-info dt::after {
+	display: inline-block;
+	content: ':';
+	padding: 0 5px;
+}
+
+.company-info dd::after {
+	display: inline-block;
+	content: '|';
+	padding: 0 5px;
+}
