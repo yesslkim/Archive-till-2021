@@ -149,6 +149,7 @@ accent - 2c2d2d;
 
 .exhibition-item {
 	position: relative;
+	overflow: hidden;
 }
 
 .exhibition-item > img {
@@ -159,10 +160,11 @@ accent - 2c2d2d;
 
 .exhibition-info {
 	position: absolute;
-	bottom: 0;
+	bottom: -300px;
 	height: 250px;
 	padding: 0 25px;
 	background-color: rgba(255, 255, 255, 0.6);
+	transition: bottom 1s;
 }
 
 .exhibition-info > h3 {
@@ -175,12 +177,95 @@ accent - 2c2d2d;
 	margin-bottom: 10px;
 }
 
-.exhibition-info > a {
+.more-btn {
 	display: block;
 	width: 70px;
 	padding: 5px 10px;
 	border-radius: 10px;
-	background-color: #1525fc;
+	background: #1525fc;
 	color: #fff;
 	text-align: center;
+	transition: background 1s;
 }
+
+.more-btn:hover {
+	background: #2c2d2d;
+}
+
+.exhibition-item:hover .exhibition-info {
+	bottom: 0;
+}
+
+/*프로그램 일정 */
+
+.section-link {
+	grid-area: 2/2/3/3;
+	margin: 10px;
+	font-size: 40px;
+}
+
+.section-link::after {
+	display: inline-block;
+	padding-left: 10px;
+	content: '>';
+}
+
+.program-title {
+	grid-area: 3/2/5/3;
+	margin: 10px;
+	font-size: 80px;
+}
+
+.program-title > strong {
+	color: #1525fc;
+}
+
+.program {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-area: 3/3/5/6;
+	
+}
+
+.program-item {
+	position: relative;
+	overflow: hidden;	
+}
+
+.program-item a > img {
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.program-info {
+	position: absolute;
+	bottom: -300px;
+	width: 100%;
+	height: 300px;
+	padding: 0px 35px;
+	margin: 0px auto;
+	background-color: rgba(255,255,255,0.6);
+	color: #000;
+	transition: bottom 1s;
+}
+
+.program-info h3 {
+	margin: 10px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.program-info div {
+	margin-bottom: 50px;
+}
+
+.program-info  p {
+	margin-bottom: 10px;
+}
+
+.program-item:hover .program-info {
+	bottom: 0;
+}
+
