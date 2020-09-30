@@ -3,6 +3,10 @@ const userName = document.querySelector(".js-userinfo input");
 const greetings = document.querySelector(".js-greetings");
 const USER_LS = "currentUser";
 
+const saveName = (currentUser) => {
+  localStorage.setItem(USER_LS, currentUser);
+};
+
 const getName = () => {
   userInfoForm.classList.add("visible");
   userInfoForm.addEventListener("submit", (e) => {
