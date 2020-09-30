@@ -1,0 +1,8 @@
+.user-info,
+.greetings {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
