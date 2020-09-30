@@ -7,6 +7,12 @@ const saveName = (currentUser) => {
   localStorage.setItem(USER_LS, currentUser);
 };
 
+const greetUser = (currentUser) => {
+  userInfoForm.classList.remove("visible");
+  greetings.textContent += ` ${currentUser}`;
+  greetings.classList.add("visible");
+};
+
 const getName = () => {
   userInfoForm.classList.add("visible");
   userInfoForm.addEventListener("submit", (e) => {
