@@ -3,6 +3,28 @@ const todoInput = document.querySelector(".js-todoform input");
 const todoLists = document.querySelector(".js-todolist");
 const TODO_LS = "todolist";
 let toDos = [];
+let filterToDos;
+
+const deleteList = () =>
+  todoLists.addEventListener("click", e => {
+    const listIndex = Array.from(todoLists.children).indexOf(
+      e.target.parentElement
+    );
+    if (e.target.tagName === "BUTTON") {
+      if (filterToDos === undefined) {
+        filterToDos = toDos.filter((toDo, index) => {
+          return index !== listIndex;
+        });
+      } else {
+        filterToDos = filterToDos.filter((toDo, index) => {
+          return index !== listIndex;
+        });
+      }
+      e.target.parentElement.remove();
+      toDos = filterToDos;
+      saveTodo();
+    }
+  });
 
 const paintTodo = todoItem => {
   const todoTemplate = `<li> ${todoItem}<button type="button">❌</button></li>`;
