@@ -2,6 +2,15 @@ const todoForm = document.querySelector(".js-todoform");
 const todoInput = document.querySelector(".js-todoform input");
 const todoLists = document.querySelector(".js-todolist");
 const TODO_LS = "todolist";
+let toDos = [];
+
+const paintTodo = todoItem => {
+  const todoTemplate = `<li> ${todoItem}<button type="button">❌</button></li>`;
+  todoLists.innerHTML += todoTemplate;
+  toDos.push(todoItem);
+  saveTodo();
+  deleteList();
+};
 
 const getTodo = () => {
   todoForm.addEventListener("submit", e => {
