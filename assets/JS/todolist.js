@@ -5,6 +5,10 @@ const TODO_LS = "todolist";
 let toDos = [];
 let filterToDos;
 
+const saveTodo = () => {
+  localStorage.setItem(TODO_LS, toDos);
+};
+
 const deleteList = () =>
   todoLists.addEventListener("click", e => {
     const listIndex = Array.from(todoLists.children).indexOf(
