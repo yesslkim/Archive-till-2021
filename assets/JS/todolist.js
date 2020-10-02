@@ -31,7 +31,7 @@ const deleteList = () =>
   });
 
 const paintTodo = todoItem => {
-  const todoTemplate = `<li> ${todoItem}<button type="button">❌</button></li>`;
+  const todoTemplate = `<li class="todo-item"> ${todoItem}<button type="button" class="close-btn" aria-label="close">❌</button></li>`;
   todoLists.innerHTML += todoTemplate;
   toDos.push(todoItem);
   saveTodo();
