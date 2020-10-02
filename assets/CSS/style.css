@@ -1,4 +1,7 @@
 /* reset & common css */
+html {
+  font-size: 62.5%;
+}
 
 * {
   margin: 0;
@@ -23,6 +26,7 @@ ul {
 input {
   border: none;
   border-radius: 5px;
+  outline: none;
 }
 
 .sr-only {
@@ -36,8 +40,7 @@ input {
 
 /* styling css  */
 body {
-  position: relative;
-  padding: 10px;
+  padding: 1rem;
   background-color: #ddd;
 }
 
@@ -47,48 +50,58 @@ body {
 }
 
 .user-weather {
-  padding: 5px 10px;
-  font-size: 12px;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
   text-align: right;
 }
 
 .user-time {
-  font-size: 40px;
+  font-size: 4rem;
   font-weight: 800;
   text-align: center;
 }
 
 .main {
-  padding: 10px;
+  padding: 1rem;
   text-align: center;
 }
 
 .user-info,
 .greetings {
   display: none;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 .user-info > label,
 .user-todoform > label {
-  font-size: 14px;
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
 }
 
 .user-info > input,
 .user-todoform > input {
+  width: calc(100% - 40%);
   border: 1px solid #b3b4b3;
 }
 
+.greetings {
+  color: #447961;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
 .user-todoform {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 .todo-item {
   position: relative;
   width: 80%;
-  padding: 5px 5px 5px 10px;
+  padding: 1rem 1rem 1rem 2rem;
   margin: 0 auto;
-  font-size: 13px;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.3rem;
   text-align: left;
 }
 
@@ -101,12 +114,12 @@ body {
 .background-image {
   display: block;
   width: 100%;
-  border-radius: 20px 20px 0 0;
+  border-radius: 2rem 2rem 0 0;
 }
 
 .footer {
-  padding: 30px 10px 20px;
-  font-size: 10px;
+  padding: 3rem 1rem 2rem;
+  font-size: 1rem;
   text-align: center;
   font-weight: 800;
 }
@@ -119,4 +132,18 @@ body {
 
 .visible {
   display: block;
+}
+
+/* media query  */
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 72%;
+  }
+
+  .background-image,
+  .wrap {
+    max-width: 70rem;
+    margin: 0 auto;
+  }
 }
