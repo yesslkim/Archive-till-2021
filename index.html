@@ -13,22 +13,22 @@
   <div class="wrap">
     <div>
       <h2 class="sr-only">Location, Place and Time information</h2>
-      <p class="js-weather">Your location : </p>
-      <p class="js-time">00:00:00</p>
+      <p class="js-weather user-weather"></p>
+      <p class="js-time user-time">00:00:00</p>
     </div>
-    <main>
+    <main class="main">
       <form action="#" method="POST" class="js-userinfo user-info">
         <label for="user-name">What is your name?</label>
         <input type="text" id="user-name">
       </form>
       <p class="js-greetings greetings">Hello</p>
-      <form action="#" method="POST" class="js-todoform">
+      <form action="#" method="POST" class="js-todoform user-todoform">
         <label for="todo-input">Write Todo List here ❣️</label>
         <input type="text" id="todo-input">
       </form>
       <ul class="js-todolist">
         <li class="todo-item">
-          this is your TODO List
+          This is your TODO List
           <button type="button" class="close-btn" aria-label="close">❌</button>
         </li>
       </ul>
