@@ -13,7 +13,7 @@ const getWeatherInfo = (latitude, longitude) => {
       const temperature = data.main.temp;
       const place = data.name;
 
-      weatherInfo.textContent += ` ${place}, temperature : ${temperature}ºC`;
+      weatherInfo.textContent += ` ${place} ${temperature}°C`;
     })
     .catch(error => {
       weatherInfo.textContent = null;
@@ -40,7 +40,7 @@ const handleGeoError = error => {
   const errorMessage = error.message;
   console.log(`ERROR CODE : ${errorCode}, ERROR MESSAGE : ${errorMessage}`);
   if (errorCode < 3) {
-    weatherInfo.textContent = null;
+    alert("현재 위치와 날씨 정보를 이용하려면 설정정보를 확인해주세요");
   }
 };
 
