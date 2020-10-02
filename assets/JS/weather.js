@@ -1,5 +1,9 @@
 const COORDS = "coords";
 
+const saveGeolocation = Coords => {
+  localStorage.setItem(COORDS, JSON.stringify(Coords));
+};
+
 const handleGeoSuccess = position => {
   const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
