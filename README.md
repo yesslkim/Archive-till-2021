@@ -22,7 +22,7 @@ Clone Momentum
 ✔️ 공부내용
 
 - 공부한 내용에 대해 적어보며 정리하는 시간을 가졌습니다.
-- [시계wiki](./What-I-Learned/1.in-clock-js.md)
+- [시계wiki](./What-I-Learned/1.in-clock.md)
 - [사용자 이름 관련 wiki](./What-I-Learned/2.in-greetings.md)
 - [할일 목록 wiki](./What-I-Learned/3.in-todo-list.md)
 - [날씨 관련 wiki](What-I-Learned/4.in-weather.md)
