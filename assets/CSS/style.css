@@ -20,6 +20,11 @@ ul {
   list-style-type: none;
 }
 
+input {
+  border: none;
+  border-radius: 5px;
+}
+
 .sr-only {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -48,7 +53,7 @@ body {
 }
 
 .user-time {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 800;
   text-align: center;
 }
@@ -64,8 +69,33 @@ body {
   margin-bottom: 10px;
 }
 
+.user-info > label,
+.user-todoform > label {
+  font-size: 14px;
+}
+
+.user-info > input,
+.user-todoform > input {
+  border: 1px solid #b3b4b3;
+}
+
 .user-todoform {
   margin-bottom: 10px;
+}
+
+.todo-item {
+  position: relative;
+  width: 80%;
+  padding: 5px 5px 5px 10px;
+  margin: 0 auto;
+  font-size: 13px;
+  text-align: left;
+}
+
+.close-btn {
+  position: absolute;
+  right: 5px;
+  color: #447961;
 }
 
 .background-image {
@@ -75,8 +105,14 @@ body {
 }
 
 .footer {
-  text-align: center;
   padding: 30px 10px 20px;
+  font-size: 10px;
+  text-align: center;
+  font-weight: 800;
+}
+
+.footer > a {
+  color: #447961;
 }
 
 /* class for JS  */
