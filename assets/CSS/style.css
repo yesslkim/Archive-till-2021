@@ -24,6 +24,19 @@ button {
 }
 
 /* styling css  */
+body {
+  position: relative;
+}
+
+.user-weather {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  width: 70%;
+  border-radius: 5px;
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
 
 .user-info,
 .greetings {
@@ -32,10 +45,6 @@ button {
 
 .visible {
   display: block;
-}
-
-body {
-  position: relative;
 }
 
 .background-image {
