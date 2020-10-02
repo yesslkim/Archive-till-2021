@@ -32,33 +32,49 @@ body {
 
 .wrap {
   background-color: #fff;
+  border-radius: 0 0 20px 20px;
 }
 
 .user-weather {
-  position: absolute;
-  right: 5%;
-  top: 5%;
-  width: 70%;
-  border-radius: 5px;
+  padding: 5px 10px;
   font-size: 12px;
-  background-color: rgba(255, 255, 255, 0.6);
+  text-align: right;
 }
 
 .user-time {
   font-size: 50px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.main {
+  padding: 10px;
   text-align: center;
 }
 
 .user-info,
 .greetings {
   display: none;
+  margin-bottom: 10px;
 }
 
-.visible {
-  display: block;
+.user-todoform {
+  margin-bottom: 10px;
 }
 
 .background-image {
   display: block;
   width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+.footer {
+  text-align: center;
+  padding: 30px 10px 20px;
+}
+
+/* class for JS  */
+
+.visible {
+  display: block;
 }
