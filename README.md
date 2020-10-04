@@ -36,16 +36,23 @@ HTML 및 CSS는 **네이버 블로그**를 통해 기록했습니다.
   - [Function](Javascript/Basics/5.Function.md)
   - [Function-callback function](Javascript/Basics/5a.Callback-Function.md)
   - [Array](Javascript/Basics/6.Array.md)
-  - [Array - forEach() method](Javascript/Basics/6a.ForEach-Method.md)
+  - [Array Method](Javascript/Basics/6a.Array-Method-example.md)
   - [Condition - if, switch](Javascript/Basics/7.Condition-if-switch.md)
   - [Loops - for, while](Javascript/Basics/8.Loops-for-while.md)
   - [Object](Javascript/Basics/10.Object.md)
   - [Call stact and memory heap](Javascript/Basics/9.Call-stack-and-Memory-heap.md)
+  - [AJAX](Javascript/Basics/b11.AJAX.md)
+  - [Local Storage](Javascript/Basics/b12.Local-Storage.md)
+  - [Rest and Spread](Javascript/Basics/b13.Rest-and-Spread.md)
+  - [Sets](Javascript/Basics/b14.Sets.md)
+  - [Symbol](Javascript/Basics/b15.Symbol.md)
 - The DOM
   - [What is DOM](Javascript/the-DOM/1.The-DOM-Explanation.md)
   - [Properties 모음](Javascript/the-DOM/2.Properties.md)
   - [Methods 모음](Javascript/the-DOM/3.Method.md)
   - [Event에 대하여](Javascript/the-DOM/4.Event.md)
+- OOP
+  - [class](Javascript/OOP/class.md)
 
 ## Small Practices
 
@@ -55,21 +62,13 @@ HTML 및 CSS는 **네이버 블로그**를 통해 기록했습니다.
 - CSS
 - JavaScript
   - [2020.08.15] Practice about Variables, Operators, and Data Types
-    - HTML, CSS 제공됨 / JS문제풀이
   - [2020.08.18] Daily Practice
-    - 간단히 빈칸에 정답하는 방식. 기본 개념을 확인하기 위한 문제풀이
   - [2020.08.19] Practice about Functions
-    - HTML, CSS 제공됨 / JS문제풀이
-  - [2020.08.20] Daily Practice
-    - 기본 개념을 확인하기 위한 문제풀이 - variable편
-  - [2020.08.21] Daily Practice
-    - 기본 개념을 확인하기 위한 문제풀이 - math편 (operators, datatype, assignment shorthand etc )
-  - [2020.08.22] Daily Practice
-    - 기본 개념을 확인하기 위한 문제풀이 - String 복습
-  - [2020.08.23] Daily Practice
-    - 기본 개념을 확인하기 위한 문제풀이 - Array 복습
-  - [2020.08.23] Daily Practice
-    - 논리연산자 기초 학습용 연습문제 - 논리연산자 복습
-  - [2020.09.02] 간단한 팝업창 구현해 보기 - The DOM Event - 열기, 닫기 버튼 (using event listener)
+  - [2020.08.20] Daily Practice about Variable
+  - [2020.08.21] Daily Practice about Operators, Data types, Assignmet etc
+  - [2020.08.22] Daily Practice about String
+  - [2020.08.23] Daily Practice about Array
+  - [2020.08.23] Daily Practice about Logical Operator
+  - [2020.09.02] 간단한 팝업창 구현해 보기 - The DOM Event - 열기, 닫기 버튼
     ![popupv](assets/popup.gif)
     [관련된 readme 바로가기](small-practices/JavaScript/3.Making-a-pop-up/readme.md)
