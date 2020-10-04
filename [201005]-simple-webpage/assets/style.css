@@ -149,3 +149,54 @@ sub - #5b9bd5
 }
 
 /* main - contents  */
+
+.main-contents {
+  height: 200px;
+}
+
+.contents {
+  float: left;
+  width: calc(100%/3);
+  padding: 10px;
+}
+
+.contents-title {
+  position: relative;
+  top: 1px;
+  width: 30%;
+  border: 1px solid #ff5050;
+  border-bottom: 2px solid #fff;
+  color: #ff5050;
+}
+
+.contents-title>a {
+  display: block;
+  padding: 5px;
+  text-align: center;
+}
+
+.contents-body {
+  height: 150px;
+  padding: 10px;
+  border: 1px solid #ff5050;
+}
+
+/* contents - notice  */
+
+.notice a {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.notice-text {
+  float: left;
+  width: 250px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.notice-date {
+  float: right;
+}
