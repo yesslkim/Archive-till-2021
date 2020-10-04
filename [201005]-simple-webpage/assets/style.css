@@ -128,3 +128,24 @@ sub - #5b9bd5
   background-color: #fff;
   color: #ff5050;
 }
+
+/* main  */
+
+/* main - imgslide  */
+.img-slides {
+  position: relative;
+  height: 300px;
+}
+
+.img-slides>img {
+  position: absolute;
+  top: 0;
+  opacity: 1;
+  transition: opacity .5s linear;
+}
+
+.img-slides>img.on {
+  opacity: 0;
+}
+
+/* main - contents  */
