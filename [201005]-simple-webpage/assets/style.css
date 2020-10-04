@@ -1,0 +1,38 @@
+/* RESET & COMMON  */
+
+/* font  */
+@font-face {
+  font-family: 'RIDIBatang';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'RIDIBatang', sans-serif;
+}
+
+/* reset  */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* common  */
+
+img {
+  display: block;
+}
+
+/* STYLING CSS */
