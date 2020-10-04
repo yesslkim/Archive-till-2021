@@ -165,7 +165,7 @@ sub - #5b9bd5
   top: 1px;
   width: 30%;
   border: 1px solid #ff5050;
-  border-bottom: 2px solid #fff;
+  border-bottom: 1px solid #fff;
   color: #ff5050;
 }
 
@@ -211,4 +211,44 @@ sub - #5b9bd5
   width: calc(90%/3);
   height: 110px;
   margin: 5px;
+}
+
+/* footer  */
+
+.footer {
+  height: 100px;
+}
+
+.footer-left {
+  float: left;
+  width: 90%;
+}
+
+.footer-nav {
+  height: 50px;
+
+}
+
+.footer-nav li {
+  float: left;
+}
+
+.footer-nav a {
+  display: block;
+  padding: 10px;
+}
+
+.copyright {
+  padding: 5px 10px;
+}
+
+.footer-right {
+  float: right;
+  width: 10%;
+  height: 100%;
+  padding: 5px;
+}
+
+.footer-right>label {
+  color: #ff5050;
 }
