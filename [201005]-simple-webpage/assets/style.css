@@ -45,9 +45,13 @@ img {
 /* color  */
 /*
 main - #ff5050
-sub - #ffc000
-sub - #5b9bd5
+
 */
+
+.body {
+  position: relative;
+}
+
 .wrap {
   width: 1200px;
   margin: 0 auto;
@@ -91,6 +95,8 @@ sub - #5b9bd5
   width: 120px;
   padding: 5px;
   text-align: center;
+  background-color: #fff;
+  transition: background-color .3s linear;
 }
 
 .gnb a:hover {
@@ -99,12 +105,19 @@ sub - #5b9bd5
 }
 
 .gnb-subarea {
-  display: none;
+  display: block;
   position: absolute;
   top: 100px;
   width: 100%;
   height: 150px;
   background-color: #ff5050;
+  opacity: 0;
+  z-index: 100;
+  transition: opacity .3s linear;
+}
+
+.gnb-subarea.fade-in {
+  opacity: 1;
 }
 
 .sub-right {
@@ -141,7 +154,15 @@ sub - #5b9bd5
   position: absolute;
   top: 0;
   opacity: 1;
-  transition: opacity .5s linear;
+  transition: opacity .4s linear;
+}
+
+.img-slides>img:nth-child(1) {
+  z-index: 2;
+}
+
+.img-slides>img:nth-child(2) {
+  z-index: 1;
 }
 
 .img-slides>img.on {
@@ -251,4 +272,43 @@ sub - #5b9bd5
 
 .footer-right>label {
   color: #ff5050;
+}
+
+.popup-wrap {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+}
+
+.popup {
+  width: 800px;
+  height: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.popup>h2 {
+  padding: 10px;
+  border-bottom: 1px solid #000;
+}
+
+.popup>p {
+  padding: 10px;
+}
+
+.popup>button {
+  position: relative;
+  top: 340px;
+  left: 730px;
+  background-color: #ff5050;
+  padding: 5px 10px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
 }
