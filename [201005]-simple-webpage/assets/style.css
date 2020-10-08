@@ -42,12 +42,6 @@ img {
 }
 
 /* STYLING CSS */
-/* color  */
-/*
-main - #ff5050
-
-*/
-
 .body {
   position: relative;
 }
@@ -55,7 +49,7 @@ main - #ff5050
 .wrap {
   width: 1200px;
   margin: 0 auto;
-  border: 1px solid #ff5050;
+  border: 1px solid #000;
 }
 
 /* header  */
@@ -67,8 +61,8 @@ main - #ff5050
   float: left;
   width: 20%;
   height: 100px;
-  border-right: 1px solid #ff5050;
-  color: #ff5050;
+  border-right: 1px solid #000;
+  color: #000;
   text-align: center;
   line-height: 100px;
 }
@@ -90,17 +84,19 @@ main - #ff5050
   float: left;
 }
 
+
 .gnb a {
   display: block;
   width: 120px;
   padding: 5px;
   text-align: center;
   background-color: #fff;
+  color: #000;
   transition: background-color .3s linear;
 }
 
 .gnb a:hover {
-  background-color: #ff5050;
+  background-color: #000;
   color: #fff;
 }
 
@@ -110,7 +106,7 @@ main - #ff5050
   top: 100px;
   width: 100%;
   height: 150px;
-  background-color: #ff5050;
+  background-color: #000;
   opacity: 0;
   z-index: 100;
   transition: opacity .3s linear;
@@ -139,7 +135,7 @@ main - #ff5050
 
 .gnb-sub a:hover {
   background-color: #fff;
-  color: #ff5050;
+  color: #000;
 }
 
 /* main  */
@@ -185,9 +181,9 @@ main - #ff5050
   position: relative;
   top: 1px;
   width: 30%;
-  border: 1px solid #ff5050;
+  border: 1px solid #000;
   border-bottom: 1px solid #fff;
-  color: #ff5050;
+  color: #000;
 }
 
 .contents-title>a {
@@ -199,7 +195,7 @@ main - #ff5050
 .contents-body {
   height: 150px;
   padding: 15px 10px;
-  border: 1px solid #ff5050;
+  border: 1px solid #000;
 }
 
 /* contents - notice  */
@@ -271,7 +267,7 @@ main - #ff5050
 }
 
 .footer-right>label {
-  color: #ff5050;
+  color: #000;
 }
 
 .popup-wrap {
@@ -306,7 +302,7 @@ main - #ff5050
   position: relative;
   top: 340px;
   left: 730px;
-  background-color: #ff5050;
+  background-color: #000;
   padding: 5px 10px;
   border: none;
   color: #fff;
