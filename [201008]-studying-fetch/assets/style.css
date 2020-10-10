@@ -18,6 +18,20 @@ button {
   font-family: 'Roboto', sans-serif;
 }
 
+q::after,
+q::before {
+  content: none;
+}
+
+.icon::before {
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
 /* styling  */
 body {
   background-color: #ff7700;
@@ -49,3 +63,36 @@ body {
 }
 
 /* main  */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.main-wrap {
+  padding: 10px;
+  margin: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* quote text  */
+
+.quote-text {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.quote-text::before {
+  display: inline-block;
+  content: '\f10d';
+  color: #ff7700;
+}
+
+/* quote author  */
+
+.quote-author {
+  text-align: center;
+}
+
+/* button  */
