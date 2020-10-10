@@ -11,6 +11,7 @@ a {
 
 button {
   border: none;
+  cursor: pointer;
 }
 
 body,
@@ -23,13 +24,19 @@ q::before {
   content: none;
 }
 
-.icon::before {
+.icon::before,
+.icon-br::before {
+  font-family: 'Font Awesome 5 Free';
+  font-size: 16px;
+  font-weight: 900;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
+}
+
+.icon-br::before {
+  font-family: 'Font Awesome 5 Brands';
 }
 
 /* styling  */
@@ -96,3 +103,40 @@ body {
 }
 
 /* button  */
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-container > button {
+  border-radius: 5px;
+  background-color: #ff7700;
+  color: #fff;
+  box-shadow: 0 0.3rem rgba(213, 148, 50, 0.65);
+  outline: none;
+}
+
+.btn-container > button:hover {
+  filter: brightness(110%);
+}
+
+.btn-container > button:active {
+  transform: translate(0, 0.3rem);
+  box-shadow: 0 0.1rem rgba(213, 148, 50, 0.65);
+}
+
+.twitter-btn {
+  width: 30px;
+  height: 30px;
+}
+
+.twitter-btn:hover {
+  background-color: #fff;
+  color: #38a1f3;
+}
+
+.twitter-btn::before {
+  display: inline-block;
+  content: '\f099';
+  font-size: 14px;
+}
