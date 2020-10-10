@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
     integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/style.css">
   <title>Random Quote Generator</title>
 </head>
@@ -16,7 +16,7 @@
   <!-- S: Header  -->
   <header class="header">
     <h1>Random Quote Generator</h1>
-    <a href="https://github.com/yesslkim">by yesslkim 🍒</a>
+    <a href="https://github.com/yesslkim">by yesslkim <span aria-hidden="true">🍒</span></a>
   </header>
   <!-- E: Header  -->
   <!-- S: Main  -->
@@ -32,13 +32,16 @@
       </div>
       <!-- button  -->
       <div class="btn-container">
-        <button type="button" class="twitter-btn js-twitter" title="tweet this :)">
+        <button type="button" class="twitter-btn icon-br js-twitter" title="tweet this :)">
           <span class="sr-only">tweet button</span>
         </button>
         <button type="button" class="js-new-quote">New Quote</button>
       </div>
     </div>
+    <!-- loader  -->
+    <div class="loader js-loader"></div>
   </main>
+
   <!-- E: Main  -->
   <!-- Script -->
   <script src="./assets/app.js"></script>
