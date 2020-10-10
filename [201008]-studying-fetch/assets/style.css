@@ -78,8 +78,9 @@ body {
 }
 
 .main-wrap {
+  width: 80%;
   padding: 10px;
-  margin: 5px;
+  margin: 5px auto;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -142,6 +143,33 @@ body {
   font-size: 14px;
 }
 
+.loader {
+  width: 120px;
+  height: 120px;
+  border: 16px solid #fff;
+  border-top: 16px solid #ffee00;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+.js-hidden {
+  display: none;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.long-quote {
+  font-size: 14px;
+}
+
 /* media query  */
 
 /* for tablet  */
@@ -171,6 +199,10 @@ body {
   .twitter-btn::before {
     font-size: 20px;
   }
+
+  .long-quote {
+    font-size: 25px;
+  }
 }
 
 /* for desktop  */
@@ -193,5 +225,9 @@ body {
 
   .twitter-btn::before {
     font-size: 25px;
+  }
+
+  .long-quote {
+    font-size: 30px;
   }
 }
