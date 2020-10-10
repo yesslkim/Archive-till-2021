@@ -16,7 +16,7 @@ button {
 
 body,
 button {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lora', serif;
 }
 
 q::after,
@@ -80,6 +80,7 @@ body {
 .main-wrap {
   padding: 10px;
   margin: 5px;
+  border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -139,4 +140,58 @@ body {
   display: inline-block;
   content: '\f099';
   font-size: 14px;
+}
+
+/* media query  */
+
+/* for tablet  */
+@media screen and (min-width: 768px) {
+  .header > h1 {
+    font-size: 50px;
+  }
+
+  .header > a {
+    font-size: 30px;
+  }
+  .main-wrap {
+    padding: 20px;
+    font-size: 30px;
+  }
+
+  .main-wrap button {
+    padding: 5px;
+    font-size: 20px;
+  }
+
+  .twitter-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .twitter-btn::before {
+    font-size: 20px;
+  }
+}
+
+/* for desktop  */
+
+@media screen and (min-width: 1024px) {
+  .main-wrap {
+    padding: 30px;
+    font-size: 40px;
+  }
+
+  .main-wrap button {
+    padding: 10px;
+    font-size: 25px;
+  }
+
+  .twitter-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .twitter-btn::before {
+    font-size: 25px;
+  }
 }
