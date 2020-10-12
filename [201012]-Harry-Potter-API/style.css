@@ -20,6 +20,16 @@ ul {
   background-position: bottom;
 }
 
+.search-label {
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.searchbar {
+  width: 450px;
+  margin-bottom: 10px;
+}
+
 .characters {
   display: flex;
   flex-direction: column;
