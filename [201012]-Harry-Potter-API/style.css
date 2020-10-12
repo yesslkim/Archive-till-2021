@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 
-.ul {
+ul {
   padding: 0;
   list-style-type: none;
 }
@@ -20,9 +20,27 @@
   background-position: bottom;
 }
 
-.characters-list {
+.characters {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.character-list {
+  display: flex;
   width: 450px;
   height: 130px;
+  margin-bottom: 10px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+.character-img {
+  display: block;
+  width: 100px;
+  border-radius: 10px 0 0 10px;
+}
+
+.character-desc {
+  padding: 30px;
 }
