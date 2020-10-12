@@ -1,29 +1,51 @@
-//Get Items using Fetch API
-
-const getItem = async() => {
+//Get characters using Fetch API
+const getCharacters = async() => {
   const response = await fetch('http://hp-api.herokuapp.com/api/characters');
-  const data = response.json()
-  return data;
+  const characters = await response.json()
+  return characters;
 }
 
-const createHTMLTemplate = (item) => {
+//template for displaying 
+const createHTMLTemplate = (character) => {
   return `
   <li class="character-list">
-  <img src=${item.image} alt=${item.name} class="character-img">
+  <img src=${character.image} alt=${character.name} class="character-img">
   <p class="character-desc">
-    Name : ${item.name} <br/>
-    Gender : ${item.gender} <br/>
-    House : ${item.house}
+    Name : ${character.name} <br/>
+    Gender : ${character.gender} <br/>
+    House : ${character.house}
   </p>
 </li>
   `
 }
 
-const displayCharacters = (items) => {
+//display character in HTML file
+const displayCharacters = (characters) => {
   const characterContainer = document.querySelector('.characters')
-  characterContainer.innerHTML = items.map(item => createHTMLTemplate(item)).join('');
+  characterContainer.innerHTML = characters.map(character => createHTMLTemplate(character)).join('');
 }
 
-getItem()
-.then(items => displayCharacters(items))
-.catch(err=>console.log(err))
+//search the characters
+
+const searchBar = document.querySelector('.js-search');
+const filterCharacters = (characters) => {
+  searchBar.addEventListener('keyup',(e)=>{
+    const searchValue = e.target.value.toUpperCase().trim();
+    const filteredValue = characters.filter(character => {
+      const characterName = character.name.toUpperCase().trim();
+      return characterName.includes(searchValue);
+    })
+    displayCharacters(filteredValue);
+    })
+}
+
+getCharacters()
+.then(
+  characters => {
+  displayCharacters(characters)
+  filterCharacters(characters)
+  })
+.catch(err => console.log(err))
+
+
+
