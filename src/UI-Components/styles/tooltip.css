@@ -1,0 +1,28 @@
+.tooltip {
+  position: relative;
+  border-bottom: 1px dashed #f7365b;
+  color: #f7365b;
+  font-weight: 400;
+}
+
+.tip {
+  position: absolute;
+  left: 50%;
+  top: -30px;
+  transform: translateX(-50%);
+  width: 100px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #f7365b;
+  color: #fff;
+  font-weight: 800;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}
+
+.tip.active {
+  opacity: 1;
+  visibility: visible;
+}
