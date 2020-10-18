@@ -6,7 +6,7 @@
   position: relative;
   padding: 5px 10px;
   background-color: #ebf5fc;
-  box-shadow: -6px -6px 20px rgba(255, 255, 255, 0.5), 6px 6px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.5), 3px 3px 5px rgba(0, 0, 0, 0.05);
   cursor: pointer;
 }
 
