@@ -1,7 +1,9 @@
+import './styles/tabs.css'
+
 class Tabs {
   constructor(container){
     this.container = container;
-    this.tabs = container.querySelectorAll('.tab-title');
+    this.tabs = container.querySelectorAll('.title-list');
   }
   init(){
     this.tabs.forEach(tab=>{
