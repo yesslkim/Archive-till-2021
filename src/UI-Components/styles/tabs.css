@@ -1,0 +1,36 @@
+.tab-title > li {
+  display: inline-block;
+}
+
+.title-list {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ebf5fc;
+  box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.5), 3px 3px 5px rgba(0, 0, 0, 0.05);
+}
+
+.title-list.active {
+  box-shadow: inset -6px -6px 5px rgba(255, 255, 255, 0.5), inset 6px 6px 5px rgba(0, 0, 0, 0.05);
+}
+
+.tab-body li {
+  position: relative;
+}
+
+.content {
+  display: none;
+  position: absolute;
+  width: 60%;
+  padding: 10px;
+  box-shadow: inset -6px -6px 5px rgba(255, 255, 255, 0.5), inset 6px 6px 5px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+}
+
+.content.active {
+  display: block;
+  opacity: 1;
+}
+
+.content > p {
+  font-size: 14px;
+}
