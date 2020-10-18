@@ -1,7 +1,7 @@
 .tooltip {
   position: relative;
-  border-bottom: 1px dashed #f7365b;
-  color: #f7365b;
+  border-bottom: 1px dashed #206770;
+  color: #206770;
   font-weight: 400;
 }
 
@@ -10,10 +10,10 @@
   left: 50%;
   top: -30px;
   transform: translateX(-50%);
-  width: 100px;
+  width: 150px;
   padding: 5px 10px;
   border-radius: 5px;
-  background-color: #f7365b;
+  background-color: #32a3b1;
   color: #fff;
   font-weight: 800;
   text-align: center;
