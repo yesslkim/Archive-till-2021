@@ -1,9 +1,10 @@
 .dropdown {
-  width: 50%;
+  width: 100%;
 }
 
 .dropdown-title {
   position: relative;
+  max-width: 600px;
   padding: 5px 10px;
   background-color: #ebf5fc;
   box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.5), 3px 3px 5px rgba(0, 0, 0, 0.05);
