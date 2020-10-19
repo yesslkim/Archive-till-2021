@@ -1,5 +1,6 @@
 # My Neumorphism UI Componenents
-![웹사이트사진](./website.JPG)
+![웹사이트사진](./websitepc.JPG)
+
 재사용 할 수 있는 UI 컴포넌트 모음 🎒
 
 ## 프로젝트 소개
@@ -41,6 +42,8 @@
 - [ ] Pagination
 - [ ] Thumnail
 - [ ] Calendar
+- [ ] Profile / Hamburger menu
 
 ## 추가로 해야할 사항
-- [ ] media query for mobile
+- [x] media query for mobile
+![웹사이트사진](./website2.JPG)
