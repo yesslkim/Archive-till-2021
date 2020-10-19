@@ -20,7 +20,8 @@
 .content {
   display: none;
   position: absolute;
-  width: 60%;
+  max-width: 600px;
+  width: 100%;
   padding: 10px;
   box-shadow: inset -6px -6px 5px rgba(255, 255, 255, 0.5), inset 6px 6px 5px rgba(0, 0, 0, 0.05);
   opacity: 0;
