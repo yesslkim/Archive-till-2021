@@ -1,26 +1,43 @@
 // button 
 $('.button-1').click(function(){
-  $('.carousel').removeClass('active1')
-  $('.carousel').removeClass('active2')
-  $('.carousel').addClass('active')
+  $('.carousel').animate({
+    'marginLeft': '0'
+  })
 })
 
 $('.button-2').click(function(){
-  $('.carousel').removeClass('active')
-  $('.carousel').removeClass('active2')
-  $('.carousel').addClass('active1')
+  $('.carousel').animate({
+    'marginLeft': '-800px'
+  })
 })
 
 $('.button-3').click(function(){
-  $('.carousel').removeClass('active')
-  $('.carousel').removeClass('active1')
-  $('.carousel').addClass('active2')
+  $('.carousel').animate({
+    'marginLeft': '-1600px'
+  })
 })
-
 // prev next button 
 
 $('.prev').click(function(){
-  $('.carousel').css({
-    'transform': 'translateX(-800px)'
-  })
+  var CarouselMarginLeft = $('.carousel').css('marginLeft')
+  if(CarouselMarginLeft==='0px'){
+    // $('#carousel').css({marginLeft: '0px'})
+    return
+  }else {
+    $('.carousel').animate(
+      {marginLeft: '+=800px'}
+   ,1000)
+  }
+})
+
+$('.next').click(function(){
+  var CarouselMarginLeft = $('.carousel').css('marginLeft')
+  if(CarouselMarginLeft ==='-1600px'){
+    // $('#carousel').css({marginLeft: '-1600px'})
+    return
+  }else {
+    $('.carousel').animate(
+      {marginLeft: '-=800px'}
+   ,1000)
+  }
 })
