@@ -1,0 +1,22 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  color: white;
+  z-index: 999;
+  transition: background 0.3s ease-out, font-size 0.3s ease-in;
+}
+
+.navbar.active {
+  background-color: yellow;
+  color: black;
+  font-size: 13px;
+}
+
+.main {
+  height: 1400px;
+  padding: 100px;
+  background-color: black;
+  color: #fff;
+}
