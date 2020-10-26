@@ -58,7 +58,22 @@ HTML 및 CSS는 **네이버 블로그**를 통해 기록했습니다.
   - [Event에 대하여](Javascript/the-DOM/4.Event.md)
 - OOP
   - [class](Javascript/OOP/class.md)
+- More JavaScript
+  -  [Call stack and event loop](Javascript/More-JavaScript/call-stack-and-event-loop.md)
+  -  [Hoisting](Javascript/More-JavaScript/Hoisting.md)
+  -  [Shallow copy and Deep copy](Javascript/More-JavaScript/shallow-copy-and-deep-copy.md)
+  -  [This keyword](Javascript/More-JavaScript/this-keyword.md)
+  -  [var, let, const](Javascript/More-JavaScript/var,let,const.md)
 
+## JQuery
+- Basics
+    - Selector
+    - EventListener
+    - Animation
+    - Carousel
+    - Scroll-navbar
+    - Tab-menu
+    - 실습
 ## Small Practices
 
 > 학습한 자료에서 제공되는 문제를 직접 풀면서 기본 개념을 습득하고 있습니다.
@@ -73,7 +88,9 @@ HTML 및 CSS는 **네이버 블로그**를 통해 기록했습니다.
   - [2020.08.21] Daily Practice about Operators, Data types, Assignmet etc
   - [2020.08.22] Daily Practice about String
   - [2020.08.23] Daily Practice about Array
-  - [2020.08.23] Daily Practice about Logical Operator
-  - [2020.09.02] 간단한 팝업창 구현해 보기 - The DOM Event - 열기, 닫기 버튼
-    ![popupv](assets/popup.gif)
-    [관련된 readme 바로가기](small-practices/JavaScript/3.Making-a-pop-up/readme.md)
+  - [2020.08.25] Daily Practice about Logical Operator
+  - [2020.09.02] 간단한 팝업창 구현해 보기 - The DOM Event : 열기, 닫기 버튼
+  - [2020.09.02] 간단한 퀴즈창 만들기 - The DOM Event : form event
+  - [2020.09.09] Daily Practice about Array
+  - [2020.09.28] JSON Placeholder api 활용 및 연습
+  - [2020.10.14] DOM Event - window size관련
