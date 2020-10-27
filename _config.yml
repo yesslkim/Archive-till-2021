@@ -5,19 +5,20 @@ avatar: /logo.png
 email: ngzhio@gmail.com
 
 plugins:
+  - jekyll-remote-theme
   - jekyll-seo-tag
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-paginate
-
+remote_theme: ngzhio/jekyll-theme-hamilton
 paginate: 10
 
 # Uncomment the below line and set the tracking ID for enabling Google Analytics
-# 
-# google_analytics: 
+#
+# google_analytics:
 
 # Uncomment the below lines and set the Disqus shortname for enabling Disqus
-# 
+#
 # disqus:
 
 # Jekyll
