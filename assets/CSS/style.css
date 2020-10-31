@@ -148,14 +148,15 @@
   margin-right: 40px;
 }
 
-/* gallery  */
+/* section: gallery  */
 
 .gallery_section {
   display: flex;
   flex-direction: column;
   width: 80%;
   height: 100vh;
-  margin: 0 auto;
+  margin: 40px auto;
+  padding: 20px 0;
   overflow: hidden;
 }
 
@@ -209,4 +210,43 @@
   100% {
     transform: translate3d(-50%, 0, 0);
   }
+}
+
+/* section: community   */
+
+.community_section {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 100vh;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+
+.community_container {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 50px;
+  height: 80vh;
+}
+
+.community_img {
+  width: 50%;
+  margin-right: 20px;
+}
+
+.community_img > img {
+  width: 100%;
+}
+
+.community_desc {
+  max-width: 500px;
+}
+
+.community_desc > p {
+  margin-bottom: 40px;
+}
+
+.community_desc > a.detail_link {
+  font-size: 15px;
 }
