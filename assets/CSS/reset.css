@@ -1,3 +1,4 @@
+/* reset css */
 * {
   margin: 0;
   box-sizing: border-box;
@@ -77,4 +78,12 @@ input {
 
 .logo {
   font-family: 'Playfair Display', serif;
+}
+
+/* common animation  */
+@keyframes slideDown {
+  100% {
+    transform: translateY(-50px);
+    opacity: 1;
+  }
 }
