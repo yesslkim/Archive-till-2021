@@ -274,6 +274,7 @@
 .newsletter_img {
   min-width: 400px;
   width: 50%;
+  margin-right: 40px;
 }
 
 .newsletter_img > img {
