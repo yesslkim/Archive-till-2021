@@ -349,3 +349,11 @@
   width: auto;
   opacity: 1;
 }
+
+/* footer  */
+
+.footer > p {
+  padding: 20px 0;
+  text-align: center;
+  color: #474747;
+}
