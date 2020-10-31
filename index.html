@@ -152,6 +152,40 @@
         <a href="#">게시판 바로가기</a>
       </div>
     </section>
+    <section id="newsletter" class="newsletter_section">
+      <h2>
+        SUBSCRIBE<br />
+        MONET GARDEN
+      </h2>
+
+      <form action="#" method="POST" class="newsletter_form">
+        <label for="newsletter_email">이메일 주소</label>
+        <input type="email" id="newsletter_email" name="newsletter_email" required>
+        <label for="newsletter_username">이름</label>
+        <input type="text" id="newsletter_username" name="newsletter_username" required>
+        <div>
+          <label>관심분야를 지정해시면 해당 토픽의 글을 보내드립니다.</label>
+          <input type="checkbox" name="topic_all" id="topic_all" checked>
+          <label for="topic_all">전체 받기</label>
+
+          <input type="checkbox" name="topic_artist" id="topic_artist">
+          <label for="topic_artist">화가 모네에 대한 정보</label>
+
+          <input type="checkbox" name="topic_works" id="topic_works">
+          <label for="topic_works">모네의 작품 정보</label>
+
+          <input type="checkbox" name="topic_community" id="topic_community">
+          <label for="topic_community">커뮤니티 소식</label>
+
+          <input type="checkbox" name="topic_all" id="topic_all">
+          <label for="topic_all">웹사이트 소식</label>
+        </div>
+        <button type="submit" class="submit_btn">
+          구독하기
+        </button>
+      </form>
+
+    </section>
   </main>
   <script src="./assets/JS/index.js"></script>
 </body>
