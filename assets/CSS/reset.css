@@ -101,10 +101,40 @@ input {
   content: '〉';
 }
 
+.community_section,
+.newsletter_section {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 100vh;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+
+.community_container,
+.newsletter_container {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 50px;
+  height: 80vh;
+  color: #474747;
+}
+
+.community_img,
+.newsletter_img {
+  min-width: 400px;
+  width: 50%;
+}
+
+.community_img > img,
+.newsletter_img > img {
+  width: 100%;
+}
+
 /* common animation  */
 @keyframes slideDown {
   100% {
-    transform: translateY(-50px);
+    transform: translateY(0);
     opacity: 1;
   }
 }
