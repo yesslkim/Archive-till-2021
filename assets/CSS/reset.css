@@ -80,6 +80,27 @@ input {
   font-family: 'Playfair Display', serif;
 }
 
+/* common style  */
+.detail_link {
+  display: block;
+  padding: 5px 10px;
+  margin-right: 10px;
+  color: #474747;
+  font-size: 12px;
+}
+
+.detail_link:hover,
+.detail_link:hover::after {
+  font-weight: 800;
+}
+
+.detail_link::after {
+  display: inline-block;
+  padding-left: 8px;
+  font-size: 10px;
+  content: '〉';
+}
+
 /* common animation  */
 @keyframes slideDown {
   100% {
