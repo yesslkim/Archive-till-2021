@@ -60,3 +60,21 @@ input[type='checkbox']:checked + label::before {
 body {
   overflow-x: hidden;
 }
+
+/* font  */
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body,
+button,
+input {
+  font-family: 'GmarketSansMedium', sans-serif;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+}
