@@ -1,0 +1,214 @@
+{
+  "arts": [
+    {
+      "id": 1,
+      "title": "Argenteuil, The Seine",
+      "year": 1872,
+      "image": "./assets/images/arts1.jpg",
+      "description": "The Seine at Argenteuil is an 1873 oil painting by Claude Monet, one of a series of paintings the artist made of the area. The painting is held in a private collection."
+    },
+    {
+      "id": 2,
+      "title": "Barcos rojos, Argenteuil",
+      "year": 1875,
+      "image": "./assets/images/arts2.jpg",
+      "description": "Reproduction in oil on canvas of Red ships Argenteuil 1875 , by Monet. Argenteuil area of ​​artistic activity, since it is where Monet settled from 1872 to 1876, and there other impressionists such as Renoir and Manet would join him ."
+    },
+    {
+      "id": 3,
+      "title": "Red Boats, Argenteuil",
+      "year": 1875,
+      "image": "./assets/images/arts3.jpg",
+      "description": "For most of the 1870s, Monet lived in Argenteuil, a town on the Seine only seventeen miles from Paris and accessible to the city by train. He often worked outdoors in his own boat and painted this basin several times, though the lower vantage point of this scene suggests a perspective from the shoreline. Eliminating the factory smokestacks that were in fact visible at this location, Monet instead highlights the area’s picturesque and recreational aspects, including the boat rental area on the left."
+    },
+    {
+      "id": 4,
+      "title": "Red Boats, Argenteuil",
+      "year": 1875,
+      "image": "./assets/images/arts4.jpg",
+      "description": "Monet returned to France from London in 1872 and settled in Argenteuil (a town on a picturesque stretch of the Seine, eleven kilometres from central Paris), where he lived until 1876. His contemporaries Pierre-Auguste Renoir, Édouard Manet and Alfred Sisley joined him and, for a time, Argenteuil became a hub of artistic activity. It was during this time that Monet created some of his most characteristic paintings."
+    },
+    {
+      "id": 5,
+      "title": "Arm of the Seine near Vetheuil",
+      "year": 1878,
+      "image": "./assets/images/arts5.jpg",
+      "description": "Arm of the Seine near Vetheuil in 1878"
+    },
+    {
+      "id": 6,
+      "title": "At Les Petit-Dalles",
+      "year": 1884,
+      "image": "./assets/images/arts7.jpg",
+      "description": "'At Les Petit-Dalles' was created in 1884 by Claude Monet in Impressionism style."
+    },
+    {
+      "id": 7,
+      "title": "monet cap d antibes",
+      "year": 1888,
+      "image": "./assets/images/arts8.jpg",
+      "description": "Cap d'Antibes, Mistral is one of three paintings of these very same trees that Monet made during his four-month sojourn in Antibes, from January through May"
+    },
+    {
+      "id": 8,
+      "title": "At Cap d'Antibes, Mistral Wind",
+      "year": 1888,
+      "image": "./assets/images/arts9.jpg",
+      "description": "'At Cap d'Antibes, Mistral Wind' was created in 1888 by Claude Monet in Impressionism style."
+    },
+    {
+      "id": 9,
+      "title": "Bank of the Seine",
+      "year": 1868,
+      "image": "./assets/images/arts10.jpg",
+      "description": "Painted in 1868 and given the full title On the Bank of the Seine, Bennecourt, Claude Monet painted this piece whilst on holiday with his future wife Camille"
+    },
+    {
+      "id": 10,
+      "title": "Cliff near Dieppe in the Morning",
+      "year": 1897,
+      "image": "./assets/images/arts11.jpg",
+      "description": "Impressionism art work by Claude Monet"
+    },
+    {
+      "id": 11,
+      "title": "Autumn Effect at Argenteuil",
+      "year": 1873,
+      "image": "./assets/images/arts12.jpg",
+      "description": "However, Monet’s focus is less on the modern city than the effects of the seasons, the reflections on the water, and the array of colours in the trees – from orange and pink to purple and green – , all evidence of his careful observation of fleeting moments."
+    },
+    {
+      "id": 12,
+      "title": "Banks of the Seine at Jeufosse, Autumn",
+      "year": 1884,
+      "image": "./assets/images/arts13.jpg",
+      "description": "It was a paint in 1884. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+    },
+    {
+      "id": 13,
+      "title": "Banks of the Seine at Lavacourt",
+      "year": 1878,
+      "image": "./assets/images/arts14.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+    },
+    {
+      "id": 14,
+      "title": "Bathers at La Grenouillere",
+      "year": 1869,
+      "image": "./assets/images/arts15.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+    },
+    {
+      "id": 15,
+      "title": "Cliff near Dieppe in the Morning",
+      "year": 1897,
+      "image": "./assets/images/arts16.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+    },
+    {
+      "id": 16,
+      "title": "lorem ipsum dolar sit amet",
+      "year": 1899,
+      "image": "./assets/images/arts18.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+    },
+    {
+      "id": 17,
+      "title": "lorem ipsum dolar sit amet",
+      "year": 1899,
+      "image": "./assets/images/arts19.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+    },
+    {
+      "id": 18,
+      "title": "lorem ipsum dolar sit amet",
+      "year": 1899,
+      "image": "./assets/images/arts20.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+    },
+    {
+      "id": 19,
+      "title": "lorem ipsum dolar sit amet",
+      "year": 1899,
+      "image": "./assets/images/arts21.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+    },
+    {
+      "id": 20,
+      "title": "lorem ipsum dolar sit amet",
+      "year": 1899,
+      "image": "./assets/images/arts22.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+    },
+    {
+      "id": 21,
+      "title": "lorem ipsum dolar sit amet",
+      "year": 1899,
+      "image": "./assets/images/arts23.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+    },
+    {
+      "id": 22,
+      "title": "lorem ipsum dolar sit amet",
+      "year": 1899,
+      "image": "./assets/images/arts24.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+    },
+    {
+      "id": 23,
+      "title": "lorem ipsum dolar sit amet",
+      "year": 1899,
+      "image": "./assets/images/arts27.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+    },
+    {
+      "id": 24,
+      "title": "lorem ipsum dolar sit amet",
+      "year": 1899,
+      "image": "./assets/images/arts28.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+    },
+    {
+      "id": 25,
+      "title": "lorem ipsum dolar sit amet",
+      "year": 1899,
+      "image": "./assets/images/arts29.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+    },
+    {
+      "id": 26,
+      "title": "lorem ipsum dolar sit amet",
+      "year": 1899,
+      "image": "./assets/images/arts31.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+    },
+    {
+      "id": 27,
+      "title": "lorem ipsum dolar sit amet",
+      "year": 1899,
+      "image": "./assets/images/arts32.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+    },
+    {
+      "id": 28,
+      "title": "lorem ipsum dolar sit amet",
+      "year": 1899,
+      "image": "./assets/images/arts33.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+    },
+    {
+      "id": 29,
+      "title": "lorem ipsum dolar sit amet",
+      "year": 1899,
+      "image": "./assets/images/arts34.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+    },
+    {
+      "id": 30,
+      "title": "lorem ipsum dolar sit amet",
+      "year": 1899,
+      "image": "./assets/images/arts35.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+    }
+  ]
+}
