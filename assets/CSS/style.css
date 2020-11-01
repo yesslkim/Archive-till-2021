@@ -15,6 +15,8 @@ body {
   -webkit-box-shadow: 22px 22px 39px #c7c7c7, -22px -22px 39px #ffffff;
   box-shadow: 22px 22px 39px #c7c7c7, -22px -22px 39px #ffffff;
   opacity: 0;
+  -webkit-transition: opacity 0.4s linear;
+  -o-transition: opacity 0.4s linear;
   transition: opacity 0.4s linear;
 }
 
@@ -453,6 +455,7 @@ body {
   }
   /* section: about  */
   .about_section {
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     height: auto;
     padding: 40px 0;
@@ -487,6 +490,8 @@ body {
   /* header  */
   .header {
     position: relative;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 
@@ -508,6 +513,7 @@ body {
 
   .community_container,
   .newsletter_container {
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     height: auto;
   }
