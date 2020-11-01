@@ -185,8 +185,8 @@
   flex-direction: column;
   width: 80%;
   height: 100vh;
-  margin: 40px auto;
   padding: 20px 0;
+  margin: 40px auto;
   overflow: hidden;
 }
 
@@ -393,4 +393,48 @@
   padding: 20px 0;
   text-align: center;
   color: #474747;
+}
+
+/* media query  */
+
+@media screen and (max-width: 1024px) {
+  /* common  */
+  .hidden-t {
+    display: none;
+  }
+
+  /* header  */
+  .logo {
+    font-size: 200px;
+  }
+
+  .gnb {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+
+  .gnb_btn {
+    display: block;
+  }
+
+  .gnb_list {
+    display: none;
+    position: absolute;
+    top: 90px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s linear;
+  }
+
+  .gnb_list > li {
+    display: block;
+  }
+
+  .gnb_list a,
+  .gnb_list button {
+    padding: 5px;
+    font-size: 16px;
+  }
 }
