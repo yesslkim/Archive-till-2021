@@ -21,7 +21,7 @@ gnbButton.addEventListener('click', () => {
 //fetching art data 
 
 const renderArts = async () => {
-  let uri = 'http://localhost:5000/arts';
+  let uri = 'https://my-json-server.typicode.com/yesslkim/monet-garden-api/arts';
   const res = await fetch(uri);
   const arts = await res.json();
   
