@@ -1,4 +1,4 @@
-{
+﻿{
   "arts": [
     {
       "id": 1,
@@ -19,14 +19,14 @@
       "title": "Red Boats, Argenteuil",
       "year": 1875,
       "image": "./assets/images/arts3.jpg",
-      "description": "For most of the 1870s, Monet lived in Argenteuil, a town on the Seine only seventeen miles from Paris and accessible to the city by train. He often worked outdoors in his own boat and painted this basin several times, though the lower vantage point of this scene suggests a perspective from the shoreline. Eliminating the factory smokestacks that were in fact visible at this location, Monet instead highlights the area’s picturesque and recreational aspects, including the boat rental area on the left."
+      "description": "For most of the 1870s, Monet lived in Argenteuil, a town on the Seine only seventeen miles from Paris and accessible to the city by train."
     },
     {
       "id": 4,
       "title": "Red Boats, Argenteuil",
       "year": 1875,
       "image": "./assets/images/arts4.jpg",
-      "description": "Monet returned to France from London in 1872 and settled in Argenteuil (a town on a picturesque stretch of the Seine, eleven kilometres from central Paris), where he lived until 1876. His contemporaries Pierre-Auguste Renoir, Édouard Manet and Alfred Sisley joined him and, for a time, Argenteuil became a hub of artistic activity. It was during this time that Monet created some of his most characteristic paintings."
+      "description": "Monet returned to France from London in 1872 and settled in Argenteuil (a town on a picturesque stretch of the Seine, eleven kilometres from central Paris), where he lived until 1876."
     },
     {
       "id": 5,
@@ -131,70 +131,70 @@
       "title": "lorem ipsum dolar sit amet",
       "year": 1899,
       "image": "./assets/images/arts21.jpg",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos"
     },
     {
       "id": 20,
       "title": "lorem ipsum dolar sit amet",
       "year": 1899,
       "image": "./assets/images/arts22.jpg",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos"
     },
     {
       "id": 21,
       "title": "lorem ipsum dolar sit amet",
       "year": 1899,
       "image": "./assets/images/arts23.jpg",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos"
     },
     {
       "id": 22,
       "title": "lorem ipsum dolar sit amet",
       "year": 1899,
       "image": "./assets/images/arts24.jpg",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos"
     },
     {
       "id": 23,
       "title": "lorem ipsum dolar sit amet",
       "year": 1899,
       "image": "./assets/images/arts27.jpg",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos"
     },
     {
       "id": 24,
       "title": "lorem ipsum dolar sit amet",
       "year": 1899,
       "image": "./assets/images/arts28.jpg",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos"
     },
     {
       "id": 25,
       "title": "lorem ipsum dolar sit amet",
       "year": 1899,
       "image": "./assets/images/arts29.jpg",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos"
     },
     {
       "id": 26,
       "title": "lorem ipsum dolar sit amet",
       "year": 1899,
       "image": "./assets/images/arts31.jpg",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos"
     },
     {
       "id": 27,
       "title": "lorem ipsum dolar sit amet",
       "year": 1899,
       "image": "./assets/images/arts32.jpg",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos"
     },
     {
       "id": 28,
       "title": "lorem ipsum dolar sit amet",
       "year": 1899,
       "image": "./assets/images/arts33.jpg",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos, enim, sit eaque rerum nulla nam fuga vero alias minus voluptatum, similique culpa animi iure tenetur distinctio temporibus."
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe libero dignissimos"
     },
     {
       "id": 29,
