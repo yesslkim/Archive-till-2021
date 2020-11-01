@@ -165,13 +165,46 @@
           </button>
         </form>
       </div>
-
-
     </section>
   </main>
   <footer class="footer">
     <p>&copy; copyright 2020 김예슬 All rights reserved</p>
   </footer>
+  <div class="login_wrapper">
+    <div class="login_area">
+      <button type="button" class="ico close_btn"><span class="sr-only">닫기</span></button>
+      <div class="social_media">
+        <ul>
+          <li><a href="#" class="ico_b google"><span class="sr-only">구글</span></a></li>
+          <li><a href="#" class="ico_b facebook"><span class="sr-only">페이스북</span></a></li>
+          <li><a href="#" class="ico_b github"><span class="sr-only">깃허브</span></a></li>
+        </ul>
+      </div>
+      <div class="login_page">
+        <form method="POST" class="login_form">
+          <h2>Monet Garden</h2>
+          <div class="login_info">
+            <div class="login_list">
+              <label for="login_id">이메일</label>
+              <input type="email" placeholder="이메일 주소" name="login_id" id="login_id">
+            </div>
+            <div class="login_list">
+              <label for="login_pwd">비밀번호</label>
+              <input type="password" placeholder="비밀번호" name="login_pwd" id="login_pwd" minlength="8">
+            </div>
+          </div>
+          <div class="login_search">
+            <a href="#">이메일 찾기</a>
+            <a href="#">비밀번호 찾기</a>
+          </div>
+          <button type="submit" class="login_btn">로그인</button>
+        </form>
+        <div class="signup_area">
+          <p>모네가든 계정이 없으세요? <button type="button" class="signup_btn">회원가입</button> </p>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="./assets/JS/index.js"></script>
 </body>
 
