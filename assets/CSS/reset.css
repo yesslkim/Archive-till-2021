@@ -59,6 +59,14 @@ input[type='checkbox']:checked + label::before {
   font-weight: 800;
 }
 
+.ico_b {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
 body {
   overflow-x: hidden;
 }
