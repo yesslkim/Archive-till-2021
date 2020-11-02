@@ -18,6 +18,20 @@ gnbButton.addEventListener('click', () => {
 	gnbList.classList.toggle('active')
 })
 
+//Login modal pop up event
+const loginLink = document.querySelector('.login_link');
+const loginButton = document.querySelector('.login_btn');
+const closeButton = document.querySelector('.close_btn');
+const loginModal = document.querySelector('.login_wrapper');
+
+loginLink.addEventListener('click', ()=>{
+  loginModal.classList.add('active');
+})
+
+closeButton.addEventListener('click', ()=>{
+  loginModal.classList.remove('active');
+})
+
 //fetching art data 
 
 const renderArts = async () => {
