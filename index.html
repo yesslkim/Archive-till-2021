@@ -181,7 +181,7 @@
         </ul>
       </div>
       <div class="login_page">
-        <form method="POST" class="login_form">
+        <form class="login_form">
           <h2>Monet Garden</h2>
           <div class="login_info">
             <div class="login_list">
@@ -197,6 +197,7 @@
             <a href="#">이메일 찾기</a>
             <a href="#">비밀번호 찾기</a>
           </div>
+          <span class="login_error">가입하지 않은 아이디이거나, 잘못된 비밀번호입니다.</span>
           <button type="submit" class="login_btn">로그인</button>
         </form>
         <div class="signup_area">
@@ -205,7 +206,28 @@
       </div>
     </div>
   </div>
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+  <script>
+    // web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDnGOqRUDdgsQaChFx64sXFuUIDgUoxqxk",
+      authDomain: "monet-garden.firebaseapp.com",
+      databaseURL: "https://monet-garden.firebaseio.com",
+      projectId: "monet-garden",
+      storageBucket: "monet-garden.appspot.com",
+      messagingSenderId: "692803663657",
+      appId: "1:692803663657:web:5abd1938cf7ec9b5252938"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.auth();
+    firebase.firestore();
+  </script>
   <script src="./assets/JS/index.js"></script>
+  <script src="./assets/JS/auth.js"></script>
 </body>
 
 </html>
