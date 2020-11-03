@@ -23,6 +23,7 @@ const loginLink = document.querySelector('.login_link');
 const loginButton = document.querySelector('.login_btn');
 const closeButton = document.querySelector('.close_btn');
 const loginModal = document.querySelector('.login_wrapper');
+const logoutLink = document.querySelector('logout_link');  
 
 loginLink.addEventListener('click', ()=>{
   loginModal.classList.add('active');
@@ -31,6 +32,17 @@ loginLink.addEventListener('click', ()=>{
 closeButton.addEventListener('click', ()=>{
   loginModal.classList.remove('active');
 })
+
+logoutLink.addEventListener('click',()=>{
+  auth.signOut().then(function() {
+    logoutLink.textContent = '로그아웃';
+    logoutLink.classList.replace('logout_link','login_link')
+  }).catch(function(error) {
+    // An error happened.
+  });
+})
+
+
 
 //fetching art data 
 
