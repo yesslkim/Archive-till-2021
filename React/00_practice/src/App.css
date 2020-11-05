@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .App {
   font-family: 'Gmarket Sans TTF', sans-serif;
   text-align: center;
@@ -24,6 +29,10 @@
   border-bottom: 2px solid #48ff00;
   color: #48ff00;
   text-align: left;
+}
+
+.blog-list > div {
+  margin-bottom: 10px;
 }
 
 /* .App-logo {
