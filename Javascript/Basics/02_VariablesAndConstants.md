@@ -4,14 +4,9 @@
   - [2020.08.16] - 변수와 상수 기본 개념 정리
 
 ---
-
-## Variables and Constants
-
-storing the information you need
-
 ## Variables (변수)
 
-A "data container" / "data storage"
+>A "data container" / "data storage"
 
 - Variables contain values. They aren't the values themselves.
 - Basic syntax to declare a variable  
@@ -22,35 +17,34 @@ A "data container" / "data storage"
   ```
 - you can reassign it and store a new value like this ex. `userName='kim';`
 
-what is difference between `var` and `let`?
+>What is difference between `var` and `let`?
 
-- hoisiting  
-  because variable declarations are processed before any code is executed, declaring a varaible anywhere in the code is equivalent to declaring it at the top. - this behavior is called "hoisiting"
+1. Hoisiting  
+     because variable declarations are processed before any code is executed, declaring a varaible anywhere in the code is equivalent to declaring it at the top. - this behavior is called "hoisiting"
 
-  ```javascript
-  myAge = 20;
-  var myAge;
+     ```javascript
+     myAge = 20;
+     var myAge;
 
-  // same as
+     // same as
 
-  var myAge;
-  myAge = 20;
-  ```
+     var myAge;
+     myAge = 20;
+     ```
+    However, hoisting no longer works with `let` declaring a variable after you initialize it results in error.
 
-  However, hoisting no longer works with `let` declaring a variable after you initialize it results in error.
-
-- redeclare variables
+2. Redeclare Variables  
   you can redeclare as many times as possible with `var` but with `let` you can't
 
-  ```javascript
-  var myName = "Kim";
-  var myName = "Park"; // it only works with var
+     ```javascript
+     var myName = "Kim";
+     var myName = "Park"; // it only works with var
 
-  let yourName = "kim";
-  yourName = "Park"; // you can update a value like this
-  ```
+     let yourName = "kim";
+     yourName = "Park"; // you can update a value like this
+     ```
 
-Variable Naming
+## Variable Naming
 
 - Allowed
   - camelCase ex. `let userName;`

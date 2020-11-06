@@ -8,17 +8,12 @@
   - [2020.10.13] - default parameters, helper function
 
 ---
-
 ## Definition
-
-Designed to perform a particular task.
+>Designed to perform a particular task.
 
 - the code can be reused (use multiple time)
 - building block (구성요소)
 - function declaration can be hoisted but not the function expression
-
-## Functions vocab in Korean
-
 - Functions - 함수
 - Parameters - 매개변수 : 임의의 데이터 / 매개변수의 기본값 undefined
 - Argument - 인수
@@ -29,43 +24,33 @@ Designed to perform a particular task.
 
 ![function](../img/function.jpg)
 
-1. Define Function - can use parameters(input to the function) and also return values
-2. Call Function - more flexible. Allows interaction to the website. it doesn't execute directly. -> when an event occurs, called from JS code, or automatically.
+1. 함수 구성
+   - Define Function: can use parameters(input to the function) and also return values
+   - Call Function: more flexible. Allows interaction to the website. it doesn't execute directly. -> when an event occurs, called from JS code, or automatically.
 
-```javascript
-function add(num1, num2) {
-  const result = num1 + num2;
-  alert("The result is" + result);
-}
+2. Function 뜯어보기
+   - function = keyword
+   - add = name
+   - num1, num2 = parameters(optional) => to use inside the function body
+   - {} = function body
+   - name(parameter); = function호출
 
-add(1, 2);
-```
+3. Parameters vs Arguments
+   - Parameters: listed inside the parentheses() in the function definition
+   - Arguments: the **values** received by the function when it is invoked
 
-Function 뜯어보기 : Example 참고
+4. Accessing a function without ()
 
-1. function = keyword
-2. add = name
-3. num1, num2 = parameters(optional) => to use inside the function body
-4. {} = function body
-5. name(parameter); = function호출
+   ```javascript
+   function toCelsius(fahrenheit) {
+     return (5/9) * (fahrenheit-32);
+   }
+   document.getElementById("demo").innerHTML = toCelsius; // do not have ()
 
-Parameters vs Arguments
+   //this will return the function object instead of the function result.
+   function toCelsius(fahrenheit) { return (5/9) * (fahrenheit-32);
 
-- Function **parameters** : listed inside the parentheses() in the function definition
-- Function **arguments** : the **values** received by the function when it is invoked
-
-Accessing a function without ()
-
-```javascript
-function toCelsius(fahrenheit) {
-  return (5/9) * (fahrenheit-32);
-}
-document.getElementById("demo").innerHTML = toCelsius; // do not have ()
-
-//this will return the function object instead of the function result.
-function toCelsius(fahrenheit) { return (5/9) * (fahrenheit-32);
-
-```
+   ```
 
 ## Returning Values
 
@@ -85,7 +70,6 @@ function toCelsius(fahrenheit) { return (5/9) * (fahrenheit-32);
     return result;
   }
   ```
-
 ## Default Parameters 
 - Added in ES6, ability to use default parameters.
   ```javascript
@@ -109,11 +93,9 @@ function toCelsius(fahrenheit) { return (5/9) * (fahrenheit-32);
 - function keyword 다음에 바로 매개변수가 오면 익명함수(anonymous function)이다.
 
 ## Arrow Function (화살표 함수)
+- arrow function같은 경우 return이 하나면 return구문과 {}도 생략이 가능하다.
 
 ![function](../img/function3.jpg)
 
-- arrow function같은 경우 return이 하나면 reuturn구문과 {}도 생략이 가능하다.
-
-  ```javascript
-  const calcArea = (radius) => 3.14 * radius ** 2;
-  ```
+## Callback Function (콜백함수)
+>A callback function is a function passed into another function as an argument.

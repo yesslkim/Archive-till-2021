@@ -16,8 +16,8 @@
 
 ## Web Accessibility
 
-- [HTML web accessibility](./Web-Accessibility/[HTML]-web-accessibility.md)
-- [WAI-ARIA web accessibility](./Web-Accessibility/[WAI-ARIA]-web-accessibility.md)
+- [HTML web accessibility](./Web-Accessibility/01_HTMLWebAccessibility.md)
+- [WAI-ARIA web accessibility](./Web-Accessibility/02_WAI-ARIA.md)
 
 ## HTML & CSS
 
@@ -31,37 +31,36 @@ HTML 및 CSS는 **네이버 블로그**를 통해 기록했습니다.
 > 부족한 부분은 MDN 및 ko.javascript.info를 통해 공부하고 있습니다.😊
 
 - Basics
-  - [Code structure](Javascript/Basics/1.Code-structure.md)
-  - [Variables and Constants](Javascript/Basics/2.Variables-and-Constants.md)
-  - [Operators](Javascript/Basics/3.Operators.md)
-  - [Data Types](Javascript/Basics/4.Data-Types.md)
-  - [Number wrapper object](Javascript/Basics/4a.Number-wrapper-object.md)
-  - [String wrapper object](Javascript/Basics/4a.String-wrapper-object.md)
-  - [Math object](Javascript/Basics/10a.Math-Objects.md)
-  - [Function](Javascript/Basics/5.Function.md)
-  - [Function-callback function](Javascript/Basics/5a.Callback-Function.md)
-  - [Array](Javascript/Basics/6.Array.md)
-  - [Array Method](Javascript/Basics/6a.Array-Method-example.md)
-  - [Condition - if, switch](Javascript/Basics/7.Condition-if-switch.md)
-  - [Loops - for, while](Javascript/Basics/8.Loops-for-while.md)
-  - [Object](Javascript/Basics/10.Object.md)
-  - [Call stact and memory heap](Javascript/Basics/9.Call-stack-and-Memory-heap.md)
-  - [AJAX](Javascript/Basics/b11.AJAX.md)
-  - [Local Storage](Javascript/Basics/b12.Local-Storage.md)
-  - [Rest and Spread](Javascript/Basics/b13.Rest-and-Spread.md)
-  - [Sets](Javascript/Basics/b14.Sets.md)
-  - [Symbol](Javascript/Basics/b15.Symbol.md)
+  - [Code structure](Javascript/Basics/01_CodeStructure.md)
+  - [Variables and Constants](Javascript/Basics/02_VariablesAndConstants.md)
+  - [Operators](Javascript/Basics/03_Operators.md)
+  - [Data Types](Javascript/Basics/04_DataTypes.md)
+  - [Number wrapper object](Javascript/Basics/04_WrapperOobject_Num.md)
+  - [String wrapper object](Javascript/Basics/04_WrapperObject_Str.md)
+  - [Math object](Javascript/Basics/10_MathObjects.md)
+  - [Function](Javascript/Basics/05_Function.md)
+  - [Function Convention](Javascript/Basics/05_FunctionConventions.md)
+  - [Array](Javascript/Basics/06_Array.md)
+  - [Array Method](Javascript/Basics/06_ArrayMethodExample.md)
+  - [Condition - if, switch](Javascript/Basics/07_Condition.md)
+  - [Loops - for, while](Javascript/Basics/08_Loop.md)
+  - [Object](Javascript/Basics/10_Object.md)
+  - [Call stact and memory heap](Javascript/Basics/09_CallStackAndMemoryHeap.md)
+  - [AJAX](Javascript/Basics/11_AJAX.md)
+  - [Local Storage](Javascript/Basics/12_LocalStorage.md)
+  - [Rest and Spread](Javascript/Basics/13_Rest-and-Spread.md)
+  - [Sets](Javascript/Basics/14_Sets.md)
+  - [Symbol](Javascript/Basics/15_Symbol.md)
 - The DOM
-  - [What is DOM](Javascript/the-DOM/1.The-DOM-Explanation.md)
-  - [Properties 모음](Javascript/the-DOM/2.Properties.md)
-  - [Methods 모음](Javascript/the-DOM/3.Method.md)
-  - [Event에 대하여](Javascript/the-DOM/4.Event.md)
+  - [What is DOM](Javascript/the-DOM/01_TheDOM.md)
+  - [Properties 모음](Javascript/the-DOM/02_Properties.md)
+  - [Methods 모음](Javascript/the-DOM/03_Method.md)
+  - [Event에 대하여](Javascript/the-DOM/04_Event.md)
 - OOP
-  - [class](Javascript/OOP/class.md)
+  - [class](Javascript/OOP/Class.md)
 - More JavaScript
-  -  [Call stack and event loop](Javascript/More-JavaScript/call-stack-and-event-loop.md)
-  -  [Hoisting](Javascript/More-JavaScript/Hoisting.md)
-  -  [Shallow copy and Deep copy](Javascript/More-JavaScript/shallow-copy-and-deep-copy.md)
+  -  [Call stack and event loop](Javascript/More-JavaScript/CallStackAndEventLoop.md)
+  -  [Shallow copy and Deep copy](Javascript/More-JavaScript/ShallowCopyAndDeepCopy.md)
   -  [This keyword](Javascript/More-JavaScript/this-keyword.md)
   -  [var, let, const](Javascript/More-JavaScript/var,let,const.md)
 
@@ -74,8 +73,8 @@ HTML 및 CSS는 **네이버 블로그**를 통해 기록했습니다.
     - Scroll-navbar
     - Tab-menu
     - 실습
-## Small Practices
 
+## Small Practices
 > 학습한 자료에서 제공되는 문제를 직접 풀면서 기본 개념을 습득하고 있습니다.
 > 학습한 자료를 기반으로 만들어보는 실습 예제를 모아 보았습니다.
 
