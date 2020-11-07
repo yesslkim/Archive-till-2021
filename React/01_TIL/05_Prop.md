@@ -8,11 +8,11 @@
    - 부모 컴포넌트에서 property는 여러개 보낼 수도 있음. 
    - string뿐만 아니라, boolean, array등 다양한 데이터타입 가능.
 
-   ``` javascript 
+   ```javascript 
    import React from "react";
 
    function Food(props){ //(2)
-     return <h1>I like {props.fav}</h1>;
+     return <h1>I like {props.fav}</h1>
    }
 
    function App(){ //(1)
@@ -24,6 +24,8 @@
        </div>
      )
    }
+
+   export default App;
    ```
 
    - (1) fav, keyword가 property이고 kimchi, ['yummy', 'home-made', 'korean']가 value
