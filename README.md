@@ -1,4 +1,4 @@
-# Today I Learned (TIL)
+# 2020 Today I Learned (TIL)
 
 👩‍💻 Today I learned. 그날 배운 것을 기록합니다 ✨
 
@@ -7,12 +7,13 @@
 
 ---
 
-## 작성규칙
-
-- 폴더와 파일명은 영어로 한다.
-- 확장자는 `.md`로 하여 마크다운으로 작성한다.
-- 개념을 기준으로 분류하여 기록한다.  
-  단, 날짜는 문서내에 기록하여 언제 공부하였는지 명시한다.
+## Table of Contents
+1. [Web Accessibility](#web-accessibility)  
+2. [HTML and CSS](#html-&-css)  
+3. [JavaScript](#javascript)  
+4. [React](#react)  
+5. [JQuery](#jquery)  
+6. [Small Practices](#small-practices)  
 
 ## Web Accessibility
 
@@ -63,6 +64,15 @@ HTML 및 CSS는 **네이버 블로그**를 통해 기록했습니다.
   -  [Shallow copy and Deep copy](Javascript/More-JavaScript/ShallowCopyAndDeepCopy.md)
   -  [This keyword](Javascript/More-JavaScript/this-keyword.md)
   -  [var, let, const](Javascript/More-JavaScript/var,let,const.md)
+
+## React
+- Basics
+  - [Basic Setting](./javascript/react/../../React/01_TIL/01_setting.md)
+  - [JSX](./javascript/react/../../React/01_TIL/02_JSX.md)
+  - [State](./javascript/react/../../React/01_TIL/03_Hooks.md)
+  - [Component](./javascript/react/../../React/01_TIL/04_Component.md)
+  - [Prop](./javascript/react/../../React/01_TIL/05_Prop.md)
+  - [Prop in Loop](./javascript/react/../../React/01_TIL/06_Loop.md)
 
 ## JQuery
 - Basics
