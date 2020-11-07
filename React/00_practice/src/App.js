@@ -8,6 +8,7 @@ function App() {
   let [blogTitles, blogEdit] = useState(['가을 노래 추천','인절미 호떡 맛나게 굽는 법', '공부를 열심히 해야하는 3가지 이유']);
   let [likes, likeCount] = useState(0);
   let [modal, setModal] = useState(false);
+  let [titleIndex, setTitleIndex] = useState(0);
 
   function sortBlogTitles(){
     const cloneblogTitles = [...blogTitles];
@@ -34,7 +35,7 @@ function App() {
           return (
             <div className="blog-list">
             <div>
-              <h2> { blogtitle }</h2>
+              <h2 onClick={()=>{setTitleIndex(index)}}> { blogtitle }</h2>
               <span onClick = { likeEach }>좋아요 {likes} </span>
             </div>
             <span>2020년 11월 5일</span>
@@ -42,11 +43,11 @@ function App() {
           )
         })
       }
-
+      
       <button type="button" onClick= { stateModal }> 글 읽기 </button>
       
       {
-        modal === true ?  <Modal blogTitles = { blogTitles }></Modal> : null
+        modal === true ?  <Modal blogTitles = { blogTitles } titleIndex = { titleIndex }></Modal> : null
       }
 
     </div>
@@ -58,7 +59,7 @@ function App() {
 function Modal(props){
   return (
     <div className="modal">
-      <h2>{props.blogTitles[2]}</h2>
+      <h2>{props.blogTitles[props.titleIndex]}</h2>
       <span>날짜</span>
       <p>싱세내용</p>
     </div>
