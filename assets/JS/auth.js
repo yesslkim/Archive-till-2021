@@ -1,7 +1,31 @@
-const auth = firebase.auth();
-const db = firebase.firestore();
-const loginForm = document.querySelector('.login_form');
+// web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDnGOqRUDdgsQaChFx64sXFuUIDgUoxqxk",
+  authDomain: "monet-garden.firebaseapp.com",
+  databaseURL: "https://monet-garden.firebaseio.com",
+  projectId: "monet-garden",
+  storageBucket: "monet-garden.appspot.com",
+  messagingSenderId: "692803663657",
+  appId: "1:692803663657:web:5abd1938cf7ec9b5252938"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.auth();
+firebase.firestore();
 
+const auth = firebase.auth();
+
+// auth status 
+auth.onAuthStateChanged(user=>{
+  if(user){
+    statusUI(user);
+  }else {
+    statusUI();
+  }
+})
+
+//login
+const loginForm = document.querySelector('.login_form');
 loginForm.addEventListener('submit',(e)=>{
   e.preventDefault();
   const email = loginForm.login_id.value;
@@ -15,10 +39,6 @@ loginForm.addEventListener('submit',(e)=>{
     loginForm.reset();
     loginError.classList.remove('active');
 
-    //change login => logout ( going to replace login button into logout button)
-    loginLink.textContent = 'Log Out';
-    loginLink.classList.replace('login_link','logout_link');
-
    }).catch(error=>{
     const errorCode = error.code;
     if(errorCode){
@@ -26,4 +46,10 @@ loginForm.addEventListener('submit',(e)=>{
     }
     console.log(error.message)
   })  
+})
+
+//logout
+logoutMenu.addEventListener('click',(e)=>{
+  e.preventDefault();
+  auth.signOut();
 })
