@@ -34,3 +34,28 @@
    - 함수를 만든다.
    - ++중요 Deep Copy를 한다. (because state data should be immutable data)
    - 변경한 값을 변경함수에 넣어준다. ex. 변경함수(변경한값)
+
+2. useEffect
+   > when the state changed, or state first render it gives extra function. 
+```javascript
+   // 1. Hook 호출
+   import React, { useState, useEffect } from 'react'; 
+
+   function Example() {
+     // 2. useEffect 호출 - state가 처음 렌더링 되었을 때, 두번째 파라미터는 [] empty array이다.
+     useEffect(()=>{console.log('this will work when first render')},[]);
+
+    // 2. useEffect 호출 - state가 변경되었을 때, 즉 arr에 state를 적으면 useEffect는 state를 관찰하게 되는 것이다.
+    useEffect(()=>{console.log('this will work when state updates')},[state])
+
+     return (
+       <div>
+         <p>You clicked {count} times</p>
+         <button onClick={() => setCount(count + 1)}>
+           Click me
+         </button>
+       </div>
+     );
+   }
+   ```
+   - 실제 사용도: 예를 들어서 state가 검색과 관련된 경우. 검색을 할 때마다 연관검색어를 보여주는 기능을 만들 수 있다.
