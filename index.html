@@ -43,13 +43,13 @@
         <li>
           <a href="#newsletter">Newsletter</a>
         </li>
-        <li class="login">
+        <li class="login hidden">
           <button type="button" class="login_link">
             Log in
             <span class="sr-only">로그인, 회원가입</span>
           </button>
         </li>
-        <li class="logout">
+        <li class="logout hidden">
           <button type="button" class="logout_link">
             Log out
           </button>
@@ -215,24 +215,9 @@
   <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
-  <script>
-    // web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyDnGOqRUDdgsQaChFx64sXFuUIDgUoxqxk",
-      authDomain: "monet-garden.firebaseapp.com",
-      databaseURL: "https://monet-garden.firebaseio.com",
-      projectId: "monet-garden",
-      storageBucket: "monet-garden.appspot.com",
-      messagingSenderId: "692803663657",
-      appId: "1:692803663657:web:5abd1938cf7ec9b5252938"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.auth();
-    firebase.firestore();
-  </script>
   <script src="./assets/JS/index.js"></script>
   <script src="./assets/JS/auth.js"></script>
+  <script src="./assets/JS/data.js"></script>
 </body>
 
 </html>
