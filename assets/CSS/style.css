@@ -137,6 +137,11 @@ body {
   opacity: 1;
 }
 
+.gnb_list > .login.hidden,
+.gnb_list > .logout.hidden {
+  display: none;
+}
+
 /* section : about  */
 
 .about_section {
