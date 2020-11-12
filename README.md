@@ -66,6 +66,8 @@ HTML 및 CSS는 **네이버 블로그**를 통해 기록했습니다.
   -  [var, let, const](Javascript/More-JavaScript/var,let,const.md)
 
 ## React
+> 코드에 따라 필요한 설명은 gist에 업데이트하고 있습니다. 상세한 설명이 필요한 경우  마크다운을 활용하여 노트로 적습니다.
+
 - Basics
   - [Basic Setting](./javascript/react/../../React/01_TIL/01_setting.md)
   - [JSX](./javascript/react/../../React/01_TIL/02_JSX.md)
@@ -74,8 +76,13 @@ HTML 및 CSS는 **네이버 블로그**를 통해 기록했습니다.
   - [Prop](./javascript/react/../../React/01_TIL/05_Prop.md)
   - [Prop in Loop](./javascript/react/../../React/01_TIL/06_Loop.md)
 
-- Code Snippet 👻
+- Code Snippet 💖
   - [Using JSX](https://gist.github.com/yesslkim/2abd3f7cb970697547243ddd3b7dee73)
+  - [Components](https://gist.github.com/yesslkim/6ec52910f6745db2ed3aa10f0e297c3a)
+  - [Props](https://gist.github.com/yesslkim/8efae85ee02c5c2c4b774873e674ce93)
+  - [Events](https://gist.github.com/yesslkim/dfc131e48781e2a53cb78a3c99ed8444)
+  - [state](https://gist.github.com/yesslkim/fe2c58a0316bf9ae783c130b99d5d758)
+  - [state - save, reset, and use it in different component](https://gist.github.com/yesslkim/11bcf46ff38a126e1b36502e5c99016f)
 
 ## JQuery
 - Basics
