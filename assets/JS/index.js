@@ -10,7 +10,6 @@ window.addEventListener('scroll',()=>{
 })
 
 //navigation menu event 
-
 const gnbButton = document.querySelector('.gnb_btn');
 
 gnbButton.addEventListener('click', () => {
@@ -18,14 +17,16 @@ gnbButton.addEventListener('click', () => {
 	gnbList.classList.toggle('active')
 })
 
-//Login modal pop up event
-const loginLink = document.querySelector('.login_link');
+
+const loginMenu = document.querySelector('.login_link');
+const logoutMenu = document.querySelector('.logout_link');
+
+//in login modal
+const loginModal = document.querySelector('.login_wrapper');
 const loginButton = document.querySelector('.login_btn');
 const closeButton = document.querySelector('.close_btn');
-const loginModal = document.querySelector('.login_wrapper');
-const logoutLink = document.querySelector('logout_link');  
 
-loginLink.addEventListener('click', ()=>{
+loginMenu.addEventListener('click', ()=>{
   loginModal.classList.add('active');
 })
 
@@ -33,40 +34,12 @@ closeButton.addEventListener('click', ()=>{
   loginModal.classList.remove('active');
 })
 
-
-
-//fetching art data 
-
-const renderArts = async () => {
-  let uri = 'https://my-json-server.typicode.com/yesslkim/monet-garden-api/arts';
-  const res = await fetch(uri);
-  const arts = await res.json();
-  
-  arts.forEach(art => {
-    const li = document.createElement('li');
-    const img = document.createElement('img');
-    if(art.id <= 10){
-      const ul = document.querySelector('.gallery_top');     
-      img.src = art.image;
-      img.alt = art.title;
-      li.append(img);
-      ul.append(li);
-    }else if(art.id <= 20){
-      const ul = document.querySelector('.gallery_middle');
-      img.src = art.image;
-      img.alt = art.title;
-      li.append(img);
-      ul.append(li);
-    }else {
-      const ul = document.querySelector('.gallery_bottom');
-      img.src = art.image;
-      img.alt = art.title;
-      li.append(img);
-      ul.append(li);
-    }
-
-
-  })
+const statusUI = (user)=> {
+  if(user){
+    loginMenu.parentElement.classList.add('hidden');
+    logoutMenu.parentElement.classList.remove('hidden');
+  }else {
+    loginMenu.parentElement.classList.remove('hidden');
+    logoutMenu.parentElement.classList.add('hidden');
+  }
 }
-
-window.addEventListener('DOMContentLoaded', () => renderArts())
