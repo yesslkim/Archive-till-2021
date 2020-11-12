@@ -33,15 +33,6 @@ closeButton.addEventListener('click', ()=>{
   loginModal.classList.remove('active');
 })
 
-logoutLink.addEventListener('click',()=>{
-  auth.signOut().then(function() {
-    logoutLink.textContent = '로그아웃';
-    logoutLink.classList.replace('logout_link','login_link')
-  }).catch(function(error) {
-    // An error happened.
-  });
-})
-
 
 
 //fetching art data 
