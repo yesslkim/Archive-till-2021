@@ -1,27 +1,36 @@
+const socialWallArea = document.querySelector('.socialwall_table tbody');
 const postForm = document.querySelector('.post_form');
 const postModal = document.querySelector('.post_wrapper');
 
 const openPostForm = () => {
-  const writeBtn = document.querySelector('.write_btn');
-  
-  writeBtn.addEventListener('click', ()=>{
-    postForm.classList.add('active');
+  const socialWall = document.querySelector('.socialwall');
+
+  socialWall.addEventListener('click', (e)=>{
+    if(e.target.className === 'write_btn'){
+      postForm.classList.add('active');
+    }
   })
 }
 
-const closePost = () => {
-  const closeBtns = document.querySelectorAll('.close_btn');
+const closePost = (targetUI) => {
 
-  closeBtns.forEach(closeBtn=>{
-    closeBtn.addEventListener('click', ()=>{
-      postForm.classList.remove('active');
-      postModal.classList.remove('active');
-    })
+  targetUI.addEventListener('click',(e)=>{
+    const target = e.target.parentElement;
+
+    if(e.target.className === 'close_btn'){
+      target.classList.remove('active')
+    }
+
   }) 
 }
 
+const displayPostForm = () =>{
+  openPostForm();
+  closePost(postForm);
+}
+
 const socialWallUI = (dataLists) =>{
-  const socialWallArea = document.querySelector('.socialwall_table tbody');
+  socialWallArea.innerHTML = null;
 
   dataLists.forEach((dataList,index)=>{
     const post = dataList.data();
@@ -45,7 +54,8 @@ const createNewPost = () => {
   postForm.addEventListener('submit',(e)=>{
     const user = auth.currentUser;
     const date = new Date().toLocaleDateString();
-   
+    const timestamp = firebase.firestore.FieldValue.serverTimestamp;
+
     e.preventDefault();
     
     db.collection('posts').add({
@@ -53,7 +63,8 @@ const createNewPost = () => {
       content: postForm['post_desc'].value,
       userID: user.email,
       date: date,
-      views: 0
+      views: 0,
+      createdAt: timestamp(),
     }).then(()=>{
       postForm.classList.remove('active');
       postForm.reset();
@@ -66,8 +77,47 @@ const createNewPost = () => {
   })
 }
 
+const openPostModal = () => {
+
+  socialWallArea.addEventListener('click',(e)=>{
+    const postTitle = e.target.parentElement;
+    const targetPostIndex = postTitle.previousElementSibling.textContent;
+
+    if(postTitle.className ==='title'){
+
+      db.collection('posts').get().then(snapshot =>{
+        const posts = snapshot.docs;
+  
+        posts.forEach((post,index)=>{
+          const postIndex = (index + 1).toString();
+
+          if(targetPostIndex === postIndex){
+            const targetPost = post.data()
+            postModal.innerHTML = `
+            <section class="post">
+            <button type="button" class="close_btn">닫기</button>
+            <h3>${targetPost.title}</h3>
+            <p>
+            ${targetPost.content}
+            </p>
+            </section>
+            `
+            postModal.classList.add('active')
+          }
+
+        })
+      }).catch(error=>{
+        console.log(error.message)
+      })
+    }
+  })
+}
+
+
 window.addEventListener('DOMContentLoaded', () => {
-  openPostForm();
-  closePost();
+  // openPostForm();
+  // closePost();
+  displayPostForm();
   createNewPost();
+  openPostModal();
 })
