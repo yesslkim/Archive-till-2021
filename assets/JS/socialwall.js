@@ -31,9 +31,9 @@ const createNewPost = () => {
     const user = auth.currentUser;
     const date = new Date().toLocaleDateString();
     const timestamp = firebase.firestore.FieldValue.serverTimestamp;
-
+   
     e.preventDefault();
-    
+
     db.collection('posts').add({
       title: postForm['post_title'].value,
       content: postForm['post_desc'].value,
@@ -147,7 +147,7 @@ const deletePost = () => {
   postModal.addEventListener('click',(e)=>{
 
     if(e.target.className === 'delete_btn'){
-      db.collection('posts').get().then(snapshot =>{
+      db.collection('posts').orderBy('createdAt').get().then(snapshot =>{
         const posts = snapshot.docs;
         const targetPostIndex = [...(postModal.querySelector('span').textContent)][1]
   
