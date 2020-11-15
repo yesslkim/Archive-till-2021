@@ -1,34 +1,9 @@
+//global variables
 const socialWallArea = document.querySelector('.socialwall_table tbody');
 const postForm = document.querySelector('.post_form');
 const postModal = document.querySelector('.post_wrapper');
 
-const openPostForm = () => {
-  const socialWall = document.querySelector('.socialwall');
-
-  socialWall.addEventListener('click', (e)=>{
-    if(e.target.className === 'write_btn'){
-      postForm.classList.add('active');
-    }
-  })
-}
-
-const closePost = (targetUI) => {
-
-  targetUI.addEventListener('click',(e)=>{
-    const target = e.target.parentElement;
-
-    if(e.target.className === 'close_btn'){
-      target.classList.remove('active')
-    }
-
-  }) 
-}
-
-const displayPostForm = () =>{
-  openPostForm();
-  closePost(postForm);
-}
-
+//게시판 목록 UI
 const socialWallUI = (dataLists) =>{
   socialWallArea.innerHTML = null;
 
@@ -48,6 +23,7 @@ const socialWallUI = (dataLists) =>{
   })
 }
 
+//게시판 데이터 보내기 
 const createNewPost = () => {
   const postForm = document.querySelector('.post_form');
 
@@ -77,11 +53,23 @@ const createNewPost = () => {
   })
 }
 
-const openPostModal = () => {
+// 게시글 글쓰기 열기
+const openPostForm = () => {
+  const socialWall = document.querySelector('.socialwall');
 
+  socialWall.addEventListener('click', (e)=>{
+    if(e.target.className === 'write_btn'){
+      postForm.classList.add('active');
+    }
+  })
+}
+
+// 게시글 상세보기
+const openPostModal = () => {
   socialWallArea.addEventListener('click',(e)=>{
     const postTitle = e.target.parentElement;
     const targetPostIndex = postTitle.previousElementSibling.textContent;
+    const targetPostUserID = postTitle.nextElementSibling.textContent;
 
     if(postTitle.className ==='title'){
 
@@ -90,17 +78,26 @@ const openPostModal = () => {
   
         posts.forEach((post,index)=>{
           const postIndex = (index + 1).toString();
+          const targetPost = post.data()
 
-          if(targetPostIndex === postIndex){
-            const targetPost = post.data()
+          if(targetPostIndex === postIndex && targetPostUserID === auth.currentUser.email){
             postModal.innerHTML = `
-            <section class="post">
+            <button type="button" class="close_btn">닫기</button>
+            <button type="button" class="delete_btn">삭제하기</button>
+            <h3>${targetPost.title}</h3>
+            <p>
+            ${targetPost.content}
+            </p>
+            <span>-${postIndex}-</span>
+            `
+            postModal.classList.add('active')
+          }else if (targetPostIndex === postIndex){
+            postModal.innerHTML = `
             <button type="button" class="close_btn">닫기</button>
             <h3>${targetPost.title}</h3>
             <p>
             ${targetPost.content}
             </p>
-            </section>
             `
             postModal.classList.add('active')
           }
@@ -113,11 +110,31 @@ const openPostModal = () => {
   })
 }
 
+// 특정UI 닫기
+const closeUI = (targetUI) => {
+  targetUI.addEventListener('click',(e)=>{
+    const target = e.target.parentElement;
+
+    if(e.target.className === 'close_btn'){
+      target.classList.remove('active')
+    }
+  }) 
+}
+
+const displayPostForm = () => {
+  openPostForm();
+  closeUI(postForm);
+}
+
+const displayPostModal = () => {
+  openPostModal();
+  closeUI(postModal);
+}
+
 
 window.addEventListener('DOMContentLoaded', () => {
-  // openPostForm();
-  // closePost();
   displayPostForm();
+  displayPostModal();
   createNewPost();
-  openPostModal();
+  deletePost();
 })
