@@ -115,7 +115,7 @@ const closeUI = (targetUI) => {
   targetUI.addEventListener('click',(e)=>{
     const target = e.target.parentElement;
 
-    if(e.target.className === 'close_btn'){
+    if(e.target.className === 'close_btn' || e.target.className ==='delete_btn'){
       target.classList.remove('active')
     }
   }) 
@@ -131,6 +131,32 @@ const displayPostModal = () => {
   closeUI(postModal);
 }
 
+const deletePost = () => {
+  postModal.addEventListener('click',(e)=>{
+
+    if(e.target.className === 'delete_btn'){
+      db.collection('posts').get().then(snapshot =>{
+        const posts = snapshot.docs;
+        const targetPostIndex = [...(postModal.querySelector('span').textContent)][1]
+  
+        posts.forEach((post,index)=>{
+          const postIndex = (index + 1).toString();
+          const targetPost = post.id
+
+          if(targetPostIndex === postIndex){
+            closeUI(postModal);
+            db.collection('posts').doc(targetPost).delete().then(()=> {
+              alert('게시글이 삭제되었습니다')
+            }).catch(error=>{
+              console.log(error.message)
+            }) 
+          }
+        })
+      })
+    }
+
+  })
+}
 
 window.addEventListener('DOMContentLoaded', () => {
   displayPostForm();
