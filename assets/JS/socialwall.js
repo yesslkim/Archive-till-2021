@@ -64,6 +64,14 @@ const openPostForm = () => {
   })
 }
 
+//조회수 증가
+const increaseView = (target) => {
+  const currentView = target.data().views
+  db.collection('posts').doc(target.id).update({
+    views: currentView + 1
+  })
+}
+
 // 게시글 상세보기
 const openPostModal = () => {
   socialWallArea.addEventListener('click',(e)=>{
@@ -73,7 +81,7 @@ const openPostModal = () => {
 
     if(postTitle.className ==='title'){
 
-      db.collection('posts').get().then(snapshot =>{
+      db.collection('posts').orderBy('createdAt').get().then(snapshot =>{
         const posts = snapshot.docs;
   
         posts.forEach((post,index)=>{
@@ -90,7 +98,9 @@ const openPostModal = () => {
             </p>
             <span>-${postIndex}-</span>
             `
-            postModal.classList.add('active')
+            postModal.classList.add('active');
+
+            increaseView(post);
           }else if (targetPostIndex === postIndex){
             postModal.innerHTML = `
             <button type="button" class="close_btn">닫기</button>
@@ -98,8 +108,10 @@ const openPostModal = () => {
             <p>
             ${targetPost.content}
             </p>
+            <span>-${postIndex}-</span>
             `
             postModal.classList.add('active')
+            increaseView(post);
           }
 
         })
