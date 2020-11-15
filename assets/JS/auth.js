@@ -6,7 +6,7 @@ const authStateEvent = () => {
   auth.onAuthStateChanged(user=>{
     if(user){
       statusUI(user);
-      db.collection('posts').onSnapshot(snapshot=>{
+      db.collection('posts').orderBy('createdAt').onSnapshot(snapshot=>{
         socialWallUI(snapshot.docs);
       })
     }else {
