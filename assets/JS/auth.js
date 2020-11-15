@@ -11,6 +11,9 @@ const authStateEvent = () => {
       })
     }else {
       statusUI();
+      db.collection('posts').orderBy('createdAt').onSnapshot(snapshot=>{
+        socialWallUI(snapshot.docs);
+      })
     }
   })
 }
