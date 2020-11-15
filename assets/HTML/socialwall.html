@@ -97,6 +97,7 @@
 
     </section>
   </main>
+  <!-- post modal  -->
   <div class="post_wrapper">
     <section class="post">
       <button type="button" class="close_btn">닫기</button>
@@ -109,6 +110,20 @@
       </p>
     </section>
   </div>
+  <!-- post form  -->
+  <form action="POST" class="post_form">
+    <button type="button" class="close_btn">닫기</button>
+    <div class="post_form_list">
+      <label for="post_title">게시글 제목</label>
+      <input type="text" name="post_title" id="post_title">
+    </div>
+    <div class="post_form_list">
+      <label for="post_desc"><span class="sr-only">게시글 내용</span></label>
+      <textarea name="post_desc" id="post_desc"></textarea>
+    </div>
+    <button type="submit">등록하기</button>
+  </form>
+  <!-- login modal  -->
   <div class="login_wrapper">
     <div class="login_area">
       <button type="button" class="ico close_btn"><span class="sr-only">닫기</span></button>
@@ -145,6 +160,7 @@
       </div>
     </div>
   </div>
+
   <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
