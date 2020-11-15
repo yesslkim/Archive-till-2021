@@ -1,5 +1,3 @@
-const db = firebase.firestore();
-
 //fetching art data 
 const renderArts = async () => {
   let uri = 'https://my-json-server.typicode.com/yesslkim/monet-garden-api/arts';
