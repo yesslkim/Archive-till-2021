@@ -5,42 +5,6 @@ body {
 }
 
 /* header  */
-.scrolltop {
-  position: fixed;
-  right: 20px;
-  bottom: 30px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: -o-linear-gradient(305deg, #e6e6e6, #ffffff);
-  background: linear-gradient(145deg, #e6e6e6, #ffffff);
-  -webkit-box-shadow: 22px 22px 39px #c7c7c7, -22px -22px 39px #ffffff;
-  box-shadow: 22px 22px 39px #c7c7c7, -22px -22px 39px #ffffff;
-  opacity: 0;
-  -webkit-transition: opacity 0.4s linear;
-  -o-transition: opacity 0.4s linear;
-  transition: opacity 0.4s linear;
-  z-index: 100;
-}
-
-.scrolltop.active {
-  display: block;
-  opacity: 1;
-}
-
-.scrolltop.ico::before {
-  position: relative;
-  top: 15px;
-  display: block;
-  width: 50px;
-  height: 50px;
-  color: #474747;
-  font-size: 18px;
-  text-align: center;
-  content: '\f077';
-}
-
-/* header  */
 .header {
   display: flex;
   justify-content: space-between;
