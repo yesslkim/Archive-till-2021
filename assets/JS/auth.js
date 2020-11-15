@@ -6,6 +6,9 @@ const authStateEvent = () => {
   auth.onAuthStateChanged(user=>{
     if(user){
       statusUI(user);
+      db.collection('posts').onSnapshot(snapshot=>{
+        socialWallUI(snapshot.docs);
+      })
     }else {
       statusUI();
     }
@@ -43,38 +46,10 @@ const logoutStateEvent = () =>{
   })
 } 
 
-const createNewPost = () => {
-  const postForm = document.querySelector('.post_form');
-
-  postForm.addEventListener('submit',(e)=>{
-    const user = auth.currentUser;
-    const date = new Date().toLocaleDateString();
-   
-    e.preventDefault();
-    
-    db.collection('post').add({
-      title: postForm['post_title'].value,
-      content: postForm['post_desc'].value,
-      userID: user.email,
-      date: date,
-      views: 0
-    }).then(()=>{
-      postForm.classList.remove('active');
-      postForm.reset();
-    }).catch(error=>{
-      console.log(error.message)
-      if(error.message ==='Missing or insufficient permissions.'){
-        alert('로그인 후 글쓰기가 가능합니다.')
-      }
-    }) 
-  })
-}
-
 window.addEventListener('DOMContentLoaded', () => {
   authStateEvent();
   loginStateEvent();
   logoutStateEvent();
-  createNewPost();
 })
 
 
