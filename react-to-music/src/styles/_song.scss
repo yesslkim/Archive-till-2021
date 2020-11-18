@@ -4,4 +4,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  img {
+    width: 40%;
+    border-radius: 50%;
+  }
+  h3 {
+    padding: 20px 0 5px;
+  }
 }
