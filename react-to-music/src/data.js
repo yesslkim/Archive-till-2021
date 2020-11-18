@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 
-const Music =()=> {
-  [
+const music = () => {
+  return[
     {
       name:'Sunrise in Paris',
       artist:'Dan Henig',
@@ -95,4 +95,4 @@ const Music =()=> {
   ]
 }
 
-export default Music;
+export default music;
