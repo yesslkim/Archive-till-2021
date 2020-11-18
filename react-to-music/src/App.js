@@ -9,11 +9,11 @@ import music from './data';
 
 function App() {
   const [songs,setSongs] = useState(music());
-  const [curretSong, setCurrentSong] = useState(songs[0]);
+  const [currentSong, setCurrentSong] = useState(songs[0]);
   return (
     <div className="App">
-      <Song currentSong={curretSong}/>
-      <Player />
+      <Song currentSong={currentSong}/>
+      <Player currentSong={currentSong} />
     </div>
   );
 }
