@@ -1,0 +1,58 @@
+.music-library {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 2px 2px 20px #ddd;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(85, 94, 102, 0.5) transparent;
+  overflow-y: scroll;
+  h2 {
+    margin-bottom: 20px;
+    color: #474747;
+    font-size: 20px;
+  }
+}
+
+.music-library::-webkit-scrollbar {
+  width: 5px;
+}
+
+.music-library::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.music-library::-webkit-scrollbar-thumb {
+  border: transparent;
+  border-radius: 20px;
+  background-color: rgba(85, 94, 102, 0.5);
+}
+
+.library-song {
+  display: flex;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease-in;
+  &:hover {
+    background-color: #d3e6fa;
+  }
+  img {
+    display: block;
+    width: 30%;
+    margin-right: 10px;
+  }
+}
+
+.song-desc {
+  h3 {
+    padding: 10px 0 5px;
+    color: #474747;
+    font-size: 15px;
+  }
+  h4 {
+    color: #474747;
+    font-size: 14px;
+  }
+}
