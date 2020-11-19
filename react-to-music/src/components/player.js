@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faPause, faPlay, faAngleLeft, faAngleRight} from '@fortawesome/free-solid-svg-icons';
 
@@ -32,6 +32,9 @@ const Player = ({currentSong, isPlaying, setIsPlaying, audioRef, songInfo, setSo
   const skipTrackHandler = async(direction) =>{
     const currentIndex = songs.findIndex(song => song.id === currentSong.id);
     let newIndex = currentIndex + direction;
+    if(direction){
+      activeLibraryHandler(songs[(currentIndex+1) % songs.length]);
+    }
     if(newIndex < 0){
       newIndex = songs.length -1
     }else if(newIndex >= songs.length){
@@ -41,9 +44,9 @@ const Player = ({currentSong, isPlaying, setIsPlaying, audioRef, songInfo, setSo
     if(isPlaying) audioRef.current.play();
   }
 
-  useEffect(()=>{
+  const activeLibraryHandler = (prevOrNext) =>{
     const activeStateOfSongs = songs.map(eachSong=> {
-      if(eachSong.id === currentSong.id){
+      if(eachSong.id === prevOrNext.id){
         return {
           ...eachSong,
           active: true,
@@ -56,11 +59,11 @@ const Player = ({currentSong, isPlaying, setIsPlaying, audioRef, songInfo, setSo
       }
     })
     setSongs(activeStateOfSongs);
-  },[currentSong])
+  }
 
   const songEndHandler = async() =>{
     const currentIndex = songs.findIndex(song => song.id === currentSong.id);
-    await setCurrentSong(songs[(currentIndex+1) % songs.length]);
+    await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
     if(isPlaying) audioRef.current.play();
   }
 
