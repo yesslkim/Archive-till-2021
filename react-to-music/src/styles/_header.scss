@@ -1,0 +1,26 @@
+.header {
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  h1 {
+    color: #a9bdd2;
+  }
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    border: 2px solid #a9bdd2;
+    background-color: transparent;
+    color: #a9bdd2;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    transition: background 0.5s ease;
+    cursor: pointer;
+    &:hover {
+      background-color: #a9bdd2;
+      color: #fff;
+    }
+  }
+}
