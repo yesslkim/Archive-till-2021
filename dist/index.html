@@ -28,7 +28,7 @@
       </nav>
     </header>
     <main class="main">
-      <section class="about-section">
+      <section class="about-section active">
         <h2 class="sr-only">김예슬의 프로필 관련 사항</h2>
         <section class="profile">
           <h2 class="sr-only">프로필</h2>
@@ -40,12 +40,14 @@
             공부하고 구현하는 것에는 큰 재미를 느낍니다. 하지만 현재는 더 나아가 이를 통해 <strong>사용자와 소통하는 사람이 되고 싶습니다.</strong>
             섬세한 배려로 사용자에게 긍정적인 경험을 주고 다양한 경험을 통해 성장하는 사람이 되고 싶습니다.
           </p>
-          <h2>More...</h2>
-          <ul class="contacts">
-            <li><a href="#">Github</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Resume </a></li>
-          </ul>
+          <div class="contacts">
+            <h2>More...</h2>
+            <ul>
+              <li><a href="https://github.com/yesslkim">Github</a></li>
+              <li><a href="https://yesslkim.github.io/TIL/">Blog</a></li>
+              <li><a href="#">Resume </a></li>
+            </ul>
+          </div>
         </section>
         <section class="skills">
           <h2 class="sr-only">웹 기술 스택</h2>
@@ -100,9 +102,59 @@
           </ul>
         </section>
       </section>
-      <section class="projects-section active">
+      <section class="projects-section">
         <h2 class="sr-only">김예슬 포트폴리오 프로젝트 모음</h2>
         <ul class="projects">
+          <li>
+            <a href="#" class="icon-normal project-link">
+              <img src="./images/project0title.png" alt="뉴모피즘 스타일 컴포넌트">
+              <p>모듈을 사용한 뉴모피즘 라이브러리 <br />(총 1페이지)</p>
+            </a>
+            <div class="project-description hidden">
+              <button type="button" class="icon-normal close-btn">
+                <span class="sr-only">닫기</span>
+              </button>
+              <div class="title-wrap">
+                <img src="./images/project0.png" alt="뉴모피즘 스타일 컴포넌트">
+                <h3><a href="#">My Neumorphism Library</a></h3>
+              </div>
+              <div class="description-wrap">
+                <h5>기획의도</h5>
+                <p>
+                  재사용 할 수 있는 UI 컴포넌트 제작 및 모듈 활용
+                </p>
+                <h5>느낀점</h5>
+                <p>
+                  처음 HTML, CSS, JS를 배울 때 컴포넌트를 어떻게 효율적으로 분리하고,
+                  관리할 수 있는지에 대한 의문이 있었습니다. 모듈은 그런 의미에서
+                  컴포넌트를 관리하는 측면에서 매력적으로 다가왔습니다. 배운점이 있다면
+                  컴포넌트로 분리하고 재사용할 수 있는 점이 매력적이지만 컴포넌트 설계가
+                  견고하지 않으면 오히려 시간을 낭비할 수도 있다는 생각이 들었습니다.
+                  이 웹사이트는 컴포넌트에 대한 여러가지 생각을 가질 수 있게 해준 웹사이트 입니다.
+                </p>
+                <h5>기술스택</h5>
+                <ul class="project-skills">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Vanilla JavaScript</li>
+                </ul>
+                <h5>페이지 디테일</h5>
+                <ul class="page-details">
+                  <li>
+                    <a href="https://neumorphismlibrary.netlify.app/" class="icon-brand website" title="웹사이트 바로가기">
+                      <span class="sr-only">웹사이트 바로가기</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/yesslkim/My_Neumorphism_Library" class="icon-normal code"
+                      title="코드 바로보기">
+                      <span class="sr-only">코드 바로보기</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
           <li>
             <a href="#" class="icon-normal project-link">
               <img src="./images/project1title.png" alt="데모 쇼핑몰 웹사이트">
@@ -124,8 +176,15 @@
                 </p>
                 <h5>느낀점</h5>
                 <p>
-                  여러 서브페이지를 통해 다양한 UI 컴포넌트 퍼블리싱을 공부할 수 있었고, 공통 모듈을 활용하기 위해서 하나의 방법으로 웹팩을 공부하였습니다.
-
+                  여러 서브페이지를 통해 다양한 UI 컴포넌트 퍼블리싱을 공부할 수 있었습니다.
+                  메인페이지에도 다양한 페이지가 존재하지만 서브페이지에서
+                  로그인, 회원가입등을 퍼블리싱하면서 고려해야할 점이 많다는 것을 느꼈습니다.
+                  한가지 아쉬운 것은 웹팩으로 구성을 하지 않았다는 점입니다. 방대한 프로젝트이니만큼
+                  여러 페이지의 HTML 및 CSS가 나왔는데, 컴포넌트별로 관리했더라면
+                  훨씬 좋은 결과물을 만들 수 있지 않을까란 생각이 들었습니다.
+                  또한, 초반에 깃으로 관리를 하지 않아 코드 관리가 어려웠습니다. 중간에
+                  여러 페이지를 수정하고 다시 작업하는 경우가 있었기 때문에 효율적으로 코드를 관리하기
+                  위해서는 깃으로 관리하는 것이 좋겠다는 생각이 들었습니다.
                   <span>
                     Pages - 메인 / 회원가입 / 로그인 / 멤버쉽 / 이벤트
                   </span>
@@ -139,18 +198,13 @@
                 <h5>페이지 디테일</h5>
                 <ul class="page-details">
                   <li>
-                    <a href="#" class="icon-brand website" title="웹사이트 바로가기">
+                    <a href="https://yesslkim.github.io/Demo-Market/" class="icon-brand website" title="웹사이트 바로가기">
                       <span class="sr-only">웹사이트 바로가기</span>
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="icon-normal code" title="코드 바로보기">
+                    <a href="https://github.com/yesslkim/Demo-Market" class="icon-normal code" title="코드 바로보기">
                       <span class="sr-only">코드 바로보기</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./html/demo.html" class="icon-normal image" title="이미지 상세보기">
-                      <span class="sr-only">이미지 상세보기</span>
                     </a>
                   </li>
                 </ul>
@@ -186,24 +240,19 @@
                 <ul class="project-skills">
                   <li>HTML</li>
                   <li>CSS</li>
-                  <li>JavaScript</li>
+                  <li>Vanilla JavaScript</li>
                   <li>Firebase</li>
                 </ul>
                 <h5>페이지 디테일</h5>
                 <ul class="page-details">
                   <li>
-                    <a href="./html/monet.html" class="icon-brand website" title="웹사이트 바로가기">
+                    <a href="https://monetgarden.netlify.app/" class="icon-brand website" title="웹사이트 바로가기">
                       <span class="sr-only">웹사이트 바로가기</span>
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="icon-normal code" title="코드 바로보기">
+                    <a href="https://github.com/yesslkim/Monet-Garden" class="icon-normal code" title="코드 바로보기">
                       <span class="sr-only">코드 바로보기</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./html/demo.html" class="icon-normal image" title="이미지 상세보기">
-                      <span class="sr-only">이미지 상세보기</span>
                     </a>
                   </li>
                 </ul>
@@ -212,104 +261,51 @@
           </li>
           <li>
             <a href="#" class="icon-normal project-link">
-              <img src="./images/project1title.png" alt="데모 쇼핑몰 웹사이트">
-              <p>여성 쇼핑몰 데모사이트 구현 <br />(총 5페이지)</p>
+              <img src="./images/project3title.png" alt="뮤직플레이어">
+              <p>심플한 뮤직 플레이어 제작 <br /> (총 1페이지)</p>
             </a>
             <div class="project-description hidden">
               <button type="button" class="icon-normal close-btn">
                 <span class="sr-only">닫기</span>
               </button>
               <div class="title-wrap">
-                <img src="./images/project1.png" alt="데모 쇼핑몰 웹사이트">
-                <h3><a href="#">Demo Market</a></h3>
+                <img src="./images/project3.png" alt="데모 쇼핑몰 웹사이트">
+                <h3><a href="#">React to Music</a></h3>
               </div>
               <div class="description-wrap">
                 <h5>기획의도</h5>
                 <p>
-                  다양한 페이지의 퍼블리싱과 인터렉션 구현을 위해 제작.
+                  리액트를 활용한 웹사이트 제작
                 </p>
                 <h5>느낀점</h5>
                 <p>
-                  여러 서브페이지를 통해 다양한 UI 컴포넌트 퍼블리싱을 공부할 수 있었고, 공통 모듈을 활용하기 위해서 하나의 방법으로 웹팩을 공부하였습니다.
-
-                  <span>
-                    Pages - 메인 / 회원가입 / 로그인 / 멤버쉽 / 이벤트
-                  </span>
+                  개인적으로 컴포넌트 별로 관리를 하다보니 코드를 관리하는 측면에서는
+                  훨씬 깔끔하게 코드를 정리할 수 있다는 느낌을 받았지만, 데이터 흐름 측면에서는
+                  공부가 많이 필요하다 느꼈습니다. 컴포넌트간에 공유하는 state가 많아지면서 공통 조상에
+                  state가 끝에는 굉장히 많아졌기 때문입니다. 큰 프로젝트를 하게 된다면 훨씬 관리하기가 어려워 질
+                  것으로 생각되기 때문에 단방향으로 state가 관리 될 수 있는 방향으로 공부를 하는 것이 좋을거 같습니다.
+                </p>
+                <p>
+                  SCSS를 처음 프로젝트에 사용해 보았습니다. 리액트를 공부한지 얼마되지 않았기 때문에
+                  SCSS는 깊게 파고들지 못했습니다. 현재 활용해본것은 nested tag정도입니다. 하지만 partial로 나누어서
+                  관리하는 측면에서 CSS로 바로 작성하는 거 보다 훨씬 효율적이라고 생각했기 때문에 깊게 공부할 예정입니다.
                 </p>
                 <h5>기술스택</h5>
                 <ul class="project-skills">
                   <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JQuery</li>
+                  <li>SCSS</li>
+                  <li>React</li>
                 </ul>
                 <h5>페이지 디테일</h5>
                 <ul class="page-details">
                   <li>
-                    <a href="#" class="icon-brand website" title="웹사이트 바로가기">
+                    <a href="https://react-to-musiccc.netlify.app/" class="icon-brand website" title="웹사이트 바로가기">
                       <span class="sr-only">웹사이트 바로가기</span>
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="icon-normal code" title="코드 바로보기">
+                    <a href="https://github.com/yesslkim/React-to-Music" class="icon-normal code" title="코드 바로보기">
                       <span class="sr-only">코드 바로보기</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./html/demo.html" class="icon-normal image" title="이미지 상세보기">
-                      <span class="sr-only">이미지 상세보기</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li>
-            <a href="#" class="icon-normal project-link">
-              <img src="./images/project1title.png" alt="데모 쇼핑몰 웹사이트">
-              <p>여성 쇼핑몰 데모사이트 구현 <br /> (총 5페이지)</p>
-            </a>
-            <div class="project-description hidden">
-              <button type="button" class="icon-normal close-btn">
-                <span class="sr-only">닫기</span>
-              </button>
-              <div class="title-wrap">
-                <img src="./images/project1.png" alt="데모 쇼핑몰 웹사이트">
-                <h3><a href="#">Demo Market</a></h3>
-              </div>
-              <div class="description-wrap">
-                <h5>기획의도</h5>
-                <p>
-                  다양한 페이지의 퍼블리싱과 인터렉션 구현을 위해 제작.
-                </p>
-                <h5>느낀점</h5>
-                <p>
-                  여러 서브페이지를 통해 다양한 UI 컴포넌트 퍼블리싱을 공부할 수 있었고, 공통 모듈을 활용하기 위해서 하나의 방법으로 웹팩을 공부하였습니다.
-
-                  <span>
-                    Pages - 메인 / 회원가입 / 로그인 / 멤버쉽 / 이벤트
-                  </span>
-                </p>
-                <h5>기술스택</h5>
-                <ul class="project-skills">
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JQuery</li>
-                </ul>
-                <h5>페이지 디테일</h5>
-                <ul class="page-details">
-                  <li>
-                    <a href="#" class="icon-brand website" title="웹사이트 바로가기">
-                      <span class="sr-only">웹사이트 바로가기</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="icon-normal code" title="코드 바로보기">
-                      <span class="sr-only">코드 바로보기</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./html/demo.html" class="icon-normal image" title="이미지 상세보기">
-                      <span class="sr-only">이미지 상세보기</span>
                     </a>
                   </li>
                 </ul>
