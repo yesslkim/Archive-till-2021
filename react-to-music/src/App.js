@@ -22,9 +22,9 @@ function App() {
   const [libraryStatus, setLibraryStatus] = useState(false);
   return (
     <div className="App">
-      <Header libraryStatue={libraryStatus} setLibraryStatus={setLibraryStatus}/>
+      <Header libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus}/>
       <Song currentSong={currentSong}/>
-      <Player isPlaying={isPlaying} setIsPlaying={setIsPlaying} currentSong={currentSong} audioRef={audioRef} songInfo={songInfo} setSongInfo={setSongInfo} />
+      <Player isPlaying={isPlaying} setIsPlaying={setIsPlaying} currentSong={currentSong} audioRef={audioRef} songInfo={songInfo} setSongInfo={setSongInfo} songs={songs} setCurrentSong={setCurrentSong} setSongs={setSongs} />
       <Library songs={songs} setCurrentSong={setCurrentSong} audioRef={audioRef} isPlaying={isPlaying} setSongs={setSongs} libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus}/>
     </div>
   );
