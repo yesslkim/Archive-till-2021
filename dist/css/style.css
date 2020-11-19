@@ -187,3 +187,168 @@ body.lockscroll {
 .skill-list > p {
   font-size: 1.4rem;
 }
+
+/* project section */
+.projects-section {
+  display: none;
+}
+
+.projects-section.active {
+  display: block;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.projects > li {
+  margin-bottom: 30px;
+}
+
+.project-link {
+  position: relative;
+  display: block;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+  overflow: hidden;
+}
+
+.project-link:hover {
+  opacity: 0.8;
+}
+
+.project-link::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  color: #fff;
+  font-size: 5rem;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  content: '\f00e';
+}
+
+.project-link:hover::before {
+  opacity: 1;
+}
+
+.project-link > img {
+  width: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+}
+
+.project-link > p {
+  position: absolute;
+  bottom: -90px;
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  background-color: #fff;
+  text-align: center;
+  transition: bottom 0.5s ease-out;
+}
+
+.project-link:hover > p {
+  bottom: 0;
+}
+
+.project-description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 15px;
+  background-color: var(--color-white);
+  z-index: 100;
+}
+
+.project-description.hidden {
+  display: none;
+}
+
+.project-description > .close-btn {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  padding: 10px;
+  background-color: transparent;
+}
+
+.project-description > .close-btn::before {
+  display: block;
+  font-size: 3rem;
+  content: '\f00d';
+}
+
+.title-wrap {
+  width: 100%;
+}
+
+.title-wrap > img {
+  width: 100%;
+}
+
+.title-wrap > h3 {
+  font-size: 3rem;
+  margin-bottom: 10px 0;
+}
+
+.description-wrap > h5 {
+  display: inline-block;
+  margin-bottom: 8px;
+  background-color: var(--color-accent1);
+  color: var(--color-secondary);
+  font-size: 1.6rem;
+}
+
+.description-wrap > p,
+.description-wrap > ul {
+  margin-bottom: 5px;
+  font-size: 1.4rem;
+}
+
+.description-wrap span {
+  display: block;
+  padding: 5px 0;
+  color: var(--color-accent2);
+  font-size: 1.3rem;
+}
+
+.project-skills,
+.page-details {
+  display: flex;
+}
+
+.project-skills > li {
+  margin-right: 10px;
+  font-size: 1.6rem;
+}
+
+.page-details > li {
+  margin-right: 20px;
+}
+
+.page-details .website::before {
+  display: inline-block;
+  font-size: 2.5rem;
+  content: '\f26b';
+}
+
+.page-details .code::before {
+  display: inline-block;
+  font-size: 2.5rem;
+  content: '\f121';
+}
+
+.page-details .image::before {
+  display: inline-block;
+  font-size: 2.5rem;
+  content: '\f302';
+}
