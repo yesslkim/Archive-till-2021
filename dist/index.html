@@ -4,6 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/style.css">
   <title>김예슬의 포트폴리오</title>
@@ -13,10 +17,7 @@
   <div class="wrap">
     <header class="header">
       <h1 class="title">
-        <div class="title-wrap">
-          <strong>Explore</strong>
-          <a href="#"> &lt;YeSeulKim/&gt;</a>
-        </div>
+        <a href="#"> &lt;Yeseulkim <span>/</span>&gt;</a>
       </h1>
       <nav class="gnb">
         <ul>
@@ -31,7 +32,7 @@
         <h2 class="sr-only">김예슬의 프로필 관련 사항</h2>
         <section class="profile">
           <h2 class="sr-only">프로필</h2>
-          <img src="https://via.placeholder.com/400" alt="김예슬 프로필 사진">
+          <img src="./images/profile.jpg" alt="김예슬 프로필 사진">
           <p>
             안녕하세요, 김예슬입니다.
 
@@ -39,154 +40,301 @@
             공부하고 구현하는 것에는 큰 재미를 느낍니다. 하지만 현재는 더 나아가 이를 통해 <strong>사용자와 소통하는 사람이 되고 싶습니다.</strong>
             섬세한 배려로 사용자에게 긍정적인 경험을 주고 다양한 경험을 통해 성장하는 사람이 되고 싶습니다.
           </p>
+          <h2>More...</h2>
+          <ul class="contacts">
+            <li><a href="#">Github</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Resume </a></li>
+          </ul>
         </section>
         <section class="skills">
           <h2 class="sr-only">웹 기술 스택</h2>
           <ul>
             <li class="skill-list">
               <h3>해당 스킬을 쓰는 것이 익숙해요</h3>
-              <p>
-                W3C 웹 표준 규격에 대한 이해가 있으며, 웹 접근성에 관심이 많아 WAI-ARIA에 대해서도 공부했습니다.
-                또한 다양한 MockAPI와 오픈 API를 활용하여 서버와의 통신 구현을 연습했습니다. 제이쿼리는 국비학원인
-                대우직업능력개발원에서 배웠지만 개인 프로젝트를 할 때는 주로 바닐라 자바스크립트를 사용합니다.
-              </p>
               <ul>
-                <li class="html">HTML</li>
-                <li class="css">CSS</li>
-                <li class="js">JavaScript ES6</li>
-                <li class="jqeury">JQuery</li>
+                <li class="skill html">HTML</li>
+                <li class="skill css">CSS</li>
+                <li class="skill js">JavaScript</li>
+                <li class="skill jquery">JQuery</li>
               </ul>
+              <p>
+                W3C 웹 표준 규격에 대한 이해가 있으며, 웹 접근성에 관심이 많아 관련된 스터디 및 WAI-ARIA에 대해 혼자 공부했습니다. 제이쿼리는 국비학원에서 공부했지만 현재는 프로토타입용으로
+                사용중이며 대부분은 독학으로 공부한 바닐라 자바스크립트를 활용하며 프로젝트를 만들고 있습니다.
+              </p>
             </li>
             <li class="skill-list">
-              <h3>해당 스킬을 쓴 경험은 있지만 익숙하진 않아요.</h3>
-              <p>
-                웹팩과 깃허브를 주로 프로젝트에 사용하려고 노력하고 있지만, 기억이 나지 않는 경우가 많아 아직까지는 공식문서에
-                의존하고 있어요. 하지만 어떻게 사용하는 지는 알고 있습니다. 파이어베이스는 authentication과 firestore을 프로젝트에
-                적용해 보았지만, 많이 사용해보지는 않았습니다.
-              </p>
+              <h3>경험은 있지만 익숙하진 않아요.</h3>
               <ul>
-                <li class="webpack">Webpack</li>
-                <li class="github">Github</li>
-                <li class="firebase">Firebase</li>
+                <li class="skill webpack">Webpack</li>
+                <li class="skill github">Github</li>
+                <li class="skill firebase">Firebase</li>
               </ul>
+              <p>
+                해당 스킬은 프로젝트에서 여러번 사용했지만 기억이 나지 않는 경우가 종종 있어서 공식문서를 통해 작업하는 경우가 많습니다. 파이어베이스는 authentication 및 firestore를
+                활용하여 프로젝트를 적용해보았습니다.
+              </p>
             </li>
             <li class="skill-list">
               <h3>현재 열심히 공부하고 있어요!</h3>
-              <p>
-                새로 공부하고 있는 기술 스택입니다. 현재는 간단한 미니 프로젝트를 만들면서 사용에 익숙해 지려고 노력하고 있습니다.
-              </p>
               <ul>
-                <li class="react">React</li>
-                <li class="redux">Redux</li>
+                <li class="skill react">React</li>
+                <li class="skill scss">SCSS</li>
               </ul>
+              <p>
+                현재 공부하고 있으며 간단한 미니 프로젝트를 만들면서 사용에 익숙해 지려고 노력하고 있습니다.
+              </p>
             </li>
             <li class="skill-list">
               <h3>그외, 이런걸 할 수 있어요!</h3>
+              <ul>
+                <li class="skill photoshop">Photoshop</li>
+                <li class="skill illustration">Illustration</li>
+                <li class="skill slack">Slack</li>
+                <li class="skill figma">Figma</li>
+              </ul>
               <p>
                 개발과 관련된 기술은 아니지만 밀접히 관계되어 있는 기술 리스트입니다 :)
               </p>
-              <ul>
-                <li class="slack">Slack</li>
-                <li class="figma">Figma</li>
-                <li class="photoshop">Photoshop</li>
-                <li class="illustration">Illustration</li>
-              </ul>
             </li>
           </ul>
         </section>
       </section>
-      <section class="projects-section">
+      <section class="projects-section active">
         <h2 class="sr-only">김예슬 포트폴리오 프로젝트 모음</h2>
-        <ul>
+        <ul class="projects">
           <li>
-            <a href="#" class="project-link">
-              <img src="https://via.placeholder.com/1200" alt="">
+            <a href="#" class="icon-normal project-link">
+              <img src="./images/project1title.png" alt="데모 쇼핑몰 웹사이트">
+              <p>여성 쇼핑몰 데모사이트 구현 <br /> (총 5페이지)</p>
             </a>
-            <div class="project-description">
-              <h3>프로젝트제목</h3>
-              <p>
-                기획의도:
-                간단한 느낀점:
-              </p>
-              <ul>
-                <li>기술스택</li>
-                <li>기술스택</li>
-                <li>기술스택</li>
-                <li>기술스택</li>
-              </ul>
+            <div class="project-description hidden">
+              <button type="button" class="icon-normal close-btn">
+                <span class="sr-only">닫기</span>
+              </button>
+              <div class="title-wrap">
+                <img src="./images/project1.png" alt="데모 쇼핑몰 웹사이트">
+                <h3><a href="#">Demo Market</a></h3>
+              </div>
+
+              <div class="description-wrap">
+                <h5>기획의도</h5>
+                <p>
+                  다양한 페이지의 퍼블리싱과 인터렉션 구현을 위해 제작.
+                </p>
+                <h5>느낀점</h5>
+                <p>
+                  여러 서브페이지를 통해 다양한 UI 컴포넌트 퍼블리싱을 공부할 수 있었고, 공통 모듈을 활용하기 위해서 하나의 방법으로 웹팩을 공부하였습니다.
+
+                  <span>
+                    Pages - 메인 / 회원가입 / 로그인 / 멤버쉽 / 이벤트
+                  </span>
+                </p>
+                <h5>기술스택</h5>
+                <ul class="project-skills">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JQuery</li>
+                </ul>
+                <h5>페이지 디테일</h5>
+                <ul class="page-details">
+                  <li>
+                    <a href="#" class="icon-brand website" title="웹사이트 바로가기">
+                      <span class="sr-only">웹사이트 바로가기</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="icon-normal code" title="코드 바로보기">
+                      <span class="sr-only">코드 바로보기</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./html/demo.html" class="icon-normal image" title="이미지 상세보기">
+                      <span class="sr-only">이미지 상세보기</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </li>
           <li>
-            <a href="#" class="project-link">
-              <img src="https://via.placeholder.com/1200" alt="">
+            <a href="#" class="icon-normal project-link">
+              <img src="./images/project2title.png" alt="모네가든">
+              <p>화가 모네의 커뮤니티 웹사이트 구현 <br /> (총 2페이지)</p>
             </a>
-            <div class="project-description">
-              <h3>프로젝트제목</h3>
-              <p>
-                기획의도:
-                간단한 느낀점:
-              </p>
-              <ul>
-                <li>기술스택</li>
-                <li>기술스택</li>
-                <li>기술스택</li>
-                <li>기술스택</li>
-              </ul>
+            <div class="project-description hidden">
+              <button type="button" class="icon-normal close-btn">
+                <span class="sr-only">닫기</span>
+              </button>
+              <div class="title-wrap">
+                <img src="./images/project2.png" alt="모네가든 웹사이트 목업">
+                <h3><a href="#">Monet Garden</a></h3>
+              </div>
+              <div class="description-wrap">
+                <h5>기획의도</h5>
+                <p>
+                  Mock API를 통해 REST API를 활용하는 방법을 공부하기 위해 제작하였습니다.
+                </p>
+                <h5>느낀점</h5>
+                <p>
+                  Mock API를 활용하여 갤러리 이미지를 받아왔지만 다른 기능을 구현하기는 어려워 파이어베이스를 통해 로그인 및 게시판을 구현해보았습니다.
+                  <span>
+                    Pages - 메인 / 로그인 / 커뮤니티게시판
+                  </span>
+                </p>
+                <h5>기술스택</h5>
+                <ul class="project-skills">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>Firebase</li>
+                </ul>
+                <h5>페이지 디테일</h5>
+                <ul class="page-details">
+                  <li>
+                    <a href="./html/monet.html" class="icon-brand website" title="웹사이트 바로가기">
+                      <span class="sr-only">웹사이트 바로가기</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="icon-normal code" title="코드 바로보기">
+                      <span class="sr-only">코드 바로보기</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./html/demo.html" class="icon-normal image" title="이미지 상세보기">
+                      <span class="sr-only">이미지 상세보기</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </li>
           <li>
-            <a href="#" class="project-link">
-              <img src="https://via.placeholder.com/1200" alt="">
+            <a href="#" class="icon-normal project-link">
+              <img src="./images/project1title.png" alt="데모 쇼핑몰 웹사이트">
+              <p>여성 쇼핑몰 데모사이트 구현 <br />(총 5페이지)</p>
             </a>
-            <div class="project-description">
-              <h3>프로젝트제목</h3>
-              <p>
-                기획의도:
-                간단한 느낀점:
-              </p>
-              <ul>
-                <li>기술스택</li>
-                <li>기술스택</li>
-                <li>기술스택</li>
-                <li>기술스택</li>
-              </ul>
+            <div class="project-description hidden">
+              <button type="button" class="icon-normal close-btn">
+                <span class="sr-only">닫기</span>
+              </button>
+              <div class="title-wrap">
+                <img src="./images/project1.png" alt="데모 쇼핑몰 웹사이트">
+                <h3><a href="#">Demo Market</a></h3>
+              </div>
+              <div class="description-wrap">
+                <h5>기획의도</h5>
+                <p>
+                  다양한 페이지의 퍼블리싱과 인터렉션 구현을 위해 제작.
+                </p>
+                <h5>느낀점</h5>
+                <p>
+                  여러 서브페이지를 통해 다양한 UI 컴포넌트 퍼블리싱을 공부할 수 있었고, 공통 모듈을 활용하기 위해서 하나의 방법으로 웹팩을 공부하였습니다.
+
+                  <span>
+                    Pages - 메인 / 회원가입 / 로그인 / 멤버쉽 / 이벤트
+                  </span>
+                </p>
+                <h5>기술스택</h5>
+                <ul class="project-skills">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JQuery</li>
+                </ul>
+                <h5>페이지 디테일</h5>
+                <ul class="page-details">
+                  <li>
+                    <a href="#" class="icon-brand website" title="웹사이트 바로가기">
+                      <span class="sr-only">웹사이트 바로가기</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="icon-normal code" title="코드 바로보기">
+                      <span class="sr-only">코드 바로보기</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./html/demo.html" class="icon-normal image" title="이미지 상세보기">
+                      <span class="sr-only">이미지 상세보기</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </li>
           <li>
-            <a href="#" class="project-link">
-              <img src="https://via.placeholder.com/1200" alt="">
+            <a href="#" class="icon-normal project-link">
+              <img src="./images/project1title.png" alt="데모 쇼핑몰 웹사이트">
+              <p>여성 쇼핑몰 데모사이트 구현 <br /> (총 5페이지)</p>
             </a>
-            <div class="project-description">
-              <h3>프로젝트제목</h3>
-              <p>
-                기획의도:
-                간단한 느낀점:
-              </p>
-              <ul>
-                <li>기술스택</li>
-                <li>기술스택</li>
-                <li>기술스택</li>
-                <li>기술스택</li>
-              </ul>
+            <div class="project-description hidden">
+              <button type="button" class="icon-normal close-btn">
+                <span class="sr-only">닫기</span>
+              </button>
+              <div class="title-wrap">
+                <img src="./images/project1.png" alt="데모 쇼핑몰 웹사이트">
+                <h3><a href="#">Demo Market</a></h3>
+              </div>
+              <div class="description-wrap">
+                <h5>기획의도</h5>
+                <p>
+                  다양한 페이지의 퍼블리싱과 인터렉션 구현을 위해 제작.
+                </p>
+                <h5>느낀점</h5>
+                <p>
+                  여러 서브페이지를 통해 다양한 UI 컴포넌트 퍼블리싱을 공부할 수 있었고, 공통 모듈을 활용하기 위해서 하나의 방법으로 웹팩을 공부하였습니다.
+
+                  <span>
+                    Pages - 메인 / 회원가입 / 로그인 / 멤버쉽 / 이벤트
+                  </span>
+                </p>
+                <h5>기술스택</h5>
+                <ul class="project-skills">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JQuery</li>
+                </ul>
+                <h5>페이지 디테일</h5>
+                <ul class="page-details">
+                  <li>
+                    <a href="#" class="icon-brand website" title="웹사이트 바로가기">
+                      <span class="sr-only">웹사이트 바로가기</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="icon-normal code" title="코드 바로보기">
+                      <span class="sr-only">코드 바로보기</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./html/demo.html" class="icon-normal image" title="이미지 상세보기">
+                      <span class="sr-only">이미지 상세보기</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </li>
         </ul>
       </section>
       <section class="contact-section">
         <h2 class="sr-only">김예슬의 연락처</h2>
-        <a href="#">yskim940914@gmail.com</a>
-        <ul>
-          <li><a href="#"><span class="sr-only">깃허브</span></a></li>
-          <li><a href="#"><span class="sr-only">블로그</span></a></li>
-          <li><a href="#"><span class="sr-only">이력서</span></a></li>
-        </ul>
+        <address class="contact-list">
+          <dl>
+            <dt class="sr-only">Email</dt>
+            <dd><a href="#" class="email">yskim940914@gmail.com</a></dd>
+            <dt class="sr-only">Phone</dt>
+            <dd>010 - 3747 - 7236</dd>
+          </dl>
+        </address>
       </section>
     </main>
     <footer class="footer">
       &copy; 2020 김예슬 all rights reserved.
     </footer>
   </div>
-
+  <script src="../src/index.js"></script>
   <script src="./js/main.js"></script>
 </body>
 
