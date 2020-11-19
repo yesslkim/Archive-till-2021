@@ -1,0 +1,53 @@
+/* MOBILE FIRST : 320px layout */
+body {
+  height: 100%;
+  background: #fff;
+  background: -webkit-linear-gradient(bottom, #fff, #fff26b);
+  background: -moz-linear-gradient(bottom, #fff, #fff26b);
+  background: linear-gradient(to top, #fff, #fff26b);
+  background-repeat: no-repeat;
+}
+
+body.lockscroll {
+  overflow: hidden;
+}
+
+.main {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* STYLING CSS */
+
+/* header */
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 150px;
+}
+
+.header > .title {
+  padding: 20px 0 10px 30px;
+  font-size: 1.7rem;
+}
+
+.title span {
+  font-size: 1.3rem;
+}
+
+.gnb > ul {
+  display: flex;
+}
+
+.gnb li {
+  display: block;
+  width: 33.33%;
+  text-align: center;
+}
+
+.gnb a {
+  display: block;
+  padding: 10px;
+  font-size: 1.7rem;
+}
