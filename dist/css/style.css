@@ -377,3 +377,112 @@ body.lockscroll {
   padding: 40px;
   text-align: center;
 }
+
+/* TABLET */
+@media screen and (min-width: 600px) {
+  .header {
+    height: 250px;
+  }
+
+  .header > .title {
+    padding: 40px;
+    font-size: 2.7rem;
+  }
+
+  .title span {
+    font-size: 2rem;
+  }
+
+  .gnb > ul {
+    display: flex;
+  }
+
+  .gnb a {
+    font-size: 2rem;
+  }
+
+  .about-section p {
+    margin-bottom: 20px;
+  }
+
+  .projects > li {
+    width: 45%;
+  }
+
+  .projects > li:nth-child(2n + 1) {
+    margin-right: 20px;
+  }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1025px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 60px;
+  }
+
+  .header > .title {
+    padding: 0;
+  }
+
+  .gnb li {
+    width: 150px;
+  }
+
+  .about-section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .about-section > .profile,
+  .about-section > .skills {
+    width: 45%;
+  }
+
+  .profile {
+    display: flex;
+    flex-direction: column-reverse;
+    align-self: flex-start;
+  }
+
+  .projects > li {
+    width: 30%;
+    margin: 20px 0 10px 20px;
+  }
+
+  .projects > li:nth-child(2n + 1) {
+    margin-right: 0;
+  }
+
+  .project-description {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .title-wrap {
+    width: 48%;
+  }
+
+  .title-wrap > h3 {
+    font-size: 5rem;
+  }
+
+  .description-wrap {
+    width: 48%;
+  }
+
+  .description-wrap > h5 {
+    font-size: 2rem;
+  }
+
+  .description-wrap > p,
+  .description-wrap > ul {
+    font-size: 1.8rem;
+  }
+
+  .description-wrap span {
+    font-size: 1.6rem;
+  }
+}
