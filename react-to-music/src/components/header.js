@@ -5,7 +5,7 @@ const Header = ({libraryStatus,setLibraryStatus}) =>{
     <header className="header">
       <h1>React to Music</h1>
       <button type="button" onClick={()=>{setLibraryStatus(!libraryStatus)}}>
-        Library
+      {libraryStatus ? 'Close' : 'Library'}
       </button>
     </header>
   )
