@@ -13,6 +13,7 @@
   transform: translateX(-500px);
   transition: all 0.5s ease;
   overflow-y: scroll;
+  z-index: -1;
   h2 {
     padding: 0 20px;
     margin-bottom: 20px;
@@ -24,6 +25,7 @@
 .music-library.open {
   opacity: 1;
   transform: translateX(0);
+  z-index: 5;
 }
 
 .music-library::-webkit-scrollbar {
