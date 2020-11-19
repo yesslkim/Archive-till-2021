@@ -60,3 +60,22 @@
     cursor: pointer;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .player-container {
+    padding: 20px;
+  }
+
+  .time-control {
+    justify-content: center;
+
+    input {
+      max-width: 509px;
+      margin: 0 10px;
+    }
+  }
+
+  .play-control {
+    max-width: 460px;
+  }
+}
