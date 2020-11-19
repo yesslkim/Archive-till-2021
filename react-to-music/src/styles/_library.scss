@@ -3,13 +3,14 @@
   top: 0;
   left: 0;
   height: 100%;
-  padding: 20px;
+  padding: 20px 0;
   background-color: #fff;
   box-shadow: 2px 2px 20px #ddd;
   scrollbar-width: thin;
   scrollbar-color: rgba(85, 94, 102, 0.5) transparent;
   overflow-y: scroll;
   h2 {
+    padding: 0 20px;
     margin-bottom: 20px;
     color: #474747;
     font-size: 20px;
@@ -32,7 +33,7 @@
 
 .library-song {
   display: flex;
-  margin-bottom: 20px;
+  padding: 20px;
   cursor: pointer;
   transition: background 0.3s ease-in;
   &:hover {
@@ -43,6 +44,10 @@
     width: 30%;
     margin-right: 10px;
   }
+}
+
+.selected {
+  background-color: #a9bdd2;
 }
 
 .song-desc {
