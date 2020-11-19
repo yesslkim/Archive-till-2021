@@ -1,5 +1,4 @@
 .music-library {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -10,6 +9,7 @@
   box-shadow: 2px 2px 20px #ddd;
   scrollbar-width: thin;
   scrollbar-color: rgba(85, 94, 102, 0.5) transparent;
+  transform: translateX(-500px);
   transition: all 0.5s ease;
   overflow-y: scroll;
   h2 {
@@ -18,6 +18,11 @@
     color: #474747;
     font-size: 20px;
   }
+}
+
+.music-library.open {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .music-library::-webkit-scrollbar {
@@ -49,10 +54,6 @@
   }
 }
 
-.selected {
-  background-color: #a9bdd2;
-}
-
 .song-desc {
   h3 {
     padding: 10px 0 5px;
@@ -63,4 +64,8 @@
     color: #474747;
     font-size: 14px;
   }
+}
+
+.selected {
+  background-color: #a9bdd2;
 }
