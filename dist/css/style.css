@@ -352,3 +352,28 @@ body.lockscroll {
   font-size: 2.5rem;
   content: '\f302';
 }
+
+/*contact section */
+.contact-section {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  margin-bottom: 60px;
+}
+
+.contact-section.active {
+  display: flex;
+}
+
+.contact-list dd {
+  font-size: 2rem;
+  text-align: center;
+}
+
+/*footer */
+.footer {
+  padding: 40px;
+  text-align: center;
+}
