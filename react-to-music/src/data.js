@@ -5,7 +5,7 @@ const music = () => {
     {
       name:'Sunrise in Paris',
       artist:'Dan Henig',
-      cover:'https://images.unsplash.com/photo-1509460256263-94d60ef7f280?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+      cover:'https://images.unsplash.com/photo-1522224964017-9bfe9999fa8d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
       id: uuidv4(),
       active: true,
       colors: ['#542d15','#353821'],
@@ -41,7 +41,7 @@ const music = () => {
     {
       name:'Hot Hop Rok',
       artist:'Steve Adams',
-      cover:'https://images.unsplash.com/photo-1588260411006-a2605a79d788?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+      cover:'https://images.unsplash.com/photo-1574758505490-717eb3ad97f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
       id: uuidv4(),
       active: false,
       colors: ['#ec9d9a','#01474f'],
@@ -59,7 +59,7 @@ const music = () => {
     {
       name:'Three Wise People',
       artist:"E's Jammy Jams",
-      cover:'https://images.unsplash.com/photo-1468022536934-b938a806e490?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+      cover:'https://images.unsplash.com/photo-1584470457230-0fc019eb4ff6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
       id: uuidv4(),
       active: false,
       colors: ['#fb9a50','#dfcac6'],
@@ -77,7 +77,7 @@ const music = () => {
     {
       name:"Kate's Waltz",
       artist:'Bad Snacks',
-      cover:'https://images.unsplash.com/photo-1598456448049-1c68e921e8ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+      cover:'https://images.unsplash.com/photo-1561999641-128973db33d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
       id: uuidv4(),
       active: false,
       colors: ['#e2e2e2','#2a2a2a'],
