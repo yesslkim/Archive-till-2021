@@ -1,0 +1,31 @@
+/*common css for js */
+
+.hideScroll {
+	overflow: hidden;
+}
+
+
+/*animation for js */
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	
+	to {
+		opacity: 1;
+		display: block;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	
+	to {
+		opacity: 0;
+		z-index: -100;
+	}
+}
+

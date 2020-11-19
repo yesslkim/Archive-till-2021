@@ -1,0 +1,96 @@
+/*reset */
+*{
+	margin: 0;
+	box-sizing: border-box;
+}
+
+ul {
+	padding-left: 0;
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+button {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+address,
+dl {
+	font-style: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+th,
+td{
+	border: 2px solid #000;
+}
+
+/* common */
+.sr-only {
+	position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    border: 0;
+    clip: rect(0,0,0,0);
+    overflow: hidden;
+}
+
+/* font normal */
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body,
+input,
+button {
+	 font-family: 'NanumSquareRound';
+	color: #282827;
+}
+
+/* font-awesome icon */
+.ico-normal::before,
+.ico-normal::after {
+	display: inline-block;
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+}
+
+.ico-brand::before,
+.ico-brand::after {
+	display: inline-block;
+	font-family: "Font Awesome 5 Brands";
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+}
+
+/*color*/
+
+:root {
+	--primary-color:#ffd489;
+	--secondary-color:#f49b00;
+	--accent-light:#ffe874;
+	--accent-dark: #474747;
+	--white-color: #fff;
+	--lightgrey-color: #ddd;
+}
+
