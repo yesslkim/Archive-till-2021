@@ -58,6 +58,12 @@ const Player = ({currentSong, isPlaying, setIsPlaying, audioRef, songInfo, setSo
     setSongs(activeStateOfSongs);
   },[currentSong])
 
+  const songEndHandler = async() =>{
+    const currentIndex = songs.findIndex(song => song.id === currentSong.id);
+    await setCurrentSong(songs[(currentIndex+1) % songs.length]);
+    if(isPlaying) audioRef.current.play();
+  }
+
   return(
     <div className="player-container">
       <div className="time-control">
@@ -70,7 +76,7 @@ const Player = ({currentSong, isPlaying, setIsPlaying, audioRef, songInfo, setSo
         <FontAwesomeIcon onClick={playSongHandler} className="play" size="2x"  icon={isPlaying? faPause : faPlay}/>
         <FontAwesomeIcon className="next" onClick={()=> skipTrackHandler(1)} size="2x"  icon={faAngleRight}/>
       </div>
-      <audio onTimeUpdate={timeUpdateHandler} onLoadedMetadata={timeUpdateHandler} ref={audioRef} src={currentSong.audio}></audio>
+      <audio onTimeUpdate={timeUpdateHandler} onLoadedMetadata={timeUpdateHandler} ref={audioRef} src={currentSong.audio} onEnded={songEndHandler}></audio>
     </div>
   )
 }
