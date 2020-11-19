@@ -16,30 +16,81 @@ a {
 
 button {
   border: none;
+  cursor: pointer;
 }
 
-/* common  */
+address {
+  font-style: normal;
+}
 
+/* font, color */
 :root {
-  --color-primary: #deedcf;
-  --color-secondary: #ffcbcc;
-  --color-accent1: #b9e6e3;
-  --color-accent2: #e1d0a1;
-  --color-accent3: #ccd3f6;
-  --color-bg1: #3f4849;
-  --color-bg2: #493f46;
-  --color-bg3: #2b3242;
-  --color-bg4: #2d3a40;
-  --color-link-hover: #fff;
+  --color-primary: #0e2741;
+  --color-secondary: #183528;
+  --color-accent1: #fff695;
+  --color-accent2: #00509d;
+  --color-accent3: #fff26b;
+  --color-white: #fff;
+  --color-link-hover: #ffcbcc;
   font-size: 62.5%;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 @font-face {
-  font-family: 'GmarketSansTTFMedium';
-  src: url('../fonts/GmarketSansTTFMedium.ttf') format('truetype');
+  font-family: 'NanumSquareRound';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 body,
 button {
-  font-family: 'GmarketSansTTFMedium';
+  color: var(--color-primary);
+  font-family: 'Poppins', 'NanumSquareRound', 'Sans-serif';
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+/* icon */
+
+.icon-normal::before {
+  display: inline-block;
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-weight: 900;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon-brand::before {
+  display: inline-block;
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon-brand.html::before {
+  content: '\f13b';
+}
+
+.icon-brand.css::before {
+  content: '\f38b';
+}
+
+.icon-brand.js::before {
+  content: '\f3b8';
+}
+
+/* common css */
+.sr-only {
+  width: 1px;
+  height: 1px;
+  clip: (0, 0, 0, 0);
+  margin: -1px;
+  overflow: hidden;
 }
