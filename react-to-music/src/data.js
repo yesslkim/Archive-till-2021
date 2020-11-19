@@ -7,7 +7,7 @@ const music = () => {
       artist:'Dan Henig',
       cover:'https://images.unsplash.com/photo-1509460256263-94d60ef7f280?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
       id: uuidv4(),
-      active: false,
+      active: true,
       colors: ['#542d15','#353821'],
       audio: './assets/music/SunriseinParis-DanHenig.mp3'
     },
