@@ -27,7 +27,7 @@ const music = () => {
       id: uuidv4(),
       active: false,
       colors: ['#3d656a','#8aa0b4'],
-      audio: 'https://redirector.googlevideo.com/videoplayback?expire=1605632778&ei=sgC0X5a5KsiJgQOnqZG4Ag&ip=0.0.0.0&id=3784e086f5ed6603&itag=24&source=yt_reference&requiressl=yes&susc=ytcm&mime=audio/mpeg&vprv=1&prv=1&gir=yes&clen=2651152&dur=165.694&lmt=1597762190684957&cmo=secure_transport=yes&sparams=expire,ei,ip,id,itag,source,requiressl,susc,mime,vprv,prv,gir,clen,dur,lmt&sig=AOq0QJ8wRAIgBG4v6tZjH4QwW3sDx-eFZCmaoNTs1sDD2IjHFd6zizICIEjZWZu-TOuLS-7ZjIM3EtKLUcAsj5O7fTjqCEJlN3pz'
+      audio: './assets/music/TrueArtRealAffectionPart4-NoirEtBlancVie.mp3'
     },
     {
       name:'Eternal Garden',
