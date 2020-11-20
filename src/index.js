@@ -33,7 +33,6 @@ const gnbTabMenu = () => {
 }
 
 const openSubpages = () => {
-	const projectLinks = document.querySelectorAll('.project-link');
 	const projectLists = document.querySelectorAll('.projects li');
 	
 	projectLists.forEach(projectList => {
@@ -54,9 +53,31 @@ const closeSubpages = () =>{
 	})
 }
 
+const openHome = () => {
+	const header = document.querySelector('.header');
+	const title = document.querySelector('.title > a')
+	const sections = Array.from(document.querySelectorAll('.main > section'));
+
+	header.addEventListener('click', (e)=>{
+		e.preventDefault();
+		if(e.target === title){
+			sections
+			.map(section=> {
+				section.classList.remove('active');
+				if(section.className === 'about-section'){
+					section.classList.add('active');
+				}
+			});
+		}
+	})
+
+
+}
+
 
 window.addEventListener('DOMContentLoaded', () => {
 	gnbTabMenu();
 	openSubpages();
 	closeSubpages();
+	openHome();
 })
