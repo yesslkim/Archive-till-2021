@@ -23,6 +23,11 @@ address {
   font-style: normal;
 }
 
+input,
+textarea {
+  border: none;
+}
+
 /* font, color */
 :root {
   --color-primary: #0e2741;
@@ -46,7 +51,9 @@ address {
 }
 
 body,
-button {
+button,
+input,
+textarea {
   color: var(--color-primary);
   font-family: 'Poppins', 'NanumSquareRound', 'Sans-serif';
   font-size: 1.6rem;
@@ -95,6 +102,17 @@ button {
   overflow: hidden;
 }
 
-.desktop-only {
+.tablet-only {
   display: none;
+}
+
+/*emoji */
+.contact-desc > strong::before,
+.profile strong::after {
+  display: inline-block;
+  width: 37px;
+  height: 37px;
+  background: url(../images/emojis.png) no-repeat;
+  background-size: 216px 108px;
+  content: '';
 }
