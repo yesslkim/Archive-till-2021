@@ -113,7 +113,6 @@ const openPostModal = () => {
             postModal.classList.add('active')
             increaseView(post);
           }
-
         })
       }).catch(error=>{
         console.log(error.message)
