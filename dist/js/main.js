@@ -122,7 +122,6 @@ var gnbTabMenu = function gnbTabMenu() {
 };
 
 var openSubpages = function openSubpages() {
-  var projectLinks = document.querySelectorAll('.project-link');
   var projectLists = document.querySelectorAll('.projects li');
   projectLists.forEach(function (projectList) {
     projectList.addEventListener('click', function (e) {
@@ -143,10 +142,30 @@ var closeSubpages = function closeSubpages() {
   });
 };
 
+var openHome = function openHome() {
+  var header = document.querySelector('.header');
+  var title = document.querySelector('.title > a');
+  var sections = Array.from(document.querySelectorAll('.main > section'));
+  header.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    if (e.target === title) {
+      sections.map(function (section) {
+        section.classList.remove('active');
+
+        if (section.className === 'about-section') {
+          section.classList.add('active');
+        }
+      });
+    }
+  });
+};
+
 window.addEventListener('DOMContentLoaded', function () {
   gnbTabMenu();
   openSubpages();
   closeSubpages();
+  openHome();
 });
 
 /***/ })
