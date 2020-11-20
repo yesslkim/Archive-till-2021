@@ -94,3 +94,7 @@ button {
   margin: -1px;
   overflow: hidden;
 }
+
+.desktop-only {
+  display: none;
+}
