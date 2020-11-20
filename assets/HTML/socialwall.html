@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./assets/images/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
     integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
@@ -13,6 +14,15 @@
 </head>
 
 <body>
+<!--  scrolltop button -->
+   <nav>
+    <a href="#home" class="ico scrolltop">
+      <span class="sr-only">맨 위로 가기</span>
+    </a>
+  </nav>
+<!--  //scrolltop button -->
+
+ <!-- header -->
   <header class="header">
     <h1 class="logo">
       <a href="../../index.html">
@@ -51,6 +61,9 @@
       </ul>
     </nav>
   </header>
+   <!-- //header -->
+   
+    <!-- main -->
   <main class="main">
     <section class="socialwall">
       <h2>자유게시판</h2>
@@ -58,7 +71,7 @@
       <table class="socialwall_table">
         <colgroup>
           <col />
-          <col style="width: 50%;" />
+          <col style="width: 40%;" />
           <col />
           <col />
           <col />
@@ -76,13 +89,15 @@
           <!-- socialwall data here  -->
         </tbody>
       </table>
-
     </section>
   </main>
-  <!-- post modal  -->
+   <!-- //main -->
+   
+  <!-- post contents -->
   <div class="post_wrapper">
-
+<!-- fetching social post contents data here -->
   </div>
+  
   <!-- post form  -->
   <form action="POST" class="post_form">
     <button type="button" class="close_btn">닫기</button>
@@ -142,7 +157,7 @@
   <!-- js files -->
   <script src="../JS/firebase.js"></script>
   <script src="../JS/header.js"></script>
-  <script src="../JS/auth.js"></script>
+  <script src="../JS/auth_s.js"></script>
   <script src="../JS/socialwall.js"></script>
 </body>
 
