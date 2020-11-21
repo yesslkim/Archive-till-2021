@@ -29,16 +29,19 @@ const gnbEvent = () => {
 const loginModalEvent = () => {
   const loginModal = document.querySelector('.login_wrapper');
   const loginHelp = document.querySelector('.login_help');
-  const closeButton = document.querySelector('.close_btn');
+  const loginArea = document.querySelector('.login_area');
+  const closeButton = document.querySelector('.login_area > .close_btn');
 
   loginMenu.addEventListener('click', ()=>{
     loginModal.classList.add('active');
     loginHelp.classList.add('active');
   })
-  
-  closeButton.addEventListener('click', ()=>{
-    loginModal.classList.remove('active');
-    loginHelp.classList.remove('active');
+
+  loginArea.addEventListener('click', (e)=>{
+    if(e.target === closeButton){
+      loginModal.classList.remove('active');
+      loginHelp.classList.remove('active');
+    }
   })
 
   loginHelp.addEventListener('click', (e)=>{
