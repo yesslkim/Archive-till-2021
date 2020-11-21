@@ -28,14 +28,23 @@ const gnbEvent = () => {
 //login modal Event
 const loginModalEvent = () => {
   const loginModal = document.querySelector('.login_wrapper');
+  const loginHelp = document.querySelector('.login_help');
   const closeButton = document.querySelector('.close_btn');
 
   loginMenu.addEventListener('click', ()=>{
     loginModal.classList.add('active');
+    loginHelp.classList.add('active');
   })
   
   closeButton.addEventListener('click', ()=>{
     loginModal.classList.remove('active');
+    loginHelp.classList.remove('active');
+  })
+
+  loginHelp.addEventListener('click', (e)=>{
+    if(e.target.tagName === 'BUTTON'){
+      loginHelp.classList.remove('active');
+    }
   })
 }
 
