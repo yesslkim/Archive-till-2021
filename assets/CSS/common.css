@@ -435,11 +435,13 @@ body {
   }
 
   .login_image {
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    width: 100%;
+    min-width: 300px;
     height: 30%;
+    margin: 0 auto;
+  }
+
+  .login_image > img {
+    width: 100%;
   }
 
   .login_page {
@@ -468,6 +470,11 @@ body {
 }
 
 @media screen and (max-width: 430px) {
+  .login_image {
+    min-width: auto;
+    width: 80%;
+  }
+
   /* 푸터  */
   .footer > p {
     font-size: 12px;
