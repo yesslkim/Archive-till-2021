@@ -8,21 +8,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
     integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-  <link rel="stylesheet" href="../CSS/reset.css">
+  <link rel="stylesheet" href="../CSS/common.css">
   <link rel="stylesheet" href="../CSS/socialwall.css">
   <title>모네가든 | 자유게시판</title>
 </head>
 
 <body>
-<!--  scrolltop button -->
-   <nav>
+  <!-- ScrollTop Btn : Start -->
+  <nav>
     <a href="#home" class="ico scrolltop">
       <span class="sr-only">맨 위로 가기</span>
     </a>
   </nav>
-<!--  //scrolltop button -->
-
- <!-- header -->
+  <!-- ScrollTop Btn : End -->
+  <!-- Header : Start -->
   <header class="header">
     <h1 class="logo">
       <a href="../../index.html">
@@ -61,9 +60,8 @@
       </ul>
     </nav>
   </header>
-   <!-- //header -->
-   
-    <!-- main -->
+  <!-- Header : End -->
+  <!-- Main : Start -->
   <main class="main">
     <section class="socialwall">
       <h2>자유게시판</h2>
@@ -91,14 +89,20 @@
       </table>
     </section>
   </main>
-   <!-- //main -->
-   
-  <!-- post contents -->
+  <!-- Main : End -->
+  <!-- Footer : Start  -->
+  <footer class="footer">
+    <p>&copy; copyright 2020 김예슬 All rights reserved</p>
+  </footer>
+  <!-- Footer : End  -->
+
+  <!-- Modal  -->
+  <!-- Socialwall Post Container -->
   <div class="post_wrapper">
-<!-- fetching social post contents data here -->
+    <!-- fetching social post contents data here -->
   </div>
-  
-  <!-- post form  -->
+
+  <!-- Socialwall Post Writing form  -->
   <form action="POST" class="post_form">
     <button type="button" class="close_btn">닫기</button>
     <div class="post_form_list">
@@ -112,16 +116,12 @@
     <button type="submit">등록하기</button>
   </form>
 
-  <!-- login modal  -->
+  <!-- login Form  -->
   <div class="login_wrapper">
     <div class="login_area">
       <button type="button" class="ico close_btn"><span class="sr-only">닫기</span></button>
-      <div class="social_media">
-        <ul>
-          <li><a href="#" class="ico_b google"><span class="sr-only">구글</span></a></li>
-          <li><a href="#" class="ico_b facebook"><span class="sr-only">페이스북</span></a></li>
-          <li><a href="#" class="ico_b github"><span class="sr-only">깃허브</span></a></li>
-        </ul>
+      <div class="login_image">
+        <img src="../images/login.png" alt="">
       </div>
       <div class="login_page">
         <form class="login_form">
@@ -150,6 +150,24 @@
     </div>
   </div>
 
+  <!-- login Info -->
+  <div class="login_help">
+    <button type="button" class="ico"><span class="sr-only">닫기</span></button>
+    <h3>웹사이트 사용방법</h3>
+    <ol>
+      <li>그냥 로그인해본다 => 안내문이 뜹니다</li>
+      <li>
+        아이디, 비밀번호를 입력하고 이용한다
+        <p>
+          아이디 : test@testing.com <br />
+          비밀번호 : qwer1234
+        </p>
+        <strong>
+          로그인을 해야 게시물쓰기가 가능합니다 :)
+        </strong>
+      </li>
+    </ol>
+  </div>
   <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>

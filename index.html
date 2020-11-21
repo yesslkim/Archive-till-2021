@@ -9,17 +9,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
     integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-  <link rel="stylesheet" href="./assets/CSS/reset.css">
+  <link rel="stylesheet" href="./assets/CSS/common.css">
   <link rel="stylesheet" href="./assets/CSS/index.css">
   <title>Monet Garden</title>
 </head>
 
 <body>
+  <!-- ScrollTop Btn : Start  -->
   <nav>
     <a href="#home" class="ico scrolltop">
       <span class="sr-only">맨 위로 가기</span>
     </a>
   </nav>
+  <!-- ScrollTop Btn : End  -->
+  <!-- Header : Start  -->
   <header id="home" class="header">
     <h1 class="logo">
       <img src="./assets/images/logo.png" alt="" class="logo-ico">
@@ -58,9 +61,11 @@
       </ul>
     </nav>
   </header>
+  <!-- Header : End  -->
+  <!-- Main : Start  -->
   <main class="main">
+    <!-- About Section  -->
     <section id="about" class="about_section">
-
       <div class="about_website">
         <img src="./assets/images/monet0.jpg" alt="화가 클라우드 모네">
         <h2>ALL ABOUT MONET GARDEN</h2>
@@ -90,6 +95,7 @@
         </div>
       </div>
     </section>
+    <!-- Gallery Section  -->
     <section id="gallery" class="gallery_section">
       <div class="gallery_header">
         <h2>
@@ -107,6 +113,7 @@
         </ul>
       </div>
     </section>
+    <!-- Community Section  -->
     <section id="community" class="community_section">
       <h2>
         What is <br />
@@ -127,6 +134,7 @@
         </div>
       </div>
     </section>
+    <!-- Newsletter Section  -->
     <section id="newsletter" class="newsletter_section">
       <h2>
         SUBSCRIBE<br />
@@ -173,18 +181,20 @@
       </div>
     </section>
   </main>
+  <!-- Main : End  -->
+  <!-- Footer : Start  -->
   <footer class="footer">
     <p>&copy; copyright 2020 김예슬 All rights reserved</p>
   </footer>
+  <!-- Footer : Start  -->
+
+  <!-- Modal -->
+  <!-- login Form  -->
   <div class="login_wrapper">
     <div class="login_area">
       <button type="button" class="ico close_btn"><span class="sr-only">닫기</span></button>
-      <div class="social_media">
-        <ul>
-          <li><a href="#" class="ico_b google"><span class="sr-only">구글</span></a></li>
-          <li><a href="#" class="ico_b facebook"><span class="sr-only">페이스북</span></a></li>
-          <li><a href="#" class="ico_b github"><span class="sr-only">깃허브</span></a></li>
-        </ul>
+      <div class="login_image">
+        <img src="./assets/images/login.png" alt="">
       </div>
       <div class="login_page">
         <form class="login_form">
@@ -212,6 +222,7 @@
       </div>
     </div>
   </div>
+  <!-- login Info -->
   <div class="login_help">
     <button type="button" class="ico"><span class="sr-only">닫기</span></button>
     <h3>웹사이트 사용방법</h3>
