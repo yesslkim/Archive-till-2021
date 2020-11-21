@@ -81,7 +81,8 @@ td {
 /* font  */
 @font-face {
   font-family: 'GmarketSansMedium';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+    format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -132,7 +133,7 @@ br {
   -ms-flex-direction: column;
   flex-direction: column;
   width: 80%;
-min-height: 700px;
+  min-height: 700px;
   height: 100vh;
   padding: 20px 0;
   margin: 0 auto;
@@ -160,6 +161,34 @@ min-height: 700px;
 .community_img > img,
 .newsletter_img > img {
   width: 100%;
+}
+
+.login_help {
+  display: none;
+  position: absolute;
+  top: 500px;
+  left: 20px;
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 2px 2px 10px #474747, -2px -2px 10px #474747;
+  z-index: 200;
+}
+
+.login_help > button::before {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  content: '\f00d';
+  font-size: 20px;
+}
+
+.login_help.active {
+  display: block;
 }
 
 /* common animation  */
