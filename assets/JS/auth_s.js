@@ -38,6 +38,7 @@ const loginStateEvent = () => {
       loginForm.reset();
       loginError.classList.remove('active');
       loginHelp.classList.remove('active');
+      enableScroll();
      }).catch(error=>{
       const errorCode = error.code;
       if(errorCode){
