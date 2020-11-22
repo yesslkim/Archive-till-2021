@@ -77,6 +77,11 @@ body {
   position: relative;
 }
 
+body.lockscroll {
+  height: 100vh;
+  overflow: hidden;
+}
+
 /* 페이지별 공통 컴포넌트 스타일링  */
 /* 위로가기 버튼 */
 .scrolltop {
