@@ -20,12 +20,12 @@ const loginStateEvent = () => {
     const password = loginForm.login_pwd.value;
     const loginError = document.querySelector('.login_error');
   
-    auth.signInWithEmailAndPassword(email,password).then(cred=>{
+    auth.signInWithEmailAndPassword(email,password).then(()=>{
       loginModal.classList.remove('active');
   
       loginForm.reset();
       loginError.classList.remove('active');
-  
+      loginHelp.classList.remove('active');
      }).catch(error=>{
       const errorCode = error.code;
       if(errorCode){
