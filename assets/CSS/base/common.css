@@ -1,11 +1,369 @@
-/*common css for js */
+/*
+공통레이아웃 : Header , Footer
+공통CSS : Animation, for JS
+*/
+
+/* Header */
+.header {
+	display: flex;
+	flex-direction: column;
+	width: 1050px;
+	margin: 10px auto;
+}
+
+/* header : logo */
+
+.header > .logo {
+	margin-bottom: 30px;
+}
+
+.logo > a {
+	display: block;
+	padding: 50px 0;
+	text-align: center;
+	color: var(--secondary-color);
+}
+
+.logo > a::before {
+	display: block;
+	content: url(../../image/demo-logo.png);
+}
+
+/* header : user-area */
+.user-area {
+	display: inline-block;
+	margin-right: auto;
+	order: -1;
+}
+
+.user-nav > li {
+	display: inline-block;
+}
+
+.user-nav a {
+	display: block;
+	padding: 0 10px;
+	font-size: 12px;
+	text-align: center;
+}
+
+.service-nav {
+	position: relative;
+}
+
+.service-snb {
+	display: none;
+	position: absolute;
+	top: 30px;
+	width: 100px;
+	padding: 5px 0;
+	border: 1px solid #fae9d3;
+	border-radius: 5px;
+	opacity: 0;
+	transition: all .5s ease-out;
+}
+
+.service-snb a {
+	display: block;
+	padding: 3px 0 3px 10px;
+	text-align: left;
+}
+
+.user-nav > li:not(:last-child),
+.gnb > li:not(:last-child) {
+	border-right: 2px solid var(--primary-color);
+}
+
+/* header : gnb */
+.main-gnb {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.gnb-tablet {
+	display: none;
+}
+
+.gnb-tablet::after {
+	display: inline-block;
+	content: '\f0c9';
+	font-size: 30px;
+	color: var(--secondary-color);
+}
+
+.gnb-close {
+	display: none;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 50px;
+	height: 50px;
+}
+
+.gnb-close::after {
+	display: block;
+	content: '\f00d';
+	color: var(--accent-dark);
+	font-size: 50px;
+}
+
+.gnb > li {
+	display: inline-block;
+}
+
+.gnb a {
+	display: block;
+	padding: 3px 50px 0;
+	transition: color .1s linear;
+}
+
+.gnb a:hover,
+.gnb-btn:hover::before {
+	color: var(--secondary-color);
+}
+
+/* header : gnb - 전체보기 */
+.gnb-btn {
+	position: relative;
+}
+
+.gnb-btn::before {
+	position: absolute;
+	top: 5px;
+	left: 10px;
+	display: block;
+	cursor: pointer;
+	content: '\f0c9';
+}
+
+/* header : search bar and cart */
+.search-area {
+	position: relative;
+}
+
+.gnb-search {
+	padding: 6px 10px;
+	border: none;
+	border-radius: 20px;
+	background-color: var(--primary-color);
+}
+
+.search-ico::before {
+	position: absolute;
+	top: 5px;
+	right: 15px;
+	display: block;
+	content: '\f002';
+}
+
+.cart-area {
+	position: relative;
+}
+
+.cart-link::before {
+	display: block;
+	font-size: 20px;
+	content: '\f07a';
+}
+
+.cart-count {
+	position: absolute;
+	right: -10px;
+	top: -10px;
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #ee3939;
+	font-size: 15px;
+	text-align: center;
+	color: var(--white-color);
+}
+
+/* header : snb */
+
+.main-snb {
+	display: none;
+	position: absolute;
+	top: 380px;
+	left: 0;
+	right: 0;
+	background-color: rgba(255, 255, 255, 0.8);
+	z-index: 100;
+}
+
+.snb-wrap {
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 1080px;
+	height: 300px;
+	margin: 0 auto;
+}
+
+.snb-close {
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	padding: 10px;
+}
+
+.snb-close::before {
+	display: block;
+	content: 'X';
+	font-size: 30px;
+}
+
+.snb-nav a {
+	display: block;
+	width: 160px;
+	padding: 15px 0 10px 27px;
+	font-size: 20px;
+}
+
+.snb-nav a:hover {
+	color: var(--secondary-color);
+}
+
+.snb-item {
+	display: none;
+	width: 100%;
+}
+
+.snb-item ul {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 100%;
+}
+
+.snb-item li {
+	width: 20%;
+}
+
+.snb-item img {
+	width: 100%;
+	opacity: 1;
+	transition: opacity .3s ease-in;
+}
+
+.snb-item img:hover {
+	opacity: 0.8;
+}
+
+/* Footer  */
+
+.footer {
+	height: 300px;
+	background-color: var(--primary-color);
+}
+
+/* footer: default layout */
+.footer-wrap {
+	position: relative;
+	width: 1080px;
+	padding: 10px 0;
+	margin: 0 auto;
+}
+
+/* footer: quick links */
+.quick-links {
+	position: absolute;
+	right: 10px;
+	top: 30px;
+	text-align: right;
+}
+
+.quick-links a {
+	display: block;
+	padding: 3px 0;
+	margin-bottom: 3px;
+	font-size: 14px;
+	font-weight: 800;
+	opacity: 0.8;
+}
+
+.quick-links a:hover {
+	text-decoration: underline;
+	opacity: 1;
+}
+
+/* footer : social links */
+.social-links ul {
+	display: flex;
+	padding: 30px 0;
+}
+
+.social-links a {
+	display: block;
+	padding: 5px 10px;
+}
+
+.social-links .facebook::before {
+	display: block;
+	content: '\f082';
+	font-size: 30px;
+	text-align: center;
+}
+
+.social-links .instagram::before {
+	display: block;
+	content: '\e055';
+	font-size: 30px;
+	text-align: center;
+}
+
+.social-links .blog::before {
+	display: block;
+	content: '\f37c';
+	font-size: 30px;
+	text-align: center;
+}
+
+/* footer: address */
+.address > h2 {
+	margin-bottom: 10px;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.company-info {
+	width: 900px;
+	margin-bottom: 30px;
+	font-size: 15px;
+}
+
+.company-info dt,
+.company-info dd {
+	display: inline-block;
+}
+
+.company-info dt {
+	font-weight: 800;
+}
+
+.company-info dt::after {
+	display: inline;
+	content: ' : '
+}
+
+.company-info dd {
+	margin-right: 10px;
+}
+
+.company-copyright {
+	font-size: 15px;
+}
+
+/*Common: CSS for JS */
 
 .hideScroll {
 	overflow: hidden;
 }
 
-
-/*animation for js */
+/*Common: Animation */
 
 @keyframes fadeIn {
 	from {
@@ -28,4 +386,219 @@
 		z-index: -100;
 	}
 }
+
+
+/************************
+	MEDIA QUERY 
+***********************/
+
+@media screen and (max-width: 1100px) {
+	.header {
+		width: 100%;
+		margin: 0;
+		background-color: #fae9d3;
+	}
+
+	/* header : logo */
+	.logo > a {
+		padding: 0;
+	}
+
+	/* header : user-area */
+	.user-area {
+		width: 100%;
+		padding: 10px 0;
+		margin: 0;
+		background-color: var(--primary-color);
+	}
+
+	.main-gnb {
+		padding: 20px 20px;
+		order: -1;
+	}
+
+	.user-nav > li:not(:last-child),
+	.gnb > li:not(:last-child) {
+		border-right: none;
+	}
+
+	/* header : gnb */
+	.gnb-tablet {
+		display: block;
+	}
+
+	.gnb-wrap {
+		position: absolute;
+		top: -40px;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: var(--primary-color);
+		opacity: 0;
+		transform: translateX(-1500px);
+		transition: transform .5s linear;
+		z-index: 9999;
+	}
+
+	.gnb-wrap.active {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	.gnb-close {
+		display: block;
+	}
+
+	.gnb {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100vh;
+	}
+
+	.gnb > li {
+		display: block;
+		margin-bottom: 20px;
+	}
+
+	.gnb a {
+		display: block;
+		padding: 3px 30px 0;
+		transition: color .1s linear;
+		font-size: 80px;
+	}
+
+	.search-area {
+		display: none;
+	}
+
+	/* header : gnb - 전체보기 */
+	.gnb-btn::before {
+		content: '';
+	}
+
+	.main-snb {
+		position: relative;
+		top: -25px;
+		height: 700px;
+		background-color: var(--primary-color);
+		z-index: 9999;
+	}
+
+	/* header : snb */
+	.snb-wrap {
+		width: 95%;
+		border-top: 4px solid rgba(255, 255, 255, 0.5);
+	}
+
+	.snb-close {
+		left: 0;
+	}
+
+	.snb-close::before {
+		font-size: 25px;
+	}
+
+	.snb-nav {
+		width: 20%;
+		margin-right: 10px;
+	}
+
+	.snb-nav a {
+		width: 100%;
+		padding: 15px 0 10px 0;
+		font-size: 18px;
+	}
+
+	.snb-list {
+		width: 70%;
+	}
+
+	.snb-item li {
+		width: 24%;
+	}
+
+	/* footer  */
+	.footer {
+		height: auto
+	}
+
+	/* default layout */
+	.footer-wrap {
+		width: 90%;
+	}
+
+	/* quick links */
+	.quick-links {
+		position: relative;
+		right: 0;
+		top: 0;
+		text-align: left;
+	}
+
+	.quick-links li {
+		display: inline-block;
+		padding: 20px 0;
+	}
+
+	.quick-links a {
+		padding: 0;
+		margin-bottom: 3px;
+	}
+
+	/* footer : social links */
+	.social-links ul {
+		display: flex;
+		padding: 0 0 10px 0;
+	}
+
+	.social-links a {
+		display: block;
+		padding: 5px 10px;
+	}
+
+	/* address */
+	.company-info {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	.company-info dt,
+	.company-info dd {
+		display: inline-block;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.gnb-wrap {
+		transform: translateX(-900px);
+	}
+	
+	.snb-item ul {
+		position: absolute;
+		top: 10px;
+		flex-wrap: wrap;
+	}
+
+	.snb-item li {
+		width: 35%;
+		margin: 0 auto;
+	}
+
+	/*	footer */
+	.quick-links a {
+		font-size: 12px
+	}
+
+	.address address {
+		display: none;
+	}
+
+	.company-copyright {
+		font-size: 13px;
+	}
+}
+
 
