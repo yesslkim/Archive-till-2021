@@ -8,10 +8,13 @@ var validationTexts = {
 	},
 	hide: function (target) {
 		$(target).parent().find('span').hide();
+	},
+	correct: function(target){
+		$(target).parent().find('.correct').show();
 	}
 }
 
-$('.signup-btn').on('click', function () {
+$('.signup-btn').on('click', function (){
 	// RegExp
 	var idCheck = RegExp(/^[a-z0-9_\-]{5,20}$/);
 	var pwdCheck = RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^*()\-_=+\\\|\[\]{};:\'",.<>\/?]).{8,16}$/);
@@ -24,7 +27,7 @@ $('.signup-btn').on('click', function () {
 	var pwdCheckInput = 'input[name="pwd-check"]';
 	var emailInput = 'input[name="signup-email"]';
 	var phoneInput = 'input[name="signup-phone"]';
-
+	var nameInput = 'input[name="signup-name"]';
 	//필수사항 확인
 
 	//아이디 유효성 검사 
@@ -35,44 +38,58 @@ $('.signup-btn').on('click', function () {
 		validationTexts.hide(idInput);
 		validationTexts.error(idInput);
 		$(idInput).val('');
-	}else {
-		return
-	}
-	// 비밀번호
-	if ($(pwdInput).val() == '') {
+	} else if ($(pwdInput).val() == '') {
 		validationTexts.hide(pwdInput);
 		validationTexts.required(pwdInput);
 	} else if (!pwdCheck.test($(pwdInput).val())) {
 		validationTexts.hide(pwdInput);
 		validationTexts.error(pwdInput);
-		$(idInput).val('');
-	}else {
-		return
-	}
-	//비밀번호 확인
-	if ($(pwdInput).val() !== $(pwdCheckInput).val()) {
-		validationTexts.error(pwdCheckInput);
-	}else {
-		return
-	}
-	//이메일
-	if ($(emailInput).val() == '') {
+		$(pwdInput).val('');
+	}else if ($(pwdInput).val() !== $(pwdCheckInput).val()) {
+		validationTexts.error(pwdCheckInput)
+	}else if($(nameInput).val() == ''){
+		validationTexts.required(nameInput);
+	}else if ($(emailInput).val() == '') {
 		validationTexts.hide(emailInput);
 		validationTexts.required(emailInput);
 	} else if (!emailCheck.test($(emailInput).val())) {
 		validationTexts.hide(emailInput);
 		validationTexts.error(emailInput);
 		$(emailInput).val('');
-	}else {
-		return
-	}
-	//전화번호
-	if ($(phoneInput).val() == '') {
+	} else if ($(phoneInput).val() == '') {
 		validationTexts.hide(phoneInput);
 		validationTexts.required(phoneInput);
-	} else {
-		return
+	}else if (!phoneCheck.test($(phoneInput).val())) {
+		validationTexts.hide(phoneInput);
+		validationTexts.error(phoneInput);
+		$(phoneInput).val('');
+	} else if(!$termAll.is(':checked')){
+		alert('약관 전체동의를 해주세요!')
+	}else {
+		alert('가입이 완료되었습니다!');
+		location.href='../../index.html'
 	}
+
+	//유효성 통과시 
+	 if (idCheck.test($(idInput).val())) {
+		validationTexts.hide(idInput);
+		validationTexts.correct(idInput);
+	} 
+	if (pwdCheck.test($(pwdInput).val())) {
+		validationTexts.hide(pwdInput);
+		validationTexts.correct(pwdInput);
+	}
+	if($(nameInput).val() !== ''){
+		validationTexts.hide(nameInput);
+	}
+	if ($(pwdInput).val() == $(pwdCheckInput).val() && $(pwdInput).val() !=='' &&  $(pwdCheckInput).val() !== '') {
+		validationTexts.hide(pwdCheckInput);
+		validationTexts.correct(pwdCheckInput)
+	} 
+	if (emailCheck.test($(emailInput).val())) {
+		validationTexts.hide(emailInput);
+		validationTexts.correct(emailInput);
+	} 
 })
 
 // 전화번호 유효성 검사
@@ -96,6 +113,7 @@ $('.phone-list > .send-btn').click(function () {
 
 $('.validate-question-btn').click(function () {
 	$('.popup-wrap').addClass('active');
+	$('html').offsetTop = window.scrollY;
 	$('body').addClass('hideScroll');
 })
 
