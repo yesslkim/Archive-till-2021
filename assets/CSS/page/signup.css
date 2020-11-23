@@ -139,6 +139,13 @@ input[type='checkbox'].checkbox-input {
 	font-weight: 800;
 }
 
+.signup-list > .correct{
+	display: none;
+	color: #019119;
+	font-size: 12px;
+	font-weight: 800;
+}
+
 .phone-list button.validate-question-btn {
 	display: none;
 	width: auto;
