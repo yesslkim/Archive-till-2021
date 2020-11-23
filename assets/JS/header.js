@@ -9,9 +9,9 @@ const scrollTopEvent = () => {
   window.addEventListener('scroll',()=>{
     const scrollTop = document.querySelector('.scrolltop');
     if(window.pageYOffset>'100'){
-      scrollTop.classList.add('active')
+      scrollTop.classList.add('active');
     }else {
-      scrollTop.classList.remove('active')
+      scrollTop.classList.remove('active');
     }
   })
 }
@@ -22,7 +22,7 @@ const gnbEvent = () => {
 
   gnbButton.addEventListener('click', () => {
     const gnbList = document.querySelector('.gnb_list');
-    gnbList.classList.toggle('active')
+    gnbList.classList.toggle('active');
   })
 }
 
@@ -54,12 +54,12 @@ const loginModalEvent = () => {
 }
 
 function disableScroll() {
-  document.querySelector('body').classList.add('lockscroll')
+  document.querySelector('body').classList.add('lockscroll');
   document.querySelector('html').offsetTop = window.scrollY;
   }
   
 function enableScroll() {
-  document.querySelector('body').classList.remove('lockscroll')
+  document.querySelector('body').classList.remove('lockscroll');
   }
 
 //login/Logout Status UI
@@ -74,7 +74,7 @@ const statusUI = (user)=> {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  scrollTopEvent()
-  gnbEvent()
+  scrollTopEvent();
+  gnbEvent();
   loginModalEvent();
 })
