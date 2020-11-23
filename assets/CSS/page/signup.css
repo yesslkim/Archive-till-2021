@@ -1,12 +1,11 @@
 /* 공통 CSS */
 @import url(../base/base.css);
-@import url(../layout/layout.css);
 @import url(../base/common.css);
 
 
 /*인증번호 팝업창 */
 .popup-wrap {
-	position: absolute;
+	position: fixed;
 	left: 0;
 	right: 0;
 	top: 0;
@@ -15,6 +14,7 @@
 	justify-content: center;
 	align-items: center;
 	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 100;
 }
 
 .popup-wrap.active {
@@ -135,6 +135,13 @@ input[type='checkbox'].checkbox-input {
 .signup-list > .required{
 	display: none;
 	color: #ff0000;
+	font-size: 12px;
+	font-weight: 800;
+}
+
+.signup-list > .correct{
+	display: none;
+	color: #019119;
 	font-size: 12px;
 	font-weight: 800;
 }
