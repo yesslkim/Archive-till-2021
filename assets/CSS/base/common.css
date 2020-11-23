@@ -360,6 +360,7 @@
 /*Common: CSS for JS */
 
 .hideScroll {
+	height: 100vh;
 	overflow: hidden;
 }
 
