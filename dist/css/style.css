@@ -148,77 +148,56 @@ body.lockscroll {
 	margin-right: 10px;
 }
 
-.skill::before {
-	display: block;
-	width: 55px;
-	height: 55px;
-	margin: 5px auto;
-	content: '';
-}
-
 .skill.html::before {
-	background: url(../images/030-html-5.png);
-	background-size: contain;
+	background-position: -140px -5px;
 }
 
 .skill.css::before {
-	background: url(../images/031-css.png);
-	background-size: contain;
+	background-position: -140px -72px;
 }
 
 .skill.js::before {
-	background: url(../images/029-javascript.png);
-	background-size: contain;
+	background-position: -7px -140px;
 }
 
 .skill.jquery::before {
-	background: url(../images/jquery.png);
-	background-size: contain;
+	background-position: -207px -5px;
 }
 
 .skill.webpack::before {
-	background: url(../images/webpack.png);
-	background-size: contain;
+	background-position: -207px -72px;
 }
 
 .skill.github::before {
-	background: url(../images/010-github.png);
-	background-size: contain;
+	background-position: -72px -72px;
 }
 
 .skill.firebase::before {
-	background: url(../images/firebase.png);
-	background-size: contain;
+	background-position: -140px -140px;
 }
 
 .skill.react::before {
-	background: url(../images/006-react.png);
-	background-size: contain;
+	background-position: -5px -72px;
 }
 
 .skill.scss::before {
-	background: url(../images/scss.png);
-	background-size: contain;
+	background-position: -7px -206px;
 }
 
 .skill.slack::before {
-	background: url(../images/slack.png);
-	background-size: contain;
+	background-position: -72px -206px;
 }
 
 .skill.figma::before {
-	background: url(../images/figma.png);
-	background-size: contain;
+	background-position: -72px -140px;
 }
 
 .skill.photoshop::before {
-	background: url(../images/001-photoshop.png);
-	background-size: contain;
+	background-position: -5px -5px;
 }
 
 .skill.illustration::before {
-	background: url(../images/003-illustrator.png);
-	background-size: contain;
+	background-position: -72px -5px;
 }
 
 .skill-list > p {
@@ -304,6 +283,21 @@ body.lockscroll {
 	background: #ffffed;
 	z-index: 100;
 	overflow-y: scroll;
+}
+
+/* width */
+.project-description::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+.project-description::-webkit-scrollbar-track {
+	background: #ffffed;
+}
+
+/* Handle */
+.project-description::-webkit-scrollbar-thumb {
+	background: var(--color-accent1);
 }
 
 .project-description.hidden {
@@ -521,7 +515,6 @@ body.lockscroll {
 
 /* TABLET */
 @media screen and (min-width: 600px) {
-
 	/* common  */
 	.tablet-only {
 		display: block;
@@ -567,7 +560,6 @@ body.lockscroll {
 
 /* DESKTOP */
 @media screen and (min-width: 1025px) {
-
 	/* header  */
 	.header {
 		flex-direction: row;

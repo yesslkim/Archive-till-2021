@@ -106,7 +106,6 @@ textarea {
 	display: none;
 }
 
-/*emoji */
 .contact-desc > strong::before,
 .profile strong::after {
 	display: inline-block;
@@ -114,5 +113,15 @@ textarea {
 	height: 37px;
 	background: url(../images/emojis.png) no-repeat;
 	background-size: 216px 108px;
+	content: '';
+}
+
+.skill::before {
+	display: block;
+	width: 56px;
+	height: 56px;
+	margin: 5px auto;
+	background: url(../images/sprite.png) no-repeat;
+	background-size: 268px 268px;
 	content: '';
 }
