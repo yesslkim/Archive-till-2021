@@ -1,3 +1,4 @@
+import { gsap } from "gsap";
 const body = document.querySelector('body');
 
 function disableScroll() {
@@ -25,7 +26,7 @@ const gnbTabMenu = () => {
 		gnbList.addEventListener('click', () => {
 			const mainSections = document.querySelectorAll('.main > section');
 			mainSections.forEach(mainSection =>{
-				mainSection.classList.remove('active')
+				mainSection.classList.remove('active');
 			})
 			mainSections[index].classList.add('active');
 		})
@@ -40,6 +41,7 @@ const openSubpages = () => {
 			const link = e.target.parentElement;
 			if(link.tagName === 'A'){
 				link.nextElementSibling.classList.remove('hidden');
+				gsap.from(link.nextElementSibling, {duration: 2, x: -500, ease: "bounce"});
 				disableScroll();
 			}
 		})
@@ -68,16 +70,21 @@ const openHome = () => {
 					section.classList.add('active');
 				}
 			});
+			initAni();
 		}
 	})
-
-
 }
 
+const initAni = () => {
+	gsap.to(".header > .title", {duration: 2, rotationX: 360, delay: 1});
+	gsap.from('.about-section', {duration: 2, x: -500, ease: "expo"});
+	gsap.from('.gnb', {duration: 2, x: 500, ease: "expo"});
+}
 
 window.addEventListener('DOMContentLoaded', () => {
 	gnbTabMenu();
 	openSubpages();
 	closeSubpages();
 	openHome();
+	initAni();
 })
