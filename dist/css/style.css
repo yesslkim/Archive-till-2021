@@ -355,6 +355,7 @@ body.lockscroll {
 .project-skills,
 .page-details {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .project-skills > li {
