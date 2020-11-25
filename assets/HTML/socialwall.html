@@ -64,7 +64,10 @@
   <!-- Main : Start -->
   <main class="main">
     <section class="socialwall">
-      <h2>자유게시판</h2>
+      <h2>SOCIAL WALL</h2>
+      <p>
+        이곳은 화가 모네와 그의 작품에 대해 이야기하고 공유하는 공간입니다.
+      </p>
       <button type="button" class="write_btn">글쓰기</button>
       <table class="socialwall_table">
         <colgroup>
@@ -105,11 +108,72 @@
   <!-- Socialwall Post Writing form  -->
   <form action="POST" class="post_form">
     <button type="button" class="close_btn">닫기</button>
-    <div class="post_form_list">
+    <div class="post_form_list title">
       <label for="post_title">게시글 제목</label>
       <input type="text" name="post_title" id="post_title">
     </div>
     <div class="post_form_list">
+      <p class="sr-only">글꼴 및 정렬 메뉴</p>
+      <ul class="post_navbar">
+        <li>
+          <span class="sr-only">글꼴 </span>
+          <select name="fonts" id="fonts" class="font">
+            <option value="gullim">굴림</option>
+            <option value="dotum">돋움</option>
+            <option value="batang">바탕</option>
+          </select>
+        </li>
+        <li class="space-right">
+          <span class="sr-only">글자 크기 </span>
+          <select name="font_size" id="font_size" class="font">
+            <option value="10">10 pt</option>
+            <option value="11">11 pt</option>
+            <option value="12">12 pt</option>
+          </select>
+        </li>
+        <li>
+          <button type="button" class="ico bold">
+            <span class="sr-only">진하게</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="ico italic">
+            <span class="sr-only">기울임</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="ico underline">
+            <span class="sr-only">밑줄</span>
+          </button>
+        </li>
+        <li class="space-right">
+          <button type="button" class="ico strikethrough">
+            <span class="sr-only">취소선</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="ico align-justify">
+            <span class="sr-only">양쪽 정렬</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="ico align-left">
+            <span class="sr-only">왼쪽 정렬</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="ico align-center">
+            <span class="sr-only">가운데 정렬</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="ico align-right">
+            <span class="sr-only">오른쪽 정렬</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class="post_form_list desc">
       <label for="post_desc"><span class="sr-only">게시글 내용</span></label>
       <textarea name="post_desc" id="post_desc"></textarea>
     </div>
