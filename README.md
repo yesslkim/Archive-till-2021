@@ -20,3 +20,14 @@
   - 본인 게시글일 경우
   ![삭제버튼](./readme/delete.JPG)
 - 조회수 증가
+
+## 추가 업데이트
+- 2020.11.26 : 페이지 디자인 변경, 상태에 따른 알림바 추가
+- 커뮤니티 페이지 디자인 변경
+  ![게시판](./readme/newsocial.png)
+  ![게시판글쓰기폼](./readme/newpost.png)
+- 로그인, 로그아웃시 상태 알림바 추가
+  - 로그인 시  
+  ![로그인시](./readme/loginalert.JPG)
+  - 로그아웃 시  
+  ![로그아웃시](./readme/logoutalert.JPG)
