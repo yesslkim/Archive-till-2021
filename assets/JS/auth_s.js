@@ -33,6 +33,7 @@ const loginStateEvent = () => {
     const loginError = document.querySelector('.login_error');
   
     auth.signInWithEmailAndPassword(email,password).then(()=>{
+      alert(`${email.split('@')[0]}님 환영합니다`);
       loginModal.classList.remove('active');
   
       loginForm.reset();
@@ -52,6 +53,7 @@ const loginStateEvent = () => {
 const logoutStateEvent = () =>{
   logoutMenu.addEventListener('click',(e)=>{
     e.preventDefault();
+    alert('로그아웃 되었습니다');
     auth.signOut();
   })
 } 
