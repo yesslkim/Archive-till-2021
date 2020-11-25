@@ -1,5 +1,5 @@
 /*reset */
-*{
+* {
 	margin: 0;
 	box-sizing: border-box;
 }
@@ -30,42 +30,55 @@ table {
 }
 
 th,
-td{
+td {
 	border: 2px solid #000;
 }
 
 /* common */
 .sr-only {
 	position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    border: 0;
-    clip: rect(0,0,0,0);
-    overflow: hidden;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	overflow: hidden;
 }
 
 /* font normal */
 @font-face {
-    font-family: 'NanumSquareRound';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'NanumSquareRound';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MapoGoldenPier';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoGoldenPierA.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 
 body,
 input,
 button {
-	 font-family: 'NanumSquareRound';
+	font-family: 'NanumSquareRound', sans-serif;
 	color: #282827;
+}
+
+.logo > a {
+	font-family: 'MapoGoldenPier', serif;
 }
 
 /* font-awesome icon */
 .ico-normal::before,
 .ico-normal::after {
 	display: inline-block;
-	font-family: "Font Awesome 5 Free";
+	font-family: 'Font Awesome 5 Free';
 	font-weight: 900;
 	font-style: normal;
 	font-variant: normal;
@@ -76,7 +89,7 @@ button {
 .ico-brand::before,
 .ico-brand::after {
 	display: inline-block;
-	font-family: "Font Awesome 5 Brands";
+	font-family: 'Font Awesome 5 Brands';
 	font-style: normal;
 	font-variant: normal;
 	text-rendering: auto;
@@ -86,11 +99,11 @@ button {
 /*color*/
 
 :root {
-	--primary-color:#ffd489;
-	--secondary-color:#f49b00;
-	--accent-light:#ffe874;
-	--accent-dark: #474747;
+	--primary-color: #edeafd;
+	--secondary-color: #654f95;
+	--accent-light: #5c24db;
+	--accent-color: #f05928;
 	--white-color: #fff;
 	--lightgrey-color: #ddd;
+	--grey-color: #474747;
 }
-

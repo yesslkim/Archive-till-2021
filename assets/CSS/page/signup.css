@@ -85,7 +85,7 @@
 	width: 80%;
 	height: 40px;
 	border: none;
-	background-color: #fae9d3;
+	background-color: var(--primary-color)
 }
 
 /* signup form */
@@ -93,6 +93,7 @@
 	padding-bottom: 20px;
 	margin: 40px 0;
 	border-bottom: 2px solid var(--primary-color);
+	color: var(--secondary-color);
 	text-align: center;
 }
 
@@ -116,11 +117,14 @@
 .phone-list button {
 	width: 102px;
 	height: 40px;
-	background-color: var(--primary-color);
+	background-color: var(--secondary-color);
+	color: var(--white-color);
+	font-weight: 800;
 }
 
 .news-desc {
 	padding: 20px 0;
+	color: var(--secondary-color);
 }
 
 input[type='checkbox'].checkbox-input {
@@ -162,6 +166,7 @@ input[type='checkbox'].checkbox-input {
 	height: 80px;
 	border: 2px solid #000;
 	border-color: var(--primary-color) var(--white-color);
+	color: var(--secondary-color);
 	font-size: 20px;
 	font-weight: 800;
 	text-align: left;
@@ -172,7 +177,7 @@ input[type='checkbox'].checkbox-input {
 	right: 30px;
 	display: inline-block;
 	font-size: 30px;
-	color: var(--primary-color);
+	color: var(--secondary-color);
 	content: '\f106';
 	transform: rotate(0);
 	transition: transform .3s linear;
@@ -202,6 +207,7 @@ input[type='checkbox'].checkbox-input {
 /*signup agreement */
 .signup-agreement > h2 {
 	padding: 20px 10px;
+	color: var(--secondary-color);
 }
 
 .agreement-wrap {
@@ -215,6 +221,7 @@ input[type='checkbox'].checkbox-input {
 	position: relative;
 	padding: 10px;
 	border-top: 1px solid var(--primary-color);
+	color: var(--secondary-color);
 	font-size: 20px;
 	font-weight: 800;
 }

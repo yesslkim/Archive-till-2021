@@ -15,6 +15,7 @@
 	padding-bottom: 20px;
 	margin: 100px auto 20px;
 	border-bottom: 2px solid var(--primary-color);
+	color: var(--secondary-color);
 	font-size: 30px;
 	text-align: center;
 }
