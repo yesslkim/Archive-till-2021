@@ -29,6 +29,7 @@ const gnbTabMenu = () => {
 				mainSection.classList.remove('active');
 			})
 			mainSections[index].classList.add('active');
+			gsap.from(mainSections[index], {duration: 1, opacity: 0});
 		})
 	})
 }

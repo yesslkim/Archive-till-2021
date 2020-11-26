@@ -121,6 +121,10 @@ var gnbTabMenu = function gnbTabMenu() {
         mainSection.classList.remove('active');
       });
       mainSections[index].classList.add('active');
+      gsap__WEBPACK_IMPORTED_MODULE_0__["gsap"].from(mainSections[index], {
+        duration: 1,
+        opacity: 0
+      });
     });
   });
 };
