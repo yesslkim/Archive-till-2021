@@ -1,6 +1,7 @@
 /*reset */
 * {
 	margin: 0;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -99,9 +100,9 @@ button {
 /*color*/
 
 :root {
-	--primary-color: #edeafd;
-	--secondary-color: #654f95;
-	--accent-light: #5c24db;
+	--primary-color: #feecea;
+	--secondary-color: #dca7a1;
+	--accent-light: #f1857b;
 	--accent-color: #f05928;
 	--white-color: #fff;
 	--lightgrey-color: #ddd;

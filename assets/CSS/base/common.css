@@ -5,7 +5,12 @@
 
 /* Header */
 .header {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 	width: 1050px;
 	margin: 10px auto;
@@ -30,13 +35,14 @@
 
 .logo > a::before {
 	display: block;
-	/*	content: url(../../image/demo-logo.png);*/
 }
 
 /* header : user-area */
 .user-area {
 	display: inline-block;
 	margin-right: auto;
+	-webkit-box-ordinal-group: 0;
+	-ms-flex-order: -1;
 	order: -1;
 }
 
@@ -64,6 +70,8 @@
 	border: 1px solid #fae9d3;
 	border-radius: 5px;
 	opacity: 0;
+	-webkit-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
 	transition: all 0.5s ease-out;
 }
 
@@ -81,8 +89,14 @@
 /* header : gnb */
 .main-gnb {
 	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 }
 
@@ -120,6 +134,8 @@
 .gnb a {
 	display: block;
 	padding: 3px 50px 0;
+	-webkit-transition: color 0.1s linear;
+	-o-transition: color 0.1s linear;
 	transition: color 0.1s linear;
 }
 
@@ -201,7 +217,11 @@
 
 .snb-wrap {
 	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	width: 1080px;
 	height: 300px;
@@ -238,8 +258,13 @@
 }
 
 .snb-item ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-pack: distribute;
 	justify-content: space-around;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	height: 100%;
 }
@@ -251,6 +276,8 @@
 .snb-item img {
 	width: 100%;
 	opacity: 1;
+	-webkit-transition: opacity 0.3s ease-in;
+	-o-transition: opacity 0.3s ease-in;
 	transition: opacity 0.3s ease-in;
 }
 
@@ -298,6 +325,8 @@
 
 /* footer : social links */
 .social-links ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	padding: 30px 0;
 }
@@ -376,6 +405,17 @@
 
 /*Common: Animation */
 
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+		display: block;
+	}
+}
+
 @keyframes fadeIn {
 	from {
 		opacity: 0;
@@ -384,6 +424,17 @@
 	to {
 		opacity: 1;
 		display: block;
+	}
+}
+
+@-webkit-keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+		z-index: -100;
 	}
 }
 
@@ -423,6 +474,8 @@
 
 	.main-gnb {
 		padding: 20px 20px;
+		-webkit-box-ordinal-group: 0;
+		-ms-flex-order: -1;
 		order: -1;
 	}
 
@@ -444,13 +497,21 @@
 		height: 100vh;
 		background-color: var(--white-color);
 		opacity: 0;
+		-webkit-transform: translateX(-1500px);
+		-ms-transform: translateX(-1500px);
 		transform: translateX(-1500px);
+		-webkit-transition: -webkit-transform 0.5s linear;
+		transition: -webkit-transform 0.5s linear;
+		-o-transition: transform 0.5s linear;
 		transition: transform 0.5s linear;
+		transition: transform 0.5s linear, -webkit-transform 0.5s linear;
 		z-index: 9999;
 	}
 
 	.gnb-wrap.active {
 		opacity: 1;
+		-webkit-transform: translateX(0);
+		-ms-transform: translateX(0);
 		transform: translateX(0);
 	}
 
@@ -459,12 +520,22 @@
 	}
 
 	.gnb {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
 		justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
 		align-items: center;
 		width: 100%;
 		height: 100vh;
+		font-family: 'GyeonggiBatang';
 	}
 
 	.gnb > li {
@@ -475,6 +546,8 @@
 	.gnb a {
 		display: block;
 		padding: 3px 30px 0;
+		-webkit-transition: color 0.1s linear;
+		-o-transition: color 0.1s linear;
 		transition: color 0.1s linear;
 		font-size: 60px;
 	}
@@ -525,6 +598,8 @@
 
 	/* footer : social links */
 	.social-links ul {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 		padding: 0 0 10px 0;
 	}
@@ -555,13 +630,23 @@
 	/*	header */
 	.header {
 		height: 300px;
+		background-color: var(--secondary-color);
+		color: var(--primary-color);
 	}
 
 	.logo {
 		margin: 20px;
 	}
 
+	.logo > a,
+	.gnb-tablet::after,
+	.cart-link::before {
+		color: var(--primary-color);
+	}
+
 	.gnb-wrap {
+		-webkit-transform: translateX(-900px);
+		-ms-transform: translateX(-900px);
 		transform: translateX(-900px);
 	}
 
