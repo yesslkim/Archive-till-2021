@@ -44,28 +44,24 @@ const User = class User {
 - `extends` 를 통해서 User를 확장하여 Admin 클래스를 만들 수 있다.
 - `super()`메소드 사용 시, User클래스 생성자에 접근할 수 있다.
 
-## ES5 with Constructor and Prototype
-
-- ES5에서는 사용자 정의 타입 생성이라는 접근 방식을 가졌다. 
-- 생성자를 생성, 생성자의 프로토타입에 메서드 할당.
-
+## Getter and Setter (접근자 프로퍼티)
 ```javascript
-//constructor
-function User(username,email){
-  this.username = username;
-  this.email = email;
-}
+class Teacher extends Person {
+  constructor(first, last, age, gender, interests, subject, grade) {
+    super(first, last, age, gender, interests);
+    // subject and grade are specific to Teacher
+    this._subject = subject;
+    this.grade = grade;
+  }
 
-//method
-User.prototype.login = function(){
-  console.log(`${this.username} just logged in`)
-}
+  get subject() {
+    return this._subject;
+  }
 
-//prototypal inheritance 
-function Admin (username,email,title){
-  User.call(this,username,email) // User 클래스의 constructor상속
-  this.title = title;
+  set subject(newSubject) {
+    this._subject = newSubject;
+  }
 }
-
-Admin.prototype = Object.create(User.prototype) // User 클래스의 메소드 상속
 ```
+- Getters and setters work in pairs. A getter returns the current value of the variable and its corresponding setter changes the value of the variable to the one it defines.
+- 여기서 underscore(_)로 쓰여진 이름에 바로 접근 가능, 그러나 직접사용하는 것은 좋지 않음. 이 프로퍼티는 객체 내부에서만 활용하고 외부에서는 건드리지 않는 것이 관습.
