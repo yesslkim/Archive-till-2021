@@ -8,23 +8,18 @@
 ---
 
 ## Table of Contents
-1. [Web Accessibility](#web-accessibility)  
-2. [HTML and CSS](#html-&-css)  
-3. [JavaScript](#javascript)  
-4. [React](#react)  
-5. [JQuery](#jquery)  
-6. [Small Practices](#small-practices)  
+
+1. [Web Accessibility](#web-accessibility)
+2. [HTML and CSS](#html-&-css)
+3. [JavaScript](#javascript)
+4. [React](#react)
+5. [JQuery](#jquery)
+6. [Small Practices](#small-practices)
 
 ## Web Accessibility
 
 - [HTML web accessibility](./Web-Accessibility/01_HTMLWebAccessibility.md)
 - [WAI-ARIA web accessibility](./Web-Accessibility/02_WAI-ARIA.md)
-
-## HTML & CSS
-
-HTML 및 CSS는 **네이버 블로그**를 통해 기록했습니다.  
- 다시 옮기는 것은 무의미하다고 판단하여 사이트를 첨부합니다.😊  
- [사이트 바로가기](https://blog.naver.com/yesslkim94)
 
 ## JavaScript
 
@@ -60,15 +55,17 @@ HTML 및 CSS는 **네이버 블로그**를 통해 기록했습니다.
 - OOP
   - [class](Javascript/OOP/Class.md)
 - More JavaScript
-  -  [Call stack and event loop](Javascript/More-JavaScript/CallStackAndEventLoop.md)
-  -  [Shallow copy and Deep copy](Javascript/More-JavaScript/ShallowCopyAndDeepCopy.md)
-  -  [This keyword](Javascript/More-JavaScript/this-keyword.md)
-  -  [var, let, const](Javascript/More-JavaScript/var,let,const.md)
+  - [Call stack and event loop](Javascript/More-JavaScript/CallStackAndEventLoop.md)
+  - [Shallow copy and Deep copy](Javascript/More-JavaScript/ShallowCopyAndDeepCopy.md)
+  - [This keyword](Javascript/More-JavaScript/this-keyword.md)
+  - [var, let, const](Javascript/More-JavaScript/var,let,const.md)
 
 ## React
-> 코드에 따라 필요한 설명은 gist에 업데이트하고 있습니다. 상세한 설명이 필요한 경우  마크다운을 활용하여 노트로 적습니다.
+
+> 코드에 따라 필요한 설명은 gist에 업데이트하고 있습니다. 상세한 설명이 필요한 경우 마크다운을 활용하여 노트로 적습니다.
 
 - Basics
+
   - [Basic Setting](./javascript/react/../../React/01_TIL/01_setting.md)
   - [JSX](./javascript/react/../../React/01_TIL/02_JSX.md)
   - [State](./javascript/react/../../React/01_TIL/03_Hooks.md)
@@ -85,16 +82,18 @@ HTML 및 CSS는 **네이버 블로그**를 통해 기록했습니다.
   - [state - save, reset, and use it in different component](https://gist.github.com/yesslkim/11bcf46ff38a126e1b36502e5c99016f)
 
 ## JQuery
+
 - Basics
-    - Selector
-    - EventListener
-    - Animation
-    - Carousel
-    - Scroll-navbar
-    - Tab-menu
-    - 실습
+  - Selector
+  - EventListener
+  - Animation
+  - Carousel
+  - Scroll-navbar
+  - Tab-menu
+  - 실습
 
 ## Small Practices
+
 > 학습한 자료에서 제공되는 문제를 직접 풀면서 기본 개념을 습득하고 있습니다.
 > 학습한 자료를 기반으로 만들어보는 실습 예제를 모아 보았습니다.
 
