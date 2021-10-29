@@ -5,8 +5,8 @@
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 ul,
@@ -21,23 +21,26 @@ img {
 
 /* COMMON CSS  */
 
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
 .sr-only {
   position: absolute;
-  clip: rect(0 0 0 0);
   width: 1 px;
   height: 1 px;
   margin: -1 px;
+  clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
 .section-title {
   font-size: 72px;
 }
 
 .section-title > span {
   display: block;
-  margin-bottom: 25px;
-  font-size: 22px;
   font-weight: 400;
+  font-size: 22px;
   letter-spacing: 0.2em;
+  margin-bottom: 25px;
 }
