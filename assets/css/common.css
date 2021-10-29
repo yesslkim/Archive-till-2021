@@ -1,0 +1,43 @@
+/* RESET CSS  */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  padding: 0;
+  list-style-type: none;
+}
+
+img {
+  display: block;
+}
+
+/* COMMON CSS  */
+
+.sr-only {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1 px;
+  height: 1 px;
+  margin: -1 px;
+  overflow: hidden;
+}
+
+.section-title {
+  font-size: 72px;
+}
+
+.section-title > span {
+  display: block;
+  margin-bottom: 25px;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+}
