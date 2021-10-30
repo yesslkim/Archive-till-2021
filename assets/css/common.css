@@ -33,14 +33,21 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 .section-title {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 72px;
+  text-align: center;
+  color: #fff;
 }
 
 .section-title > span {
   display: block;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 22px;
   letter-spacing: 0.2em;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
 }
