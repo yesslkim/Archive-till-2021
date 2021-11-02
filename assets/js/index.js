@@ -16,8 +16,23 @@ $(function () {
       if (destination == 3 || destination == 4) {
         $(".logo a , .main-nav > li, .lang").addClass("active");
       } else {
-        $(".logo a, .main-nav > li").removeClass("active");
+        $(".logo a, .main-nav > li, .lang").removeClass("active");
       }
     },
   });
+
+  //scrollTop
+  $(document).on("click", ".scroll-top", function () {
+    $.fn.fullpage.moveTo(1);
+  });
+
+  //FOOTER NAV HOVER
+  $(".family-nav").hover(
+    function () {
+      $(this).find(".family-subnav").slideDown();
+    },
+    function () {
+      $(this).find(".family-subnav").slideUp();
+    }
+  );
 });
