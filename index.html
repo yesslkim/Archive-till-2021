@@ -5,9 +5,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js" integrity="sha512-bxzECOBohzcTcWocMAlNDE2kYs0QgwGs4eD8TlAN2vfovq13kfDfp95sJSZrNpt0VMkpP93ZxLC/+WN/7Trw2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="./assets/js/index.js"></script>
+  <link rel="icon" type="image/png" href="./assets/images/favicon.ico" />
+  <!-- GOOGLE FONT  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;700&family=Roboto:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+  <!-- CSS LIBRARY FILES  -->
+  <link rel="stylesheet" href="./assets/css/jquery.fullPage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.2.0/swiper-bundle.min.css" integrity="sha512-BYn1UZcpzkgi4cForzUzU/FqsewIcfXDYAU0tThFfehimrUrp5hOtcWPI1Wpli8rKopUIhaDCbxXPttBDTISgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- CSS FILES  -->
+  <link rel="stylesheet" href="./assets/css/common.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
   <title>MDM</title>
 </head>
 
@@ -15,7 +23,7 @@
   <header class="header">
     <h1 class="logo">
       <a href="#">
-        <img src="./assets/images/logo-header.png" alt="MDN">
+        <span class="sr-only">MDN</span>
       </a>
     </h1>
     <nav>
@@ -66,22 +74,28 @@
         </li>
       </ul>
     </nav>
-    <div>
+    <div class="lang">
       <a href="#">
         <span class="sr-only">영문 웹사이트 바로가기</span>
         <span aria-hidden="true">eng</span>
       </a>
     </div>
   </header>
-  <main id="fullpage">
-    <section class="section content1">
-      <div class="slide">
-        <img src="./assets/images/mainslide01.jpg" alt="꿈을 현실로 만들어 가는 MDM">
-      </div>
-      <div class="slide" aria-hidden="true">
-        <img src="./assets/images/mainslide02.jpg" alt="꿈을 현실로 만들어 가는 MDM">
+  <!-- //HEADER  -->
+  <div id="fullpage">
+    <section class="section content1 mySwiper2">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./assets/images/mainslide01.jpg" alt="꿈을 현실로 만들어 가는 MDM">
+        </div>
+        <div class="swiper-slide" aria-hidden="true">
+          <img src="./assets/images/mainslide02.jpg" alt="꿈을 현실로 만들어 가는 MDM">
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
     </section>
+    <!-- //CONTENT 1 -->
     <section class="section content2">
       <h2 class="section-title">
         <span>스스로를 믿고 결과로 성공을 증명하는 자기확신</span>
@@ -89,7 +103,7 @@
       </h2>
       <ul class="history">
         <li>
-          <div>
+          <div class="history-content">
             <h3>도전장</h3>
             <span class="sr-only">1998년부터 2006년까지</span>
             <div aria-hidden="true" class="year">
@@ -97,16 +111,18 @@
               <div class="year-second">2006</div>
             </div>
             <div class="history-desc">
-              <p>
-                미래를 향한 도전. <br>
-                창업의 길을 걷다.
-              </p>
+              <div>
+                <p>
+                  미래를 향한 도전. <br>
+                  창업의 길을 걷다.
+                </p>
+              </div>
+              <a href="#">자세히보기</a>
             </div>
-            <a href="#">자세히보기</a>
           </div>
         </li>
         <li>
-          <div>
+          <div class="history-content">
             <h3>승부수</h3>
             <span class="sr-only">2007년부터 2009년까지</span>
             <div aria-hidden="true" class="year">
@@ -114,16 +130,18 @@
               <div class="year-second">2009</div>
             </div>
             <div class="history-desc">
-              <p>
-                새로운 도약의 시작. <br>
-                디벨로퍼의 나래를 펼치다.
-              </p>
+              <div>
+                <p>
+                  새로운 도약의 시작. <br>
+                  디벨로퍼의 나래를 펼치다.
+                </p>
+              </div>
+              <a href="#">자세히보기</a>
             </div>
-            <a href="#">자세히보기</a>
           </div>
         </li>
         <li>
-          <div>
+          <div class="history-content">
             <h3>백전승</h3>
             <span class="sr-only">2010년부터 2015년까지</span>
             <div aria-hidden="true" class="year">
@@ -131,17 +149,19 @@
               <div class="year-second">2015</div>
             </div>
             <div class="history-desc">
-              <p>
-                패러다임의 전환. <br>
-                미래에 대한 인사이트로 <br>
-                디벨로퍼에 금융을 접목하다.
-              </p>
+              <div>
+                <p>
+                  패러다임의 전환. <br>
+                  미래에 대한 인사이트로 <br>
+                  디벨로퍼에 금융을 접목하다.
+                </p>
+              </div>
+              <a href="#">자세히보기</a>
             </div>
-            <a href="#">자세히보기</a>
           </div>
         </li>
         <li>
-          <div>
+          <div class="history-content">
             <h3>미래선점</h3>
             <span class="sr-only">2016년부터 현재년까지</span>
             <div aria-hidden="true" class="year">
@@ -149,190 +169,206 @@
               <div class="year-second">현재</div>
             </div>
             <div class="history-desc">
-              <p>
-                세계 일류 <br>
-                종합부동산그룹의 길
-              </p>
+              <div>
+                <p>
+                  세계 일류 <br>
+                  종합부동산그룹의 길
+                </p>
+              </div>
+              <a href="#">자세히보기</a>
             </div>
-            <a href="#">자세히보기</a>
           </div>
         </li>
       </ul>
     </section>
+    <!-- //CONTENT 2 -->
     <section class="section content3">
       <h2 class="section-title">
         <span>창의적으로 한발 앞서 시장을 이끌어 가는 상상력</span>
         사업분야
       </h2>
       <ul class="business-area">
-        <li>
-          <h3 class="business-title">
-            <strong>개발사업 부문</strong>
-            Development
-          </h3>
-          <ul>
-            <div>
-              <li><span class="dot">국내</span>외 부동산 개발</li>
-              <li>분양마케팅</li>
-              <li><span class="dot">설계</span>CM</li>
+        <li class="area1">
+          <div>
+            <h3 class="business-title">
+              <strong>개발사업 부문</strong>
+              <span>Development</span>
+            </h3>
+            <ul class="business-lists">
+              <div>
+                <li><span class="dot">국내</span>외 부동산 개발</li>
+                <li>분양마케팅</li>
+                <li><span class="dot">설계</span>CM</li>
+              </div>
+              <div>
+                <li><span class="dot">PM</span>컨설팅</li>
+                <li>보유자산운용</li>
+              </div>
+            </ul>
+            <div class="details">
+              <a href="#">
+                <span class="sr-only">자세히보기</span>
+              </a>
             </div>
-            <div>
-              <li><span class="dot">PM</span>컨설팅</li>
-              <li>보유자산운용</li>
-            </div>
-          </ul>
-          <div class="details">
-            <a href="#">
-              <img src="./assets/images/btn-more.png" alt="자세히보기">
-            </a>
           </div>
         </li>
-        <li>
-          <h3 class="business-title">
-            <strong>금융 부문</strong>
-            Finance
-          </h3>
-          <ul>
-            <div>
-              <li>부동산신탁</li>
-              <li>부동산금융</li>
-              <li>투자금융</li>
+        <li class="area2">
+          <div>
+            <h3 class="business-title">
+              <strong>금융 부문</strong>
+              <span>Finance</span>
+            </h3>
+            <ul class="business-lists">
+              <div>
+                <li>부동산신탁</li>
+                <li>부동산금융</li>
+                <li>투자금융</li>
+              </div>
+              <div>
+                <li>REITs</li>
+                <li>기업여신</li>
+                <li>Fund</li>
+              </div>
+            </ul>
+            <div class="details">
+              <a href="#">
+                <span class="sr-only">자세히보기</span>
+              </a>
             </div>
-            <div>
-              <li>REITs</li>
-              <li>기업여신</li>
-              <li>Fund</li>
-            </div>
-          </ul>
-          <div class="details">
-            <a href="#">
-              <img src="./assets/images/btn-more.png" alt="자세히보기">
-            </a>
           </div>
         </li>
-        <li>
-          <h3 class="business-title">
-            <strong><span class="dot">사회</span>문화 부문</strong>
-            Social & Cultural
-          </h3>
-          <ul>
-            <div>
-              <li>장학사업</li>
-              <li>복지재단 후원</li>
-              <li>문화예술지원</li>
+        <li class="area3">
+          <div>
+            <h3 class="business-title">
+              <strong><span class="dot">사회</span>문화 부문</strong>
+              <span>Social & Cultural</span>
+            </h3>
+            <ul class="business-lists">
+              <div>
+                <li>장학사업</li>
+                <li>복지재단 후원</li>
+                <li>문화예술지원</li>
+              </div>
+              <div>
+                <li>공익활동</li>
+                <li>외식사업</li>
+              </div>
+            </ul>
+            <div class="details">
+              <a href="#">
+                <span class="sr-only">자세히보기</span>
+              </a>
             </div>
-            <div>
-              <li>공익활동</li>
-              <li>외식사업</li>
-            </div>
-          </ul>
-          <div class="details">
-            <a href="#">
-              <img src="./assets/images/btn-more.png" alt="자세히보기">
-            </a>
           </div>
         </li>
       </ul>
     </section>
+    <!-- //CONTENT 3 -->
     <section class="section content4">
       <h2 class="section-title">
         <span>남들이 보지 못하는 것을 볼 수 있는 통찰력</span>
         사업실적
       </h2>
-      <div class="projects">
-        <div>
-          <a href="#">
-            <div class="img">
-              <img src="./assets/images/cont4slide01.jpg" alt="">
-            </div>
-            <div class="info">
-              <h3 class="project-title">
-                <span>개발사업</span>
-                <div>e편한세상 연동 센트럴파크 1,2단지</div>
-              </h3>
-              <p class="project-desc">
-                1단지 : 제주특별자치도 제주시 연동 293-46 <br>
-                2단지 : 제주특별자치도 제주시 연동 292-53 <br>
-                1단지 : 15,819.3507㎡ (4,785.3평) <br>
-                2단지 : 15,820.7629㎡ (4,785.7평)
-              </p>
-            </div>
-          </a>
+      <div class="swiper mySwiper">
+        <div class="projects swiper-wrapper">
+          <div class="projects-inner swiper-slide">
+            <a href="#">
+              <div class="img">
+                <img src="./assets/images/cont4slide01.jpg" alt="">
+              </div>
+              <div class="project-info">
+                <h3 class="title">
+                  <span>개발사업</span>
+                  <div>e편한세상 연동 센트럴파크 1,2단지</div>
+                </h3>
+                <p class="desc">
+                  1단지 : 제주특별자치도 제주시 연동 293-46 <br>
+                  2단지 : 제주특별자치도 제주시 연동 292-53 <br>
+                  1단지 : 15,819.3507㎡ (4,785.3평) <br>
+                  2단지 : 15,820.7629㎡ (4,785.7평)
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="projects-inner swiper-slide">
+            <a href="#">
+              <div class="img">
+                <img src="./assets/images/cont4slide02.jpg" alt="">
+              </div>
+              <div class="project-info">
+                <h3 class="title">
+                  <span>개발사업</span>
+                  <div>몬트레아 한남</div>
+                </h3>
+                <p class="desc">
+                  오피스텔 142실, 오피스 13실, 근린생활시설 2실 <br>
+                  서울시 용산구 한남동 76-6 <br>
+                  18,848.9㎡ (5,701.8평)
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="projects-inner swiper-slide">
+            <a href="#">
+              <div class="img">
+                <img src="./assets/images/cont4slide03.jpg" alt="">
+              </div>
+              <div class="project-info">
+                <h3 class="title">
+                  <span>개발사업</span>
+                  <div>더샵 반포리버파크</div>
+                </h3>
+                <p class="desc">
+                  도시형생활주택 <br>
+                  서울시 서초구 반포동 114-1,4,5번지 <br>
+                  17,086.2㎡ (5,168.6평)
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="projects-inner swiper-slide">
+            <a href="#">
+              <div class="img">
+                <img src="./assets/images/cont4slide04.jpg" alt="">
+              </div>
+              <div class="project-info">
+                <h3 class="title">
+                  <span>개발사업</span>
+                  <div>아이엠삼송</div>
+                </h3>
+                <p class="desc">
+                  업무시설(오피스텔/8년 장기일반민간임대주택), 근린생활시설 <br>
+                  경기도 고양시 덕양구 동산동 367,367-1번지 <br>
+                  191,382.8㎡ (57,893.2평)
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="projects-inner swiper-slide">
+            <a href="#">
+              <div class="img">
+                <img src="./assets/images/cont4slide05.jpg" alt="">
+              </div>
+              <div class="project-info">
+                <h3 class="title">
+                  <span>개발사업</span>
+                  <div>광안 KCC 스위첸 하버뷰</div>
+                </h3>
+                <p class="desc">
+                  공동주택 294세대 / 오피스텔 64실 / 근린생활시설 <br>
+                  부산광역시 수영구 민락동 181-79 <br>
+                  34,985㎡ (10,583 평)
+                </p>
+              </div>
+            </a>
+          </div>
         </div>
-        <div>
-          <a href="#">
-            <div class="img">
-              <img src="./assets/images/cont4slide02.jpg" alt="">
-            </div>
-            <div class="info">
-              <h3 class="project-title">
-                <span>개발사업</span>
-                <div>몬트레아 한남</div>
-              </h3>
-              <p class="project-desc">
-                오피스텔 142실, 오피스 13실, 근린생활시설 2실 <br>
-                서울시 용산구 한남동 76-6 <br>
-                18,848.9㎡ (5,701.8평)
-              </p>
-            </div>
-          </a>
-        </div>
-        <div>
-          <a href="#">
-            <div class="img">
-              <img src="./assets/images/cont4slide02.jpg" alt="">
-            </div>
-            <div class="info">
-              <h3 class="project-title">
-                <span>개발사업</span>
-                <div>더샵 반포리버파크</div>
-              </h3>
-              <p class="project-desc">
-                도시형생활주택 <br>
-                서울시 서초구 반포동 114-1,4,5번지 <br>
-                17,086.2㎡ (5,168.6평)
-              </p>
-            </div>
-          </a>
-        </div>
-        <div>
-          <a href="#">
-            <div class="img">
-              <img src="./assets/images/cont4slide02.jpg" alt="">
-            </div>
-            <div class="info">
-              <h3 class="project-title">
-                <span>개발사업</span>
-                <div>아이엠삼송</div>
-              </h3>
-              <p class="project-desc">
-                업무시설(오피스텔/8년 장기일반민간임대주택), 근린생활시설 <br>
-                경기도 고양시 덕양구 동산동 367,367-1번지 <br>
-                191,382.8㎡ (57,893.2평)
-              </p>
-            </div>
-          </a>
-        </div>
-        <div>
-          <a href="#">
-            <div class="img">
-              <img src="./assets/images/cont4slide02.jpg" alt="">
-            </div>
-            <div class="info">
-              <h3 class="project-title">
-                <span>개발사업</span>
-                <div>광안 KCC 스위첸 하버뷰</div>
-              </h3>
-              <p class="project-desc">
-                공동주택 294세대 / 오피스텔 64실 / 근린생활시설 <br>
-                부산광역시 수영구 민락동 181-79 <br>
-                34,985㎡ (10,583 평)
-              </p>
-            </div>
-          </a>
-        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
     </section>
+    <!-- //CONTENT 4 -->
     <section class="section content5">
       <h2 class="section-title">
         <span>새로운 아이디어를 통해 도시를 창조하는</span>
@@ -347,7 +383,7 @@
               </span>
               2021.10
             </div>
-            <div>
+            <div class="news-info">
               <span>회사뉴스</span>
               <h3>[2021.10.01] 엠디엠, 제7회 집코노미 박람회 참가</h3>
             </div>
@@ -361,7 +397,7 @@
               </span>
               2021.05
             </div>
-            <div>
+            <div class="news-info">
               <span>회사뉴스</span>
               <h3>[2021.05.27] 동서대, 엠디엠그룹 문주현 회장 '명예 박사' 학위 수여</h3>
             </div>
@@ -375,7 +411,7 @@
               </span>
               2021.05
             </div>
-            <div>
+            <div class="news-info">
               <span>회사뉴스</span>
               <h3>[2021.05.18] 23주년 MDM그룹 창립기념 행사</h3>
             </div>
@@ -383,57 +419,68 @@
         </li>
       </ul>
     </section>
-  </main>
-  <footer class="footer">
-    <div class="footer-top">
-      <div class="footer-nav">
-        <a href="#">회사소개</a>
-        <a href="#">오시는길</a>
-      </div>
-      <ul class="family-nav">
-        <li>
-          <a href="#">Family Site</a>
-          <ul class="familly-subnav">
-            <li>
-              <a href="#">엠디엠에프엔씨</a>
-            </li>
-            <li>
-              <a href="#">엠디엠투자운용</a>
-            </li>
-            <li>
-              <a href="#">한국자산신탁</a>
-            </li>
-            <li>
-              <a href="#">한국자산캐피탈</a>
-            </li>
-            <li>
-              <a href="#">한국자산에셋운용</a>
-            </li>
-            <li>
-              <a href="#">문주장학재단</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <div class="footer-bottom">
-      <address>
-        <span class="divider">
-          19 & 20F, KAIT Tower, 306, Teheran-ro, Gangnam-gu, Seoul, (706-1, Yeoksam-dong)
-        </span>
-        <span class="divider">
-          MDM colon; Tel +82-2-2166-3100 frasl; Fax +82-2-2166-3199
-        </span>
-        MDM+ colon; Tel +82-2-2166-3117 / Fax +82-2-2166-3198
-        <div class="copyright">
-          Copyright &copy; 2020 Moon Development amp; Marketing Co., Ltd. All Rights Reserved.
+    <!-- //CONTENT 5 -->
+    <footer class="section fp-auto-height footer">
+      <div class="footer-top">
+        <div class="footer-nav">
+          <a href="#">회사소개</a>
+          <a href="#">오시는길</a>
         </div>
-      </address>
-    </div>
-  </footer>
-  <a href="#fullpage">
+        <ul>
+          <li class="family-nav">
+            <a href="#">Family Site</a>
+            <ul class="family-subnav">
+              <li>
+                <a href="#">엠디엠에프엔씨</a>
+              </li>
+              <li>
+                <a href="#">엠디엠투자운용</a>
+              </li>
+              <li>
+                <a href="#">한국자산신탁</a>
+              </li>
+              <li>
+                <a href="#">한국자산캐피탈</a>
+              </li>
+              <li>
+                <a href="#">한국자산에셋운용</a>
+              </li>
+              <li>
+                <a href="#">문주장학재단</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <address>
+          <span class="divider">
+            19 & 20F, KAIT Tower, 306, Teheran-ro, Gangnam-gu, Seoul, (706-1, Yeoksam-dong)
+          </span>
+          <span class="divider">
+            MDM colon; Tel +82-2-2166-3100 frasl; Fax +82-2-2166-3199
+          </span>
+          MDM+ colon; Tel +82-2-2166-3117 / Fax +82-2-2166-3198
+          <div class="copyright">
+            Copyright &copy; 2020 Moon Development amp; Marketing Co., Ltd. All Rights Reserved.
+          </div>
+        </address>
+      </div>
+    </footer>
+    <!-- //FOOTER -->
+  </div>
+  <!-- //MAIN SECTION, FOOTER  -->
+  <a href="#fullpage" class="scroll-top">
     <span class="sr-only">TOP</span>
   </a>
+  <!-- //scrollTop button  -->
+  <!-- JS Library Files  -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js" integrity="sha512-bxzECOBohzcTcWocMAlNDE2kYs0QgwGs4eD8TlAN2vfovq13kfDfp95sJSZrNpt0VMkpP93ZxLC/+WN/7Trw2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.2.0/swiper-bundle.min.js" integrity="sha512-XHnWZWvy5TkCnPgLU7XsWhGAks1JQ3uFutVxRSH0Z4+djsGkCkxVsYu+JgfrDicvbCmjfUf1HeMWYUvUYKgjzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- JS Files  -->
+  <script src="./assets/js/index.js"></script>
+  <script src="./assets/js/swiper.js"></script>
 </body>
 
 </html>
