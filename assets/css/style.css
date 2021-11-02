@@ -100,6 +100,7 @@ body {
 
 .lang {
   padding: 20px 0;
+  font-weight: 800;
   font-size: 14px;
   text-transform: uppercase;
 }
@@ -110,9 +111,44 @@ body {
 
 /* CONTENT 1  */
 
-.slide img {
+.content1 img {
   width: 100vw;
   height: 100vh;
+  object-fit: cover;
+}
+
+.content1 .swiper-button-next,
+.content1 .swiper-button-prev {
+  width: 45px;
+  height: 86px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.content1 .swiper-button-next {
+  right: 250px;
+}
+
+.content1 .swiper-button-prev {
+  left: 250px;
+}
+
+.content1 .swiper-button-next::after,
+.content1 .swiper-button-prev::after {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/btn-roll-white.png);
+  background-size: cover;
+}
+
+.content1 .swiper-button-next::after {
+  content: "";
+  background-position-x: -44px;
+}
+
+.content1 .swiper-button-prev::after {
+  content: "";
 }
 
 /* CONTENT 2 */
@@ -374,7 +410,7 @@ body {
   color: #000;
 }
 
-.swiper {
+.content4 .swiper {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -383,7 +419,7 @@ body {
   overflow: visible;
 }
 
-.swiper-slide {
+.content4 .swiper-slide {
   display: flex;
   background: #fff;
   font-size: 18px;
@@ -391,12 +427,12 @@ body {
   align-items: center;
 }
 
-.swiper-slide a {
+.content4 .swiper-slide a {
   display: flex;
   align-items: flex-start;
 }
 
-.swiper-slide img {
+.content4 .swiper-slide img {
   display: block;
   width: 540px;
   height: 350px;
@@ -404,22 +440,22 @@ body {
   object-fit: cover;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
+.content4 .swiper-button-next,
+.content4 .swiper-button-prev {
   width: 37px;
   height: 71px;
 }
 
-.swiper-button-next {
+.content4 .swiper-button-next {
   right: -75px;
 }
 
-.swiper-button-prev {
+.content4 .swiper-button-prev {
   left: -160px;
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
+.content4 .swiper-button-next::after,
+.content4 .swiper-button-prev::after {
   display: block;
   width: 100%;
   height: 100%;
@@ -427,12 +463,12 @@ body {
   background-size: cover;
 }
 
-.swiper-button-next::after {
+.content4 .swiper-button-next::after {
   content: "";
   background-position-x: -37px;
 }
 
-.swiper-button-prev::after {
+.content4 .swiper-button-prev::after {
   content: "";
 }
 
