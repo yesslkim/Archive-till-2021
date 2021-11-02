@@ -1,4 +1,4 @@
-/* header  */
+/* HEADER  */
 body {
   position: relative;
 }
@@ -119,36 +119,28 @@ body {
 
 .content1 .swiper-button-next,
 .content1 .swiper-button-prev {
+  top: 50%;
   width: 45px;
   height: 86px;
-  top: 50%;
   transform: translateY(-50%);
 }
 
 .content1 .swiper-button-next {
-  right: 250px;
+  right: 15%;
 }
 
 .content1 .swiper-button-prev {
-  left: 250px;
+  left: 15%;
 }
 
 .content1 .swiper-button-next::after,
 .content1 .swiper-button-prev::after {
-  display: block;
-  width: 100%;
-  height: 100%;
   background-image: url(../images/btn-roll-white.png);
-  background-size: cover;
 }
 
 .content1 .swiper-button-next::after {
   content: "";
   background-position-x: -44px;
-}
-
-.content1 .swiper-button-prev::after {
-  content: "";
 }
 
 /* CONTENT 2 */
@@ -291,21 +283,24 @@ body {
 }
 
 .business-area {
-  position: absolute;
-  bottom: 13%;
-  left: 50%;
-  width: 65%;
-  transform: translateX(-50%);
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: flex-end;
+  margin-bottom: 30%;
 }
 
 .business-area > li {
   display: inline-block;
   position: relative;
   bottom: 0;
-  width: 30%;
-  margin: 0 15px;
+  width: calc(100% / 3);
+  max-width: 370px;
+  margin: 15px;
   color: #fff;
-  min-width: 370px;
+  background-size: contain;
+  background-repeat: no-repeat;
   transition: all 200ms linear;
 }
 
@@ -338,18 +333,15 @@ body {
 }
 
 .area1 {
-  background: url(../images/bg-division1.jpg) no-repeat;
-  background-size: contain;
+  background-image: url(../images/bg-division1.jpg);
 }
 
 .area2 {
-  background: url(../images/bg-division2.jpg) no-repeat;
-  background-size: contain;
+  background-image: url(../images/bg-division2.jpg);
 }
 
 .area3 {
-  background: url(../images/bg-division3.jpg) no-repeat;
-  background-size: contain;
+  background-image: url(../images/bg-division3.jpg);
 }
 
 .business-title strong {
@@ -414,7 +406,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 1200px;
+  width: 1024px;
   transform: translate(-50%);
   overflow: visible;
 }
@@ -424,7 +416,7 @@ body {
   background: #fff;
   font-size: 18px;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .content4 .swiper-slide a {
@@ -436,7 +428,7 @@ body {
   display: block;
   width: 540px;
   height: 350px;
-  margin-right: 34px;
+  margin: 0 10px;
   object-fit: cover;
 }
 
@@ -447,57 +439,21 @@ body {
 }
 
 .content4 .swiper-button-next {
-  right: -75px;
+  right: -10%;
 }
 
 .content4 .swiper-button-prev {
-  left: -160px;
+  left: -20%;
 }
 
 .content4 .swiper-button-next::after,
 .content4 .swiper-button-prev::after {
-  display: block;
-  width: 100%;
-  height: 100%;
   background-image: url(../images/btn-roll.png);
-  background-size: cover;
 }
 
 .content4 .swiper-button-next::after {
   content: "";
   background-position-x: -37px;
-}
-
-.content4 .swiper-button-prev::after {
-  content: "";
-}
-
-.swiper-horizontal > .swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal,
-.swiper-pagination-custom,
-.swiper-pagination-fraction {
-  bottom: -65px;
-}
-
-.swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
-  border: 2px solid #8d8d8d;
-  border-radius: 0;
-  background-color: transparent;
-  transition: width 300ms linear;
-}
-
-.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets
-  .swiper-pagination-bullet {
-  margin: 0 10px;
-}
-
-.swiper-pagination-bullet-active {
-  width: 60px;
-  border: none;
-  background: #ffb400;
 }
 
 .project-info {
@@ -540,6 +496,7 @@ body {
 /* CONTENT 5  */
 .content5 {
   position: relative;
+  color: #fff;
   background-image: url(../images/pic-content5.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -575,7 +532,6 @@ body {
 .dates {
   width: 155px;
   padding: 15px 20px;
-  color: #fff;
   text-align: center;
   opacity: 0.4;
 }
@@ -589,7 +545,6 @@ body {
 
 .news-info {
   padding: 25px 0 20px;
-  color: #fff;
 }
 
 .news-info span {

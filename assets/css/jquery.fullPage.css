@@ -108,46 +108,24 @@ html.fp-enabled,
 #fp-nav.left {
   left: 17px;
 }
-.fp-slidesNav {
-  position: absolute;
-  right: 0;
-  left: 0 !important;
-  margin: 0 auto !important;
-  z-index: 4;
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-.fp-slidesNav.bottom {
-  bottom: 17px;
-}
-.fp-slidesNav.top {
-  top: 17px;
-}
-#fp-nav ul,
-.fp-slidesNav ul {
+
+#fp-nav ul {
   padding: 0;
   margin: 0;
 }
-#fp-nav ul li,
-.fp-slidesNav ul li {
+#fp-nav ul li {
   display: block;
   position: relative;
   width: 20px;
   height: 20px;
   margin: 13px;
 }
-.fp-slidesNav ul li {
-  display: inline-block;
-}
 
 #fp-nav ul li:last-child {
   display: none;
 }
 
-#fp-nav ul li a,
-.fp-slidesNav ul li a {
+#fp-nav ul li a {
   display: block;
   position: relative;
   width: 100%;
@@ -196,34 +174,6 @@ html.fp-enabled,
   background: #8f8883;
 }
 
-#fp-nav ul li .fp-tooltip {
-  display: block;
-  position: absolute;
-  top: -2px;
-  width: 0;
-  color: #fff;
-  font-size: 14px;
-  font-family: arial, helvetica, sans-serif;
-  white-space: nowrap;
-  max-width: 220px;
-  overflow: hidden;
-  opacity: 0;
-  cursor: pointer;
-}
-
-#fp-nav ul li:hover .fp-tooltip,
-#fp-nav.fp-show-active a.active + .fp-tooltip {
-  width: auto;
-  -webkit-transition: opacity 0.2s ease-in;
-  transition: opacity 0.2s ease-in;
-  opacity: 1;
-}
-#fp-nav ul li .fp-tooltip.right {
-  right: 20px;
-}
-#fp-nav ul li .fp-tooltip.left {
-  left: 20px;
-}
 .fp-auto-height.fp-section,
 .fp-auto-height .fp-slide,
 .fp-auto-height .fp-tableCell {
