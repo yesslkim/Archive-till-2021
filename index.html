@@ -18,7 +18,7 @@
 
 <body>
   <!-- skip -->
-  <div class="skip">
+  <div id="skip">
     <a href="#">본문 바로가기</a>
     <a href="#">주메뉴 바로가기</a>
   </div>
@@ -33,13 +33,13 @@
       <div class="user-nav">
         <h2 class="sr-only">회원관련 메뉴</h2>
         <ul>
-          <li><a href="#">홈으로</a></li>
+          <li class="m-hidden"><a href="#">홈으로</a></li>
           <li><a href="#">로그인</a></li>
           <li><a href="#">회원가입</a></li>
-          <li><a href="#">관련사이트</a></li>
+          <li class="m-hidden"><a href="#">관련사이트</a></li>
         </ul>
       </div>
-      <div class="header-banner">
+      <div class="header-banner m-hidden">
         <h2 class="sr-only">웹사이트 관련 배너</h2>
         <ul>
           <li>
@@ -52,242 +52,254 @@
     </div>
     <!-- //header-top -->
     <div class="header-bottom">
-      <nav>
+      <button type="button" class="menu-btn" title="메뉴열기">
+        <img src="./assets/images/menu.svg" alt="메인메뉴">
+      </button>
+      <nav class="close">
         <h2 class="sr-only">주요 메뉴</h2>
-        <ul class="gnb">
-          <li class="gnb-list">
-            <h2><a href="#">정보공개</a></h2>
-            <ul class="snb">
-              <li>
-                <a href="#" class="snb-depth1">정보공개안내</a>
-                <ul class="snb-depth2">
-                  <li><a href="#">정보목록</a></li>
-                  <li><a href="#">비공개세부기준</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#" class="snb-depth1">사전정보공표</a>
-                <ul class="snb-depth2">
-                  <li><a href="#">사전정보공표</a></li>
-                  <li><a href="#">즐겨찾기</a></li>
-                  <li><a href="#">국민 사전정보 건의함</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#" class="snb-depth1">사업실명제</a>
-              </li>
-              <li>
-                <a href="#" class="snb-depth1">정보공개청구</a>
-              </li>
-              <li>
-                <a href="#" class="snb-depth1">공공데이터개방</a>
-                <ul class="snb-depth2">
-                  <li><a href="#">공공데이터개방</a></li>
-                  <li><a href="#">공공데이터 <br />사용자 의견 제출</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#" class="snb-depth1">경영공시</a>
-                <ul class="snb-depth2">
-                  <li><a href="#"">경영공시 소개</a></li>
-                  <li><a href=" #">항목별 공시</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
+        <div class="inner">
+          <ul class="gnb">
+            <li class="gnb-list">
+              <h2 class="active"><a href="#">정보공개</a></h2>
+              <ul class="snb">
+                <li>
+                  <a href="#" class="snb-depth1">정보공개안내</a>
+                  <ul class="snb-depth2">
+                    <li><a href="#">정보목록</a></li>
+                    <li><a href="#">비공개세부기준</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="snb-depth1">사전정보공표</a>
+                  <ul class="snb-depth2">
+                    <li><a href="#">사전정보공표</a></li>
+                    <li><a href="#">즐겨찾기</a></li>
+                    <li><a href="#">국민 사전정보 건의함</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="snb-depth1">사업실명제</a>
+                </li>
+                <li>
+                  <a href="#" class="snb-depth1">정보공개청구</a>
+                </li>
+                <li>
+                  <a href="#" class="snb-depth1">공공데이터개방</a>
+                  <ul class="snb-depth2">
+                    <li><a href="#">공공데이터개방</a></li>
+                    <li><a href="#">공공데이터 <br />사용자 의견 제출</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="snb-depth1">경영공시</a>
+                  <ul class="snb-depth2">
+                    <li><a href="#"">경영공시 소개</a></li>
+                    <li><a href=" #">항목별 공시</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
 
-          <li class="gnb-list">
-            <h2><a href="#">주요사업</a></h2>
-            <ul class="snb">
-              <li>
-                <a href="#" class="snb-depth1">연구개발</a>
-                <ul class="snb-depth2">
-                  <li><a href="#">사업소개</a></li>
-                  <li><a href="#">사업일정</a></li>
-                  <li><a href="#">연구과제검색</a></li>
-                  <li><a href="#">과제분류체계</a></li>
-                  <li><a href="#">규정 및 서식</a></li>
-                  <li><a href="#">사업FAQ</a></li>
-                  <li><a href="#">사업Q&amp;A</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#" class="snb-depth1">우수연구개발 혁신제품 지정</a>
-                <ul class="snb-depth2">
-                  <li><a href="#">사업소개</a></li>
-                  <li><a href="#">사업일정</a></li>
-                  <li><a href="#">평가기준</a></li>
-                  <li><a href="#">관련법규 및 서식</a></li>
-                  <li><a href="#">자주묻는질문(FAQ)</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#" class="snb-depth1">기술인증</a>
-                <ul class="snb-depth2">
-                  <li><a href="#">신기술인증</a></li>
-                  <li><a href="#">녹색인증</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#" class="snb-depth1">농식품기술<br>SNS컨설팅</a>
-                <ul class="snb-depth2">
-                  <li><a href="#">사업소개</a></li>
-                  <li><a href="#">품목별 바로가기</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#" class="snb-depth1">농식품 R&amp;D<br>코디네이터사업</a>
-                <ul class="snb-depth2">
-                  <li><a href="#">코디네이터 사업소개</a></li>
-                  <li><a href="#">컨설팅 신청하기</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
+            <li class="gnb-list">
+              <h2><a href="#">주요사업</a></h2>
+              <ul class="snb hidden">
+                <li>
+                  <a href="#" class="snb-depth1">연구개발</a>
+                  <ul class="snb-depth2">
+                    <li><a href="#">사업소개</a></li>
+                    <li><a href="#">사업일정</a></li>
+                    <li><a href="#">연구과제검색</a></li>
+                    <li><a href="#">과제분류체계</a></li>
+                    <li><a href="#">규정 및 서식</a></li>
+                    <li><a href="#">사업FAQ</a></li>
+                    <li><a href="#">사업Q&amp;A</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="snb-depth1">우수연구개발 혁신제품 지정</a>
+                  <ul class="snb-depth2">
+                    <li><a href="#">사업소개</a></li>
+                    <li><a href="#">사업일정</a></li>
+                    <li><a href="#">평가기준</a></li>
+                    <li><a href="#">관련법규 및 서식</a></li>
+                    <li><a href="#">자주묻는질문(FAQ)</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="snb-depth1">기술인증</a>
+                  <ul class="snb-depth2">
+                    <li><a href="#">신기술인증</a></li>
+                    <li><a href="#">녹색인증</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="snb-depth1">농식품기술<br>SNS컨설팅</a>
+                  <ul class="snb-depth2">
+                    <li><a href="#">사업소개</a></li>
+                    <li><a href="#">품목별 바로가기</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="snb-depth1">농식품 R&amp;D<br>코디네이터사업</a>
+                  <ul class="snb-depth2">
+                    <li><a href="#">코디네이터 사업소개</a></li>
+                    <li><a href="#">컨설팅 신청하기</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
 
-          <li class="gnb-list">
-            <h2><a href="#">자료실</a></h2>
-            <ul class="snb">
-              <li><a href="#" class="snb-depth1">R&amp;D최종보고서</a></li>
-              <li><a href="#" class="snb-depth1">행사자료</a></li>
-              <li><a href="#" class="snb-depth1">R&amp;D동향정보</a>
-                <ul class="snb-depth2">
-                  <li><a href="#">정책 및 동향 보고서</a></li>
-                  <li><a href="#">연구개발 지식지도</a></li>
-                </ul>
-              </li>
-              <li><a href="#" class="snb-depth1">R&amp;D정책</a>
-                <ul class="snb-depth2">
-                  <li><a href="#">농림식품과학기술<br>육성법</a></li>
-                  <li><a href="#">제3차농림식품과학<br>기술육성 종합계획<br>(2020-2024)</a></li>
-                  <li><a href="#">농림식품과학기술<br>육성중장기<br>(2013-2022)계획</a></li>
-                  <li><a href="#">농림식품 R&amp;D 추진<br>체계</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
+            <li class="gnb-list">
+              <h2><a href="#">자료실</a></h2>
+              <ul class="snb hidden">
+                <li><a href="#" class="snb-depth1">R&amp;D최종보고서</a></li>
+                <li><a href="#" class="snb-depth1">행사자료</a></li>
+                <li><a href="#" class="snb-depth1">R&amp;D동향정보</a>
+                  <ul class="snb-depth2">
+                    <li><a href="#">정책 및 동향 보고서</a></li>
+                    <li><a href="#">연구개발 지식지도</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="snb-depth1">R&amp;D정책</a>
+                  <ul class="snb-depth2">
+                    <li><a href="#">농림식품과학기술<br>육성법</a></li>
+                    <li><a href="#">제3차농림식품과학<br>기술육성 종합계획<br>(2020-2024)</a></li>
+                    <li><a href="#">농림식품과학기술<br>육성중장기<br>(2013-2022)계획</a></li>
+                    <li><a href="#">농림식품 R&amp;D 추진<br>체계</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
 
-          <li class="gnb-list">
-            <h2><a href="#">알림소식</a></h2>
-            <ul class="snb">
-              <li><a href="#" class="snb-depth1">공지사항</a></li>
-              <li><a href="#" class="snb-depth1">사업공고</a></li>
-              <li><a href="#" class="snb-depth1">입찰공고</a></li>
-              <li>
-                <a href="#" class="snb-depth1">채용안내</a>
-                <ul class="snb-depth2">
-                  <li><a href="#">채용안내</a></li>
-                  <li><a href="#">채용공고 및 입사지원</a></li>
-                  <li><a href="#">지원서확인·수정</a></li>
-                  <li><a href="#">지원결과확인</a></li>
-                  <li><a href="#">채용Q&amp;A</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
+            <li class="gnb-list">
+              <h2><a href="#">알림소식</a></h2>
+              <ul class="snb hidden">
+                <li><a href="#" class="snb-depth1">공지사항</a></li>
+                <li><a href="#" class="snb-depth1">사업공고</a></li>
+                <li><a href="#" class="snb-depth1">입찰공고</a></li>
+                <li>
+                  <a href="#" class="snb-depth1">채용안내</a>
+                  <ul class="snb-depth2">
+                    <li><a href="#">채용안내</a></li>
+                    <li><a href="#">채용공고 및 입사지원</a></li>
+                    <li><a href="#">지원서확인·수정</a></li>
+                    <li><a href="#">지원결과확인</a></li>
+                    <li><a href="#">채용Q&amp;A</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
 
-          <li class="gnb-list">
-            <h2><a href="#">홍보관</a></h2>
-            <ul class="snb">
-              <li><a href="#" class="snb-depth1">보도자료</a></li>
-              <li><a href="#" class="snb-depth1">언론보도</a></li>
-              <li><a href="#" class="snb-depth1">뉴스레터</a></li>
-              <li><a href="#" class="snb-depth1">IPET창</a></li>
-              <li><a href="#" class="snb-depth1">사업성과</a>
-                <ul class="snb-depth2">
-                  <li><a href="#">연구개발우수사례</a></li>
-                  <li><a href="#">유망기술소개</a></li>
-                  <li><a href="#">인증기술우수사례</a></li>
-                  <li><a href="#">농식품기술SNS컨설팅<br>우수사례</a></li>
-                </ul>
-              </li>
-              <li><a href="#" class="snb-depth1">카드뉴스</a></li>
-            </ul>
-          </li>
+            <li class="gnb-list">
+              <h2><a href="#">홍보관</a></h2>
+              <ul class="snb hidden">
+                <li><a href="#" class="snb-depth1">보도자료</a></li>
+                <li><a href="#" class="snb-depth1">언론보도</a></li>
+                <li><a href="#" class="snb-depth1">뉴스레터</a></li>
+                <li><a href="#" class="snb-depth1">IPET창</a></li>
+                <li><a href="#" class="snb-depth1">사업성과</a>
+                  <ul class="snb-depth2">
+                    <li><a href="#">연구개발우수사례</a></li>
+                    <li><a href="#">유망기술소개</a></li>
+                    <li><a href="#">인증기술우수사례</a></li>
+                    <li><a href="#">농식품기술SNS컨설팅<br>우수사례</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="snb-depth1">카드뉴스</a></li>
+              </ul>
+            </li>
 
-          <li class="gnb-list">
-            <h2><a href="#">고객소통</a></h2>
-            <ul class="snb">
-              <li>
-                <a href="#" class="snb-depth1">고객서비스헌장</a>
-                <ul class="snb-depth2">
-                  <li><a href="#">고객헌장</a></li>
-                  <li><a href="#">기업민원 보호·서비스<br>헌장</a></li>
-                  <li><a href="#">핵심서비스 이행표준</a></li>
-                  <li><a href="#">고객응대서비스<br>이행표준</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#" class="snb-depth1">사회적가치</a>
-                <ul class="snb-depth2">
-                  <li><a href="#">사회적 가치 실현</a></li>
-                  <li><a href="#">추진체계</a></li>
-                  <li><a href="#">일자리 창출</a></li>
-                  <li><a href="#">안전 및 환경</a></li>
-                  <li><a href="#">사회공헌활동 </a></li>
-                  <li><a href="#">윤리경영</a></li>
-                  <li><a href="#">인권경영</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#" class="snb-depth1">수요조사</a>
-                <ul class="snb-depth2">
-                  <li><a href="#">현장수요조사</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#" class="snb-depth1">고객제안</a>
-                <ul class="snb-depth2">
-                  <li><a href="#">고객제안</a></li>
-                  <li><a href="#">칭찬격려</a></li>
-                  <li><a href="#">적극행정 우수직원</a></li>
-                </ul>
-              </li>
-              <li><a href="#" class="snb-depth1">실적증명서 발급</a></li>
-              <li>
-                <a href="#" class="snb-depth1">IPET 신문고</a>
-                <ul class="snb-depth2">
-                  <li><a href="#">공익·갑질 익명<br>신고센터</a></li>
-                  <li><a href="#">인권침해행위 <br>신고센터</a></li>
-                  <li><a href="#">채용비리 등<br> 종합신고센터</a></li>
-                </ul>
-              </li>
-              <li><a href="#" class="snb-depth1">소극행정·규제애로<br>신고</a></li>
-            </ul>
-          </li>
+            <li class="gnb-list">
+              <h2><a href="#">고객소통</a></h2>
+              <ul class="snb hidden">
+                <li>
+                  <a href="#" class="snb-depth1">고객서비스헌장</a>
+                  <ul class="snb-depth2">
+                    <li><a href="#">고객헌장</a></li>
+                    <li><a href="#">기업민원 보호·서비스<br>헌장</a></li>
+                    <li><a href="#">핵심서비스 이행표준</a></li>
+                    <li><a href="#">고객응대서비스<br>이행표준</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="snb-depth1">사회적가치</a>
+                  <ul class="snb-depth2">
+                    <li><a href="#">사회적 가치 실현</a></li>
+                    <li><a href="#">추진체계</a></li>
+                    <li><a href="#">일자리 창출</a></li>
+                    <li><a href="#">안전 및 환경</a></li>
+                    <li><a href="#">사회공헌활동 </a></li>
+                    <li><a href="#">윤리경영</a></li>
+                    <li><a href="#">인권경영</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="snb-depth1">수요조사</a>
+                  <ul class="snb-depth2">
+                    <li><a href="#">현장수요조사</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="snb-depth1">고객제안</a>
+                  <ul class="snb-depth2">
+                    <li><a href="#">고객제안</a></li>
+                    <li><a href="#">칭찬격려</a></li>
+                    <li><a href="#">적극행정 우수직원</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="snb-depth1">실적증명서 발급</a></li>
+                <li>
+                  <a href="#" class="snb-depth1">IPET 신문고</a>
+                  <ul class="snb-depth2">
+                    <li><a href="#">공익·갑질 익명<br>신고센터</a></li>
+                    <li><a href="#">인권침해행위 <br>신고센터</a></li>
+                    <li><a href="#">채용비리 등<br> 종합신고센터</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="snb-depth1">소극행정·규제애로<br>신고</a></li>
+              </ul>
+            </li>
 
-          <li class="gnb-list">
-            <h2><a href="#">기관 소개</a></h2>
-            <ul class="snb">
-              <li><a href="#" class="snb-depth1">IPET소개</a>
-                <ul class="snb-depth2">
-                  <li><a href="#">인사말</a></li>
-                  <li><a href="#">비전 및 목표</a></li>
-                  <li><a href="#">연혁</a></li>
-                  <li><a href="#">주요기능</a></li>
-                  <li><a href="#">CI소개</a></li>
-                  <li><a href="#">원장 소개</a></li>
-                  <li><a href="#">기관장 활동</a></li>
-                  <li><a href="#">역대원장</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#" class="snb-depth1">조직 및 직원안내</a>
-                <ul class="snb-depth2">
-                  <li><a href="#">조직도</a></li>
-                  <li><a href="#">직원검색</a></li>
-                </ul>
-              </li>
-              <li><a href="#" class="snb-depth1">찾아오시는 길</a></li>
-            </ul>
-          </li>
-        </ul>
+            <li class="gnb-list">
+              <h2><a href="#">기관 소개</a></h2>
+              <ul class="snb hidden">
+                <li><a href="#" class="snb-depth1">IPET소개</a>
+                  <ul class="snb-depth2">
+                    <li><a href="#">인사말</a></li>
+                    <li><a href="#">비전 및 목표</a></li>
+                    <li><a href="#">연혁</a></li>
+                    <li><a href="#">주요기능</a></li>
+                    <li><a href="#">CI소개</a></li>
+                    <li><a href="#">원장 소개</a></li>
+                    <li><a href="#">기관장 활동</a></li>
+                    <li><a href="#">역대원장</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="snb-depth1">조직 및 직원안내</a>
+                  <ul class="snb-depth2">
+                    <li><a href="#">조직도</a></li>
+                    <li><a href="#">직원검색</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="snb-depth1">찾아오시는 길</a></li>
+              </ul>
+            </li>
+          </ul>
 
-        <div class="gnb-close">
-          <button type="button">
-            <span class="sr-only">닫기</span>
-          </button>
+          <div class="gnb-btn">
+            <button type="button">
+              <svg preserveAspectRatio="none slice" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <circle cx="20" cy="20" r="20" fill="#E8F0FE" />
+                <rect x="15.4141" y="13" width="16.932" height="2" rx="1" transform="rotate(45 15.4141 13)" fill="#2E63C5" />
+                <rect width="16.932" height="2" rx="1" transform="matrix(-0.707107 0.707107 0.707107 0.707107 25.9727 13)" fill="#2E63C5" />
+              </svg>
+              <span class="sr-only">닫기</span>
+            </button>
+          </div>
         </div>
+
+
       </nav>
     </div>
   </header>

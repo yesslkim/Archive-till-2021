@@ -1,0 +1,202 @@
+/* 
+ * SKIP-NAVIGATION  
+*/
+#skip {
+  position: relative;
+  z-index: 3000;
+}
+
+#skip a {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 100%;
+  background: #333;
+  text-align: center;
+}
+
+/* 
+ * HEADER  
+*/
+
+.header {
+  position: relative;
+}
+
+/* header-top  */
+.header-top {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 20px 10px;
+}
+
+.main-logo img {
+  width: 80%;
+  max-width: 210px;
+  margin: 0 auto;
+}
+
+.user-nav {
+  margin-bottom: 40px;
+}
+
+.user-nav ul {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 14px;
+  color: #00458b;
+  font-weight: 800;
+}
+
+.user-nav li {
+  margin: 0 3px;
+}
+
+/* header-bottom  */
+.menu-btn {
+  position: absolute;
+  top: 22px;
+  right: 10px;
+  background-color: transparent;
+}
+
+.header-bottom > nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 8888;
+}
+
+.header-bottom .inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 500px;
+  height: 100vh;
+  background-color: #00458b;
+  z-index: 9999;
+}
+
+.gnb {
+  position: relative;
+  padding: 60px 0;
+}
+
+.gnb-list {
+  display: flex;
+}
+
+.gnb-list > h2 {
+  width: 100px;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+}
+
+.snb {
+  position: absolute;
+  top: 0;
+  left: 100px;
+  width: calc(100% - 100px);
+  height: 100vh;
+  padding: 60px 0;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+.snb-depth1 {
+  position: relative;
+  display: block;
+  padding: 10px;
+}
+
+.snb-depth1:hover {
+  font-weight: 800;
+}
+
+.snb-depth1::after {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  content: "";
+  width: 11px;
+  height: 11px;
+  background: url("../images/css_sprites.png") -286px -484px;
+}
+
+.snb-depth2 {
+  height: 0;
+  font-size: 14px;
+  background-color: #e3ebf2;
+  overflow: hidden;
+}
+
+.snb-depth2 li {
+  position: relative;
+}
+
+.snb-depth2 li::before {
+  content: "·";
+  position: absolute;
+  top: 2px;
+  padding: 0 5px;
+  color: #949494;
+}
+
+.snb-depth2 a {
+  display: block;
+  padding: 3px 10px 3px 15px;
+}
+
+.gnb-btn button {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  background-color: transparent; /*IE crossbrowsing*/
+}
+
+.gnb-btn svg {
+  width: 30px;
+  height: 30px;
+}
+
+/* events  */
+.header-bottom > nav.close {
+  display: none;
+}
+
+.gnb-list > h2.active {
+  background-color: #fff;
+  color: #0452a0;
+}
+
+.snb > li.active .snb-depth1 {
+  background-color: #0452a0;
+  color: #fff;
+  font-weight: 800;
+}
+
+.snb > li.active .snb-depth1::after {
+  width: 12px;
+  height: 1px;
+  background: url("../images/css_sprites.png") -178px -386px;
+}
+
+.snb > li.active .snb-depth2 {
+  height: auto;
+  overflow: auto;
+}
+
+.snb.hidden {
+  display: none;
+}
+
+/* 
+ * MAIN - Slides Section  
+*/
