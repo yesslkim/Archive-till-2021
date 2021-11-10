@@ -344,7 +344,7 @@
 /* info-top : tab  */
 
 .tab {
-  width: 95%;
+  width: 85%;
   margin: 0 auto 20px;
 }
 
@@ -410,7 +410,7 @@
 /* info-top : quick-menu  */
 
 .quick-menu {
-  width: 95%;
+  width: 85%;
   margin: 0 auto 20px;
   border: 1px solid #ddd;
 }
@@ -463,9 +463,11 @@
 
 /* info-top : businesses  */
 .businesses {
-  width: 95%;
+  width: 85%;
   margin: 0 auto;
   padding: 10px;
+  border-radius: 5px;
+  box-shadow: 3px 2px 20px #a4a4a4;
   background-image: url(../images/bg_sect01_rt.jpg);
   background-size: contain;
   background-position: 100% 100%;
@@ -531,7 +533,7 @@
 /* info-bottom : tech-trends  */
 
 .tech-trends {
-  width: 95%;
+  width: 85%;
   margin: 0 auto 20px;
 }
 
@@ -604,12 +606,14 @@
 
 /* info-bottom : public-part  */
 .public-part {
-  width: 95%;
+  width: 85%;
   margin: 0 auto 20px;
 }
 
 .public-part > .inner {
   border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 3px 2px 20px #a4a4a4;
 }
 
 .public-list {
@@ -658,7 +662,7 @@
 
 .research-section {
   position: relative;
-  width: 95%;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -685,7 +689,7 @@
 
 /* common  */
 .community-section {
-  width: 95%;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -763,6 +767,10 @@
 }
 
 /* community-right  */
+.promotion {
+  margin-bottom: 20px;
+}
+
 .promo-top {
   margin-bottom: 10px;
 }
@@ -790,4 +798,28 @@
 
 .promotion a:hover img {
   transform: scale(1.2);
+}
+
+/* 
+ * MAIN - banners
+*/
+
+.banner-section .prev,
+.banner-section .stop,
+.banner-section .next {
+  width: 26px;
+  height: 26px;
+  background-image: url("../images/css_sprites.png");
+}
+
+.banner-section .prev {
+  background-position: -225px -339px;
+}
+
+.banner-section .stop {
+  background-position: -271px -339px;
+}
+
+.banner-section .next {
+  background-position: -317px -339px;
 }
