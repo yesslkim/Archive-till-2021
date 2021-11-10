@@ -398,7 +398,7 @@
   width: 70%;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; /* 말줄임 적용 */
+  text-overflow: ellipsis;
 }
 
 .tab-inner .date {
@@ -654,4 +654,31 @@
 
 /* 
  * MAIN - R&D section
+*/
+
+.research-section {
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.research-section img {
+  width: 100%;
+}
+
+.research-list {
+  display: block;
+}
+
+.research-list h3,
+.research-list p {
+  display: block;
+  width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 
+ * MAIN - communication section
 */
