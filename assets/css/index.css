@@ -26,14 +26,14 @@
 /* header-top  */
 .header-top {
   display: flex;
-  flex-direction: column-reverse;
   padding: 20px 10px;
+  flex-direction: column-reverse;
 }
 
 .main-logo img {
   width: 80%;
-  max-width: 210px;
   margin: 0 auto;
+  max-width: 210px;
 }
 
 .user-nav {
@@ -42,10 +42,10 @@
 
 .user-nav ul {
   display: flex;
-  justify-content: flex-start;
-  font-size: 14px;
   color: #00458b;
   font-weight: 800;
+  font-size: 14px;
+  justify-content: flex-start;
 }
 
 .user-nav li {
@@ -75,8 +75,8 @@
   top: 0;
   left: 0;
   width: 100%;
-  max-width: 500px;
   height: 100vh;
+  max-width: 500px;
   background-color: #00458b;
   z-index: 9999;
 }
@@ -94,8 +94,8 @@
   width: 100px;
   padding: 10px;
   color: #fff;
-  text-align: center;
   font-size: 18px;
+  text-align: center;
 }
 
 .snb {
@@ -105,13 +105,13 @@
   width: calc(100% - 100px);
   height: 100vh;
   padding: 60px 0;
-  background-color: #fff;
   font-size: 16px;
+  background-color: #fff;
 }
 
 .snb-depth1 {
-  position: relative;
   display: block;
+  position: relative;
   padding: 10px;
 }
 
@@ -123,11 +123,11 @@
   position: absolute;
   top: 50%;
   right: 10px;
-  transform: translateY(-50%);
-  content: "";
   width: 11px;
   height: 11px;
   background: url("../images/css_sprites.png") -286px -484px;
+  content: "";
+  transform: translateY(-50%);
 }
 
 .snb-depth2 {
@@ -142,11 +142,11 @@
 }
 
 .snb-depth2 li::before {
-  content: "·";
   position: absolute;
   top: 2px;
   padding: 0 5px;
   color: #949494;
+  content: "·";
 }
 
 .snb-depth2 a {
@@ -172,14 +172,14 @@
 }
 
 .gnb-list > h2.active {
-  background-color: #fff;
   color: #0452a0;
+  background-color: #fff;
 }
 
 .snb > li.active .snb-depth1 {
-  background-color: #0452a0;
   color: #fff;
   font-weight: 800;
+  background-color: #0452a0;
 }
 
 .snb > li.active .snb-depth1::after {
@@ -199,4 +199,162 @@
 
 /* 
  * MAIN - Slides Section  
+*/
+
+/* slides common  */
+
+/* common  */
+.slides-section {
+  padding: 15px 0;
+  background-color: #e3ebf2;
+}
+.slide-top a {
+  position: relative;
+  display: block;
+}
+
+.slide-top p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+.slide1 .controls,
+.slide2 .controls {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 5px;
+  height: 35px;
+  border-radius: 0 0 10px 0;
+  display: flex;
+  align-items: center;
+  background-color: rgba(30, 56, 112, 0.767);
+}
+
+.slide1 .prev,
+.slide2 .prev {
+  width: 26px;
+  height: 26px;
+  background: url("../images/css_sprites.png") -339px -410px;
+}
+
+.slide1 .stop,
+.slide2 .stop {
+  width: 26px;
+  height: 26px;
+  background: url("../images/css_sprites.png") -431px -410px;
+  margin: 0 5px;
+}
+
+.slide1 .next,
+.slide2 .next {
+  width: 26px;
+  height: 26px;
+  background: url("../images/css_sprites.png") -385px -410px;
+}
+
+/* slide-top: slide1  */
+.slide1 {
+  position: relative;
+  width: 90%;
+  margin: 0 auto 10px;
+}
+
+.slide1-content {
+  border-radius: 10px;
+}
+
+.slide1-content img {
+  border-radius: 10px;
+}
+
+/* slide-top: slide 2  */
+
+.slide2 {
+  width: 40%;
+  max-width: 364px;
+}
+
+/* slide-bottom: slide 3  */
+.slide3 {
+  position: relative;
+  padding: 0 15px;
+}
+
+.slide3 li {
+  text-align: center;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.slide3 a::before {
+  display: block;
+  height: 54px;
+  margin: 20px auto;
+  background-image: url("../images/css_sprites.png");
+  content: "";
+}
+
+.slide3 a.icon1::before {
+  width: 65px;
+  background-position: -448px -10px;
+}
+
+.slide3 a.icon2::before {
+  width: 55px;
+  background-position: -172px -410px;
+}
+
+.slide3 a.icon3::before {
+  width: 57px;
+  background-position: -95px -410px;
+}
+
+.slide3 a.icon4::before {
+  width: 73px;
+  background-position: -230px -230px;
+}
+
+.slide3 a.icon5::before {
+  width: 58px;
+  background-position: -100px -339px;
+}
+
+.slide3 a.icon6::before {
+  width: 70px;
+  background-position: -10px -339px;
+}
+
+.slide3 .prev,
+.slide3 .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 26px;
+  background-image: url("../images/css_sprites.png");
+  background-color: transparent;
+}
+
+.slide3 .prev {
+  left: 7px;
+  width: 14px;
+  background-position: -10px -530px;
+}
+
+.slide3 .next {
+  right: 7px;
+  width: 16px;
+  background-position: -409px -339px;
+}
+
+/* 
+ * MAIN - info section
 */
