@@ -605,7 +605,7 @@
 /* info-bottom : public-part  */
 .public-part {
   width: 95%;
-  margin: 0 auto;
+  margin: 0 auto 20px;
 }
 
 .public-part > .inner {
@@ -682,3 +682,112 @@
 /* 
  * MAIN - communication section
 */
+
+/* common  */
+.community-section {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.community-section a {
+  display: block;
+}
+
+.plaza li {
+  width: 214px;
+  border: 1px solid #ddd;
+  padding: 6px;
+}
+
+.plaza h3 {
+  font-size: 16px;
+}
+
+/* community-left: plaza-top  */
+.plaza-inner {
+  overflow: hidden;
+}
+
+.plaza-inner img {
+  width: 100%;
+  height: 142px;
+  object-fit: cover;
+  object-position: top;
+  transform: scale(1);
+  transition: all 300ms ease-in;
+}
+
+.plaza-top a:hover img {
+  transform: scale(1.2);
+}
+
+/* community-left: plaza-bottom  */
+
+.plaza-bottom a {
+  padding: 20px 16px 15px;
+}
+
+.plaza-bottom a:hover h3,
+.plaza-bottom a:hover .date {
+  text-decoration: underline;
+}
+
+.plaza-bottom a::before {
+  display: block;
+  width: 37px;
+  height: 37px;
+  background-image: url("../images/css_sprites.png");
+  content: "";
+}
+
+.plaza-bottom a.icon1::before {
+  background-position: -533px -252px;
+}
+.plaza-bottom a.icon2::before {
+  background-position: -533px -421px;
+}
+.plaza-bottom a.icon3::before {
+  background-position: -533px -364px;
+}
+.plaza-bottom a.icon4::before {
+  background-position: -323px -230px;
+}
+
+.plaza-bottom h3 {
+  font-size: 16px;
+  margin: 14px 0 18px;
+}
+
+.plaza-bottom .date {
+  font-size: 14px;
+}
+
+/* community-right  */
+.promo-top {
+  margin-bottom: 10px;
+}
+
+.promo-top a {
+  overflow: hidden;
+}
+
+.promo-top img,
+.promo-bottom img {
+  width: 100%;
+  transform: scale(1);
+  transition: all 300ms ease-out;
+}
+
+.promo-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.promo-bottom a {
+  width: 48%;
+  overflow: hidden;
+}
+
+.promotion a:hover img {
+  transform: scale(1.2);
+}
