@@ -37,6 +37,8 @@ a {
 
 button {
   border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 img {
@@ -51,37 +53,73 @@ address {
  * COMMON.CSS  
 */
 
-body {
+body,
+button {
   font-family: "Noto Sans KR", sans-serif;
 }
 
-/* color-palette */
-/* 
-1. FONT
---title-color: #121212;
---main-color: #565a5c;
---accent-color: #313131;
-2. background-color
---main-bg-color: #00458b;
---second-bg-color: #0e64bc;
---footer-bg-color: #45576a;
---footer-bg2-color: #2c3c4d; 
-*/
-
 h2 {
+  margin-bottom: 15px;
   color: #121212;
   font-size: 20px;
 }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.slide3 .prev,
+.slide3 .next,
+.tech-trends .prev,
+.tech-trends .next,
+.research-section .prev,
+.research-section .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 26px;
+  background-image: url("../images/css_sprites.png");
+  background-color: transparent;
+}
+
+.slide3 .prev,
+.tech-trends .prev,
+.research-section .prev {
+  left: 7px;
+  width: 14px;
+  background-position: -10px -530px;
+}
+
+.slide3 .next,
+.tech-trends .next,
+.research-section .next {
+  right: 7px;
+  width: 16px;
+  background-position: -409px -339px;
+}
+
+/* 
+ * slick custom
+*/
+
+.slick-slide img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* 
+ * 반응형 관련
+*/
 
 .m-hidden {
   display: none;
 }
 
-.sr-only {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1 px;
-  height: 1 px;
-  margin: -1 px;
-  overflow: hidden;
+.slide-top p.m-hidden {
+  display: none;
 }
