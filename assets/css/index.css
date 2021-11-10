@@ -207,6 +207,7 @@
 .slides-section {
   padding: 15px 0;
   background-color: #e3ebf2;
+  margin-bottom: 20px;
 }
 .slide-top a {
   position: relative;
@@ -333,28 +334,324 @@
   background-position: -10px -339px;
 }
 
-.slide3 .prev,
-.slide3 .next {
+/* 
+ * MAIN - info section
+*/
+.info-top {
+  margin-bottom: 20px;
+}
+
+/* info-top : tab  */
+
+.tab {
+  width: 95%;
+  margin: 0 auto 20px;
+}
+
+.tab-btns {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  font-size: 13px;
+  background-color: #0e64bc;
+}
+
+.tab-btns li {
+  position: relative;
+}
+
+.tab-btns button {
+  padding: 10px 7px;
+  text-align: center;
+  color: #fff;
+  font-weight: 800;
+}
+
+.tab-btns li::after {
   position: absolute;
   top: 50%;
+  right: -1px;
   transform: translateY(-50%);
-  height: 26px;
-  background-image: url("../images/css_sprites.png");
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background-color: #fff;
+  content: "";
+}
+
+.tab-btns li:last-child::after {
   background-color: transparent;
 }
 
-.slide3 .prev {
-  left: 7px;
-  width: 14px;
-  background-position: -10px -530px;
+.tab-inner {
+  font-size: 13px;
+  padding: 10px 5px;
+  border: 1px solid #ddd;
 }
 
-.slide3 .next {
-  right: 7px;
-  width: 16px;
-  background-position: -409px -339px;
+.tab-inner li {
+  position: relative;
+}
+
+.tab-inner a {
+  display: block;
+  width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* 말줄임 적용 */
+}
+
+.tab-inner .date {
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+
+/* info-top : quick-menu  */
+
+.quick-menu {
+  width: 95%;
+  margin: 0 auto 20px;
+  border: 1px solid #ddd;
+}
+
+.qmenu-list {
+  border-bottom: 1px solid #ddd;
+}
+
+.qmenu-list:last-child {
+  border-bottom: none;
+}
+
+.qmenu-list a {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  background-color: #f5f5f5;
+}
+
+.qmenu-list > .icon1::before {
+  display: block;
+  width: 40px;
+  height: 36px;
+  background: url("../images/css_sprites.png") -533px -196px;
+  content: "";
+}
+
+.qmenu-list > .icon2::before {
+  display: block;
+  width: 39px;
+  height: 33px;
+  background: url("../images/css_sprites.png") -379px -230px;
+  content: "";
+}
+
+.qmenu-list > .icon3::before {
+  display: block;
+  width: 39px;
+  height: 35px;
+  background: url("../images/css_sprites.png") -533px -309px;
+  content: "";
+}
+
+.q-more {
+  width: 26px;
+  height: 26px;
+  background: url("../images/css_sprites.png") -363px -339px;
+}
+
+/* info-top : businesses  */
+.businesses {
+  width: 95%;
+  margin: 0 auto;
+  padding: 10px;
+  background-image: url(../images/bg_sect01_rt.jpg);
+  background-size: contain;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: #009abc;
+  color: #fff;
+  font-weight: 800;
+}
+
+.businesses > h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.businesses > ul {
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+.businesses a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.businesses a:hover {
+  text-decoration: underline;
+}
+
+.businesses a::before {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  padding-right: 10px;
+  background-image: url("../images/css_sprites.png");
+  content: "";
+}
+
+.businesses a.icon1::before {
+  background-position: -310px -299px;
+}
+
+.businesses a.icon2::before {
+  background-position: -145px -484px;
+}
+
+.businesses a.icon3::before {
+  background-position: -388px -299px;
+}
+
+.businesses a.icon4::before {
+  background-position: -349px -299px;
+}
+
+.businesses a.icon5::before {
+  background-position: -184px -484px;
+}
+
+.businesses a:hover::before {
+  opacity: 0.5;
+}
+
+/* info-bottom : tech-trends  */
+
+.tech-trends {
+  width: 95%;
+  margin: 0 auto 20px;
+}
+
+.tech-trends > .inner {
+  position: relative;
+  border: 1px solid #ddd;
+}
+
+.trends-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 10px;
+  text-align: center;
+}
+
+.trends-list li {
+  width: 100px;
+  margin: 0 10px;
+}
+
+.trends-list a::before {
+  display: block;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+  background-image: url("../images/css_sprites.png");
+  content: "";
+}
+
+.trends-list a.icon1::before {
+  background-position: -10px -10px;
+}
+
+.trends-list a.icon1:hover::before {
+  background-position: -10px -120px;
+}
+
+.trends-list a.icon2::before {
+  background-position: -230px -10px;
+}
+
+.trends-list a.icon2:hover::before {
+  background-position: -339px -10px;
+}
+
+.trends-list a.icon3::before {
+  background-position: -339px -121px;
+}
+
+.trends-list a.icon3:hover::before {
+  background-position: -230px -121px;
+}
+
+.trends-list a.icon4::before {
+  background-position: -10px -230px;
+}
+
+.trends-list a.icon4:hover::before {
+  background-position: -120px -230px;
+}
+
+.trends-list a.icon5::before {
+  background-position: -120px -10px;
+}
+
+.trends-list a.icon5:hover::before {
+  background-position: -120px -120px;
+}
+
+/* info-bottom : public-part  */
+.public-part {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.public-part > .inner {
+  border: 1px solid #ddd;
+}
+
+.public-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 12px;
+}
+
+.public-list:first-child {
+  border-bottom: 1px solid #ddd;
+}
+
+.public-info > h3 {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.public-info > p {
+  font-size: 13px;
+}
+
+.public-link {
+  align-self: flex-end;
+  background-color: #e3ebf2;
+  border-radius: 3px;
+}
+
+.public-link > a {
+  display: block;
+  padding: 5px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* events  */
+.tab-btns > .active {
+  border-radius: 5px;
+  background-color: #00458b;
 }
 
 /* 
- * MAIN - info section
+ * MAIN - R&D section
 */

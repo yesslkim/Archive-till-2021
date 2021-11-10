@@ -338,7 +338,6 @@
               </button>
               <button type="button" class="stop">
                 <span class="sr-only">일시정지</span>
-                <span class="sr-only" aria-hidden="true" class="aria-play">재생</span>
               </button>
               <button type="button" class="next">
                 <span class="sr-only">다음</span>
@@ -405,164 +404,166 @@
         <div class="info-top">
           <div class="tab">
             <h2 class="sr-only">주요 게시글 탭</h2>
+            <ul class="tab-btns" role="tablist">
+              <li class="active">
+                <h3><button type="button" role="tab">공지사항</button></h3>
+              </li>
+              <li>
+                <h3><button type="button" role="tab">사업공고</button></h3>
+              </li>
+              <li>
+                <h3><button type="button" role="tab">보도자료</button></h3>
+              </li>
+              <li>
+                <h3><button type="button" role="tab">언론보도</button></h3>
+              </li>
+              <li>
+                <h3><button type="button" role="tab">입찰공고</button></h3>
+              </li>
+            </ul>
             <ul>
               <li class="tab-list">
-                <h3><a href="#">공지사항</a></h3>
-                <div>
-                  <ul class="tab-inner">
-                    <li>
-                      <a href="#">2021년 농림식품기술기획평가원 ESG 혁신 정책 아이디어 공모전 시행 공고</a>
-                      <span class="day" aria-label="2021년 10월 22일">2021-10-22</span>
-                    </li>
-                    <li>
-                      <a href="#">2021년도 농림축산식품 학술단체행사지원사업 지정트랙 지원대상 선정결과</a>
-                      <span class="day" aria-label="2021년 10월 07일">2021-10-07</span>
-                    </li>
-                    <li>
-                      <a href="#">2021년도 농림식품 4개 기관 공동 기술수요조사 실시 공고</a>
-                      <span class="day" aria-label="2021년 09월 30일">2021-09-30</span>
-                    </li>
-                    <li>
-                      <a href="#">농림축산식품 연구개발사업 연구개발비 사용·관리 온라인 교육자료</a>
-                      <span class="day" aria-label="2021년 09월 27일">2021-09-27</span>
-                    </li>
-                    <li>
-                      <a href="#">개원기념일 휴무 안내(10월1일)</a>
-                      <span class="day" aria-label="2021년 09월 27일">2021-09-27</span>
-                    </li>
-                  </ul>
-                </div>
+                <ul class="tab-inner" role="tabpanel">
+                  <li>
+                    <a href="#">2021년 농림식품기술기획평가원 ESG 혁신 정책 아이디어 공모전 시행 공고</a>
+                    <span class="date" aria-label="2021년 10월 22일">2021-10-22</span>
+                  </li>
+                  <li>
+                    <a href="#">2021년도 농림축산식품 학술단체행사지원사업 지정트랙 지원대상 선정결과</a>
+                    <span class="date" aria-label="2021년 10월 07일">2021-10-07</span>
+                  </li>
+                  <li>
+                    <a href="#">2021년도 농림식품 4개 기관 공동 기술수요조사 실시 공고</a>
+                    <span class="date" aria-label="2021년 09월 30일">2021-09-30</span>
+                  </li>
+                  <li>
+                    <a href="#">농림축산식품 연구개발사업 연구개발비 사용·관리 온라인 교육자료</a>
+                    <span class="date" aria-label="2021년 09월 27일">2021-09-27</span>
+                  </li>
+                  <li>
+                    <a href="#">개원기념일 휴무 안내(10월1일)</a>
+                    <span class="date" aria-label="2021년 09월 27일">2021-09-27</span>
+                  </li>
+                </ul>
               </li>
               <li class="tab-list">
-                <h3><a href="#">사업공고</a></h3>
-                <div>
-                  <ul class="tab-inner">
-                    <li>
-                      <a href="#">2021년도 스마트팜 다부처패키지 혁신기술개발 시행계획 추가공고</a>
-                      <span class="day" aria-label="2021년 04월 06일">2021-04-06</span>
-                    </li>
-                    <li>
-                      <a href="#">2021년도 농식품수출비즈니스전략모델구축사업 시행계획 추가공고</a>
-                      <span class="day" aria-label="2021년 03월 17일">2021-03-17</span>
-                    </li>
-                    <li>
-                      <a href="#">2021년도 농업에너지자립형산업모델기술개발사업 시행계획 추가공고</a>
-                      <span class="day" aria-label="2021년 03월 17일">2021-03-17</span>
-                    </li>
-                    <li>
-                      <a href="#">2021년도 핵심농자재국산화기술개발사업 시행계획 재공고</a>
-                      <span class="day" aria-label="2021년 03월 09일">2021-03-09</span>
-                    </li>
-                    <li>
-                      <a href="#">2021년도 작물바이러스 및 병해충대응 산업화 기술개발사업 시행계획 재공고</a>
-                      <span class="day" aria-label="2021년 03월 09일">2021-03-09</span>
-                    </li>
-                  </ul>
-                </div>
+                <ul class="tab-inner" role="tabpanel" hidden>
+                  <li>
+                    <a href="#">2021년도 스마트팜 다부처패키지 혁신기술개발 시행계획 추가공고</a>
+                    <span class="date" aria-label="2021년 04월 06일">2021-04-06</span>
+                  </li>
+                  <li>
+                    <a href="#">2021년도 농식품수출비즈니스전략모델구축사업 시행계획 추가공고</a>
+                    <span class="date" aria-label="2021년 03월 17일">2021-03-17</span>
+                  </li>
+                  <li>
+                    <a href="#">2021년도 농업에너지자립형산업모델기술개발사업 시행계획 추가공고</a>
+                    <span class="date" aria-label="2021년 03월 17일">2021-03-17</span>
+                  </li>
+                  <li>
+                    <a href="#">2021년도 핵심농자재국산화기술개발사업 시행계획 재공고</a>
+                    <span class="date" aria-label="2021년 03월 09일">2021-03-09</span>
+                  </li>
+                  <li>
+                    <a href="#">2021년도 작물바이러스 및 병해충대응 산업화 기술개발사업 시행계획 재공고</a>
+                    <span class="date" aria-label="2021년 03월 09일">2021-03-09</span>
+                  </li>
+                </ul>
               </li>
               <li class="tab-list">
-                <h3><a href="#">보도자료</a></h3>
-                <div>
-                  <ul class="tab-inner">
-                    <li>
-                      <a href="#">농기평, 지역 우수 인재에게 장학금 수여</a>
-                      <span class="day" aria-label="2021년 11월 05일">2021-11-05</span>
-                    </li>
-                    <li>
-                      <a href="#">꿀벌농가 살리는 "낭충봉아부패병, 부저병 진단키트" 개발고</a>
-                      <span class="day" aria-label="2021년 10월 29일">2021-10-29</span>
-                    </li>
-                    <li>
-                      <a href="#">국산 천연소재로 닭 진드기 방제용 친환경 연막제 개발</a>
-                      <span class="day" aria-label="2021년 10월 28일">2021-10-28</span>
-                    </li>
-                    <li>
-                      <a href="#">농기평, 지역아동들을 위한 빛가람 공공기관 기부 물품 전달</a>
-                      <span class="day" aria-label="2021년 10월 27일">2021-10-27</span>
-                    </li>
-                    <li>
-                      <a href="#">GSP사업으로 개발한 고품질 청경채, 세계시장 공략 나서</a>
-                      <span class="day" aria-label="2021년 10월 27일">2021-10-27</span>
-                    </li>
-                  </ul>
-                </div>
+                <ul class="tab-inner" role="tabpanel" hidden>
+                  <li>
+                    <a href="#">농기평, 지역 우수 인재에게 장학금 수여</a>
+                    <span class="date" aria-label="2021년 11월 05일">2021-11-05</span>
+                  </li>
+                  <li>
+                    <a href="#">꿀벌농가 살리는 "낭충봉아부패병, 부저병 진단키트" 개발고</a>
+                    <span class="date" aria-label="2021년 10월 29일">2021-10-29</span>
+                  </li>
+                  <li>
+                    <a href="#">국산 천연소재로 닭 진드기 방제용 친환경 연막제 개발</a>
+                    <span class="date" aria-label="2021년 10월 28일">2021-10-28</span>
+                  </li>
+                  <li>
+                    <a href="#">농기평, 지역아동들을 위한 빛가람 공공기관 기부 물품 전달</a>
+                    <span class="date" aria-label="2021년 10월 27일">2021-10-27</span>
+                  </li>
+                  <li>
+                    <a href="#">GSP사업으로 개발한 고품질 청경채, 세계시장 공략 나서</a>
+                    <span class="date" aria-label="2021년 10월 27일">2021-10-27</span>
+                  </li>
+                </ul>
               </li>
               <li class="tab-list">
-                <h3><a href="#">언론보도</a></h3>
-                <div>
-                  <ul class="tab-inner">
-                    <li>
-                      <a href="#">농기평, 지역 우수 인재에게 장학금 수여</a>
-                      <span class="day" aria-label="2021년 11월 08일">2021-11-08</span>
-                    </li>
-                    <li>
-                      <a href="#">농기평, 지역 우수 인재 육성 나선다</a>
-                      <span class="day" aria-label="2021년 11월 08일">2021-11-08</span>
-                    </li>
-                    <li>
-                      <a href="#">농기평, 지역대학 우수인재 3명 선발.. 장학금 전달</a>
-                      <span class="day" aria-label="2021년 11월 08일">2021-11-08</span>
-                    </li>
-                    <li>
-                      <a href="#">농기평, 농식품분야 미래인재 양성 착착</a>
-                      <span class="day" aria-label="2021년 11월 05일">2021-11-05</span>
-                    </li>
-                    <li>
-                      <a href="#">농기평, 지역인재 육성위해 장학금 전달</a>
-                      <span class="day" aria-label="2021년 11월 05일">2021-11-05</span>
-                    </li>
-                  </ul>
-                </div>
+                <ul class="tab-inner" role="tabpanel" hidden>
+                  <li>
+                    <a href="#">농기평, 지역 우수 인재에게 장학금 수여</a>
+                    <span class="date" aria-label="2021년 11월 08일">2021-11-08</span>
+                  </li>
+                  <li>
+                    <a href="#">농기평, 지역 우수 인재 육성 나선다</a>
+                    <span class="date" aria-label="2021년 11월 08일">2021-11-08</span>
+                  </li>
+                  <li>
+                    <a href="#">농기평, 지역대학 우수인재 3명 선발.. 장학금 전달</a>
+                    <span class="date" aria-label="2021년 11월 08일">2021-11-08</span>
+                  </li>
+                  <li>
+                    <a href="#">농기평, 농식품분야 미래인재 양성 착착</a>
+                    <span class="date" aria-label="2021년 11월 05일">2021-11-05</span>
+                  </li>
+                  <li>
+                    <a href="#">농기평, 지역인재 육성위해 장학금 전달</a>
+                    <span class="date" aria-label="2021년 11월 05일">2021-11-05</span>
+                  </li>
+                </ul>
               </li>
               <li class="tab-list">
-                <h3><a href="#">입찰공고</a></h3>
-                <div>
-                  <ul class="tab-inner">
-                    <li>
-                      <a href="#">「국가 농식품 R&D 적정 투자 포트폴리오 구축에 관한 연구」용역 입찰 공고</a>
-                      <span class="day" aria-label="2021년 10월 22일">2021-10-22</span>
-                    </li>
-                    <li>
-                      <a href="#">「중장기 가축질병 방역시스템 개편 및 R&D 추진전략 고도화 연구」 용역 입찰 재공고</a>
-                      <span class="day" aria-label="2021년 10월 07일">2021-10-07</span>
-                    </li>
-                    <li>
-                      <a href="#">「중장기 가축질병 방역시스템 개편 및 R&D 추진전략 고도화 연구」 용역 입찰 공고</a>
-                      <span class="day" aria-label="2021년 09월 30일">2021-09-30</span>
-                    </li>
-                    <li>
-                      <a href="#">「2021년도 농식품연구개발사업 성과 조사·분석 연구 용역」 입찰 공고</a>
-                      <span class="day" aria-label="2021년 09월 27일">2021-09-27</span>
-                    </li>
-                    <li>
-                      <a href="#">「GSP 사업 백서발간 」 용역 공고</a>
-                      <span class="day" aria-label="2021년 09월 27일">2021-09-27</span>
-                    </li>
-                  </ul>
-                </div>
+                <ul class="tab-inner" role="tabpanel" hidden>
+                  <li>
+                    <a href="#">「국가 농식품 R&D 적정 투자 포트폴리오 구축에 관한 연구」용역 입찰 공고</a>
+                    <span class="date" aria-label="2021년 10월 22일">2021-10-22</span>
+                  </li>
+                  <li>
+                    <a href="#">「중장기 가축질병 방역시스템 개편 및 R&D 추진전략 고도화 연구」 용역 입찰 재공고</a>
+                    <span class="date" aria-label="2021년 10월 07일">2021-10-07</span>
+                  </li>
+                  <li>
+                    <a href="#">「중장기 가축질병 방역시스템 개편 및 R&D 추진전략 고도화 연구」 용역 입찰 공고</a>
+                    <span class="date" aria-label="2021년 09월 30일">2021-09-30</span>
+                  </li>
+                  <li>
+                    <a href="#">「2021년도 농식품연구개발사업 성과 조사·분석 연구 용역」 입찰 공고</a>
+                    <span class="date" aria-label="2021년 09월 27일">2021-09-27</span>
+                  </li>
+                  <li>
+                    <a href="#">「GSP 사업 백서발간 」 용역 공고</a>
+                    <span class="date" aria-label="2021년 09월 27일">2021-09-27</span>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
           <div class="quick-menu">
             <h2 class="sr-only">퀵 메뉴</h2>
-            <div class="qmenu-list icon1">
-              <a href="#">
+            <div class="qmenu-list">
+              <a href="#" class="icon1">
                 <strong>경영공시</strong>
                 <div class="q-more">
                   <span class="sr-only">더보기</span>
                 </div>
               </a>
             </div>
-            <div class="qmenu-list icon2">
-              <a href="#">
+            <div class="qmenu-list">
+              <a href="#" class="icon2">
                 <strong>사전정보</strong>
                 <div class="q-more">
                   <span class="sr-only">더보기</span>
                 </div>
               </a>
             </div>
-            <div class="qmenu-list icon3">
-              <a href="#">
+            <div class="qmenu-list">
+              <a href="#" class="icon3">
                 <strong>정보공개</strong>
                 <div class="q-more">
                   <span class="sr-only">더보기</span>
@@ -571,13 +572,13 @@
             </div>
           </div>
           <div class="businesses">
-            <h3><a href="">주요사업</a></h3>
+            <h3>주요사업</h3>
             <ul>
-              <li class="bs-list icon1"><a href="#">사업소개</a></li>
-              <li class="bs-list icon2"><a href="#">사업일정</a></li>
-              <li class="bs-list icon3"><a href="#">사업공고</a></li>
-              <li class="bs-list icon4"><a href="#">사업Q&amp;A</a></li>
-              <li class="bs-list icon5"><a href="#">사업FAQ</a></li>
+              <li><a href="#" class="icon1">사업소개</a></li>
+              <li><a href="#" class="icon2">사업일정</a></li>
+              <li><a href="#" class="icon3">사업공고</a></li>
+              <li><a href="#" class="icon4">사업Q&amp;A</a></li>
+              <li><a href="#" class="icon5">사업FAQ</a></li>
             </ul>
           </div>
         </div>
@@ -586,36 +587,44 @@
           <div class="tech-trends">
             <h2>기술동향 정보</h2>
             <div class="inner">
-              <ul>
+              <ul class="trends-list">
                 <li><a href="#" class="icon1">R&amp;D</a></li>
                 <li><a href="#" class="icon2">정책및동향 보고서</a></li>
                 <li><a href="#" class="icon3">연구개발지식지도</a></li>
                 <li><a href="#" class="icon4">신기술인증</a></li>
                 <li><a href="#" class="icon5">녹색인증</a></li>
               </ul>
+              <div class="controls">
+                <button type="button" class="prev">
+                  <span class="sr-only">이전</span>
+                </button>
+                <button type="button" class="next">
+                  <span class="sr-only">다음</span>
+                </button>
+              </div>
             </div>
           </div>
           <div class="public-part">
             <h2>국민참여</h2>
             <div class="inner">
-              <div>
-                <div class="public-tit">
+              <div class="public-list">
+                <div class="public-info">
                   <h3>IPET 신문고</h3>
                   <p>
-                    금품수수, 공익갑질,</p>
-                  인권침해 신고하세요!
+                    금품수수, 공익갑질, <br>
+                    인권침해 신고하세요!
                   </p>
                 </div>
                 <div class="public-link icon1">
                   <a href="#">바로가기</a>
                 </div>
               </div>
-              <div>
-                <div class="public-tit">
+              <div class="public-list">
+                <div class="public-info">
                   <h3>적극행정</h3>
                   <p>
-                    공공기관 직원이 불합리한</p>
-                  규제의 개선등을 등록하세요!
+                    공공기관 직원이 불합리한<br>
+                    규제의 개선등을 등록하세요!
                   </p>
                 </div>
                 <div class="public-link icon2">
@@ -973,6 +982,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha512-3n19xznO0ubPpSwYCRRBgHh63DrV+bdZfHK52b1esvId4GsfwStQNPJFjeQos2h3JwCmZl0/LgLxSKMAI55hgw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="./assets/index.js"></script>
+  <script src="./assets/wait.js"></script>
 </body>
 
 </html>
