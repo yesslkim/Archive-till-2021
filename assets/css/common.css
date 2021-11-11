@@ -59,9 +59,9 @@ button {
 }
 
 h2 {
-  margin-bottom: 15px;
   color: #121212;
   font-size: 20px;
+  margin-bottom: 15px;
 }
 
 .sr-only {
@@ -73,6 +73,23 @@ h2 {
   overflow: hidden;
 }
 
+/* section common */
+.main-contents {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.section,
+.sub-section {
+  margin-bottom: 20px;
+}
+
+/* slide controls  */
+
+.controls button {
+  background-image: url("../images/css_sprites.png");
+}
+
 .slide3 .prev,
 .slide3 .next,
 .tech-trends .prev,
@@ -81,16 +98,15 @@ h2 {
 .research-section .next {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   height: 26px;
-  background-image: url("../images/css_sprites.png");
+  transform: translateY(-50%);
   background-color: transparent;
 }
 
 .slide3 .prev,
 .tech-trends .prev,
 .research-section .prev {
-  left: 7px;
+  left: -7px;
   width: 14px;
   background-position: -10px -530px;
 }
@@ -98,9 +114,19 @@ h2 {
 .slide3 .next,
 .tech-trends .next,
 .research-section .next {
-  right: 7px;
+  right: -7px;
   width: 16px;
   background-position: -409px -339px;
+}
+
+/* image-sprite */
+
+.icons::before,
+.icons::after {
+  display: block;
+  content: "";
+  background-image: url("../images/css_sprites.png");
+  transform: scale(0.7);
 }
 
 /* 
@@ -121,5 +147,9 @@ h2 {
 }
 
 .slide-top p.m-hidden {
+  display: none;
+}
+
+.user-nav a.m-hidden {
   display: none;
 }
