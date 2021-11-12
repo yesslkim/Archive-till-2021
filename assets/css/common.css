@@ -106,7 +106,6 @@ h2 {
 .slide3 .prev,
 .tech-trends .prev,
 .research-section .prev {
-  left: -7px;
   width: 14px;
   background-position: -10px -530px;
 }
@@ -114,7 +113,6 @@ h2 {
 .slide3 .next,
 .tech-trends .next,
 .research-section .next {
-  right: -7px;
   width: 16px;
   background-position: -409px -339px;
 }
@@ -129,9 +127,7 @@ h2 {
   transform: scale(0.7);
 }
 
-/* 
- * slick custom
-*/
+/* slick custom */
 
 .slick-slide img {
   width: 100%;
@@ -146,10 +142,25 @@ h2 {
   display: none;
 }
 
-.slide-top p.m-hidden {
+.t-hidden {
   display: none;
 }
 
-.user-nav a.m-hidden {
-  display: none;
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 22px;
+  }
+
+  .main-contents {
+    width: 90%;
+  }
+
+  .icons::before,
+  .icons::after {
+    transform: scale(1);
+  }
+
+  .m-hidden {
+    display: block;
+  }
 }

@@ -20,24 +20,22 @@
 */
 
 .header {
-  position: relative;
   display: flex;
-  align-items: center;
-  padding: 10px;
+  justify-content: center;
+  padding: 10px 0;
   height: 70px;
   box-shadow: 3px 2px 20px #ddd;
 }
 
-/* header-top  */
-.header-top {
+.header > .inner {
+  position: relative;
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 90%;
-  height: 100%;
 }
 
+/* header-top  */
 .main-logo a {
   display: block;
 }
@@ -45,7 +43,7 @@
 .main-logo img {
   position: relative;
   bottom: 3px;
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
   max-width: 210px;
 }
@@ -75,7 +73,6 @@
 
 /* header-bottom  */
 .header-bottom {
-  width: 10%;
   position: relative;
 }
 
@@ -242,7 +239,7 @@
 }
 
 .slide-top p {
-  display: flex;
+  display: none;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -373,8 +370,6 @@
 /* info-top : tab  */
 .tab-btns {
   display: flex;
-  padding: 5px;
-  font-size: 13px;
   flex-wrap: wrap;
   background-color: #0e64bc;
 }
@@ -384,8 +379,9 @@
 }
 
 .tab-btns button {
-  padding: 10px 7px;
+  padding: 15px 12px;
   color: #fff;
+  font-size: 13px;
   font-weight: 800;
   text-align: center;
 }
@@ -416,9 +412,22 @@
   position: relative;
 }
 
+.tab-inner li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 3px;
+  background: #949494;
+}
+
 .tab-inner a {
   display: block;
-  width: 95%;
+  width: 90%;
+  padding: 0 8px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -429,6 +438,11 @@
   position: absolute;
   top: 0;
   right: 5px;
+}
+
+/* events  */
+.tab-btns .active {
+  background-color: #00458b;
 }
 
 /* info-top : quick-menu  */
@@ -495,6 +509,7 @@
 
 .businesses > h3 {
   font-size: 16px;
+  font-weight: 800;
   margin-bottom: 5px;
 }
 
@@ -604,6 +619,14 @@
   background-position: -120px -120px;
 }
 
+.tech-trends .prev {
+  left: -7px;
+}
+
+.tech-trends .next {
+  right: -7px;
+}
+
 /* info-bottom : public-part  */
 
 .public-part > .inner {
@@ -624,6 +647,10 @@
   border-bottom: 1px solid #ddd;
 }
 
+.public-info:hover {
+  text-decoration: underline;
+}
+
 .public-info > h3 {
   font-weight: 800;
   font-size: 14px;
@@ -635,22 +662,18 @@
 }
 
 .public-link {
+  position: relative;
   align-self: flex-end;
-  background-color: #e3ebf2;
+  color: #fff;
   border-radius: 3px;
 }
 
 .public-link > a {
   display: block;
   padding: 5px;
+  background-color: #8d8d9b;
   font-weight: 800;
   font-size: 13px;
-}
-
-/* events  */
-.tab-btns > .active {
-  border-radius: 5px;
-  background-color: #00458b;
 }
 
 /* 
@@ -667,6 +690,9 @@
 
 .research-list {
   display: block;
+  font-size: 14px;
+  color: #313131;
+  margin-right: 15px;
 }
 
 .research-list h3,
@@ -676,6 +702,26 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.research-list h3 {
+  font-weight: 800;
+}
+
+.research-list span {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 15px 0;
+  background-color: #8d8d9b;
+  color: #fff;
+}
+
+.research-section .prev {
+  left: -27px;
+}
+
+.research-section .next {
+  right: -27px;
 }
 
 /* 
@@ -689,13 +735,21 @@
 }
 
 .plaza li {
-  width: 214px;
+  width: 50%;
   padding: 6px;
+  margin-right: 10px;
   border: 1px solid #ddd;
 }
 
 .plaza h3 {
   font-size: 16px;
+}
+
+.plaza-top,
+.plaza-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 /* community-left: plaza-top  */
@@ -712,14 +766,23 @@
   transition: all 300ms ease-in;
 }
 
+.plaza-top h3 {
+  text-align: center;
+  padding: 12px 0 8px;
+}
+
 .plaza-top a:hover img {
   transform: scale(1.2);
+}
+
+.plaza-top a:hover h3 {
+  text-decoration: underline;
 }
 
 /* community-left: plaza-bottom  */
 
 .plaza-bottom a {
-  padding: 20px 16px 15px;
+  padding: 14px 12px 9px;
 }
 
 .plaza-bottom a:hover h3,
@@ -746,7 +809,7 @@
 }
 
 .plaza-bottom h3 {
-  margin: 14px 0 18px;
+  margin: 14px 0 10px;
   font-size: 16px;
 }
 
@@ -787,6 +850,14 @@
 /* 
  * MAIN - banners
 */
+.banner-section > div {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.banner-section .controls {
+  margin-bottom: 10px;
+}
 
 .banner-section .prev,
 .banner-section .stop,
@@ -906,4 +977,184 @@
   position: absolute;
   top: 5px;
   right: 10px;
+}
+
+/* 
+ * MEDIA QUERY
+*/
+
+/* tablet(768px) ~  */
+
+@media screen and (min-width: 768px) {
+  /* MAIN - SLIDE SECTION */
+
+  .slide-top p {
+    display: flex;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .slide1 .controls,
+  .slide2 .controls {
+    height: 40px;
+    padding: 10px;
+    background-color: transparent;
+  }
+
+  .slide3 .prev {
+    left: 42px;
+  }
+
+  .slide3 .next {
+    right: 42px;
+  }
+  /* MAIN */
+
+  /* MAIN - INFO SECTION */
+  .info-sections > .section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .tab {
+    width: 100%;
+  }
+
+  .tab-btns button {
+    position: relative;
+    padding: 20px 17px;
+    font-size: 16px;
+  }
+
+  .tab-btns button.active::after {
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 14px;
+    height: 14px;
+    transform: translateX(-50%) rotate(45deg);
+    background-color: #00458b;
+    content: "";
+  }
+
+  .tab-inner {
+    padding: 20px;
+    font-size: 15px;
+  }
+
+  .tab-inner a {
+    width: 70%;
+  }
+
+  .tab-inner .date {
+    display: block;
+    font-size: 14px;
+  }
+
+  .quick-menu {
+    width: 35%;
+  }
+
+  .businesses {
+    width: 60%;
+  }
+
+  .businesses > h3 {
+    font-size: 22px;
+    padding: 20px 0 0 20px;
+    margin-bottom: 20px;
+  }
+
+  .businesses > ul {
+    padding: 0 30px;
+    font-size: 16px;
+  }
+
+  .tech-trends .prev {
+    left: 2px;
+  }
+
+  .tech-trends .next {
+    right: 2px;
+  }
+
+  .public-part > .inner {
+    border-radius: 0;
+    box-shadow: 0 0 0 transparent;
+  }
+
+  .public-info > h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .public-info > p {
+    font-size: 16px;
+  }
+
+  .public-link {
+    align-self: center;
+    border-radius: 0;
+  }
+
+  .public-link > a {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  .public-link.icons::before {
+    position: absolute;
+    left: -79px;
+    bottom: -22px;
+  }
+
+  .public-link.icon1::before {
+    width: 38px;
+    height: 76px;
+    background-position: -533px -100px;
+  }
+
+  .public-link.icon2::before {
+    width: 42px;
+    height: 70px;
+    background-position: -533px -10px;
+  }
+
+  /* COMMUNICATION SECTION */
+
+  .community-section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .community-left {
+    width: 50%;
+  }
+
+  .plaza-top li {
+    height: 196px;
+  }
+
+  .plaza-bottom li {
+    height: 181px;
+  }
+
+  .community-right {
+    width: 50%;
+    align-self: flex-end;
+    margin-bottom: 15px;
+  }
+
+  .promo-top a {
+    height: 196px;
+  }
+
+  .promo-bottom a {
+    height: 185px;
+  }
+
+  .promo-top img,
+  .promo-bottom img {
+    height: 100%;
+  }
 }
