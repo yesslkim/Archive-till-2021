@@ -21,19 +21,19 @@
 
 .header {
   display: flex;
+  height: 70px;
+  padding: 10px 0;
   justify-content: center;
   align-items: center;
-  padding: 10px 0;
-  height: 70px;
   box-shadow: 3px 2px 20px #ddd;
 }
 
 .header-inner {
-  position: relative;
   display: flex;
+  position: relative;
+  width: 90%;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
 }
 
 /* login  */
@@ -83,10 +83,10 @@
 }
 
 .header-bottom > nav {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
-  display: none;
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
@@ -176,8 +176,8 @@
 
 .snb-depth2 a {
   display: block;
-  font-size: 14px;
   padding: 3px 10px 3px 15px;
+  font-size: 14px;
 }
 
 .gnb-btn button {
@@ -381,8 +381,8 @@
 .tab-btns button {
   padding: 15px 12px;
   color: #fff;
-  font-size: 13px;
   font-weight: 800;
+  font-size: 13px;
   text-align: center;
 }
 
@@ -413,15 +413,15 @@
 }
 
 .tab-inner li::before {
-  content: "";
   display: block;
   position: absolute;
-  left: 0;
   top: 50%;
-  transform: translateY(-50%);
+  left: 0;
   width: 3px;
   height: 3px;
   background: #949494;
+  content: "";
+  transform: translateY(-50%);
 }
 
 .tab-inner a {
@@ -498,18 +498,18 @@
 /* info-top : businesses  */
 .businesses {
   padding: 10px;
+  background: url("../images/bg_sect01_rt.jpg") 100% 100% no-repeat;
   color: #fff;
   font-weight: 800;
   border-radius: 5px;
   box-shadow: 3px 2px 20px #a4a4a4;
-  background: url("../images/bg_sect01_rt.jpg") 100% 100% no-repeat;
   background-size: contain;
   background-color: #009abc;
 }
 
 .businesses > h3 {
-  font-size: 16px;
   font-weight: 800;
+  font-size: 16px;
   margin-bottom: 5px;
 }
 
@@ -663,17 +663,17 @@
 
 .public-link {
   position: relative;
-  align-self: flex-end;
   color: #fff;
+  align-self: flex-end;
   border-radius: 3px;
 }
 
 .public-link > a {
   display: block;
   padding: 5px;
-  background-color: #8d8d9b;
   font-weight: 800;
   font-size: 13px;
+  background-color: #8d8d9b;
 }
 
 /* 
@@ -690,8 +690,8 @@
 
 .research-list {
   display: block;
-  font-size: 14px;
   color: #313131;
+  font-size: 14px;
   margin-right: 15px;
 }
 
@@ -712,8 +712,8 @@
   display: inline-block;
   padding: 5px 10px;
   margin: 15px 0;
-  background-color: #8d8d9b;
   color: #fff;
+  background-color: #8d8d9b;
 }
 
 .research-section .prev {
@@ -737,8 +737,8 @@
 .plaza li {
   width: 50%;
   padding: 6px;
-  margin-right: 10px;
   border: 1px solid #ddd;
+  margin-right: 10px;
 }
 
 .plaza h3 {
@@ -767,8 +767,8 @@
 }
 
 .plaza-top h3 {
-  text-align: center;
   padding: 12px 0 8px;
+  text-align: center;
 }
 
 .plaza-top a:hover img {
@@ -880,6 +880,10 @@
 
 .banner-slide li {
   margin-right: 5px;
+}
+
+.banner-slide img {
+  border: 1px solid #ddd;
 }
 
 /* 
@@ -1028,13 +1032,13 @@
 
   .tab-btns button.active::after {
     position: absolute;
-    left: 50%;
     bottom: -5px;
+    left: 50%;
     width: 14px;
     height: 14px;
+    content: "";
     transform: translateX(-50%) rotate(45deg);
     background-color: #00458b;
-    content: "";
   }
 
   .tab-inner {
@@ -1063,8 +1067,8 @@
   }
 
   .businesses > h3 {
-    font-size: 22px;
     padding: 20px 0 0 20px;
+    font-size: 22px;
     margin-bottom: 20px;
   }
 
@@ -1107,8 +1111,8 @@
 
   .public-link.icons::before {
     position: absolute;
-    left: -79px;
     bottom: -22px;
+    left: -79px;
   }
 
   .public-link.icon1::before {
@@ -1168,17 +1172,17 @@
   /* HEADER  */
 
   .header {
-    padding: 0;
     height: 164px;
+    padding: 0;
     box-shadow: 0 0 0 transparent;
   }
 
   .header-inner {
     position: relative;
-    flex-direction: column;
-    justify-content: flex-start;
     width: 100%;
     height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
   .login {
@@ -1193,24 +1197,24 @@
 
   .header-top .inner {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 90%;
     height: 100%;
     margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
     max-width: 1260px;
   }
 
   .main-logo {
     position: absolute;
-    left: 50%;
     top: 50%;
+    left: 50%;
     transform: translate(-50%);
   }
 
   .main-logo img {
-    width: 90%;
     bottom: 25px;
+    width: 90%;
     max-width: 264px;
   }
 
@@ -1252,8 +1256,8 @@
     position: absolute;
     width: 100%;
     height: 59px;
-    background-color: #00458b;
     content: "";
+    background-color: #00458b;
   }
 
   .header-bottom:hover {
@@ -1265,8 +1269,8 @@
   }
 
   .header-bottom > nav {
-    position: relative;
     display: block;
+    position: relative;
     width: 100%;
     height: 100%;
     background-color: transparent;
@@ -1276,16 +1280,16 @@
     position: static;
     width: 100%;
     height: 100%;
-    max-width: 1260px;
     margin: 0 auto;
+    max-width: 1260px;
     background-color: transparent;
   }
 
   .gnb {
-    position: relative;
     display: flex;
-    justify-content: center;
+    position: relative;
     padding: 0;
+    justify-content: center;
   }
 
   .gnb-list {
@@ -1295,33 +1299,33 @@
 
   .gnb-list > h2 {
     display: flex;
+    width: 158px;
+    padding: 0;
+    line-height: 59px;
     justify-content: center;
     align-items: center;
-    width: 158px;
-    line-height: 59px;
-    padding: 0;
     margin-bottom: 0;
     z-index: 9999;
     background-color: #00458b;
   }
 
   .snb {
+    display: none;
     position: static;
     width: 158px;
     height: 100%;
     padding: 12px 0;
     background-color: #fff;
     z-index: 6666;
-    display: none;
   }
 
   .snb::after {
     position: absolute;
     top: 0;
     right: 0;
-    content: "";
-    height: 100%;
     width: 1px;
+    height: 100%;
+    content: "";
     background-color: #ddd;
   }
 
@@ -1329,9 +1333,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    content: "";
-    height: 100%;
     width: 1px;
+    height: 100%;
+    content: "";
     background-color: #ddd;
   }
 
@@ -1341,19 +1345,19 @@
 
   .snb > li > a {
     padding: 7px 21px 7px 16px;
-    font-size: 15px;
     color: #565a5c;
+    font-size: 15px;
     transition: all 0.3s linear;
   }
 
   .snb a:hover {
-    background-color: #d2e6f9;
     font-weight: 800;
+    background-color: #d2e6f9;
   }
 
   .snb a.snb-depth1:hover {
-    background-color: #dbdbdb;
     font-weight: 800;
+    background-color: #dbdbdb;
   }
 
   .snb-depth1::after {
@@ -1361,8 +1365,8 @@
   }
 
   .snb-depth2 {
-    line-height: 1.4;
     color: #565a5c;
+    line-height: 1.4;
   }
 
   .snb-depth2 a {
@@ -1384,12 +1388,12 @@
   /* event  */
   /* gnb 오버시 뒷 배경  */
   .header-bottom > nav.active::after {
-    content: "";
     position: absolute;
     top: 59px;
-    left: 0;
     right: 0;
+    left: 0;
     height: 300px;
+    content: "";
     background-color: #fff;
   }
 
@@ -1413,8 +1417,8 @@
   /* slide-section  */
   .slides-section > .inner {
     width: 90%;
-    max-width: 1260px;
     margin: 0 auto;
+    max-width: 1260px;
   }
 
   .slide-top p {
@@ -1428,12 +1432,14 @@
 
   .slide-top {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .slide1 {
     position: relative;
-    margin-bottom: auto;
+    width: 70%;
+    margin: 0 0 0;
+    max-width: 900px;
   }
 
   .slide1-content,
@@ -1442,7 +1448,9 @@
   }
 
   .slide2 {
-    display: none;
+    position: relative;
+    width: 29%;
+    max-width: 369px;
   }
 
   .slide3 {
@@ -1458,44 +1466,167 @@
   }
 
   /* INFO-SECTION  */
-  .info-sections > .section {
-    max-width: 1260px;
+  .main-contents {
     margin: 0 auto;
+    max-width: 1260px;
   }
 
   .tab {
-    width: 48%;
-  }
-
-  .quick-menu {
-    width: 48%;
-  }
-
-  .businesses {
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 1275px) {
-  .slide1 {
-    max-width: 886px;
-    margin-right: 10px;
-  }
-
-  .slide2 {
-    display: block;
-    max-width: 369px;
-  }
-
-  .tab {
+    width: 50%;
     max-width: 620px;
   }
 
   .quick-menu {
+    width: 20%;
     max-width: 252px;
   }
 
   .businesses {
+    width: 25%;
     max-width: 344px;
+  }
+
+  .info-bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .tech-trends {
+    width: 69%;
+    max-width: 897px;
+  }
+
+  .tech-trends .trends-list {
+    display: flex;
+    width: 100%;
+    height: 203px;
+    border: 1px solid #ddd;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .trends-list a::before {
+    margin-bottom: 20px;
+  }
+
+  .trends-list a {
+    display: block;
+    padding: 20px 0;
+  }
+
+  .tech-trends .controls {
+    display: none;
+  }
+
+  .public-part {
+    width: 30%;
+    max-width: 385px;
+  }
+
+  /* COMMUNITY SECTION  */
+  .community-left {
+    width: 70%;
+    max-width: 890px;
+  }
+
+  .community-right {
+    width: 29%;
+    max-width: 364px;
+  }
+
+  /* BANNER SECTION  */
+  .banner-section > div {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .banner-slide {
+    width: 90%;
+    max-width: 1165px;
+  }
+
+  /* FOOTER  */
+
+  .footer-top {
+    padding: 0;
+  }
+
+  .footer-top .inner {
+    display: flex;
+    width: 90%;
+    max-width: 1260px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-top .qmenu {
+    display: flex;
+    width: 94%;
+    margin-bottom: 0;
+  }
+
+  .footer-top .qmenu a {
+    position: relative;
+    padding: 20px 16px;
+  }
+
+  .footer-top .qmenu a::after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 1px;
+    height: 15px;
+    content: "";
+    transform: translateY(-50%);
+    background-color: #ddd;
+  }
+
+  .qmenu li:last-child a::after {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+  }
+
+  .websites {
+    display: flex;
+    width: 32%;
+    padding: 10px 0;
+    max-width: 440px;
+    justify-content: space-between;
+  }
+
+  .websites > div {
+    width: 49%;
+  }
+
+  .footer-bottom {
+    padding: 20px 0;
+  }
+
+  .footer-bottom .inner {
+    display: flex;
+    width: 90%;
+    max-width: 1260px;
+  }
+
+  .footer-bottom .logo {
+    width: 8%;
+    margin-right: 80px;
+  }
+
+  .footer-bottom .info {
+    width: 72%;
+  }
+
+  .footer-bottom .accessibility-logo {
+    width: 8%;
+  }
+
+  .footer-bottom .menu ul {
+    display: flex;
+  }
+
+  .footer-bottom .menu li {
+    margin-right: 10px;
   }
 }
