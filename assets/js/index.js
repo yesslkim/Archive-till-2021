@@ -3,7 +3,7 @@ $(function () {
   //HEADER - NAVIGATION
   //
 
-  //MOBILE VER) 메뉴열기
+  //MOBILE 메뉴열기
   $(".menu-btn").on("click", function () {
     $(this).siblings().addClass("open");
   });
@@ -66,51 +66,33 @@ $(function () {
   // SLICK SLIDER
   //
 
-  //slick slide1
-  $(".slide1 > .inner").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    fade: true,
-    autoplaySpeed: 2500,
-    arrows: false,
-    mobileFirst: true,
-    responsive: [
-      {
-        breakpoint: 1199,
-        settings: {
-          fade: false,
-        },
-      },
-    ],
-  });
-
-  //slick slide2
-  $(".slide2 > .inner").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    fade: true,
-    autoplaySpeed: 2500,
-    arrows: false,
-    mobileFirst: true,
-    responsive: [
-      {
-        breakpoint: 1199,
-        settings: {
-          fade: false,
-        },
-      },
-    ],
-  });
-
-  //slick slide3
-  $(".slide3 > ul").slick({
+  const commonSetting = {
     slidesToShow: 2,
     slidesToScroll: 1,
-    autoplay: false,
     arrows: false,
     mobileFirst: true,
+  };
+
+  //slide1 & slide2
+  $(".slide1 > .inner, .slide2 > .inner").slick({
+    ...commonSetting,
+    slidesToShow: 1,
+    autoplay: true,
+    fade: true,
+    autoplaySpeed: 2500,
+    responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          fade: false,
+        },
+      },
+    ],
+  });
+
+  //slide3
+  $(".slide3 > ul").slick({
+    ...commonSetting,
     responsive: [
       {
         breakpoint: 374,
@@ -134,12 +116,8 @@ $(function () {
     ],
   });
 
-  //slick trends-list
+  //trends
   const trendsSetting = {
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    arrows: false,
-    mobileFirst: true,
     responsive: [
       {
         breakpoint: 768,
@@ -154,14 +132,20 @@ $(function () {
     ],
   };
 
-  $(".trends-list").slick(trendsSetting);
+  $(".trends-list").slick({ ...commonSetting, ...trendsSetting });
 
-  //slick research-section
+  $(window).on("resize", function () {
+    if (
+      $(window).width() < 1199 &&
+      !$(".trends-list").hasClass("slick-initialized")
+    ) {
+      $(".trends-list").slick({ ...commonSetting, ...trendsSetting });
+    }
+  });
+
+  //research-section
   $(".research-section .slides").slick({
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    arrows: false,
-    mobileFirst: true,
+    ...commonSetting,
     responsive: [
       {
         breakpoint: 1199,
@@ -172,14 +156,12 @@ $(function () {
     ],
   });
 
-  //slick banners
+  //banners
   $(".banner-slide").slick({
+    ...commonSetting,
     slidesToShow: 3,
-    slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2500,
-    arrows: false,
-    mobileFirst: true,
     responsive: [
       {
         breakpoint: 767,
@@ -190,7 +172,7 @@ $(function () {
     ],
   });
 
-  //slick controls
+  //controls
   $(".controls .prev").click(function () {
     $(this).parent().siblings().slick("slickPrev");
   });
@@ -201,20 +183,11 @@ $(function () {
     $(this).parent().siblings().slick("slickNext");
   });
 
-  // slick responsive
-  $(window).on("resize", function () {
-    if (
-      $(window).width() < 1199 &&
-      !$(".trends-list").hasClass("slick-initialized")
-    ) {
-      $(".trends-list").slick(trendsSetting);
-    }
-  });
-
   //
   // ACCESSIBILITY - FOCUS
   //
 
+  //main-nav
   const firstGnbTitle = $(".gnb-list").first().find("h2 > a");
 
   firstGnbTitle.focus(function () {
@@ -239,6 +212,7 @@ $(function () {
     }
   });
 
+  //tab
   $(".tab-btns button").on("focusout", function () {
     const tabPanelId = $(this).attr("aria-controls");
     $("#" + tabPanelId + ">li")
