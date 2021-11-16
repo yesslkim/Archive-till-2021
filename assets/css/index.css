@@ -1362,10 +1362,6 @@
     display: block;
   }
 
-  .gnb:hover .gnb-btn {
-    display: block;
-  }
-
   .gnb-list {
     width: 158px;
     display: table-cell;
@@ -1438,9 +1434,8 @@
 
   .gnb-btn {
     display: none;
-    position: absolute;
-    right: 5px;
     top: auto;
+    right: calc((100% - 90%) / 2);
     bottom: 5px;
     z-index: 9999;
   }
@@ -1459,7 +1454,8 @@
     display: block;
   }
 
-  .header-bottom.focus .gnb-btn {
+  .header-bottom.focus .gnb-btn,
+  .gnb-btn.active {
     display: block;
   }
 
@@ -1719,5 +1715,11 @@
 
   .footer-bottom .menu li {
     margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .gnb-btn {
+    right: calc((100% - 1260px) / 2);
   }
 }

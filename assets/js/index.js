@@ -28,6 +28,15 @@ $(function () {
   });
 
   //nav hover
+  $(".gnb").hover(
+    function () {
+      $(this).next().addClass("active");
+    },
+    function () {
+      $(this).next().removeClass("active");
+    }
+  );
+
   $("nav").on("mouseleave", function () {
     $(".snb").children().removeClass("active");
   });
