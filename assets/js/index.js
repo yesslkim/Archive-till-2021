@@ -74,47 +74,49 @@ $(function () {
   };
 
   //slide1 & slide2
-  $(".slide1 > .inner, .slide2 > .inner").slick({
-    ...commonSetting,
-    slidesToShow: 1,
-    autoplay: true,
-    fade: true,
-    autoplaySpeed: 2500,
-    responsive: [
-      {
-        breakpoint: 1199,
-        settings: {
-          fade: false,
+  $(".slide1 > .inner, .slide2 > .inner").slick(
+    $.extend({}, commonSetting, {
+      slidesToShow: 1,
+      autoplay: true,
+      fade: true,
+      autoplaySpeed: 2500,
+      responsive: [
+        {
+          breakpoint: 1199,
+          settings: {
+            fade: false,
+          },
         },
-      },
-    ],
-  });
+      ],
+    })
+  );
 
   //slide3
-  $(".slide3 > ul").slick({
-    ...commonSetting,
-    responsive: [
-      {
-        breakpoint: 374,
-        settings: {
-          slidesToShow: 3,
+  $(".slide3 > ul").slick(
+    $.extend({}, commonSetting, {
+      responsive: [
+        {
+          breakpoint: 374,
+          settings: {
+            slidesToShow: 3,
+          },
         },
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 4,
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 4,
+          },
         },
-      },
-      {
-        breakpoint: 1199,
-        settings: {
-          slidesToShow: 6,
-          useTransform: false,
+        {
+          breakpoint: 1199,
+          settings: {
+            slidesToShow: 6,
+            useTransform: false,
+          },
         },
-      },
-    ],
-  });
+      ],
+    })
+  );
 
   //trends
   const trendsSetting = {
@@ -132,45 +134,47 @@ $(function () {
     ],
   };
 
-  $(".trends-list").slick({ ...commonSetting, ...trendsSetting });
+  $(".trends-list").slick($.extend({}, commonSetting, trendsSetting));
 
   $(window).on("resize", function () {
     if (
       $(window).width() < 1199 &&
       !$(".trends-list").hasClass("slick-initialized")
     ) {
-      $(".trends-list").slick({ ...commonSetting, ...trendsSetting });
+      $(".trends-list").slick($.extend({}, commonSetting, trendsSetting));
     }
   });
 
   //research-section
-  $(".research-section .slides").slick({
-    ...commonSetting,
-    responsive: [
-      {
-        breakpoint: 1199,
-        settings: {
-          slidesToShow: 3,
+  $(".research-section .slides").slick(
+    $.extend({}, commonSetting, {
+      responsive: [
+        {
+          breakpoint: 1199,
+          settings: {
+            slidesToShow: 3,
+          },
         },
-      },
-    ],
-  });
+      ],
+    })
+  );
 
   //banners
-  $(".banner-slide").slick({
-    ...commonSetting,
-    slidesToShow: 3,
-    autoplay: true,
-    autoplaySpeed: 2500,
-    responsive: [
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 7,
+  $(".banner-slide").slick(
+    $.extend({}, commonSetting, {
+      slidesToShow: 3,
+      autoplay: true,
+      autoplaySpeed: 2500,
+      responsive: [
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 7,
+          },
         },
-      },
-    ],
-  });
+      ],
+    })
+  );
 
   //controls
   $(".controls .prev").click(function () {
