@@ -1369,7 +1369,8 @@
     background: url(../images/navline.png) left top repeat-y;
   }
 
-  .gnb-list:hover {
+  .gnb-list:hover,
+  .gnb-list.active {
     background: #f5f5f5 url(../images/navline.png) left top repeat-y;
   }
 
@@ -1446,25 +1447,23 @@
 
   /* event  */
 
+  .header-bottom .inner:hover .gnb-btn {
+    display: block;
+  }
+
   .header-bottom.focus {
     height: auto;
   }
 
-  .header-bottom.focus .snb {
-    display: block;
-  }
-
+  .header-bottom.focus .snb,
   .header-bottom.focus .gnb-btn,
-  .gnb-btn.active {
+  .snb li.focus .snb-depth2,
+  .snb.active {
     display: block;
   }
 
   .header-bottom.focus .snb-depth2 {
     display: none;
-  }
-
-  .snb li.focus .snb-depth2 {
-    display: block;
   }
 
   .gnb-list > h2.active {

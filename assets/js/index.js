@@ -23,21 +23,21 @@ $(function () {
   });
 
   //nav -close btn
-  $(".gnb-btn >button").on("click", function () {
+  $(".gnb-btn > button").on("click", function () {
     $(this).parent().parent().parent().removeClass("open");
+    $(".gnb-list").last().removeClass("active");
+    $(".snb").removeClass("active");
+  });
+
+  $(".gnb-btn").on("mouseenter", function () {
+    $(".snb").addClass("active");
+    $(".gnb-list").last().addClass("active");
   });
 
   //nav hover
-  $(".gnb").hover(
-    function () {
-      $(this).next().addClass("active");
-    },
-    function () {
-      $(this).next().removeClass("active");
-    }
-  );
-
   $("nav").on("mouseleave", function () {
+    $(".gnb-list").last().removeClass("active");
+    $(".snb").removeClass("active");
     $(".snb").children().removeClass("active");
   });
 
