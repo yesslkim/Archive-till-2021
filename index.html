@@ -50,8 +50,8 @@
           <div class="header-banner t-hidden">
             <h2 class="sr-only">웹사이트 관련 배너</h2>
             <div>
-              <a href="#"><img src="./assets/images/hbanner1.jpg" alt="정부혁신보다 나은 정부"></a>
-              <a href="#"><img src="./assets/images/hbanner2.jpg" alt="국민의나라 정의로운 대한민국"></a>
+              <img src="./assets/images/hbanner1.jpg" alt="정부혁신보다 나은 정부">
+              <img src="./assets/images/hbanner2.jpg" alt="국민의나라 정의로운 대한민국">
               <a href="#"><img src="./assets/images/hbanner3.png" alt="Fris 농림식품 연구개발사업 통합정보서비스"></a>
             </div>
           </div>
@@ -123,7 +123,7 @@
                     </ul>
                   </li>
                   <li>
-                    <a href="#" class="icons snb-depth1">우수연구개발 혁신제품 지정</a>
+                    <a href="#" class="icons snb-depth1">우수연구개발 <br>혁신제품 지정</a>
                     <ul class="snb-depth2">
                       <li><a href="#">사업소개</a></li>
                       <li><a href="#">사업일정</a></li>
@@ -289,7 +289,7 @@
                       <li><a href="#">직원검색</a></li>
                     </ul>
                   </li>
-                  <li><a href="#" class="icons snb-depth1">찾아오시는 길</a></li>
+                  <li><a href="#" class="icons">찾아오시는 길</a></li>
                 </ul>
               </li>
             </ul>
@@ -414,24 +414,25 @@
             <h2 class="sr-only">주요 게시글 탭</h2>
             <ul class="tab-btns" role="tablist">
               <li>
-                <h3><button type="button" role="tab" class="active">공지사항</button></h3>
+                <h3><button type="button" role="tab" aria-controls="tab-panel1" class="active">공지사항</button></h3>
               </li>
               <li>
-                <h3><button type="button" role="tab">사업공고</button></h3>
+                <h3><button type="button" role="tab" aria-controls="tab-panel2">사업공고</button></h3>
               </li>
               <li>
-                <h3><button type="button" role="tab">보도자료</button></h3>
+                <h3><button type="button" role="tab" aria-controls="tab-panel3">보도자료</button></h3>
               </li>
               <li>
-                <h3><button type="button" role="tab">언론보도</button></h3>
+                <h3><button type="button" role="tab" aria-controls="tab-panel4">언론보도</button></h3>
               </li>
               <li>
-                <h3><button type="button" role="tab">입찰공고</button></h3>
+                <h3><button type="button" role="tab" aria-controls="tab-panel5">입찰공고</button></h3>
               </li>
+              <li class="more"><a href="#"><img src="./assets/images/btn_more.png" alt="더보기"></a></li>
             </ul>
             <ul>
               <li class="tab-list">
-                <ul class="tab-inner" role="tabpanel">
+                <ul class="tab-inner active" id="tab-panel1" role="tabpanel">
                   <li>
                     <a href="#">2021년 농림식품기술기획평가원 ESG 혁신 정책 아이디어 공모전 시행 공고</a>
                     <span class="date" aria-label="2021년 10월 22일">2021-10-22</span>
@@ -455,7 +456,7 @@
                 </ul>
               </li>
               <li class="tab-list">
-                <ul class="tab-inner" role="tabpanel" hidden>
+                <ul class="tab-inner" id="tab-panel2" role="tabpanel">
                   <li>
                     <a href="#">2021년도 스마트팜 다부처패키지 혁신기술개발 시행계획 추가공고</a>
                     <span class="date" aria-label="2021년 04월 06일">2021-04-06</span>
@@ -479,7 +480,7 @@
                 </ul>
               </li>
               <li class="tab-list">
-                <ul class="tab-inner" role="tabpanel" hidden>
+                <ul class="tab-inner" id="tab-panel3" role="tabpanel">
                   <li>
                     <a href="#">농기평, 지역 우수 인재에게 장학금 수여</a>
                     <span class="date" aria-label="2021년 11월 05일">2021-11-05</span>
@@ -503,7 +504,7 @@
                 </ul>
               </li>
               <li class="tab-list">
-                <ul class="tab-inner" role="tabpanel" hidden>
+                <ul class="tab-inner" id="tab-panel4" role="tabpanel">
                   <li>
                     <a href="#">농기평, 지역 우수 인재에게 장학금 수여</a>
                     <span class="date" aria-label="2021년 11월 08일">2021-11-08</span>
@@ -527,7 +528,7 @@
                 </ul>
               </li>
               <li class="tab-list">
-                <ul class="tab-inner" role="tabpanel" hidden>
+                <ul class="tab-inner" id="tab-panel5" role="tabpanel">
                   <li>
                     <a href="#">「국가 농식품 R&D 적정 투자 포트폴리오 구축에 관한 연구」용역 입찰 공고</a>
                     <span class="date" aria-label="2021년 10월 22일">2021-10-22</span>
@@ -1011,10 +1012,10 @@
   <!-- SCRIPTS  -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha512-3n19xznO0ubPpSwYCRRBgHh63DrV+bdZfHK52b1esvId4GsfwStQNPJFjeQos2h3JwCmZl0/LgLxSKMAI55hgw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="./assets/index.js"></script>
-  <script src="./assets/wait.js"></script>
+  <script src="./assets/js/slick.js"></script>
+  <script src="./assets/js/index.js"></script>
+
 </body>
 
 </html>
