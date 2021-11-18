@@ -1,96 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/style.css" />
-    <title>MY UI COMPONENTS</title>
-  </head>
-  <body>
-    <header class="header">
-      <h1>My Components</h1>
-      <p>
-        바닐라 자바스크립트를 사용하여 컴포넌트를 마크업 해보았습니다. <br />
-        다양한 웹사이트에서 많이 사용하는 컴포넌트를 위주로 작업해 보았으며,
-        <br />
-        일부 컴포넌트의 경우 JSONPlaceholder를 활용하여 데이터를 받아 온 점 참고
-        부탁드립니다
-      </p>
-    </header>
-    <main class="main">
-      <div class="main-inner">
-        <ul class="components">
-          <li class="review">
-            <div class="component"></div>
-            <div class="info">
-              <h2>책 평점 리뷰</h2>
-              <div class="tags">
-                <strong>Rating UI</strong>
-                <strong>Form 마크업</strong>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/style.css" />
+  <title>MY UI COMPONENTS</title>
+</head>
+
+<body>
+  <header class="header">
+    <h1>My Components</h1>
+    <p>
+      바닐라 자바스크립트를 사용하여 컴포넌트를 마크업 해보았습니다. <br />
+      다양한 웹사이트에서 많이 사용하는 컴포넌트를 위주로 작업해 보았으며,
+      <br />
+      일부 컴포넌트의 경우 JSONPlaceholder를 활용하여 데이터를 받아 온 점 참고
+      부탁드립니다
+    </p>
+  </header>
+  <main class="main">
+    <div class="main-inner">
+      <ul class="components">
+        <li>
+          <div class="component">
+            <div class="review">
+              <div class="review-top">
+                <div class="book-info">
+                  <h2>뉴미디어 트렌드 2022</h2>
+                  <p>
+                    <span class="sr-only">줄거리</span>
+                    새로운 비즈니스와 부의 기회를 찾는다면 뉴미디어 트렌드에
+                    집중하라
+                  </p>
+                </div>
+                <div class="book-img">
+                  <img src="./assets/images/book.jpg" alt="" />
+                </div>
               </div>
+              <form class="review-bottom" action="#" method="GET">
+                <h3>리뷰</h3>
+                <div class="stars">
+                  <div class="sr-only">총 5점 만점, 별 반개 당 1점 부여</div>
+                  <button type="button" class="star">
+                    <span class="sr-only">
+                      총 1점 부여. 동일 별 클릭 시 1점 감소
+                    </span>
+                  </button>
+                  <button type="button" class="star">
+                    <span class="sr-only">
+                      총 2점 부여. 동일 별 클릭 시 1점 감소
+                    </span>
+                  </button>
+                  <button type="button" class="star">
+                    <span class="sr-only">
+                      총 3점 부여. 동일 별 클릭 시 1점 감소
+                    </span>
+                  </button>
+                  <button type="button" class="star">
+                    <span class="sr-only">
+                      총 4점 부여. 동일 별 클릭 시 1점 감소
+                    </span>
+                  </button>
+                  <button type="button" class="star">
+                    <span class="sr-only">
+                      총 5점 부여. 동일 별 클릭 시 1점 감소
+                    </span>
+                  </button>
+                </div>
+                <label for="review-text" class="sr-only">
+                  느낀점 작성 칸
+                </label>
+                <textarea name="review-text" id="review-text" class="text" cols="30" rows="10"></textarea>
+                <div class="review-info">
+                  <strong>(0/1000)</strong>
+                  <button type="button" class="spoiler">스포일러 포함</button>
+                </div>
+                <button type="submit">등록</button>
+              </form>
             </div>
-          </li>
-          <li class="board">
-            <div class="component"></div>
-            <div class="info">
-              <h2>게시판</h2>
-              <div class="tags">
-                <strong>Pagination</strong>
-                <strong>표 마크업</strong>
-                <strong>Mock API</strong>
-              </div>
+          </div>
+          <div class="info">
+            <h2>책 평점 리뷰</h2>
+            <div class="tags">
+              <strong>Rating UI</strong>
+              <strong>Form 마크업</strong>
             </div>
-          </li>
-          <li class="carousel">
-            <div class="component"></div>
-            <div class="info">
-              <h2>이미지 슬라이드</h2>
-              <div class="tags">
-                <strong>Carousel</strong>
-                <strong>Modal</strong>
-                <strong>Mock API</strong>
-              </div>
+          </div>
+        </li>
+        <li class="board">
+          <div class="component"></div>
+          <div class="info">
+            <h2>게시판</h2>
+            <div class="tags">
+              <strong>Pagination</strong>
+              <strong>표 마크업</strong>
+              <strong>Mock API</strong>
             </div>
-          </li>
-          <li class="tab">
-            <div class="component"></div>
-            <div class="info">
-              <h2>탭</h2>
-              <div class="tags">
-                <strong>TAB UI</strong>
-              </div>
+          </div>
+        </li>
+        <li class="carousel">
+          <div class="component"></div>
+          <div class="info">
+            <h2>이미지 슬라이드</h2>
+            <div class="tags">
+              <strong>Carousel</strong>
+              <strong>Modal</strong>
+              <strong>Mock API</strong>
             </div>
-          </li>
-          <li class="tos">
-            <div class="component"></div>
-            <div class="info">
-              <h2>이용약관</h2>
-              <div class="tags">
-                <strong>CHECK UI</strong>
-                <strong>필수선택</strong>
-              </div>
+          </div>
+        </li>
+        <li class="tab">
+          <div class="component"></div>
+          <div class="info">
+            <h2>탭</h2>
+            <div class="tags">
+              <strong>TAB UI</strong>
             </div>
-          </li>
-          <li class="calendar">
-            <div class="component"></div>
-            <div class="info">
-              <h2>달력</h2>
-              <div class="tags">
-                <strong>달력 UI</strong>
-                <strong>체크인,체크아웃</strong>
-              </div>
+          </div>
+        </li>
+        <li class="tos">
+          <div class="component"></div>
+          <div class="info">
+            <h2>이용약관</h2>
+            <div class="tags">
+              <strong>CHECK UI</strong>
+              <strong>필수선택</strong>
             </div>
-          </li>
-        </ul>
-      </div>
-    </main>
-    <script src="./assets/index.js"></script>
-  </body>
+          </div>
+        </li>
+        <li class="calendar">
+          <div class="component"></div>
+          <div class="info">
+            <h2>달력</h2>
+            <div class="tags">
+              <strong>달력 UI</strong>
+              <strong>체크인,체크아웃</strong>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </main>
+  <script src="./assets/index.js"></script>
+</body>
+
 </html>
