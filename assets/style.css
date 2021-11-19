@@ -111,6 +111,7 @@ table {
   border-collapse: collapse;
 }
 
+input[type="checkbox"],
 .sr-only {
   position: absolute;
   width: 1px;
@@ -183,14 +184,14 @@ table {
   border-radius: 15px;
 }
 
-.ui-lists > div {
-  margin: 0 30px 10px;
-}
-
 .ui-review,
 .ui-board,
-.ui-carousel {
+.ui-carousel,
+.ui-tos,
+.ui-tab,
+.ui-calendar {
   padding: 45px;
+  margin: 0 20px 20px;
   border-radius: 15px;
   background-color: #fff;
   box-shadow: 0 8px 127px 0 rgb(0 0 0 / 11%);
@@ -198,6 +199,7 @@ table {
 
 .info {
   padding: 10px;
+  margin: 0 20px 20px;
 }
 
 .info h2 {
@@ -382,4 +384,103 @@ table {
   font-size: var(--fs-small);
   border-radius: 10px;
   background-color: var(--accent-color);
+}
+
+/* TOS UI */
+.ui-tos {
+  height: 716px;
+  padding: 28px;
+}
+
+.tos-title {
+  font-size: 30px;
+  text-align: center;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
+.terms-all {
+  margin-bottom: 20px;
+}
+
+.terms-all,
+.section-top {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.terms-all label,
+.section-top label {
+  cursor: pointer;
+}
+
+.terms-all input,
+.section-top input {
+  margin-right: 5px;
+  border: none;
+  background-color: inherit;
+}
+
+.tos-section .section-bottom {
+  height: 100px;
+  overflow: auto;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: var(--fs-small);
+  background-color: #effcff;
+}
+
+.check {
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+
+.check::before {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  content: "\f058";
+  font-size: var(--fs-large);
+}
+
+.check.active::before {
+  font-weight: 800;
+  color: var(--accent-color);
+}
+
+.alarm {
+  font-size: var(--fs-small);
+  color: var(--accent2-color);
+}
+
+.alarm.hide {
+  display: none;
+}
+
+.tos-btns {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.tos-btns button {
+  width: 250px;
+  padding: 10px;
+  color: #fff;
+  border-radius: 5px;
+  margin: 3px;
+}
+
+.tos-btns .cancel {
+  background-color: #686868;
+}
+
+.tos-btns .agree {
+  background-color: var(--accent-color);
+}
+
+.tos-info {
+  margin: 0 30px 20px;
 }
