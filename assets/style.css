@@ -160,7 +160,7 @@ input[type="checkbox"],
 }
 
 .header p {
-  font-size: 18px;
+  font-size: var(--fs-large);
   line-height: 1.5;
 }
 
@@ -182,6 +182,11 @@ input[type="checkbox"],
   width: 48%;
   margin-bottom: 20px;
   border-radius: 15px;
+}
+
+.ui-list1,
+.ui-list2 {
+  width: 100%;
 }
 
 .ui-review,
@@ -442,7 +447,7 @@ input[type="checkbox"],
   margin-bottom: 15px;
   padding: 10px;
   font-size: var(--fs-small);
-  background-color: #effcff;
+  background-color: #f1f1f1;
 }
 
 .check {
@@ -503,7 +508,7 @@ input[type="checkbox"],
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 640px;
+  height: 535px;
   font-size: var(--fs-small);
 }
 
@@ -583,8 +588,8 @@ input[type="checkbox"],
 .calendar th,
 .calendar button {
   padding: 10px;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   text-align: center;
   margin: 5px;
 }
@@ -612,14 +617,14 @@ input[type="checkbox"],
 .arrow-btns .prev,
 .arrow-btns .next {
   position: absolute;
-  bottom: 210px;
+  bottom: 110px;
   width: 40px;
   height: 40px;
 }
 
 .arrow-btns .prev::before,
 .arrow-btns .next::before {
-  font-size: 25px;
+  font-size: 20px;
   color: var(--dark-color);
 }
 
@@ -628,9 +633,158 @@ input[type="checkbox"],
 }
 
 .arrow-btns .prev {
-  left: 25px;
+  left: calc((100% - 280px) / 3);
 }
 
 .arrow-btns .next {
-  right: 25px;
+  right: calc((100% - 280px) / 3);
+}
+
+/* 
+ * MEDIA-QUERY 
+*/
+
+@media screen and (max-width: 1024px) {
+  .ui-list5,
+  .ui-list6 {
+    width: 100%;
+  }
+
+  /* TAB UI */
+  .ui-tab {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --fs-title: 60px;
+    --fs-subtitle: 20px;
+    --fs-large: 16px;
+    --fs-normal: 14px;
+    --fs-small: 13px;
+  }
+
+  .br {
+    display: none;
+  }
+
+  .ui-list3,
+  .ui-list4 {
+    width: 100%;
+  }
+
+  /* BOARD UI */
+  .board th,
+  .board td {
+    padding: 5px;
+    font-size: var(--fs-normal);
+  }
+
+  /* TOS UI */
+  .ui-tos {
+    height: auto;
+  }
+
+  .terms-all {
+    margin-bottom: 5px;
+  }
+
+  .terms-all label,
+  .section-top label {
+    font-size: var(--fs-normal);
+  }
+
+  .tos-btns button {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  :root {
+    --fs-title: 35px;
+    --fs-large: 15px;
+  }
+
+  .ui-review,
+  .ui-board,
+  .ui-carousel,
+  .ui-tos,
+  .ui-tab,
+  .ui-calendar {
+    padding: 20px;
+  }
+
+  .info h2::after {
+    bottom: 9px;
+    right: -62px;
+    width: 60px;
+    height: 60px;
+  }
+
+  /* BOARD UI */
+  .board th,
+  .board td {
+    padding: 5px;
+    font-size: var(--fs-small);
+  }
+
+  .board th:nth-child(3),
+  .board td:nth-child(3) {
+    display: none;
+  }
+
+  /* CAROUSEL UI */
+  .carousel-btns .prev,
+  .carousel-btns .next {
+    font-size: 20px;
+  }
+
+  .carousel-btns .prev {
+    left: 5px;
+  }
+
+  .carousel-btns .next {
+    right: 5px;
+  }
+
+  /* TAB UI */
+  .tab-info li {
+    padding: 15px;
+    height: auto;
+  }
+
+  /* CALENDAR UI */
+  .ui-calendar h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .ui-calendar > p {
+    font-size: var(--fs-normal);
+    text-align: center;
+  }
+
+  .calendar-btns {
+    display: flex;
+  }
+
+  .calendar-btns button {
+    width: 100px;
+  }
+
+  .calendar th,
+  .calendar button {
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .arrow-btns .prev {
+    left: calc((100% - 280px) / 7);
+  }
+
+  .arrow-btns .next {
+    right: calc((100% - 280px) / 7);
+  }
 }
