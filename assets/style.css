@@ -22,6 +22,15 @@
   font-style: normal;
 }
 
+:root {
+  --fs-title: 80px;
+  --fs-subtitle: 20px;
+  --fs-large: 18px;
+  --fs-normal: 16px;
+  --fs-small: 14px;
+  --dark-color: #2c2c2c;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -43,6 +52,7 @@ p {
 
 body,
 button {
+  color: var(--dark-color);
   font-family: "GmarketSansMedium", sans-serif;
 }
 
@@ -91,7 +101,7 @@ sr-only {
 
 .header h1 {
   color: #505050;
-  font-size: 80px;
+  font-size: var(--fs-title);
   font-family: "GmarketSansBold", sans-serif;
   margin-bottom: 20px;
 }
@@ -99,4 +109,51 @@ sr-only {
 .header p {
   font-size: 18px;
   line-height: 1.5;
+}
+
+/* 
+ * MAIN  
+*/
+
+/* main-common  */
+.main-inner {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+}
+
+.ui-lists {
+  width: 48%;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 15px 3px #ddd;
+}
+
+.ui-list1 {background-color: #d1c2fe;}
+
+.ui-list2 {background-color: #f0ebe8;}
+
+.ui-list3 {background-color: #bce2e0;}
+
+.ui-list4 {background-color: #ffe4bd;}
+
+.ui-list5 {background-color: #cdcdcd;}
+
+.ui-list6 {background-color: #f8bfbf;}
+
+.info h2 {
+  font-size: var( --fs-subtitle);
+}
+
+.info .tags {
+  font-size: var( --fs-small);
+}
+
+.tags strong {
+  padding: 5px;
+  border: 1px solid var(--dark-color);
+  border-radius: 20px;
 }
