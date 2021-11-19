@@ -2,24 +2,24 @@
  * RESET CSS & COMMON CSS
 */
 @font-face {
-  font-weight: normal;
   font-family: "GmarketSansLight";
+  font-weight: normal;
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
     format("woff");
   font-style: normal;
 }
 
 @font-face {
-  font-weight: normal;
   font-family: "GmarketSansMedium";
+  font-weight: normal;
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
     format("woff");
   font-style: normal;
 }
 
 @font-face {
-  font-weight: normal;
   font-family: "GmarketSansBold";
+  font-weight: normal;
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
     format("woff");
   font-style: normal;
@@ -124,8 +124,8 @@ input[type="checkbox"],
 .icon::before,
 .icon::after {
   display: inline-block;
-  font-weight: 400;
   font-family: "Font Awesome 5 Free";
+  font-weight: 400;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
@@ -154,8 +154,8 @@ input[type="checkbox"],
 
 .header h1 {
   color: var(--accent-color);
-  font-size: var(--fs-title);
   font-family: "GmarketSansBold", sans-serif;
+  font-size: var(--fs-title);
   margin-bottom: 20px;
 }
 
@@ -172,10 +172,10 @@ input[type="checkbox"],
 .main-inner {
   display: flex;
   width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   flex-wrap: wrap;
   justify-content: space-around;
-  max-width: 1200px;
 }
 
 .ui-lists {
@@ -208,8 +208,8 @@ input[type="checkbox"],
 }
 
 .info h2 {
-  position: relative;
   display: inline-block;
+  position: relative;
   padding: 0 4px;
   font-size: var(--fs-subtitle);
   margin-bottom: 10px;
@@ -360,8 +360,8 @@ input[type="checkbox"],
 
 .star::after {
   color: var(--light-grey-color);
-  font-weight: 800;
   font-size: var(--fs-large);
+  font-weight: 800;
   content: "\f005";
 }
 
@@ -411,9 +411,9 @@ input[type="checkbox"],
 }
 
 .tos-title {
+  color: var(--accent-color);
   font-size: 30px;
   text-align: center;
-  color: var(--accent-color);
   margin-bottom: 20px;
 }
 
@@ -423,8 +423,8 @@ input[type="checkbox"],
 
 .terms-all,
 .section-top {
-  position: relative;
   display: flex;
+  position: relative;
   flex-direction: row-reverse;
   justify-content: flex-end;
 }
@@ -436,17 +436,17 @@ input[type="checkbox"],
 
 .terms-all input,
 .section-top input {
-  margin-right: 5px;
   border: none;
+  margin-right: 5px;
   background-color: inherit;
 }
 
 .tos-section .section-bottom {
   height: 100px;
-  overflow: auto;
-  margin-bottom: 15px;
   padding: 10px;
   font-size: var(--fs-small);
+  overflow: auto;
+  margin-bottom: 15px;
   background-color: #f1f1f1;
 }
 
@@ -457,20 +457,20 @@ input[type="checkbox"],
 
 .check::before {
   position: absolute;
-  left: 0;
   top: 2px;
-  content: "\f058";
+  left: 0;
   font-size: var(--fs-large);
+  content: "\f058";
 }
 
 .check.active::before {
-  font-weight: 800;
   color: var(--accent-color);
+  font-weight: 800;
 }
 
 .alarm {
-  font-size: var(--fs-small);
   color: var(--accent2-color);
+  font-size: var(--fs-small);
 }
 
 .alarm.hide {
@@ -479,16 +479,16 @@ input[type="checkbox"],
 
 .tos-btns {
   display: flex;
-  justify-content: center;
   margin: 30px 0;
+  justify-content: center;
 }
 
 .tos-btns button {
   width: 250px;
   padding: 10px;
+  margin: 3px;
   color: #fff;
   border-radius: 5px;
-  margin: 3px;
 }
 
 .tos-btns .cancel {
@@ -506,28 +506,28 @@ input[type="checkbox"],
 /* TAB UI */
 .ui-tab {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   height: 535px;
   font-size: var(--fs-small);
+  flex-direction: column;
+  justify-content: center;
 }
 
 .tab-title {
   display: flex;
+  height: 50px;
+  padding: 0 15px;
   align-items: flex-end;
   background-color: var(--dark-color);
-  height: 50px;
   border-radius: 10px 10px 0 0;
-  padding: 0 15px;
 }
 
 .tab-title li {
   display: flex;
+  width: 80px;
+  height: 30px;
   justify-content: center;
   align-items: center;
   margin-right: 10px;
-  width: 80px;
-  height: 30px;
   background-color: #5e5c5c;
   box-shadow: 0 7px 20px -7px #686868;
 }
@@ -542,8 +542,8 @@ input[type="checkbox"],
 }
 
 .tab-info li {
-  padding: 20px;
   height: 200px;
+  padding: 20px;
   border-radius: 0 0 10px 10px;
   box-shadow: 0 2px 10px 10px rgb(0 0 0 / 11%);
 }
@@ -554,8 +554,8 @@ input[type="checkbox"],
 
 /* CALENDAR UI */
 .ui-calendar {
-  position: relative;
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
 }
@@ -573,25 +573,25 @@ input[type="checkbox"],
 }
 
 .calendar-btns button {
-  border-radius: 10px;
-  margin: 0 5px;
-  padding: 10px;
   width: 120px;
+  padding: 10px;
+  margin: 0 5px;
+  border-radius: 10px;
   box-shadow: 0 2px 30px 10px rgb(0 0 0 / 11%);
 }
 
 .calendar caption {
-  margin-bottom: 10px;
   font-weight: 800;
+  margin-bottom: 10px;
 }
 
 .calendar th,
 .calendar button {
-  padding: 10px;
   width: 30px;
   height: 30px;
-  text-align: center;
+  padding: 10px;
   margin: 5px;
+  text-align: center;
 }
 
 .calendar th {
@@ -599,9 +599,9 @@ input[type="checkbox"],
 }
 
 .calendar button.active {
+  color: #fff;
   border-radius: 50%;
   background-color: var(--dark-color);
-  color: #fff;
 }
 
 .calendar button.hover {
@@ -624,8 +624,8 @@ input[type="checkbox"],
 
 .arrow-btns .prev::before,
 .arrow-btns .next::before {
-  font-size: 20px;
   color: var(--dark-color);
+  font-size: 20px;
 }
 
 .arrow-btns .prev:disabled::before {
@@ -750,8 +750,8 @@ input[type="checkbox"],
 
   /* TAB UI */
   .tab-info li {
-    padding: 15px;
     height: auto;
+    padding: 15px;
   }
 
   /* CALENDAR UI */
@@ -775,9 +775,9 @@ input[type="checkbox"],
 
   .calendar th,
   .calendar button {
-    padding: 5px;
     width: 20px;
     height: 20px;
+    padding: 5px;
   }
 
   .arrow-btns .prev {
