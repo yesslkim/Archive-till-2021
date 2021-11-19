@@ -203,9 +203,22 @@ input[type="checkbox"],
 }
 
 .info h2 {
+  position: relative;
+  display: inline-block;
   padding: 0 4px;
   font-size: var(--fs-subtitle);
   margin-bottom: 10px;
+}
+
+.info h2::after {
+  position: absolute;
+  bottom: 3px;
+  right: -95px;
+  width: 100px;
+  height: 100px;
+  background: url(../assets/images/arrow.png) 50% 100% no-repeat;
+  background-size: contain;
+  content: "";
 }
 
 .info .tags {
@@ -487,6 +500,10 @@ input[type="checkbox"],
 
 /* TAB UI */
 .ui-tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 640px;
   font-size: var(--fs-small);
 }
 
@@ -528,4 +545,92 @@ input[type="checkbox"],
 
 .tab-info .hidden {
   display: none;
+}
+
+/* CALENDAR UI */
+.ui-calendar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ui-calendar h2 {
+  color: var(--accent-color);
+}
+
+.ui-calendar > p {
+  margin-bottom: 20px;
+}
+
+.calendar-btns {
+  margin-bottom: 30px;
+}
+
+.calendar-btns button {
+  border-radius: 10px;
+  margin: 0 5px;
+  padding: 10px;
+  width: 120px;
+  box-shadow: 0 2px 30px 10px rgb(0 0 0 / 11%);
+}
+
+.calendar caption {
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.calendar th,
+.calendar button {
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  margin: 5px;
+}
+
+.calendar th {
+  color: var(--accent-color);
+}
+
+.calendar button.active {
+  border-radius: 50%;
+  background-color: var(--dark-color);
+  color: #fff;
+}
+
+.calendar button.hover {
+  border: 2px solid var(--dark-color);
+  border-radius: 50%;
+}
+
+.calendar button:disabled {
+  cursor: initial;
+  opacity: 0.25;
+}
+
+.arrow-btns .prev,
+.arrow-btns .next {
+  position: absolute;
+  bottom: 210px;
+  width: 40px;
+  height: 40px;
+}
+
+.arrow-btns .prev::before,
+.arrow-btns .next::before {
+  font-size: 25px;
+  color: var(--dark-color);
+}
+
+.arrow-btns .prev:disabled::before {
+  opacity: 0.25;
+}
+
+.arrow-btns .prev {
+  left: 25px;
+}
+
+.arrow-btns .next {
+  right: 25px;
 }
