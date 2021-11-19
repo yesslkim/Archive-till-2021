@@ -188,7 +188,8 @@ table {
 }
 
 .ui-review,
-.ui-board {
+.ui-board,
+.ui-carousel {
   padding: 45px;
   border-radius: 15px;
   background-color: #fff;
@@ -214,6 +215,93 @@ table {
   border: 1px solid var(--dark-color);
   margin-right: 5px;
   border-radius: 20px;
+}
+
+.prev::before {
+  font-weight: 800;
+  content: "\f053";
+}
+
+.next::before {
+  font-weight: 800;
+  content: "\f053";
+  transform: rotate(180deg);
+}
+
+/* BOARD-UI  */
+.board {
+  width: 100%;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+.board thead {
+  border-top: 3px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.board th,
+.board td {
+  padding: 5px 7px;
+}
+
+.board-lists td {
+  vertical-align: top;
+  border-bottom: 2px solid var(--light-grey-color);
+}
+
+.board-list .title {
+  text-align: left;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination a {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+/* CAROUSEL UI */
+.ui-carousel {
+  position: relative;
+  padding: 30px;
+}
+
+.carousel {
+  display: flex;
+  width: 85%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-img img {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.carousel-btns .prev,
+.carousel-btns .next {
+  position: absolute;
+  top: 50%;
+  font-size: 30px;
+  transform: translateY(-50%);
+}
+
+.carousel-btns .prev {
+  left: 15px;
+}
+
+.carousel-btns .next {
+  right: 15px;
 }
 
 /* REVIEW-UI  */
@@ -294,55 +382,4 @@ table {
   font-size: var(--fs-small);
   border-radius: 10px;
   background-color: var(--accent-color);
-}
-
-/* BOARD-UI  */
-.board {
-  width: 100%;
-  margin: 0 auto 20px;
-  text-align: center;
-}
-
-.board thead {
-  border-top: 3px solid var(--accent-color);
-  border-bottom: 1px solid var(--accent-color);
-}
-
-.board th,
-.board td {
-  padding: 5px 7px;
-}
-
-.board-lists td {
-  vertical-align: top;
-  border-bottom: 2px solid var(--light-grey-color);
-}
-
-.board-list .title {
-  text-align: left;
-}
-
-.pagination {
-  display: flex;
-  justify-content: center;
-}
-
-.pagination a {
-  display: flex;
-  width: 30px;
-  height: 30px;
-  justify-content: center;
-  align-items: center;
-  margin-right: 10px;
-}
-
-.pagination .prev::before {
-  font-weight: 800;
-  content: "\f053";
-}
-
-.pagination .next::before {
-  font-weight: 800;
-  content: "\f053";
-  transform: rotate(180deg);
 }
