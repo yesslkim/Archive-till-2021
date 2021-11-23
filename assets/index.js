@@ -140,3 +140,60 @@ carouselBtns.addEventListener("click", (e) => {
 
   disableBtns(carousel, positionX);
 });
+
+//REVIEW - STARS
+const reviewWrapper = document.querySelector(".ui-review");
+const reviewInfoWrapper = document.querySelector(".review-info");
+const starsWrapper = document.querySelector(".stars");
+const stars = document.querySelectorAll(".stars > button");
+const textArea = reviewWrapper.querySelector(".text");
+
+starsWrapper.addEventListener("mouseover", (e) => {
+  if (e.target.tagName !== "BUTTON") return;
+  const targetIndex = Array.from(stars).indexOf(e.target);
+
+  stars.forEach((star, index) => {
+    if (index <= targetIndex) {
+      star.classList.add("hover");
+    } else {
+      star.classList.remove("hover");
+      star.classList.remove("click");
+    }
+  });
+});
+
+starsWrapper.addEventListener("click", (e) => {
+  if (e.target.tagName !== "BUTTON") return;
+
+  const targetIndex = Array.from(stars).indexOf(e.target);
+
+  const strong = starsWrapper.querySelector("strong");
+  strong.classList.add("active");
+  strong.textContent = targetIndex + 1;
+
+  stars.forEach((star, index) => {
+    if (index <= targetIndex) {
+      star.classList.add("click");
+    } else {
+      star.classList.remove("click");
+    }
+  });
+});
+
+starsWrapper.addEventListener("mouseout", (e) => {
+  if (e.target.tagName !== "BUTTON") return;
+
+  stars.forEach((star) => star.classList.remove("hover"));
+});
+
+//REVIEW - SPOILER BTN
+reviewInfoWrapper.addEventListener("click", (e) => {
+  if (e.target.tagName !== "BUTTON") return;
+  e.target.classList.toggle("click");
+});
+
+//REVIEW - LETTER COUNTER
+textArea.addEventListener("keyup", (e) => {
+  const counters = e.target.value.split("").length;
+  reviewInfoWrapper.querySelector("strong").textContent = `(${counters}/1000)`;
+});
