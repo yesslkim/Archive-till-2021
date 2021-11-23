@@ -76,3 +76,67 @@ fetch(BOARD_URL)
     renderBoardLists(board, numberOfItems, numberPerPage, currentPage);
     renderPage(board, numberOfItems, numberPerPage, currentPage);
   });
+
+//CAROUSEL - GET DATA
+const CAROUSEL_URL = "https://jsonplaceholder.typicode.com/photos";
+
+fetch(CAROUSEL_URL)
+  .then((response) => response.json())
+  .then((json) => {
+    const carouselArray = json.slice(0, 10);
+
+    carouselArray.map((item) => {
+      const img = document.createElement("img");
+      img.setAttribute("src", item.thumbnailUrl);
+      img.setAttribute("alt", item.title);
+
+      const carouselLists = document.createElement("div");
+      carouselLists.append(img);
+      carouselLists.classList.add("carousel-img");
+
+      document.querySelector(".carousel").append(carouselLists);
+    });
+  });
+
+//CAROUSEL - DISABLE BTNS
+let positionX = 0;
+
+const disableBtns = (carousel, positionX) => {
+  const carouselWidth = carousel.offsetWidth;
+
+  const leftBtn = carouselBtns.querySelector(".prev");
+  const rightBtn = carouselBtns.querySelector(".next");
+
+  if (positionX === 0) {
+    leftBtn.setAttribute("disabled", true);
+  } else {
+    leftBtn.removeAttribute("disabled");
+  }
+
+  if (positionX < -carouselWidth) {
+    rightBtn.setAttribute("disabled", true);
+  } else {
+    rightBtn.removeAttribute("disabled");
+  }
+};
+
+//CAROUSEL - UI
+const carouselBtns = document.querySelector(".carousel-btns");
+carouselBtns.addEventListener("click", (e) => {
+  if (e.target.tagName !== "BUTTON") return;
+
+  const carousel = document.querySelector(".carousel");
+  const carouselImgWidth = Number(
+    document.querySelector(".carousel-img").offsetWidth
+  );
+
+  if (e.target.classList.contains("prev")) {
+    carousel.style.transform += `translate3d(${carouselImgWidth}px, 0px, 0px)`;
+    positionX += carouselImgWidth;
+  } else {
+    carousel.style.transform += `translate3d(-${carouselImgWidth}px, 0px, 0px)`;
+    positionX -= carouselImgWidth;
+  }
+
+  disableBtns(carousel, positionX);
+});
