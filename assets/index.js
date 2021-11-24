@@ -324,9 +324,8 @@ tabWrapper.addEventListener("click", (e) => {
   e.target.closest("li").classList.add("active");
 
   //TAB PARAGRAPH
-  const targetTab = document.querySelector(".tab-title li.active");
-  const targetTabIndex = Array.from(tabTitleBtns).indexOf(targetTab);
+  const targetIndex = e.target.dataset.index;
   const tabInfo = document.querySelectorAll(".tab-info li");
   tabInfo.forEach((info) => info.classList.add("hidden"));
-  tabInfo[targetTabIndex].classList.remove("hidden");
+  tabInfo[targetIndex].classList.remove("hidden");
 });
