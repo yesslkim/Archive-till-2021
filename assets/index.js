@@ -197,3 +197,98 @@ textArea.addEventListener("keyup", (e) => {
   const counters = e.target.value.split("").length;
   reviewInfoWrapper.querySelector("strong").textContent = `(${counters}/1000)`;
 });
+
+//TOS - CHANGE INPUT(CHECKED) STATE
+const changeCheckState = (elem) => {
+  if (elem.classList.contains("active")) {
+    elem.nextElementSibling.checked = true;
+  } else {
+    elem.nextElementSibling.checked = false;
+  }
+};
+
+//TOS - BTN STYLE
+const addBtnStyle = (elem) => {
+  elem.classList.add("active");
+};
+const removeBtnStyle = (elem) => {
+  elem.classList.remove("active");
+};
+
+//TOS - UPDATING STATE OF BTN-ALL BTN
+const updateBtnAllState = (checkedBtnsQuantity, btnsQuantity, btnAll) => {
+  if (checkedBtnsQuantity === btnsQuantity) {
+    btnAll.classList.add("clickBtnAll");
+    addBtnStyle(btnAll);
+    changeCheckState(btnAll);
+  } else if (checkedBtnsQuantity < btnsQuantity) {
+    btnAll.classList.remove("clickBtnAll");
+    removeBtnStyle(btnAll);
+    changeCheckState(btnAll);
+  }
+};
+
+//TOS - UPDATING STATE OF EACH BTNS
+const updateBtnsState = (targetElem, btns) => {
+  targetElem.classList.toggle("clickBtnAll"); //FOR BTN-ALL STATE
+  btns.forEach((btn) => {
+    if (targetElem.classList.contains("clickBtnAll")) {
+      addBtnStyle(btn);
+      changeCheckState(btn);
+    } else {
+      removeBtnStyle(btn);
+      changeCheckState(btn);
+    }
+  });
+};
+
+//TOS - SET CHECKBOX BTNS
+const setCheckboxBtns = (targetElem) => {
+  if (!targetElem.classList.contains("check")) return;
+
+  targetElem.classList.toggle("active");
+
+  const btns = document.querySelectorAll(".btn");
+  const btnsQuantity = btns.length;
+  let checkedBtnsQuantity = document.querySelectorAll(".btn.active").length;
+  const btnAll = document.querySelector(".btn-all");
+
+  if (targetElem.classList.contains("btn"))
+    updateBtnAllState(checkedBtnsQuantity, btnsQuantity, btnAll);
+
+  if (targetElem.classList.contains("btn-all"))
+    updateBtnsState(targetElem, btns);
+};
+
+//TOS - SET FORM BTNS
+const setFormBtn = (targetElem) => {
+  if (targetElem.tagName !== "BUTTON") return;
+
+  //필수선택 갯수 , 선택된 필수선택 갯수
+  const btnsQuantity = document.querySelectorAll(".chk-required").length;
+  const checkedBtnsQuantity = document.querySelectorAll(
+    ".chk-required.active"
+  ).length;
+
+  if (targetElem.classList.contains("agree")) {
+    if (checkedBtnsQuantity < btnsQuantity) {
+      document.querySelector(".alarm").classList.add("active");
+      targetElem.parentElement.classList.add("slide-down");
+    } else {
+      alert("다음 페이지로 넘어갑니다.");
+    }
+  }
+
+  if (targetElem.classList.contains("cancel")) {
+    alert("이전 페이지로 이동됩니다.");
+  }
+};
+
+const tosWrapper = document.querySelector(".ui-tos");
+tosWrapper.addEventListener("click", (e) => {
+  e.preventDefault();
+  const targetElem = e.target;
+
+  setCheckboxBtns(targetElem);
+  setFormBtn(targetElem);
+});
