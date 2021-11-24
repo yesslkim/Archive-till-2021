@@ -1,3 +1,7 @@
+////
+//// BOARD UI
+////
+
 //BOARD - RENDER PAGINATION NUMBER
 const renderPagination = (totalPages) => {
   for (let i = 1; i <= totalPages; i++) {
@@ -77,6 +81,10 @@ fetch(BOARD_URL)
     renderPage(board, numberOfItems, numberPerPage, currentPage);
   });
 
+////
+//// CAROUSEL UI
+////
+
 //CAROUSEL - GET DATA
 const CAROUSEL_URL = "https://jsonplaceholder.typicode.com/photos";
 
@@ -141,6 +149,10 @@ carouselBtns.addEventListener("click", (e) => {
   disableBtns(carousel, positionX);
 });
 
+////
+//// REVIEW UI
+////
+
 //REVIEW - STARS
 const reviewWrapper = document.querySelector(".ui-review");
 const reviewInfoWrapper = document.querySelector(".review-info");
@@ -197,6 +209,10 @@ textArea.addEventListener("keyup", (e) => {
   const counters = e.target.value.split("").length;
   reviewInfoWrapper.querySelector("strong").textContent = `(${counters}/1000)`;
 });
+
+////
+//// TOS UI
+////
 
 //TOS - CHANGE INPUT(CHECKED) STATE
 const changeCheckState = (elem) => {
@@ -291,4 +307,26 @@ tosWrapper.addEventListener("click", (e) => {
 
   setCheckboxBtns(targetElem);
   setFormBtn(targetElem);
+});
+
+////
+//// TAB UI
+////
+
+const tabWrapper = document.querySelector(".ui-tab");
+
+tabWrapper.addEventListener("click", (e) => {
+  if (e.target.tagName !== "BUTTON") return;
+
+  //TAB TITLE BTN
+  const tabTitleBtns = document.querySelectorAll(".tab-title li");
+  tabTitleBtns.forEach((btn) => btn.classList.remove("active"));
+  e.target.closest("li").classList.add("active");
+
+  //TAB PARAGRAPH
+  const targetTab = document.querySelector(".tab-title li.active");
+  const targetTabIndex = Array.from(tabTitleBtns).indexOf(targetTab);
+  const tabInfo = document.querySelectorAll(".tab-info li");
+  tabInfo.forEach((info) => info.classList.add("hidden"));
+  tabInfo[targetTabIndex].classList.remove("hidden");
 });
