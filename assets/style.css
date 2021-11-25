@@ -194,7 +194,7 @@ input[type="checkbox"],
 .ui-carousel,
 .ui-tos,
 .ui-tab,
-.ui-calendar {
+.ui-cart {
   padding: 45px;
   margin: 0 20px 20px;
   border-radius: 15px;
@@ -267,10 +267,11 @@ input[type="checkbox"],
 
 .board-lists td {
   vertical-align: top;
-  border-bottom: 2px solid var(--light-grey-color);
+  border-bottom: 1px solid var(--light-grey-color);
 }
 
-.board-list .title {
+td.title {
+  padding-left: 20px;
   text-align: left;
 }
 
@@ -288,17 +289,23 @@ input[type="checkbox"],
   margin-right: 10px;
 }
 
+.num.active {
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  color: #fff;
+}
+
 /* CAROUSEL UI */
 .ui-carousel {
   position: relative;
-  padding: 30px;
+  padding: 40px;
+  overflow: hidden;
 }
 
 .carousel {
   display: flex;
-  width: 85%;
-  margin: 0 auto;
-  overflow: hidden;
+  transform: translateX(0);
+  transition: all 0.3s linear;
 }
 
 .carousel-img img {
@@ -322,6 +329,12 @@ input[type="checkbox"],
 
 .carousel-btns .next {
   right: 15px;
+}
+
+.prev:disabled::before,
+.next:disabled::before {
+  cursor: auto;
+  color: var(--light-grey-color);
 }
 
 /* REVIEW-UI  */
@@ -354,6 +367,17 @@ input[type="checkbox"],
   margin-bottom: 10px;
 }
 
+.stars strong {
+  display: none;
+  padding-left: 10px;
+  font-size: var(--fs-large);
+  font-weight: 800;
+}
+
+.stars strong.active {
+  display: inline;
+}
+
 .star {
   padding: 5px;
 }
@@ -363,9 +387,11 @@ input[type="checkbox"],
   font-size: var(--fs-large);
   font-weight: 800;
   content: "\f005";
+  transition: color 0.3s linear;
 }
 
-.star.active::after {
+.star.hover::after,
+.star.click::after {
   color: var(--accent2-color);
 }
 
@@ -406,6 +432,7 @@ input[type="checkbox"],
 
 /* TOS UI */
 .ui-tos {
+  position: relative;
   height: 716px;
   padding: 28px;
 }
@@ -463,24 +490,30 @@ input[type="checkbox"],
   content: "\f058";
 }
 
+.btn-all.active::before,
 .check.active::before {
   color: var(--accent-color);
   font-weight: 800;
 }
 
 .alarm {
+  display: none;
   color: var(--accent2-color);
   font-size: var(--fs-small);
 }
 
-.alarm.hide {
-  display: none;
+.alarm.active {
+  display: block;
 }
 
 .tos-btns {
   display: flex;
   margin: 30px 0;
   justify-content: center;
+}
+
+.tos-btns.slide-down {
+  margin: 10px 0;
 }
 
 .tos-btns button {
@@ -506,7 +539,7 @@ input[type="checkbox"],
 /* TAB UI */
 .ui-tab {
   display: flex;
-  height: 535px;
+  height: 730px;
   font-size: var(--fs-small);
   flex-direction: column;
   justify-content: center;
@@ -537,10 +570,6 @@ input[type="checkbox"],
   box-shadow: 0 0 0 0 transparent;
 }
 
-.tab-title a {
-  display: block;
-}
-
 .tab-info li {
   height: 200px;
   padding: 20px;
@@ -552,92 +581,137 @@ input[type="checkbox"],
   display: none;
 }
 
-/* CALENDAR UI */
-.ui-calendar {
-  display: flex;
+/* CART UI */
+.ui-cart {
   position: relative;
-  flex-direction: column;
-  align-items: center;
 }
 
-.ui-calendar h2 {
-  color: var(--accent-color);
-}
-
-.ui-calendar > p {
-  margin-bottom: 20px;
-}
-
-.calendar-btns {
-  margin-bottom: 30px;
-}
-
-.calendar-btns button {
-  width: 120px;
-  padding: 10px;
-  margin: 0 5px;
-  border-radius: 10px;
-  box-shadow: 0 2px 30px 10px rgb(0 0 0 / 11%);
-}
-
-.calendar caption {
-  font-weight: 800;
-  margin-bottom: 10px;
-}
-
-.calendar th,
-.calendar button {
-  width: 30px;
-  height: 30px;
-  padding: 10px;
-  margin: 5px;
-  text-align: center;
-}
-
-.calendar th {
-  color: var(--accent-color);
-}
-
-.calendar button.active {
-  color: #fff;
-  border-radius: 50%;
-  background-color: var(--dark-color);
-}
-
-.calendar button.hover {
-  border: 2px solid var(--dark-color);
-  border-radius: 50%;
-}
-
-.calendar button:disabled {
-  cursor: initial;
-  opacity: 0.25;
-}
-
-.arrow-btns .prev,
-.arrow-btns .next {
+.ui-cart .close-btn {
   position: absolute;
-  bottom: 110px;
-  width: 40px;
-  height: 40px;
+  top: 20px;
+  right: 20px;
 }
 
-.arrow-btns .prev::before,
-.arrow-btns .next::before {
-  color: var(--dark-color);
+.product-info .delete-btn::before,
+.ui-cart .close-btn::before {
+  font-weight: 800;
+  font-size: 30px;
+  content: "\f00d";
+}
+
+.cart-title {
+  text-align: center;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--dark-color);
+}
+
+.cart-title::before {
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  width: 80px;
+  height: 80px;
+  content: "";
+  background-image: url(./images/Cart.png);
+  background-size: contain;
+}
+
+.product {
+  position: relative;
+  display: flex;
+  align-content: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 8px 127px 0 rgb(0 0 0 / 15%);
+}
+
+.product img {
+  width: 100px;
+  margin-left: 20px;
+  margin-right: 10%;
+}
+
+.product-info .delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.product-info .delete-btn::before {
   font-size: 20px;
 }
 
-.arrow-btns .prev:disabled::before {
-  opacity: 0.25;
+.product-info h3 {
+  font-size: var(--fs-normal);
+  padding: 10px 0 5px;
 }
 
-.arrow-btns .prev {
-  left: calc((100% - 280px) / 3);
+.product-info .price {
+  font-size: var(--fs-small);
 }
 
-.arrow-btns .next {
-  right: calc((100% - 280px) / 3);
+.counter {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  width: 90px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: var(--accent-color);
+}
+
+.counter strong {
+  display: flex;
+  width: calc(90px / 3);
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.counter button {
+  width: calc(90px / 3);
+  color: #fff;
+}
+
+.counter .minus::before {
+  font-weight: 800;
+  content: "\f068";
+}
+
+.counter .plus {
+  order: 3;
+}
+
+.counter .plus::before {
+  font-weight: 800;
+  content: "\f067";
+}
+
+.price > dl > div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 15px 0;
+}
+
+.total-price {
+  border-top: 1px solid var(--dark-color);
+  padding: 20px 0;
+  margin-top: 10px;
+}
+
+.total-price dt,
+.total-price dd {
+  font-weight: 800;
+}
+
+.delivery-alarm {
+  padding-right: 15px;
+  text-align: right;
+  font-size: var(--fs-small);
+  color: var(--accent2-color);
 }
 
 /* 
@@ -648,6 +722,15 @@ input[type="checkbox"],
   .ui-list5,
   .ui-list6 {
     width: 100%;
+  }
+
+  /* TOS UI  */
+  .terms-all .br {
+    display: none;
+  }
+
+  .tos-section .section-bottom {
+    height: 90px;
   }
 
   /* TAB UI */
@@ -675,10 +758,27 @@ input[type="checkbox"],
   }
 
   /* BOARD UI */
+  .ui-board {
+    overflow-x: scroll;
+  }
+
+  td.title a {
+    white-space: nowrap;
+  }
+
   .board th,
   .board td {
     padding: 5px;
     font-size: var(--fs-normal);
+  }
+
+  .board th:nth-child(1),
+  .board th:nth-child(3),
+  .board th:nth-child(4),
+  .board td:nth-child(1),
+  .board td:nth-child(1),
+  .board td:nth-child(1) {
+    min-width: 60px;
   }
 
   /* TOS UI */
@@ -710,8 +810,7 @@ input[type="checkbox"],
   .ui-board,
   .ui-carousel,
   .ui-tos,
-  .ui-tab,
-  .ui-calendar {
+  .ui-tab {
     padding: 20px;
   }
 
@@ -754,37 +853,16 @@ input[type="checkbox"],
     padding: 15px;
   }
 
-  /* CALENDAR UI */
-  .ui-calendar h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
+  /* CART UI  */
+  .cart-title::before {
+    background-image: initial;
   }
 
-  .ui-calendar > p {
-    font-size: var(--fs-normal);
-    text-align: center;
+  .product {
+    flex-direction: column;
   }
 
-  .calendar-btns {
-    display: flex;
-  }
-
-  .calendar-btns button {
-    width: 100px;
-  }
-
-  .calendar th,
-  .calendar button {
-    width: 20px;
-    height: 20px;
-    padding: 5px;
-  }
-
-  .arrow-btns .prev {
-    left: calc((100% - 280px) / 7);
-  }
-
-  .arrow-btns .next {
-    right: calc((100% - 280px) / 7);
+  .product-info {
+    margin: 0 20px;
   }
 }
