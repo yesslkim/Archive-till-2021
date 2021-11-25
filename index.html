@@ -5,9 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/style.css" />
   <title>MY UI COMPONENTS</title>
 </head>
@@ -15,11 +13,11 @@
 <body>
   <!-- HEADER  -->
   <header class="header">
-    <h1>My Components</h1>
+    <h1>My UI Components</h1>
     <p>
-      바닐라 자바스크립트를 사용하여 컴포넌트를 마크업 해보았습니다. <br />
+      바닐라 자바스크립트를 사용하여 컴포넌트를 마크업 해보았습니다. <br class="br" />
       다양한 웹사이트에서 많이 사용하는 컴포넌트를 위주로 작업해 보았으며,
-      <br />
+      <br class="br" />
       일부 컴포넌트의 경우 JSONPlaceholder를 활용하여 데이터를 받아 온 점 참고
       부탁드립니다
     </p>
@@ -29,73 +27,7 @@
   <!-- MAIN  -->
   <main class="main">
     <div class="main-inner">
-      <section class="ui-lists">
-        <div class="ui-review">
-          <div class="review-top">
-            <div class="book-info">
-              <h2>뉴미디어 트렌드 2022</h2>
-              <p>
-                <span class="sr-only">줄거리</span>
-                새로운 비즈니스와 부의 기회를 찾는다면 뉴미디어 트렌드에
-                집중하라
-              </p>
-            </div>
-            <div class="book-img">
-              <img src="./assets/images/book.jpg" alt="" />
-            </div>
-          </div>
-          <form class="review-bottom" action="#" method="GET">
-            <h3>리뷰</h3>
-            <div class="stars">
-              <div class="sr-only">총 5점 만점, 별 반개 당 1점 부여</div>
-              <button type="button" class="star">
-                <span class="sr-only">
-                  총 1점 부여. 동일 별 클릭 시 1점 감소
-                </span>
-              </button>
-              <button type="button" class="star">
-                <span class="sr-only">
-                  총 2점 부여. 동일 별 클릭 시 1점 감소
-                </span>
-              </button>
-              <button type="button" class="star">
-                <span class="sr-only">
-                  총 3점 부여. 동일 별 클릭 시 1점 감소
-                </span>
-              </button>
-              <button type="button" class="star">
-                <span class="sr-only">
-                  총 4점 부여. 동일 별 클릭 시 1점 감소
-                </span>
-              </button>
-              <button type="button" class="star">
-                <span class="sr-only">
-                  총 5점 부여. 동일 별 클릭 시 1점 감소
-                </span>
-              </button>
-            </div>
-            <label for="review-text" class="sr-only">
-              느낀점 작성 칸
-            </label>
-            <textarea name="review-text" id="review-text" class="text" cols="30" rows="10"></textarea>
-            <div class="review-info">
-              <strong>(0/1000)</strong>
-              <button type="button" class="spoiler">스포일러 포함</button>
-            </div>
-            <button type="submit">등록</button>
-          </form>
-        </div>
-        <div class="info">
-          <h2>책 평점 리뷰</h2>
-          <div class="tags">
-            <strong>Rating UI</strong>
-            <strong>Form 마크업</strong>
-          </div>
-        </div>
-      </section>
-      <!-- //REVIEW-UI  -->
-
-      <section class="ui-lists">
+      <section class="ui-lists ui-list1">
         <div class="ui-board">
           <table class="board">
             <thead>
@@ -103,40 +35,16 @@
                 <th>순번</th>
                 <th>제목</th>
                 <th>작성자</th>
-                <th>작성일</th>
                 <th>조회수</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>3</td>
-                <td>제목입니다</td>
-                <td>김영희</td>
-                <td>2021.11.23</td>
-                <td>01</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>제목입니다</td>
-                <td>김철수</td>
-                <td>2021.11.22</td>
-                <td>01</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>제목입니다</td>
-                <td>김예슬</td>
-                <td>2021.11.9</td>
-                <td>01</td>
-              </tr>
+            <tbody class="board-lists">
+              <!-- MOCK DATA  -->
             </tbody>
           </table>
           <div class="pagination">
-            <a href="#" class="arrow prev"><span class="sr-only">이전 페이지</span></a>
-            <a href="#" class="one"><span class="sr-only">페이지 1</span></a>
-            <a href="#" class="two"><span class="sr-only">페이지 2</span></a>
-            <a href="#" class="three"><span class="sr-only">페이지 3</span></a>
-            <a href="#" class="arrow next"><span class="sr-only">다음 페이지</span></a>
+            <a href="#" class="icon prev"><span class="sr-only">이전 페이지</span></a>
+            <a href="#" class="icon next"><span class="sr-only">다음 페이지</span></a>
           </div>
         </div>
         <div class="info">
@@ -150,26 +58,14 @@
       </section>
       <!-- //BOARD-UI  -->
 
-      <section class="ui-lists">
+      <section class="ui-lists ui-list2">
         <div class="ui-carousel">
-          <div class="carousel-img">
-            <img src="./assets/images/book.jpg" alt="">
-          </div>
-          <div class="img">
-            <img src="./assets/images/book.jpg" alt="">
-          </div>
-          <div class="img">
-            <img src="./assets/images/book.jpg" alt="">
-          </div>
-          <div class="img">
-            <img src="./assets/images/book.jpg" alt="">
-          </div>
-          <div class="img">
-            <img src="./assets/images/book.jpg" alt="">
+          <div class="carousel">
+            <!-- MOCK DATA  -->
           </div>
           <div class="carousel-btns">
-            <button type="button"><span class="sr-only">이전</span></button>
-            <button type="button"><span class="sr-only">다음</span></button>
+            <button type="button" class="icon prev" disabled><span class="sr-only">이전</span></button>
+            <button type="button" class="icon next"><span class="sr-only">다음</span></button>
           </div>
         </div>
         <div class="info">
@@ -183,17 +79,135 @@
       </section>
       <!-- //CAROUSEL-UI  -->
 
-      <section class="ui-lists">
+      <section class="ui-lists ui-list3">
+        <div class="ui-review">
+          <div class="book-img">
+            <img src="./assets/images/book.jpg" alt="" />
+          </div>
+          <form class="review-bottom" action="#" method="GET">
+            <h3>리뷰</h3>
+            <div class="stars">
+              <div class="sr-only">총 5점 만점, 별 반개 당 1점 부여</div>
+              <button type="button" class="icon star">
+                <span class="sr-only">
+                  총 1점 부여. 동일 별 클릭 시 1점 감소
+                </span>
+              </button>
+              <button type="button" class="icon star">
+                <span class="sr-only">
+                  총 2점 부여. 동일 별 클릭 시 1점 감소
+                </span>
+              </button>
+              <button type="button" class="icon star">
+                <span class="sr-only">
+                  총 3점 부여. 동일 별 클릭 시 1점 감소
+                </span>
+              </button>
+              <button type="button" class="icon star">
+                <span class="sr-only">
+                  총 4점 부여. 동일 별 클릭 시 1점 감소
+                </span>
+              </button>
+              <button type="button" class="icon star">
+                <span class="sr-only">
+                  총 5점 부여. 동일 별 클릭 시 1점 감소
+                </span>
+              </button>
+              <strong> 0 </strong>
+            </div>
+            <label for="review-text" class="sr-only">
+              느낀점 작성 칸
+            </label>
+            <textarea name="review-text" id="review-text" class="text" cols="30" rows="10"></textarea>
+            <div class="review-info">
+              <strong>(0/1000)</strong>
+              <button type="button" class="icon spoiler">스포일러 포함</button>
+            </div>
+            <button type="submit" class="submit-btn">등록</button>
+          </form>
+        </div>
+        <div class="info">
+          <h2>책 평점 리뷰</h2>
+          <div class="tags">
+            <strong>Rating UI</strong>
+            <strong>Form 마크업</strong>
+          </div>
+        </div>
+      </section>
+      <!-- //REVIEW-UI  -->
+
+      <section class="ui-lists ui-list4">
+        <form class="ui-tos" action="#" method="GET">
+          <h2 class="tos-title">BLUE</h2>
+          <strong class="terms-all">
+            <label for="chk-all" class="icon check btn-all">BLUE 이용약관, 개인정보 수집 및 이용, <br class="br" />위치정보 이용약관(선택)에 모두 동의합니다.</label>
+            <input type="checkbox" id="chk-all" class="" aria-label="모두 동의하기">
+          </strong>
+          <div class="tos-section">
+            <div class="section-top">
+              <label for="chk-service" class="icon check btn chk-required">BLUE 이용약관 동의 <span class="tos-required">(필수)</span></label>
+              <input type="checkbox" id="chk-service" aria-label="동의하기">
+            </div>
+            <p class="section-bottom">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Atque provident praesentium odit?
+              Culpa repellat in blanditiis aliquid iure, tenetur vero.
+              Asperiores autem repellat laboriosam corrupti! Minus, excepturi? Ipsum, commodi voluptatem.
+            </p>
+          </div>
+          <div class="tos-section">
+            <div class="section-top">
+              <label for="chk-personal" class="icon check btn chk-required">개인정보 수집 및 이용 동의 <span class="tos-required">(필수)</span></label>
+              <input type="checkbox" id="chk-personal" aria-label="동의하기">
+            </div>
+            <p class="section-bottom">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Atque provident praesentium odit?
+              Culpa repellat in blanditiis aliquid iure, tenetur vero.
+              Asperiores autem repellat laboriosam corrupti! Minus, excepturi? Ipsum, commodi voluptatem.
+            </p>
+          </div>
+          <div class="tos-section">
+            <div class="section-top">
+              <label for="chk-location" class="icon check btn">위치정보 이용약관 동의 <span class="tos-choice">(선택)</span></label>
+              <input type="checkbox" id="chk-location" aria-label="동의하기">
+            </div>
+            <p class="section-bottom">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Atque provident praesentium odit?
+              Culpa repellat in blanditiis aliquid iure, tenetur vero.
+              Asperiores autem repellat laboriosam corrupti! Minus, excepturi? Ipsum, commodi voluptatem.
+            </p>
+          </div>
+          <p class="alarm">
+            BLUE 이용약관과 개인정보 수집 및 이용에 대한 안내 모두 동의해주세요.
+          </p>
+          <div class="tos-btns">
+            <button type="button" class="cancel">취소</button>
+            <button type="button" class="agree">확인</button>
+          </div>
+        </form>
+        <div class="tos-info info">
+          <h2>이용약관</h2>
+          <div class="tags">
+            <strong>CHECK UI</strong>
+            <strong>필수선택</strong>
+          </div>
+        </div>
+      </section>
+      <!-- //TOS-UI  -->
+
+      <section class="ui-lists ui-list5">
         <div class="ui-tab">
           <ul class="tab-title">
-            <li>
-              <a href="#">Tab 1</a>
+            <li class="active">
+              <button type="button" data-index="0">Tab 1</button>
             </li>
             <li>
-              <a href="#">Tab 2</a>
+              <button type="button" data-index="1">Tab 2</button>
             </li>
             <li>
-              <a href="#">Tab 3</a>
+              <button type="button" data-index="2">Tab 3</button>
             </li>
           </ul>
           <ul class="tab-info">
@@ -204,14 +218,14 @@
                 reiciendis fuga, ullam nam nemo dolore sit libero, molestias similique omnis.
               </p>
             </li>
-            <li>
+            <li class="hidden">
               <p>
                 Tab 2번의 내용입니다. Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Iste cumque quam nam harum tempore molestias laborum! Esse vitae necessitatibus
                 reiciendis fuga, ullam nam nemo dolore sit libero, molestias similique omnis.
               </p>
             </li>
-            <li>
+            <li class="hidden">
               <p>
                 Tab 3번의 내용입니다. Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Iste cumque quam nam harum tempore molestias laborum! Esse vitae necessitatibus
@@ -229,150 +243,76 @@
       </section>
       <!-- //TAB-UI  -->
 
-      <section class="ui-lists">
-        <form class="ui-tos">
-          <h2 class="tos-title">Yellow</h2>
-          <strong>
-            <p>옐로우 이용약관, 개인정보 수집 및 이용, 위치정보 이용약관(선택), 프로모션 정보 수신(선택)에 모두 동의합니다.</p>
-            <button type="button"><span class="sr-only">동의하기</span></button>
-          </strong>
-          <div class="tos-section">
-            <div class="section-top">
-              <h3>옐로우 이용약관 동의 <span class="tos-necessary">(필수)</span></h3>
-              <button type="button" class="check btn-necessary"><span class="sr-only">동의하기</span></button>
+      <section class="ui-lists ui-list6">
+        <div class="ui-cart">
+          <button type="button" class="icon close-btn"><span class="sr-only">닫기</span></button>
+          <h2 class="cart-title">BLUE 상품 고르기</h2>
+          <div class="product">
+            <img src="./assets/images/Calendar.png" alt="">
+            <div class="product-info">
+              <button type="button" class="icon delete-btn"><span class="sr-only">상품 삭제하기</span></button>
+              <h3>BLUE 2022년 달력</h3>
+              <strong class="price">3,000원</strong>
+              <div class="counter">
+                <button type="button" class="icon minus"><span class="sr-only">수량 1줄이기</span></button>
+                <button type="button" class="icon plus"><span class="sr-only">수량 1늘리기</span></button>
+                <strong class="quantity"><span class="sr-only">수량</span>1</strong>
+              </div>
             </div>
-            <p class="section-bottom">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Atque provident praesentium odit?
-              Culpa repellat in blanditiis aliquid iure, tenetur vero.
-              Asperiores autem repellat laboriosam corrupti! Minus, excepturi? Ipsum, commodi voluptatem.
-            </p>
           </div>
-          <div class="tos-section">
-            <div class="section-top">
-              <h3>개인정보 수집 및 이용 동의 <span class="tos-necessary">(필수)</span></h3>
-              <button type="button" class="check btn-necessary"><span class="sr-only">동의하기</span></button>
+          <div class="product">
+            <img src="./assets/images/Clock.png" alt="">
+            <div class="product-info">
+              <button type="button" class="icon delete-btn"><span class="sr-only">상품 삭제하기</span></button>
+              <h3>BLUE 스페셜 시계</h3>
+              <strong class="price">7,000원</strong>
+              <div class="counter">
+                <button type="button" class="icon minus"><span class="sr-only">수량 1줄이기</span></button>
+                <button type="button" class="icon plus"><span class="sr-only">수량 1늘리기</span></button>
+                <strong class="quantity"><span class="sr-only">수량</span>1</strong>
+              </div>
             </div>
-            <p class="section-bottom">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Atque provident praesentium odit?
-              Culpa repellat in blanditiis aliquid iure, tenetur vero.
-              Asperiores autem repellat laboriosam corrupti! Minus, excepturi? Ipsum, commodi voluptatem.
-            </p>
           </div>
-          <div class="tos-section">
-            <div class="section-top">
-              <h3>위치정보 이용약관 동의 <span class="tos-choice">(선택)</span></h3>
-              <button type="button" class="check"><span class="sr-only">동의하기</span></button>
+          <div class="product">
+            <img src="./assets/images/Light.png" alt="">
+            <div class="product-info">
+              <button type="button" class="icon delete-btn"><span class="sr-only">상품 삭제하기</span></button>
+              <h3>BLUE 감성 전등</h3>
+              <strong class="price">12,000원</strong>
+              <div class="counter">
+                <button type="button" class="icon minus"><span class="sr-only">수량 1줄이기</span></button>
+                <button type="button" class="icon plus"><span class="sr-only">수량 1늘리기</span></button>
+                <strong class="quantity"><span class="sr-only">수량</span>1</strong>
+              </div>
             </div>
-            <p class="section-bottom">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Atque provident praesentium odit?
-              Culpa repellat in blanditiis aliquid iure, tenetur vero.
-              Asperiores autem repellat laboriosam corrupti! Minus, excepturi? Ipsum, commodi voluptatem.
-            </p>
           </div>
-          <div class="alarm hide">옐로우 이용약관과 개인정보 수집 및 이용에 대한 안내 모두 동의해주세요.</div>
-          <div class="tos-btns">
-            <button type="button" class="cancel">취소</button>
-            <button type="button" class="agree">확인</button>
+          <div class="price">
+            <dl>
+              <div>
+                <dt>상품금액</dt>
+                <dd>0원</dd>
+              </div>
+              <div>
+                <dt>배송비</dt>
+                <dd>0원</dd>
+              </div>
+              <div class="total-price">
+                <dt>결제예정금액</dt>
+                <dd>0원</dd>
+              </div>
+            </dl>
+            <div class="delivery-alarm">5만원 이상 구매 시 배송비 0원 적용</div>
           </div>
-        </form>
+        </div>
         <div class="info">
-          <h2>이용약관</h2>
+          <h2>장바구니</h2>
           <div class="tags">
-            <strong>CHECK UI</strong>
-            <strong>필수선택</strong>
+            <strong>장바구니 마크업</strong>
+            <strong>금액계산</strong>
           </div>
         </div>
       </section>
-      <!-- //TOS-UI  -->
-
-      <section class="ui-lists">
-        <div class="ui-calendar">
-          <h2>단기 숙소 예약하기</h2>
-          <p>최대 한달까지 숙소를 예약해서 머물 수 있어요!</p>
-          <div class="calendar-btns">
-            <button type="button" class="check-in">
-              <h3>체크인 <span class="sr-only">날짜</span></h3>
-              <strong>날짜 입력</strong>
-            </button>
-            <button type="button" class="check-out">
-              <h3>체크아웃 <span class="sr-only">날짜</span></h3>
-              <strong>날짜 입력</strong>
-            </button>
-          </div>
-          <table>
-            <caption>2021년 11월</caption>
-            <thead>
-              <tr class="days">
-                <th scope="col">일</th>
-                <th scope="col">월</th>
-                <th scope="col">화</th>
-                <th scope="col">수</th>
-                <th scope="col">목</th>
-                <th scope="col">금</th>
-                <th scope="col">토</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="date row1">
-                <td><button type="button"></button></td>
-                <td><button type="button">1</button></td>
-                <td><button type="button">2</button></td>
-                <td><button type="button">3</button></td>
-                <td><button type="button">4</button></td>
-                <td><button type="button">5</button></td>
-                <td><button type="button">6</button></td>
-              </tr>
-              <tr class="date row2">
-                <td><button type="button">7</button></td>
-                <td><button type="button">8</button></td>
-                <td><button type="button">9</button></td>
-                <td><button type="button">10</button></td>
-                <td><button type="button">11</button></td>
-                <td><button type="button">12</button></td>
-                <td><button type="button">13</button></td>
-              </tr>
-              <tr class="date row3">
-                <td><button type="button">14</button></td>
-                <td><button type="button">15</button></td>
-                <td><button type="button">16</button></td>
-                <td><button type="button">17</button></td>
-                <td><button type="button">18</button></td>
-                <td><button type="button">19</button></td>
-                <td><button type="button">20</button></td>
-              </tr>
-              <tr class="date row4">
-                <td><button type="button">21</button></td>
-                <td><button type="button">22</button></td>
-                <td><button type="button">23</button></td>
-                <td><button type="button">24</button></td>
-                <td><button type="button">25</button></td>
-                <td><button type="button">26</button></td>
-                <td><button type="button">27</button></td>
-              </tr>
-              <tr class="date row5">
-                <td><button type="button">28</button></td>
-                <td><button type="button">29</button></td>
-                <td><button type="button">30</button></td>
-                <td><button type="button"></button></td>
-                <td><button type="button"></button></td>
-                <td><button type="button"></button></td>
-                <td><button type="button"></button></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="info">
-          <h2>달력</h2>
-          <div class="tags">
-            <strong>달력 UI</strong>
-            <strong>체크인,체크아웃</strong>
-          </div>
-        </div>
-      </section>
-      <!-- //CALENDAR-UI  -->
+      <!-- //CART-UI  -->
 
     </div>
   </main>
