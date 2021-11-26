@@ -344,6 +344,10 @@ quantityList.forEach((quantity) => {
   quantityData.push(Number(quantity.textContent.substring(2)));
 });
 
+const chnageIntoNum = (price) => {
+  return Number(price.slice(0, -1).replace(/\,/g, ""));
+};
+
 const addComma = (num) => {
   const str = num.toString().split(".");
   str[0] = str[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -355,7 +359,7 @@ const editPrice = (targetElem, index) => {
   const price = priceData[priceIndex]; //기존가격
 
   //계산을 위한 정규표현식 - '원', 콤마 삭제 -> 계산 후 '원', 콤마 추가 후 삽입
-  const priceNum = Number(price.slice(0, -1).replace(/\,/g, ""));
+  const priceNum = chnageIntoNum(price);
   const newPriceNum = addComma(priceNum * quantityData[index]);
   targetElem.parentElement.previousElementSibling.textContent = `${newPriceNum}원`;
 };
@@ -374,9 +378,7 @@ const plusNumber = (targetElem, index) => {
 
 const minusNumber = (targetElem, index) => {
   quantityData[index]--;
-
   targetElem.parentElement.children[2].textContent = quantityData[index];
-
   if (quantityData[index] == 0) {
     targetElem.classList.add("disabled");
     targetElem.setAttribute("disabled", true);
@@ -385,21 +387,17 @@ const minusNumber = (targetElem, index) => {
 };
 
 const deleteProduct = (targetElem) => {
-  if (confirm("정말 삭제하시겠습니까?")) {
+  if (confirm("정말 삭제하시겠습니까?"))
     targetElem.closest(".product").remove();
 
-    if (document.querySelector(".product-wrapper").children.length === 0) {
-      document.querySelector(".price-info").classList.add("hidden");
-      document.querySelector(".product-alarm").classList.add("active");
-    }
+  if (document.querySelector(".product-wrapper").children.length === 0) {
+    document.querySelector(".price-info").classList.add("hidden");
+    document.querySelector(".product-alarm").classList.add("active");
   }
 };
 
 const addTotalPrice = (productPrice, deliveryPrice) => {
-  const deliveryNum = Number(
-    deliveryPrice.textContent.slice(0, -1).replace(/\,/g, "")
-  );
-
+  const deliveryNum = chnageIntoNum(deliveryPrice.textContent);
   const totalPrice = addComma(productPrice + deliveryNum);
 
   document.querySelector(".total-price dd").textContent = `${totalPrice}원`;
@@ -421,7 +419,7 @@ const addProductPrice = (deliveryPrice) => {
 
   let productPrice = 0;
   priceList.forEach((price) => {
-    productPrice += Number(price.textContent.slice(0, -1).replace(/\,/g, ""));
+    productPrice += chnageIntoNum(price.textContent);
     totaltPrice.textContent = `${addComma(productPrice)}원`;
   });
   setDeliveryPrice(productPrice, deliveryPrice);
