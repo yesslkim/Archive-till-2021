@@ -1,5 +1,5 @@
 {
-  "semi": false,
+  "semi": true,
   "singleQuotes": true,
   "endOfLine": "lf",
   "tabWidth": 2,
