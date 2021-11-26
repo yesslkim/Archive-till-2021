@@ -246,59 +246,70 @@
       <section class="ui-lists ui-list6">
         <div class="ui-cart">
           <button type="button" class="icon close-btn"><span class="sr-only">닫기</span></button>
-          <h2 class="cart-title">BLUE 상품 고르기</h2>
-          <div class="product">
-            <img src="./assets/images/Calendar.png" alt="">
-            <div class="product-info">
-              <button type="button" class="icon delete-btn"><span class="sr-only">상품 삭제하기</span></button>
-              <h3>BLUE 2022년 달력</h3>
-              <strong class="price">3,000원</strong>
-              <div class="counter">
-                <button type="button" class="icon minus"><span class="sr-only">수량 1줄이기</span></button>
-                <button type="button" class="icon plus"><span class="sr-only">수량 1늘리기</span></button>
-                <strong class="quantity"><span class="sr-only">수량</span>1</strong>
-              </div>
+          <h2 class="cart-title">BLUE 장바구니</h2>
+          <div class="product-list">
+            <ul class="product-wrapper">
+              <li class="product" data-index="0">
+                <img src="./assets/images/Calendar.png" alt="">
+                <div class="product-info">
+                  <button type="button" class="icon delete-btn"><span class="sr-only">상품 삭제하기</span></button>
+                  <h3>BLUE 2022년 달력</h3>
+                  <strong class="price">3,000원</strong>
+                  <div class="counter">
+                    <button type="button" class="icon minus"><span class="sr-only">수량 1줄이기</span></button>
+                    <button type="button" class="icon plus"><span class="sr-only">수량 1늘리기</span></button>
+                    <strong class="quantity"><span class="sr-only">수량</span>1</strong>
+                  </div>
+                </div>
+              </li>
+              <li class="product" data-index="1">
+                <img src="./assets/images/Clock.png" alt="">
+                <div class="product-info">
+                  <button type="button" class="icon delete-btn"><span class="sr-only">상품 삭제하기</span></button>
+                  <h3>BLUE 스페셜 시계</h3>
+                  <strong class="price">7,000원</strong>
+                  <div class="counter">
+                    <button type="button" class="icon minus"><span class="sr-only">수량 1줄이기</span></button>
+                    <button type="button" class="icon plus"><span class="sr-only">수량 1늘리기</span></button>
+                    <strong class="quantity"><span class="sr-only">수량</span>1</strong>
+                  </div>
+                </div>
+              </li>
+              <li class="product" data-index="2">
+                <img src="./assets/images/Light.png" alt="">
+                <div class="product-info">
+                  <button type="button" class="icon delete-btn"><span class="sr-only">상품 삭제하기</span></button>
+                  <h3>BLUE 감성 전등</h3>
+                  <strong class="price">12,000원</strong>
+                  <div class="counter">
+                    <button type="button" class="icon minus"><span class="sr-only">수량 1줄이기</span></button>
+                    <button type="button" class="icon plus"><span class="sr-only">수량 1늘리기</span></button>
+                    <strong class="quantity"><span class="sr-only">수량</span>1</strong>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <div class="product-alarm">
+              <p>장바구니에 담긴 상품이 없습니다</p>
+              <strong>BLUE의 추천 상품을 만나보세요!</strong>
+              <a href="#">추천상품 보러가기</a>
             </div>
           </div>
-          <div class="product">
-            <img src="./assets/images/Clock.png" alt="">
-            <div class="product-info">
-              <button type="button" class="icon delete-btn"><span class="sr-only">상품 삭제하기</span></button>
-              <h3>BLUE 스페셜 시계</h3>
-              <strong class="price">7,000원</strong>
-              <div class="counter">
-                <button type="button" class="icon minus"><span class="sr-only">수량 1줄이기</span></button>
-                <button type="button" class="icon plus"><span class="sr-only">수량 1늘리기</span></button>
-                <strong class="quantity"><span class="sr-only">수량</span>1</strong>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <img src="./assets/images/Light.png" alt="">
-            <div class="product-info">
-              <button type="button" class="icon delete-btn"><span class="sr-only">상품 삭제하기</span></button>
-              <h3>BLUE 감성 전등</h3>
-              <strong class="price">12,000원</strong>
-              <div class="counter">
-                <button type="button" class="icon minus"><span class="sr-only">수량 1줄이기</span></button>
-                <button type="button" class="icon plus"><span class="sr-only">수량 1늘리기</span></button>
-                <strong class="quantity"><span class="sr-only">수량</span>1</strong>
-              </div>
-            </div>
-          </div>
-          <div class="price">
+
+          <div class="price-info">
             <dl>
-              <div>
+              <div class="product-price">
                 <dt>상품금액</dt>
-                <dd>0원</dd>
+                <dd>22,000원</dd>
               </div>
-              <div>
+              <div class="delivery-price">
                 <dt>배송비</dt>
-                <dd>0원</dd>
+                <dd>2,500원</dd>
               </div>
               <div class="total-price">
                 <dt>결제예정금액</dt>
-                <dd>0원</dd>
+                <dd>24,500원</dd>
               </div>
             </dl>
             <div class="delivery-alarm">5만원 이상 구매 시 배송비 0원 적용</div>
