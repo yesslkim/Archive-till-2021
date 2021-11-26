@@ -584,6 +584,7 @@ td.title {
 /* CART UI */
 .ui-cart {
   position: relative;
+  min-height: 730px;
 }
 
 .ui-cart .close-btn {
@@ -617,6 +618,10 @@ td.title {
   background-size: contain;
 }
 
+.product-wrapper {
+  min-height: 407px;
+}
+
 .product {
   position: relative;
   display: flex;
@@ -631,6 +636,47 @@ td.title {
   width: 100px;
   margin-left: 20px;
   margin-right: 10%;
+}
+
+.product-alarm {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  text-align: center;
+}
+
+.product-alarm.active {
+  display: block;
+}
+
+.product-alarm p {
+  margin-bottom: 5px;
+  font-size: var(--fs-large);
+  color: var(--accent-color);
+  font-weight: 800;
+}
+
+.product-alarm strong {
+  display: block;
+  margin-bottom: 15px;
+  font-size: var(--fs-small);
+}
+
+.product-alarm a {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  padding: 7px 10px;
+  background-color: var(--accent-color);
+  color: #fff;
+  font-size: var(--fs-small);
+}
+
+.price-info.hidden {
+  display: none;
 }
 
 .product-info .delete-btn {
@@ -680,6 +726,10 @@ td.title {
   content: "\f068";
 }
 
+.counter .minus.disabled::before {
+  opacity: 0.2;
+}
+
 .counter .plus {
   order: 3;
 }
@@ -689,7 +739,7 @@ td.title {
   content: "\f067";
 }
 
-.price > dl > div {
+.price-info > dl > div {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -708,10 +758,28 @@ td.title {
 }
 
 .delivery-alarm {
+  position: relative;
   padding-right: 15px;
   text-align: right;
   font-size: var(--fs-small);
-  color: var(--accent2-color);
+  font-weight: 800;
+  color: var(--accent-color);
+  z-index: 2;
+}
+
+.delivery-alarm::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  right: 6px;
+  width: 245px;
+  height: 28px;
+  z-index: -2;
+  background-color: #f7f795;
+}
+
+.delivery-alarm.hidden {
+  display: none;
 }
 
 /* 
