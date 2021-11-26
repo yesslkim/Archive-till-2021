@@ -329,3 +329,115 @@ tabWrapper.addEventListener("click", (e) => {
   tabInfo.forEach((info) => info.classList.add("hidden"));
   tabInfo[targetIndex].classList.remove("hidden");
 });
+
+///
+/// CART UI
+///
+
+const cartWrapper = document.querySelector(".ui-cart");
+const priceList = document.querySelectorAll(".price");
+const quantityList = document.querySelectorAll(".quantity");
+const priceData = [];
+const quantityData = [];
+priceList.forEach((price) => priceData.push(price.textContent));
+quantityList.forEach((quantity) => {
+  quantityData.push(Number(quantity.textContent.substring(2)));
+});
+
+const addComma = (num) => {
+  const str = num.toString().split(".");
+  str[0] = str[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return str.join(".");
+};
+
+const editPrice = (targetElem, index) => {
+  const priceIndex = targetElem.closest(".product").dataset.index;
+  const price = priceData[priceIndex]; //기존가격
+
+  //계산을 위한 정규표현식 - '원', 콤마 삭제 -> 계산 후 '원', 콤마 추가 후 삽입
+  const priceNum = Number(price.slice(0, -1).replace(/\,/g, ""));
+  const newPriceNum = addComma(priceNum * quantityData[index]);
+  targetElem.parentElement.previousElementSibling.textContent = `${newPriceNum}원`;
+};
+
+const plusNumber = (targetElem, index) => {
+  quantityData[index]++;
+
+  targetElem.nextElementSibling.textContent = quantityData[index];
+  if (quantityData[index] !== 0) {
+    targetElem.previousElementSibling.classList.remove("disabled");
+    targetElem.previousElementSibling.removeAttribute("disabled", true);
+  }
+
+  editPrice(targetElem, index);
+};
+
+const minusNumber = (targetElem, index) => {
+  quantityData[index]--;
+
+  targetElem.parentElement.children[2].textContent = quantityData[index];
+
+  if (quantityData[index] == 0) {
+    targetElem.classList.add("disabled");
+    targetElem.setAttribute("disabled", true);
+  }
+  editPrice(targetElem, index);
+};
+
+const deleteProduct = (targetElem) => {
+  if (confirm("정말 삭제하시겠습니까?")) {
+    targetElem.closest(".product").remove();
+
+    if (document.querySelector(".product-wrapper").children.length === 0) {
+      document.querySelector(".price-info").classList.add("hidden");
+      document.querySelector(".product-alarm").classList.add("active");
+    }
+  }
+};
+
+const addTotalPrice = (productPrice, deliveryPrice) => {
+  const deliveryNum = Number(
+    deliveryPrice.textContent.slice(0, -1).replace(/\,/g, "")
+  );
+
+  const totalPrice = addComma(productPrice + deliveryNum);
+
+  document.querySelector(".total-price dd").textContent = `${totalPrice}원`;
+};
+
+const setDeliveryPrice = (productPrice, deliveryPrice) => {
+  if (productPrice < 50000) {
+    deliveryPrice.textContent = "2,500원";
+    document.querySelector(".delivery-alarm").classList.remove("hidden");
+  } else {
+    deliveryPrice.textContent = "0원";
+    document.querySelector(".delivery-alarm").classList.add("hidden");
+  }
+};
+
+const addProductPrice = (deliveryPrice) => {
+  const priceList = document.querySelectorAll(".price");
+  const totaltPrice = document.querySelector(".product-price dd");
+
+  let productPrice = 0;
+  priceList.forEach((price) => {
+    productPrice += Number(price.textContent.slice(0, -1).replace(/\,/g, ""));
+    totaltPrice.textContent = `${addComma(productPrice)}원`;
+  });
+  setDeliveryPrice(productPrice, deliveryPrice);
+  addTotalPrice(productPrice, deliveryPrice);
+};
+
+cartWrapper.addEventListener("click", (e) => {
+  const targetElem = e.target;
+  const index = targetElem.closest(".product").dataset.index;
+  const deliveryPrice = document.querySelector(".delivery-price dd");
+
+  if (targetElem.tagName !== "BUTTON") return;
+
+  targetElem.classList.contains("plus") && plusNumber(targetElem, index);
+  targetElem.classList.contains("minus") && minusNumber(targetElem, index);
+  targetElem.classList.contains("delete-btn") && deleteProduct(targetElem);
+
+  addProductPrice(deliveryPrice);
+});
