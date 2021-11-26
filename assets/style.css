@@ -271,8 +271,8 @@ input[type="checkbox"],
 }
 
 td.title {
-  padding-left: 20px;
   text-align: left;
+  padding-left: 20px;
 }
 
 .pagination {
@@ -290,9 +290,9 @@ td.title {
 }
 
 .num.active {
+  color: #fff;
   background-color: var(--accent-color);
   border-radius: 50%;
-  color: #fff;
 }
 
 /* CAROUSEL UI */
@@ -333,8 +333,8 @@ td.title {
 
 .prev:disabled::before,
 .next:disabled::before {
-  cursor: auto;
   color: var(--light-grey-color);
+  cursor: auto;
 }
 
 /* REVIEW-UI  */
@@ -369,9 +369,9 @@ td.title {
 
 .stars strong {
   display: none;
-  padding-left: 10px;
   font-size: var(--fs-large);
   font-weight: 800;
+  padding-left: 10px;
 }
 
 .stars strong.active {
@@ -595,8 +595,8 @@ td.title {
 
 .product-info .delete-btn::before,
 .ui-cart .close-btn::before {
-  font-weight: 800;
   font-size: 30px;
+  font-weight: 800;
   content: "\f00d";
 }
 
@@ -613,9 +613,9 @@ td.title {
   left: 40px;
   width: 80px;
   height: 80px;
-  content: "";
   background-image: url(./images/Cart.png);
   background-size: contain;
+  content: "";
 }
 
 .product-wrapper {
@@ -623,10 +623,10 @@ td.title {
 }
 
 .product {
-  position: relative;
   display: flex;
-  align-content: center;
+  position: relative;
   padding: 10px;
+  align-content: center;
   margin-bottom: 10px;
   border-radius: 10px;
   box-shadow: 0 8px 127px 0 rgb(0 0 0 / 15%);
@@ -643,9 +643,9 @@ td.title {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   width: 300px;
   text-align: center;
+  transform: translate(-50%, -50%);
 }
 
 .product-alarm.active {
@@ -653,26 +653,26 @@ td.title {
 }
 
 .product-alarm p {
-  margin-bottom: 5px;
-  font-size: var(--fs-large);
   color: var(--accent-color);
+  font-size: var(--fs-large);
   font-weight: 800;
+  margin-bottom: 5px;
 }
 
 .product-alarm strong {
   display: block;
-  margin-bottom: 15px;
   font-size: var(--fs-small);
+  margin-bottom: 15px;
 }
 
 .product-alarm a {
   display: block;
-  margin: 0 auto;
   width: 150px;
   padding: 7px 10px;
-  background-color: var(--accent-color);
+  margin: 0 auto;
   color: #fff;
   font-size: var(--fs-small);
+  background-color: var(--accent-color);
 }
 
 .price-info.hidden {
@@ -690,8 +690,8 @@ td.title {
 }
 
 .product-info h3 {
-  font-size: var(--fs-normal);
   padding: 10px 0 5px;
+  font-size: var(--fs-normal);
 }
 
 .product-info .price {
@@ -700,10 +700,10 @@ td.title {
 
 .counter {
   display: flex;
-  align-items: center;
-  margin: 10px 0;
   width: 90px;
   height: 30px;
+  margin: 10px 0;
+  align-items: center;
   border-radius: 5px;
   background-color: var(--accent-color);
 }
@@ -711,9 +711,9 @@ td.title {
 .counter strong {
   display: flex;
   width: calc(90px / 3);
+  color: #fff;
   justify-content: center;
   align-items: center;
-  color: #fff;
 }
 
 .counter button {
@@ -741,14 +741,14 @@ td.title {
 
 .price-info > dl > div {
   display: flex;
-  justify-content: space-between;
   width: 100%;
   padding: 10px 15px 0;
+  justify-content: space-between;
 }
 
 .total-price {
-  border-top: 1px solid var(--dark-color);
   padding: 20px 0;
+  border-top: 1px solid var(--dark-color);
   margin-top: 10px;
 }
 
@@ -759,21 +759,21 @@ td.title {
 
 .delivery-alarm {
   position: relative;
-  padding-right: 15px;
-  text-align: right;
+  color: var(--accent-color);
   font-size: var(--fs-small);
   font-weight: 800;
-  color: var(--accent-color);
+  text-align: right;
+  padding-right: 15px;
   z-index: 2;
 }
 
 .delivery-alarm::before {
-  content: "";
   position: absolute;
   top: -4px;
   right: 6px;
   width: 245px;
   height: 28px;
+  content: "";
   z-index: -2;
   background-color: #f7f795;
 }
