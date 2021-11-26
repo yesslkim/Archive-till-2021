@@ -317,10 +317,18 @@ td.title {
 
 .carousel-btns .prev,
 .carousel-btns .next {
+  display: flex;
   position: absolute;
   top: 50%;
-  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  justify-content: center;
+  background-color: #fff;
+  align-items: center;
+  border-radius: 50%;
   transform: translateY(-50%);
+  box-shadow: 0 15px 20px 0 rgb(113 94 97 / 15%);
 }
 
 .carousel-btns .prev {
@@ -904,6 +912,8 @@ td.title {
   /* CAROUSEL UI */
   .carousel-btns .prev,
   .carousel-btns .next {
+    width: 35px;
+    height: 35px;
     font-size: 20px;
   }
 
