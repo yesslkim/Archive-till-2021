@@ -307,6 +307,7 @@ body {
 .business-area > li:hover {
   box-shadow: 30px 40px 30px 0px rgb(0 0 0 / 35%);
   transform: translateY(-30px);
+  font-weight: 800;
 }
 
 .business-area > li:hover .details {
@@ -364,17 +365,28 @@ body {
   display: flex;
 }
 
-.business-lists li::before {
+.business-lists > div {
+  margin-right: 20px;
+}
+
+.business-lists > div > span {
+  display: block;
+}
+
+.business-lists > div > span::before {
   display: inline-block;
   position: relative;
   bottom: 1px;
   content: "▪";
-  margin-right: 5px;
+  margin-right: 4px;
 }
 
-.business-lists > div {
-  margin-right: 20px;
+span.dot::after {
+  content: '·';
+  display: inline-block;
+  padding: 0 2px;
 }
+
 
 .details {
   display: none;
@@ -482,7 +494,8 @@ body {
   margin-bottom: 20px;
 }
 
-.project-info > .title div {
+.project-info > .title .title-detail {
+  display: block;
   color: #444;
   font-size: 28px;
 }
