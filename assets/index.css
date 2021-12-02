@@ -113,7 +113,6 @@ button {
 
 .list-inner li {
   display: none;
-  margin: 0 10px;
 }
 
 .list-inner a {
@@ -147,4 +146,53 @@ button {
   font-size: 30px;
   color: #fff;
   content: 'X';
+}
+
+@media screen and (min-width: 768px){
+  .header > .title {
+    font-size: 10vw;
+  }
+
+  .list-inner {
+    font-size: 40px;
+  }
+
+  .list-inner li {
+    margin: 10px 0;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  d-hidden,
+  d-hidden::before,
+  d-hidden::after {
+    display: none;
+  }
+
+  .gnb > .gnb-btn {
+    display: none;
+  }
+
+  .gnb-list {
+    width: auto;
+    height: auto;
+    background-color: transparent
+  }
+
+  .list-inner {
+    position: static;
+    transform: translateY(0);
+    display: flex;
+    justify-content: flex-end;
+    margin: 30px;
+    font-size: 25px;
+  }
+  
+  .list-inner li {
+    display: block;
+  }
+
+  .gnb-list > .close-btn::before {
+    display: none;
+  }
 }
