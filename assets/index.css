@@ -1,0 +1,150 @@
+/* RESET CSS */
+body,
+h1,
+ul {
+  margin: 0;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* COMMON CSS */
+
+.icon::before,
+.icon::after {
+  font-family: 'Font Awesome 5 Free';
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	font-weight: 800;;
+}
+
+/* HEADER  */
+.header {
+  width: 100vw;
+  height: 100vh;
+  background: url(../assets/images/main.jpg) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  font-family: 'Volkhov', serif;
+  color:#fff;
+  overflow-x: hidden;
+}
+
+.header > .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  font-size: 60px;
+}
+
+.header > .title::before {
+  content: '';
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  background-image: url(../assets/images/logo.png);
+  background-size: contain;
+}
+
+.gnb > .gnb-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  font-size: 30px;
+}
+
+.gnb > .gnb-btn::before {
+  display: block;
+  font-size: 15px;
+  color: #4a5b3b;
+  content: '\f0c9';
+}
+
+.gnb-list {
+  position: relative;
+  width: 0;
+  height: 100vh;
+  background-color: #000;
+}
+
+.list-inner {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 30px;
+}
+
+.list-inner li {
+  display: none;
+  margin: 0 10px;
+}
+
+.list-inner a {
+  position: relative;
+  display: block;
+  padding: 5px 10px;
+}
+
+.list-inner a::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  display: block;
+  transition: all .2s linear;
+}
+
+.list-inner a:hover::after {
+  width: 100%;
+}
+
+.gnb-list > .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+}
+
+.gnb-list > .close-btn::before {
+  font-size: 30px;
+  color: #fff;
+  content: 'X';
+}
