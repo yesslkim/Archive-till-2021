@@ -47,88 +47,44 @@ gnb.addEventListener('click', (e) => {
 
 // ABOUT-SECTION
 
-const socialWallPos = Math.floor(document.querySelector('.socialwall').getBoundingClientRect().top) + 'px'
-console.log(socialWallPos)
-const headerHeight = document.querySelector('.header').offsetHeight + 'px';
-ScrollTrigger.saveStyles("section img, section p, .about-subtitle, section h2")
+window.addEventListener('resize', () => {
+  ScrollTrigger.saveStyles("section img, section p, .about-subtitle, section h2, section div")
+})
 
 ScrollTrigger.matchMedia({
-  // mobile
-  "(min-width: 320px) and (max-width: 767px)": function() {
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: '.header',
-        start: `bottom bottom`,
-        toggleActions: 'restart none none none'
-      }
-    }).from(".about-section1 img", {
-      opacity: 0,
-      y: -30,
-    }).from(".about-title", {
-      opacity: 0,
-      y: -30,
-    }).from(".about-section1 p", {
-      duration: 1,
-      opacity: 0,
-      x: -30,
-    })
-
-    // gallery
-    gsap.timeline({
-      delay: 0.8,
-      scrollTrigger: {
-        trigger: '.gallery',
-        start: `center top`,
-        toggleActions: 'restart none none none'
-      }
-    }).from(".socialwall h2", {
-      opacity: 0,
-      y: -30,
-    }).from(".socialwall-content img", {
-      opacity: 0,
-      x: -30,
-    }).from(".socialwall-content > div", {
-      opacity: 0,
-      x: 30,
-    })
-  },
-
-  // tablet ~
   "(min-width: 768px)": function() {
     gsap.timeline({
       scrollTrigger: {
         trigger: '.header',
-        start: `bottom bottom`,
+        start: `center 100px`,
         toggleActions: 'restart none none none'
       }
     }).from(".about-section1 img", {
       opacity: 0,
       y: -30,
-    }).from(".about-title", {
+    }).from(".about-title, .about-section1 p", {
       opacity: 0,
       y: -30,
-    }).from(".about-section1 p", {
-      duration: .4,
-      opacity: 0,
-      x: -30,
-    }).from(".about-subtitle", {
-      opacity: 0,
-      y: -30,
-    }).from(".about-section2 p", {
-      duration: .4,
+    }).from(".about-subtitle, .about-section2 p", {
       opacity: 0,
       x: -30,
     }).from(".about-section2 img", {
       opacity: 0,
       y: -30,
+    }).from(".gallery h2, .gallery p, .gallery-more", {
+      opacity: 0,
+      y: -30,
+    }).from(".gallery-contents", {
+      opacity: 0,
+      x: -50,
     })
+  
 
-    // gallery
     gsap.timeline({
       delay: 0.8,
       scrollTrigger: {
         trigger: '.gallery',
-        start: `bottom bottom`,
+        start: `top top`,
         toggleActions: 'restart none none none'
       }
     }).from(".socialwall h2", {
@@ -136,10 +92,19 @@ ScrollTrigger.matchMedia({
       y: -30,
     }).from(".socialwall-content img", {
       opacity: 0,
-      x: -30,
+      x: -50,
     }).from(".socialwall-content > div", {
       opacity: 0,
-      x: 30,
+      x: 50,
+    }).from(".subscription h2", {
+      opacity: 0,
+      y: -30,
+    }).from(".subscription-content img", {
+      opacity: 0,
+      x: -50,
+    }).from(".subscription-content > div", {
+      opacity: 0,
+      x: 50,
     })
   },
 });
