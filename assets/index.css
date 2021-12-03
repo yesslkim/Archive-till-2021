@@ -23,6 +23,7 @@ button {
   background-color: inherit;
   border: none;
   cursor: pointer;
+  font-family: 'Volkhov','Noto Sans KR', sans-serif;
 }
 
 /* COMMON CSS */
@@ -154,7 +155,7 @@ body {
 /* MAIN */
 
 .main-inner {
-  padding: 40px 30px;
+  padding: 40px 30px 20px;
 }
 
 .more-btn::after {
@@ -227,10 +228,69 @@ body {
 
 /* MAIN - SOCIALWALL SECTION */
 
-.socialwall-content img {
+.socialwall-content img,
+.subscription-content img {
   width: 80%;
   margin: 0 auto;
 }
+
+.socialwall-content .br {
+  display: none;
+}
+
+/* MAIN - SUBSCRIPTION SECTION */
+.subs-form > div {
+  margin-bottom: 10px;
+}
+
+.personal-q label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.personal-q label::after {
+  display: inline;
+  content: ' : ';
+}
+
+.personal-q input {
+  display: block;
+  width: 100%;
+  height: 20px;
+}
+
+.subs-form > div.subs-q {
+  margin-bottom: 25px;
+}
+
+.subs-q p {
+  font-weight: 800;
+}
+
+.subs-q .radio-list {
+  margin-bottom: 5px;
+}
+
+.subs-form .submit-btn {
+  width: 100%;
+  height: 40px;
+  background-color: #1f1f1f;
+  color: #fff;
+  font-weight: 800;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 0 30px 20px;
+}
+
+.footer p {
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+}
+
 
 @media screen and (min-width: 768px){
   .br {
@@ -346,6 +406,25 @@ body {
 .socialwall-content .br {
   display: block;
 }
+
+ /* MAIN - SUBSCRIPTION SECTION */
+.subscription-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscription-content img {
+  width: auto;
+  height: 300px;
+  margin: 0;
+  margin-right: 20px;
+} 
+
+.personal-q input {
+  height: 30px;
+}
+
 
 }
 
@@ -463,7 +542,9 @@ body {
 
   .socialwall-content {
     display: flex;
-    justify-content: flex-start;
+    width: 1000px;
+    margin: 0 auto;
+    justify-content: space-between;
   }
 
   .socialwall-content img {
@@ -474,4 +555,16 @@ body {
   .socialwall-content > div {
     align-self: center;
   }
+
+  /* MAIN - SUBSCRIPTION SECTION */
+  .subscription-content {
+    width: 1000px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .subscription-content img {
+    height: 400px;
+    margin-right: 100px;
+  } 
 }
