@@ -1,4 +1,5 @@
-let tl = gsap.timeline(); 
+ScrollTrigger.saveStyles(".title")
+let tl = gsap.timeline();
 tl.from(".title", { duration: 2.5, opacity: 0,y: 10, ease: "sine.out" })
   
 const gnb = document.querySelector('.gnb');
@@ -47,19 +48,21 @@ gnb.addEventListener('click', (e) => {
 // ABOUT-SECTION
 
 const headerHeight = document.querySelector('.header').offsetHeight + 'px';
-
-console.log(headerHeight)
+ScrollTrigger.saveStyles(".about img, .about-title, .about p, .about-subtitle")
 
 ScrollTrigger.matchMedia({
 	
-  // large
+  // mobile
   "(min-width: 320px) and (max-width: 767px)": function() {
     gsap.timeline({
       scrollTrigger: {
         trigger: '.about-section1',
-        start: 'top center',
+        start: `top ${headerHeight}`,
         toggleActions: 'restart none none none'
       }
+    }).from(".about-section1 img", {
+      opacity: 0,
+      y: -30,
     }).from(".about-title", {
       opacity: 0,
       y: -30,
@@ -67,14 +70,9 @@ ScrollTrigger.matchMedia({
       duration: 1,
       opacity: 0,
       x: -30,
-    })
-      
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: '.about-section2',
-        start: 'top center',
-        toggleActions: 'restart none none none'
-      }
+    }).from(".about-section2 img", {
+      opacity: 0,
+      y: -30,
     }).from(".about-subtitle", {
       opacity: 0,
       y: -30,
@@ -82,13 +80,10 @@ ScrollTrigger.matchMedia({
       duration: .8,
       opacity: 0,
       x: -30,
-    }).from(".about-section3 p", {
-      opacity: 0,
-      x: -30,
-    })  
+    })
   },
 
-  // medium
+  // tablet ~
   "(min-width: 768px)": function() {
     gsap.timeline({
       scrollTrigger: {
@@ -119,4 +114,5 @@ ScrollTrigger.matchMedia({
     })
   },
 });
+
 
