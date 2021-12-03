@@ -154,24 +154,81 @@ body {
 /* MAIN */
 
 .main-inner {
-  padding: 40px 20px;
+  padding: 40px 30px;
 }
 
 /* MAIN - ABOUT SECTION */
-.about {
-  padding: 0 20px;
-}
 
 .about img {
-  width: 240px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .about p {
   word-break: keep-all;
 }
 
+.about-section2 {
+  display: none;
+}
+
+/* MAIN - GALLERY SECTION */
+.gallery-contents {
+  overflow-x: hidden;
+}
+
+.gallery-contents > div {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.gallery-contents img {
+  width: 100%;
+  object-fit: cover;
+  margin: 0 5px
+}
+
+.slide-left.t-hidden,
+.slide-right.m-hidden {
+  display: none;
+}
+
+.slide-left {
+  animation: slide 50s linear infinite;
+}
+
+.slide-right {
+  animation: slide-reverse 50s linear infinite;
+}
+
+@keyframes slide {
+	0% {transform: translate3d(0, 0, 0)}
+	50% {transform: translate3d(-850%, 0, 0)}
+  100% {transform: translate3d(0, 0, 0)}
+}
+
+@keyframes slide-reverse {
+	0% {transform: translate3d(-850%, 0, 0)}
+	50% {transform: translate3d(0, 0, 0)}
+  100% {transform: translate3d(-850%, 0, 0)}
+}
+
+.gallery-more::after {
+  display: inline-block;
+  padding: 0 5px;
+  content: '>';
+  font-weight: 800;
+  transform: translateX(0);
+  transition: transform .2s linear;
+}
+
+.gallery-more:hover::after {
+  transform: translateX(10px);
+}
+
 @media screen and (min-width: 768px){
+  .br {
+    display: none;
+  }
   /* header */
   .header > .title {
     font-size: 10vw;
@@ -185,7 +242,13 @@ body {
     margin: 10px 0;
   }
 
+  /* MAIN */
+  .main section {
+    margin-bottom: 40px;
+  }
+
   /* MAIN - ABOUT SECTION */
+
   .about img {
     width: 200px;
     margin-right: 20px;
@@ -228,16 +291,47 @@ body {
     margin-bottom: 0;
   }
 
+  /* MAIN - GALLERY SECTION */
+  .gallery-contents img {
+    width:50%;
+    height: 300px;
+  }
+
+  .m-hidden.slide-right{
+    display: flex;
+  }
+  
+  @keyframes slide {
+    0% {transform: translate3d(0, 0, 0)}
+    50% {transform: translate3d(-250%, 0, 0)}
+    100% {transform: translate3d(0, 0, 0)}
+  }
+  
+  @keyframes slide-reverse {
+    0% {transform: translate3d(-250%, 0, 0)}
+    50% {transform: translate3d(0, 0, 0)}
+    100% {transform: translate3d(-250%, 0, 0)}
+  }
+
 }
 
 @media screen and (min-width: 1024px){
-  /* header */
+  /* common */
   d-hidden,
   d-hidden::before,
   d-hidden::after {
     display: none;
   }
 
+  h2 {
+    font-size: 35px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  /* header */
   .gnb > .gnb-btn {
     display: none;
   }
@@ -269,16 +363,14 @@ body {
   .main-inner {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 60px 40px;
+  }
+  
+  .main section {
+    margin-bottom: 60px;
   }
 
   /* MAIN - ABOUT SECTION */
-  .about p {
-    font-size: 18px;
-  }
-
-  .about-title {
-    font-size: 35px;
-  }
 
   .about-section1 {
     margin-bottom: 40px;
@@ -294,5 +386,42 @@ body {
 
   .about-section2 >div {
     margin-right: 20px;
+  }
+
+  /* MAIN - GALLERY SECTION */
+  .gallery {
+    position: relative;
+  }
+
+  .gallery-contents img {
+    width:100%;
+    height: 200px;
+  }
+
+  .slide-left,
+  .slide-right{
+    animation-duration: 60s;
+  }
+  
+  .slide-left.t-hidden {
+    display: flex;
+  }
+
+  @keyframes slide {
+    0% {transform: translate3d(0, 0, 0)}
+    50% {transform: translate3d(-100%, 0, 0)}
+    100% {transform: translate3d(0, 0, 0)}
+  }
+  
+  @keyframes slide-reverse {
+    0% {transform: translate3d(-100%, 0, 0)}
+    50% {transform: translate3d(0, 0, 0)}
+    100% {transform: translate3d(-100%, 0, 0)}
+  }
+
+  .gallery-more {
+    position: absolute;
+    top: 120px;
+    right: 0;
   }
 }
