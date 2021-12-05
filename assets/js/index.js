@@ -1,3 +1,4 @@
+//HEADER
 let tl = gsap.timeline();
 
 gsap.to('.smile-wrapper', {
@@ -55,4 +56,19 @@ headerTop.addEventListener('click', (e) => {
       opacity: 0
     })
   }
+})
+
+//MAIN - ABOUT-SECTION
+
+document.querySelector('.about-list').addEventListener('click', (e) => {
+  if (e.target.tagName !== 'BUTTON') return;
+
+  document.querySelectorAll('.skill-btn').forEach(btn => {
+    if (btn.parentElement.classList.contains('active')) {
+      btn.parentElement.classList.remove('active')
+    } else {
+      btn.parentElement.classList.remove('active');
+      btn === e.target && btn.parentElement.classList.add('active');
+    }
+  })
 })
