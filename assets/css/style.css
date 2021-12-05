@@ -50,7 +50,10 @@ header,
 main,
 section,
 footer,
-img {
+img,
+dl,
+dt,
+dd {
   margin: 0;
   box-sizing:border-box;
 }
@@ -322,6 +325,93 @@ body {
   background-color: #d4d4d4;
   font-size: 12px;
 }
+
+/* 
+ * MAIN - PROJECTS
+*/
+.projects {
+  padding-bottom: 20px;
+}
+
+.project-desc {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.project > span {
+  font-size: 20px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.project > .project-row {
+  display: flex;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  justify-content: flex-start;
+  border-top: 1px solid #000;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
+
+.project-row h4{
+  width: 100px;
+}
+
+.project-row > p,
+.project-row > div {
+  width: calc(100% - 100px);
+}
+
+.project-row .publishing {
+  margin-bottom: 5px;
+}
+
+.project-row .html,
+.project-row .css,
+.project-row .js,
+.project-row .fullpage-pl,
+.project-row .slide-pl, 
+.project-row .gsap {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.project-row .html {
+  background-color: #c0eeff
+}
+
+.project-row .css {
+  background-color: #e2ffc0
+}
+
+.project-row .js {
+  background-color: #fff0c0
+}
+
+.project-row .fullpage-pl {
+  background-color: #f5c0ff
+}
+
+.project-row .slide-pl {
+  background-color: #ffc0c0
+}
+
+.project-row .gsap {
+  background-color: #c0ffdc
+}
+
+.project-row .github-link {
+  display: block;
+  padding: 2px 0;
+  margin: 2px 0;
+  color: #2e3192;
+  font-weight: 600;
+}
+
 
 
 
