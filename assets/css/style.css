@@ -3,33 +3,36 @@
 */
 
 @font-face {
-  font-family: 'GmarketSansLight';
+  font-family: "GmarketSansLight";
   font-weight: normal;
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
+    format("woff");
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'GmarketSansMedium';
+  font-family: "GmarketSansMedium";
   font-weight: normal;
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'GmarketSansBold';
+  font-family: "GmarketSansBold";
   font-weight: normal;
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Blacker Pro';
+  font-family: "Blacker Pro";
   font-weight: 700;
-  src: local('Blacker Pro Display Bold'), local('Blacker-Pro-Display-Bold'),
-      url('../fonts/BlackerProDisplayTrial-Bold.woff2') format('woff2'),
-      url('../fonts/BlackerProDisplayTrial-Bold.woff') format('woff'),
-      url('../fonts/BlackerProDisplayTrial-Bold.ttf') format('truetype');
+  src: local("Blacker Pro Display Bold"), local("Blacker-Pro-Display-Bold"),
+    url("../fonts/BlackerProDisplayTrial-Bold.woff2") format("woff2"),
+    url("../fonts/BlackerProDisplayTrial-Bold.woff") format("woff"),
+    url("../fonts/BlackerProDisplayTrial-Bold.ttf") format("truetype");
   font-style: normal;
 }
 
@@ -55,7 +58,7 @@ dl,
 dt,
 dd {
   margin: 0;
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
 ul,
@@ -86,12 +89,12 @@ strong {
 
 .icon::before,
 .icon::after {
-  font-family: 'Font Awesome 5 Free';
-	display: inline-block;
-	font-style: normal;
-	font-variant: normal;
-	text-rendering: auto;
-	font-weight: 800;;
+  font-family: "Font Awesome 5 Free";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-weight: 800;
 }
 
 .sr-only {
@@ -112,6 +115,10 @@ h5 {
   font-weight: 500;
 }
 
+m-hidden {
+  display: none;
+}
+
 body {
   color: #1b1b2f;
   font-family: "GmarketSansMedium", sans-serif;
@@ -120,40 +127,28 @@ body {
 }
 
 .hero {
-  font-family: 'GmarketSansLight', sans-serif;
+  font-family: "GmarketSansLight", sans-serif;
   letter-spacing: -2px;
   font-weight: 600;
-}
-
-.header,
-.about {
-  width: 100%;
-  height: 100vh;
-  padding: 8vw;
 }
 
 /* 
  * HEADER SECTION
 */
 
+.header {
+  width: 100%;
+  height: 100vh;
+  padding: 8vw;
+}
+
 .header-top {
-  position: fixed;
-  top: 0;
-  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 13vh;
   max-height: 170px;
-  padding: 8vw;
-  z-index: 9999;
-}
-
-.header-top.active {
-  background: rgba( 255, 255, 255, 0.25 );
-  backdrop-filter: blur( 4px );
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .header-top h1 {
@@ -175,11 +170,11 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   display: block;
   font-size: 4vw;
   color: #2e3192;
-  content: '\f0c9';
+  content: "\f0c9";
 }
 
 .gnb {
@@ -190,6 +185,7 @@ body {
   height: 100vh;
   background-color: #2e3192;
   overflow: hidden;
+  z-index: 9999;
 }
 
 .gnb ul {
@@ -221,9 +217,8 @@ body {
 .gnb > .close-btn::before {
   font-size: 30px;
   color: #fff;
-  content: 'X';
+  content: "X";
 }
-
 
 /* 
  * HERO SECTION
@@ -261,6 +256,10 @@ body {
  * MAIN - ABOUT SECTION
 */
 
+.about {
+  padding: 4vw 8vw;
+}
+
 .section-title::after,
 .about-default::after {
   display: block;
@@ -268,7 +267,11 @@ body {
   height: 1px;
   margin: 10px 0 20px;
   background-color: #000;
-  content: '';
+  content: "";
+}
+
+.about-image {
+  display: none;
 }
 
 .about-list p {
@@ -284,7 +287,7 @@ body {
 }
 
 .skill.active > .skill-btn::after {
-  content: '\f00d';
+  content: "\f00d";
 }
 
 .skill.active > p {
@@ -302,7 +305,7 @@ body {
 }
 
 .skill-btn::after {
-  content: '\f078';
+  content: "\f078";
   position: absolute;
   top: 48%;
   right: 20px;
@@ -330,7 +333,7 @@ body {
  * MAIN - PROJECTS
 */
 .projects {
-  padding: 8vw;
+  padding: 4vw 8vw;
 }
 
 .project-desc {
@@ -355,7 +358,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-.project-row h4{
+.project-row h4 {
   width: 100px;
 }
 
@@ -372,7 +375,7 @@ body {
 .project-row .css,
 .project-row .js,
 .project-row .fullpage-pl,
-.project-row .slide-pl, 
+.project-row .slide-pl,
 .project-row .gsap {
   display: inline-block;
   padding: 1px 6px;
@@ -381,27 +384,27 @@ body {
 }
 
 .project-row .html {
-  background-color: #c0eeff
+  background-color: #c0eeff;
 }
 
 .project-row .css {
-  background-color: #e2ffc0
+  background-color: #e2ffc0;
 }
 
 .project-row .js {
-  background-color: #fff0c0
+  background-color: #fff0c0;
 }
 
 .project-row .fullpage-pl {
-  background-color: #f5c0ff
+  background-color: #f5c0ff;
 }
 
 .project-row .slide-pl {
-  background-color: #ffc0c0
+  background-color: #ffc0c0;
 }
 
 .project-row .gsap {
-  background-color: #c0ffdc
+  background-color: #c0ffdc;
 }
 
 .project-row .github-link {
@@ -431,7 +434,7 @@ body {
 }
 
 .footer a {
-  display: block;
+  display: inline-block;
   padding: 5px;
   font-weight: 600;
 }
@@ -440,7 +443,341 @@ body {
   font-size: 12px;
 }
 
+@media screen and (min-width: 768px) {
+  .br {
+    display: none;
+  }
 
+  m-hidden {
+    display: block;
+  }
 
+  .header {
+    padding: 50px;
+  }
 
+  .smile-wrapper {
+    bottom: 10px;
+  }
 
+  .smile-icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* MAIN */
+  .main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .main > section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* ABOUT-SECTION */
+
+  .about-inner {
+    height: 100%;
+  }
+
+  .about-image {
+    position: relative;
+    display: block;
+    height: 65%;
+    margin-bottom: 20px;
+    overflow-y: hidden;
+  }
+
+  .about-image .html-apple,
+  .about-image .css-apple,
+  .about-image .js-apple {
+    width: 150px;
+    position: absolute;
+    top: -200px;
+  }
+
+  .about-image .html-apple {
+    left: 20%;
+  }
+
+  .about-image .css-apple {
+    left: 40%;
+  }
+
+  .about-image .js-apple {
+    left: 60%;
+  }
+
+  .about-image .others-apple {
+    width: 200px;
+    position: absolute;
+    top: -300px;
+    left: 60%;
+    z-index: 8888;
+  }
+
+  .about-image .bowl {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+  }
+
+  .about-default::after {
+    display: none;
+  }
+
+  .about-list {
+    position: relative;
+    height: 400px;
+  }
+
+  .about-list li {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.3s linear;
+  }
+
+  .about-list li.show {
+    opacity: 1;
+  }
+
+  .about-list li::after,
+  .about-list li::before {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 50px 0 20px;
+    background-color: #000;
+    content: "";
+  }
+
+  .about-list p {
+    font-size: 16px;
+  }
+
+  .skill-btn {
+    display: none;
+  }
+
+  .skill > h3 {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .skill > p {
+    display: block;
+  }
+
+  /* projects */
+  .main > section.projects {
+    height: auto;
+    background-color: #f3f3f3;
+    z-index: 9999;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* COMMON */
+  .header,
+  .main > section {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .header,
+  .about,
+  .projects {
+    padding: 30px;
+  }
+
+  /* HEADER */
+  .header-top h1 {
+    font-size: 30px;
+  }
+
+  .gnb-btn {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .gnb-btn::before {
+    font-size: 30px;
+  }
+
+  .gnb ul {
+    font-size: 100px;
+  }
+
+  .hero {
+    position: relative;
+  }
+
+  .hero-inner {
+    width: 100%;
+    max-width: 950px;
+    height: 470px;
+    margin-bottom: 400px;
+  }
+
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    font-size: 78px;
+  }
+
+  /* MAIN */
+
+  .main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .main > section {
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  /* MAIN - ABOUT */
+  .about-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 200px;
+  }
+
+  .about-image,
+  .about-content {
+    width: 70%;
+  }
+
+  .about-image {
+    position: relative;
+    display: block;
+    height: 1000px;
+    margin-bottom: 100px;
+    overflow-y: hidden;
+  }
+
+  .about-image .html-apple,
+  .about-image .css-apple,
+  .about-image .js-apple {
+    top: -300px;
+    width: 200px;
+  }
+
+  .about-image .others-apple {
+    top: -400px;
+    width: 280px;
+  }
+
+  .about-list {
+    height: 200px;
+  }
+
+  .about-list li::after,
+  .about-list li::before {
+    display: none;
+  }
+
+  /* MAIN - PROJECTS */
+
+  .main > section.projects {
+    height: 100vh;
+    padding: 30px;
+  }
+
+  .project-desc {
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+
+  .projects-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    height: 100vh;
+    padding-bottom: 400px;
+  }
+
+  .project {
+    width: 48%;
+    margin-bottom: 50px;
+  }
+
+  .project > span {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .project > .project-row {
+    display: flex;
+    padding: 8px 0;
+    font-size: 14px;
+  }
+
+  .project-row h4 {
+    width: 120px;
+  }
+
+  .project-row > p,
+  .project-row > div {
+    width: calc(100% - 100px);
+  }
+
+  .project-row .publishing {
+    margin-bottom: 10px;
+  }
+
+  .project-row .html,
+  .project-row .css,
+  .project-row .js,
+  .project-row .fullpage-pl,
+  .project-row .slide-pl,
+  .project-row .gsap {
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+
+  /* FOOTER */
+
+  .footer {
+    padding: 50px;
+  }
+
+  .footer-inner {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .footer ul {
+    font-size: 18px;
+  }
+
+  .footer p {
+    font-size: 14px;
+  }
+}
