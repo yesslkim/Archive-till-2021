@@ -133,6 +133,49 @@ body {
 }
 
 /* 
+ * POPUP
+*/
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  max-width: 800px;
+  padding: 20px;
+  height: 500px;
+  border-radius: 10px;
+  background-color: #e6e6e6;
+  z-index: 9999;
+}
+
+.popup-inner {
+  position: relative;
+}
+
+.popup strong {
+  display: block;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.popup .close-btn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.popup .close-btn::before {
+  font-size: 25px;
+  content: "X";
+}
+
+/* 
  * HEADER SECTION
 */
 
@@ -423,6 +466,7 @@ body {
   padding: 8vw;
   background-color: #2e3192;
   color: #f3f3f3;
+  z-index: 9999;
 }
 
 .footer ul {
@@ -458,6 +502,16 @@ body {
 
   .smile-wrapper {
     bottom: 10px;
+    animation: spin 10s infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 
   .smile-icon {
@@ -487,7 +541,8 @@ body {
   .about-image {
     position: relative;
     display: block;
-    height: 65%;
+    height: 70%;
+    max-height: 780px;
     margin-bottom: 20px;
     overflow-y: hidden;
   }
@@ -501,7 +556,7 @@ body {
   }
 
   .about-image .html-apple {
-    left: 20%;
+    left: 25%;
   }
 
   .about-image .css-apple {
@@ -509,7 +564,7 @@ body {
   }
 
   .about-image .js-apple {
-    left: 60%;
+    left: 55%;
   }
 
   .about-image .others-apple {
@@ -525,7 +580,7 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
+    width: 580px;
   }
 
   .about-default::after {
@@ -578,9 +633,33 @@ body {
 
   /* projects */
   .main > section.projects {
-    height: auto;
     background-color: #f3f3f3;
     z-index: 9999;
+  }
+
+  .project-website a {
+    position: relative;
+  }
+
+  .project-website a:hover {
+    color: #2e3192;
+    font-weight: 800;
+  }
+
+  .project-website a::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #ffff67;
+    z-index: -1;
+    content: "";
+    transition: all 0.3s linear;
+  }
+
+  .project-website a:hover::before {
+    width: 100%;
   }
 }
 
@@ -674,21 +753,20 @@ body {
   .about-image {
     position: relative;
     display: block;
-    height: 1000px;
     margin-bottom: 100px;
-    overflow-y: hidden;
+    overflow: hidden;
   }
 
   .about-image .html-apple,
   .about-image .css-apple,
   .about-image .js-apple {
     top: -300px;
-    width: 200px;
+    width: 190px;
   }
 
   .about-image .others-apple {
     top: -400px;
-    width: 280px;
+    width: 260px;
   }
 
   .about-list {
@@ -717,8 +795,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: center;
-    height: 100vh;
-    padding-bottom: 400px;
+    padding-top: 100px;
   }
 
   .project {

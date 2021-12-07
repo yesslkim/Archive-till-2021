@@ -1,188 +1,160 @@
 let tl = gsap.timeline();
+const headerTop = document.querySelector(".header-top");
+
+window.addEventListener("resize", () => {
+  gsap.to(".popup", {
+    display: "block",
+  });
+});
+
+document.querySelector(".popup").addEventListener("click", (e) => {
+  if (e.target.tagName !== "BUTTON") return;
+
+  gsap.to(".popup", {
+    opacity: 0,
+  });
+});
+
+const matchMedia = {
+  desktop: {
+    y:
+      document.querySelector(".about-image").clientHeight -
+      document.querySelector(".bowl").clientHeight +
+      80,
+    otherY: document.querySelector(".about-image").clientHeight + 70,
+  },
+  tablet: {
+    y:
+      document.querySelector(".about-image").clientHeight -
+      document.querySelector(".bowl").clientHeight +
+      40,
+    otherY: document.querySelector(".about-image").clientHeight + 40,
+  },
+};
+
+function onComplete() {
+  let index = 0;
+
+  document.querySelectorAll(".about-image > div").forEach((apple, i) => {
+    if (apple.classList.contains("target")) {
+      index = i + 1;
+      document.querySelector(".target").classList.remove("target");
+      return index;
+    }
+  });
+
+  document.querySelectorAll(".about-list li").forEach((list) => {
+    list.classList.remove("show");
+    document.querySelectorAll(".about-list li")[index].classList.add("show");
+  });
+}
+
+const mainTimeline = (y, othery) => {
+  const sectionTimeline = gsap.timeline();
+  sectionTimeline
+    .to(".html-apple", {
+      y: y,
+      rotate: 360,
+      onStart: () => {
+        document.querySelector(".html-apple").classList.add("target");
+      },
+      onComplete: onComplete,
+      onReverseComplete: () => {
+        document.querySelectorAll(".about-list li").forEach((list) => {
+          list.classList.remove("show");
+        });
+        document.querySelector(".about-default").classList.add("show");
+      },
+    })
+    .to(".css-apple", {
+      y: y,
+      rotate: 360,
+      onStart: () => {
+        document.querySelector(".css-apple").classList.add("target");
+      },
+      onComplete: onComplete,
+      onReverseComplete: () => {
+        document.querySelector(".html-apple").classList.add("target");
+        onComplete();
+      },
+    })
+    .to(".js-apple", {
+      y: y,
+      rotate: 360,
+      onStart: () => {
+        document.querySelector(".js-apple").classList.add("target");
+      },
+      onComplete: onComplete,
+      onReverseComplete: () => {
+        document.querySelector(".css-apple").classList.add("target");
+        onComplete();
+      },
+    })
+    .to(".others-apple", {
+      y: othery,
+      rotate: 360,
+      onStart: () => {
+        document.querySelector(".others-apple").classList.add("target");
+      },
+      onComplete: onComplete,
+      onReverseComplete: () => {
+        document.querySelector(".js-apple").classList.add("target");
+        onComplete();
+      },
+    })
+    .from(".projects", {
+      delay: 0.5,
+      opacity: 0,
+      yPercent: 100,
+    })
+    .to(".about-content", {
+      opacity: 0,
+    });
+
+  ScrollTrigger.create({
+    animation: sectionTimeline,
+    trigger: ".main",
+    start: "top top",
+    end: "+=4000",
+    pin: true,
+    scrub: true,
+    anticipatePin: 1,
+    toggleActions: "restart none reverse none",
+  });
+};
 
 ScrollTrigger.matchMedia({
-  // large
+  // DESKTOP
   "(min-width: 1024px)": function () {
-    ScrollTrigger.saveStyles(".main, .main > section");
-    function onComplete() {
-      let index = 0;
-
-      document.querySelectorAll(".about-image > div").forEach((apple, i) => {
-        if (apple.classList.contains("target")) {
-          index = i + 1;
-          document.querySelector(".target").classList.remove("target");
-          return index;
-        }
-      });
-
-      document.querySelectorAll(".about-list li").forEach((list) => {
-        list.classList.remove("show");
-        document
-          .querySelectorAll(".about-list li")
-          [index].classList.add("show");
-      });
-    }
-
-    const mainTimeline = gsap.timeline();
-    mainTimeline
-      .to(".html-apple", {
-        y: 450,
-        rotate: 360,
-        onStart: () => {
-          document.querySelector(".html-apple").classList.add("target");
-        },
-        onComplete: onComplete,
-        onReverseComplete: () => {
-          document.querySelectorAll(".about-list li").forEach((list) => {
-            list.classList.remove("show");
-          });
-          document.querySelector(".about-default").classList.add("show");
-        },
-      })
-      .to(".css-apple", {
-        y: 450,
-        rotate: 360,
-        onStart: () => {
-          document.querySelector(".css-apple").classList.add("target");
-        },
-        onComplete: onComplete,
-        onReverseComplete: () => {
-          document.querySelector(".html-apple").classList.add("target");
-          onComplete();
-        },
-      })
-      .to(".js-apple", {
-        y: 450,
-        rotate: 360,
-        onStart: () => {
-          document.querySelector(".js-apple").classList.add("target");
-        },
-        onComplete: onComplete,
-        onReverseComplete: () => {
-          document.querySelector(".css-apple").classList.add("target");
-          onComplete();
-        },
-      })
-      .to(".others-apple", {
-        y: 780,
-        rotate: 360,
-        onStart: () => {
-          document.querySelector(".others-apple").classList.add("target");
-        },
-        onComplete: onComplete,
-        onReverseComplete: () => {
-          document.querySelector(".js-apple").classList.add("target");
-          onComplete();
-        },
-      })
-      .from(".projects", {
-        delay: 0.5,
-        yPercent: 100,
-      });
-
-    ScrollTrigger.create({
-      animation: mainTimeline,
-      trigger: ".main",
-      start: "top top",
-      end: "+=4000",
-      pin: true,
-      scrub: true,
-      anticipatePin: 1,
-      toggleActions: "restart none reverse none",
+    ScrollTrigger.saveStyles(".main, .about, .projects");
+    mainTimeline(matchMedia.desktop.y, matchMedia.desktop.otherY);
+    headerTop.addEventListener("click", (e) => {
+      if (e.target.tagName !== "A") return;
+      if (e.target.classList.contains("project-link")) {
+        gsap.to(window, {
+          duration: 1,
+          scrollTo: { y: "#projects", offsetY: -1400 },
+        });
+      }
     });
   },
 
-  // tablet
+  // TABLET
   "(min-width: 768px) and (max-width: 1023px)": function () {
-    ScrollTrigger.saveStyles(".main, .main > section");
-    function onComplete() {
-      let index = 0;
-
-      document.querySelectorAll(".about-image > div").forEach((apple, i) => {
-        if (apple.classList.contains("target")) {
-          index = i + 1;
-          document.querySelector(".target").classList.remove("target");
-          return index;
-        }
-      });
-
-      document.querySelectorAll(".about-list li").forEach((list) => {
-        list.classList.remove("show");
-        document
-          .querySelectorAll(".about-list li")
-          [index].classList.add("show");
-      });
-    }
-
-    const mainTimeline = gsap.timeline();
-    mainTimeline
-      .to(".html-apple", {
-        y: 350,
-        rotate: 360,
-        onStart: () => {
-          document.querySelector(".html-apple").classList.add("target");
-        },
-        onComplete: onComplete,
-        onReverseComplete: () => {
-          document.querySelectorAll(".about-list li").forEach((list) => {
-            list.classList.remove("show");
-          });
-          document.querySelector(".about-default").classList.add("show");
-        },
-      })
-      .to(".css-apple", {
-        y: 350,
-        rotate: 360,
-        onStart: () => {
-          document.querySelector(".css-apple").classList.add("target");
-        },
-        onComplete: onComplete,
-        onReverseComplete: () => {
-          document.querySelector(".html-apple").classList.add("target");
-          onComplete();
-        },
-      })
-      .to(".js-apple", {
-        y: 350,
-        rotate: 360,
-        onStart: () => {
-          document.querySelector(".js-apple").classList.add("target");
-        },
-        onComplete: onComplete,
-        onReverseComplete: () => {
-          document.querySelector(".css-apple").classList.add("target");
-          onComplete();
-        },
-      })
-      .to(".others-apple", {
-        y: 665,
-        rotate: 360,
-        onStart: () => {
-          document.querySelector(".others-apple").classList.add("target");
-        },
-        onComplete: onComplete,
-        onReverseComplete: () => {
-          document.querySelector(".js-apple").classList.add("target");
-          onComplete();
-        },
-      })
-      .from(".projects", {
-        delay: 0.5,
-        yPercent: 100,
-      });
-
-    ScrollTrigger.create({
-      animation: mainTimeline,
-      trigger: ".main",
-      start: "top top",
-      end: "+=4000",
-      pin: true,
-      scrub: true,
-      anticipatePin: 1,
-      toggleActions: "restart none reverse none",
+    ScrollTrigger.saveStyles(".main, .about, .projects");
+    mainTimeline(matchMedia.tablet.y, matchMedia.tablet.otherY);
+    headerTop.addEventListener("click", (e) => {
+      if (e.target.tagName !== "A") return;
+      if (e.target.classList.contains("project-link")) {
+        gsap.to(window, {
+          duration: 1,
+          scrollTo: { y: "#projects", offsetY: -1400 },
+        });
+      }
     });
   },
 
+  // MOBILE
   "(min-width: 320px) and (max-width: 767px)": function () {
     gsap.to(".smile-wrapper", {
       scrollTrigger: {
@@ -198,10 +170,15 @@ ScrollTrigger.matchMedia({
     });
   },
 
-  // all
+  // DEVICE COMMOM
   all: function () {
     //HEADER
-    const headerTop = document.querySelector(".header-top");
+    gsap.from(".hero", {
+      duration: 1,
+      opacity: 0,
+      y: 310,
+    });
+
     ScrollTrigger.saveStyles(".gnb, .gnb li");
 
     headerTop.addEventListener("click", (e) => {
@@ -251,6 +228,15 @@ ScrollTrigger.matchMedia({
           opacity: 0,
         });
       }
+    });
+
+    headerTop.addEventListener("click", (e) => {
+      if (e.target.tagName !== "A") return;
+
+      gsap.to(".gnb", {
+        width: 0,
+        opacity: 0,
+      });
     });
 
     //MAIN - ABOUT-SECTION

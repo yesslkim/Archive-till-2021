@@ -4,13 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="wih4h=device-wih4h, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>YE SEUL KIM PORTFOLIO</title>
 </head>
 
 <body>
+  <div class="popup">
+    <div class="popup-inner">
+      <button type="button" class="icon close-btn"><span class="sr-only">메뉴닫기</span></button>
+      <strong>알림사항</strong>
+      <p>
+        현재 반응형 확인을 위해 창을 줄일 시 위치 틀어짐 현상이 발생 중입니다.
+        F5를 눌러주시면 각 디바이스별로 정상적으로 작동되니,
+        우선 반응형은 그렇게 봐주시면 감사하겠습니다
+      </p>
+    </div>
+  </div>
   <header class="header">
     <div class="header-top">
       <h1 class="name" id="home">YESEULKIM PORTFOLIO</h1>
@@ -19,7 +30,7 @@
         <ul>
           <li><a href="#home">HOME</a></li>
           <li><a href="#about">ABOUT</a></li>
-          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#projects" class="project-link">PROJECTS</a></li>
           <li><a href="#contact">CONTACT</a></li>
         </ul>
         <button type="button" class="icon close-btn"><span class="sr-only">메뉴닫기</span></button>
@@ -54,50 +65,118 @@
       <h2 class="section-title">
         ABOUT
       </h2>
-      <div class="about-content">
-        <ul class="about-list">
-          <li class="about-default">
-            <h3>안녕하세요 ! 김예슬입니다</h3>
-            <p>
-              사용자가 브랜드에 대한 <br />
-              좋은 기억을 플랫폼에서 이어갈 수 있도록<br />
-              탄탄한 코드와 재밌는 UI를 만드는 <br />
-              웹 퍼블리셔 되고싶습니다<br />
-            </p>
-          </li>
-          <li class="skill">
-            <button type="button" class="icon skill-btn">HTML</button>
-            <h3>HTML</h3>
-            <p>
-              웹표준을 준수하며 시맨틱 태그를<br class="br">적절하게 사용합니다.
-              또한, 필요한 부분에 WAI-ARIA를 사용합니다.
-            </p>
-          </li>
-          <li class="skill">
-            <button type="button" class="icon skill-btn">CSS</button>
-            <h3>CSS</h3>
-            <p>
-              <span class="code">float</span>, <span class="code">position</span>,
-              <span class="code">flex</span>로 탄탄한 레이아웃과
-              <span class="code">animation</span>을 통해 인터랙티브한<br class="br"> 반응형 웹사이트 구현이 가능합니다.
-            </p>
-          </li>
-          <li class="skill">
-            <button type="button" class="icon skill-btn">JAVASCRIPT</button>
-            <h3>JAVASCRIPT</h3>
-            <p>
-              Javascript ES6와 라이브러리 JQuery로 다양한 컴포넌트 구현이 가능하고 <br class="br">
-              플러그인 활용 및 커스텀이 가능합니다.
-            </p>
-          </li>
-          <li class="skill">
-            <button type="button" class="icon skill-btn">OTHERS</button>
-            <h3>OTHERS</h3>
-            <p>
-              Photoshop, Illustrator, <br class="br">Font Awesome, slick, notion등 <br class="br">다양한 툴을 사용할 수 있습니다.
-            </p>
-          </li>
-        </ul>
+      <div class="about-inner">
+        <div class="about-image">
+          <div class="html-apple">
+            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64.51 82.4">
+              <rect y="17.89" width="64.51" height="64.51" rx="8.26" style="fill:#b52b15" />
+              <path d="M32.62,12.31S37.43-.7,55,7.8C55,7.8,47.25,21,32.62,12.31Z" transform="translate(-4.95 -4.2)" style="fill:#206019" />
+              <path d="M27.78,4.92a32.36,32.36,0,0,1,8.55,23.14" transform="translate(-4.95 -4.2)" style="fill:none;stroke:#262323;stroke-miterlimit:10;stroke-width:2px" /><text transform="translate(15.47 66.81)" style="font-size:21.84266471862793px;fill:#fff;font-family:HSSaemaul-Regular, HSSaemaul">HTML</text>
+              <circle cx="41.57" cy="30.49" r="1.53" style="fill:#fff" />
+              <circle cx="22.94" cy="30.49" r="1.53" style="fill:#fff" />
+              <path d="M28.22,41s.45,4.81,9,4.81,9-4.81,9-4.81" transform="translate(-4.95 -4.2)" style="fill:none;stroke:#fff;stroke-miterlimit:10" />
+            </svg>
+          </div>
+          <div class="css-apple">
+            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64.51 82.4">
+              <rect y="17.89" width="64.51" height="64.51" rx="8.26" style="fill:#79b216" />
+              <path d="M32.62,12.31S37.43-.7,55,7.8C55,7.8,47.25,21,32.62,12.31Z" transform="translate(-4.95 -4.2)" style="fill:#206019" />
+              <path d="M27.78,4.92a32.36,32.36,0,0,1,8.55,23.14" transform="translate(-4.95 -4.2)" style="fill:none;stroke:#262323;stroke-miterlimit:10;stroke-width:2px" /><text transform="translate(19.04 66.81)" style="font-size:21.84266471862793px;fill:#fff;font-family:HSSaemaul-Regular, HSSaemaul">CSS</text>
+              <circle cx="41.57" cy="30.49" r="1.53" style="fill:#fff" />
+              <circle cx="22.94" cy="30.49" r="1.53" style="fill:#fff" />
+              <path d="M28.22,41s.45,4.81,9,4.81,9-4.81,9-4.81" transform="translate(-4.95 -4.2)" style="fill:none;stroke:#fff;stroke-miterlimit:10" />
+            </svg>
+          </div>
+          <div class="js-apple">
+            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64.51 82.4">
+              <rect y="17.89" width="64.51" height="64.51" rx="8.26" style="fill:#236fc1" />
+              <path d="M32.62,12.31S37.43-.7,55,7.8C55,7.8,47.25,21,32.62,12.31Z" transform="translate(-4.95 -4.2)" style="fill:#206019" />
+              <path d="M27.78,4.92a32.36,32.36,0,0,1,8.55,23.14" transform="translate(-4.95 -4.2)" style="fill:none;stroke:#262323;stroke-miterlimit:10;stroke-width:2px" /><text transform="translate(25.36 66.81)" style="font-size:21.84266471862793px;fill:#fff;font-family:HSSaemaul-Regular, HSSaemaul">js</text>
+              <circle cx="41.57" cy="30.49" r="1.53" style="fill:#fff" />
+              <circle cx="22.94" cy="30.49" r="1.53" style="fill:#fff" />
+              <path d="M28.22,41s.45,4.81,9,4.81,9-4.81,9-4.81" transform="translate(-4.95 -4.2)" style="fill:none;stroke:#fff;stroke-miterlimit:10" />
+            </svg>
+          </div>
+          <div class="others-apple">
+            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64.51 82.4">
+              <rect y="17.89" width="64.51" height="64.51" rx="8.26" style="fill:#cec809" />
+              <path d="M32.62,12.31S37.43-.7,55,7.8C55,7.8,47.25,21,32.62,12.31Z" transform="translate(-4.95 -4.2)" style="fill:#206019" />
+              <path d="M27.78,4.92a32.36,32.36,0,0,1,8.55,23.14" transform="translate(-4.95 -4.2)" style="fill:none;stroke:#262323;stroke-miterlimit:10;stroke-width:2px" /><text transform="translate(8.12 66.81)" style="font-size:21.84266471862793px;fill:#fff;font-family:HSSaemaul-Regular, HSSaemaul">Others</text>
+              <circle cx="41.57" cy="30.49" r="1.53" style="fill:#fff" />
+              <circle cx="22.94" cy="30.49" r="1.53" style="fill:#fff" />
+              <path d="M28.22,41s.45,4.81,9,4.81,9-4.81,9-4.81" transform="translate(-4.95 -4.2)" style="fill:none;stroke:#fff;stroke-miterlimit:10" />
+            </svg>
+          </div>
+          <div class="bowl">
+            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590.14 296.06">
+              <path d="M12.32,21.77c-1.09,9.88.19,36.7,2.47,52,6.25,41.8,23.45,82.71,49.45,117.6,27.38,36.74,62.43,65.64,104.83,86.41l15.7,7.69,0,5.3c.1,9.4,5.65,16.7,14.55,19.13,5.6,1.53,226.4,1.49,232,0a18.93,18.93,0,0,0,14.45-19.09c0-2.9-.68-6.43-1.45-7.8a15.12,15.12,0,0,1-1.45-3.15c0-.36,5.15-3.38,11.55-6.75,42.4-22.3,82.35-59.19,108-99.7,12.95-20.48,25.95-50.8,32-74.6,5.34-21.07,6.66-31.8,7.16-58.5l.48-25.3h-589l-.75,6.8Z" transform="translate(-11.93 -14.97)" style="fill:#2f358b" />
+            </svg>
+          </div>
+        </div>
+        <div class="about-content">
+          <ul class="about-list">
+            <li class="about-default show">
+              <h3>안녕하세요 ! 김예슬입니다</h3>
+              <p>
+                사용자가 브랜드에 대한 <br class="br" />
+                좋은 기억을 플랫폼에서 이어갈 수 있도록 <br class="br" />
+                탄탄한 코드와 재밌는 UI를 만드는 <br class="br" />
+                웹 퍼블리셔 되고싶습니다 <br class="br" />
+                <span class="m-hidden">
+                  재밌고 인터랙티브한 웹사이트를 만드는 것도 좋아하지만, 모든 사람들이
+                  동등한 기회로 웹사이트를 접할 수 있도록 웹 접근성에 대해 더욱 공부해보고 싶습니다!
+                </span>
+              </p>
+            </li>
+            <li class="skill skill1">
+              <button type="button" class="icon skill-btn">HTML</button>
+              <h3>HTML</h3>
+              <p>
+                웹표준을 준수하며 시맨틱 태그를<br class="br"> 적절하게 사용합니다.
+                또한, 필요한 부분에 WAI-ARIA를 사용합니다.
+                <span class="m-hidden">
+                  현재는 HTML을 이용한 검색엔진최적화(SEO) 방법에 대해 공부하고 있습니다.
+                  자세한 내용은 하단 TIL에서 확인하실 수 있습니다 😁🌹
+                </span>
+              </p>
+            </li>
+            <li class="skill skill2">
+              <button type="button" class="icon skill-btn">CSS</button>
+              <h3>CSS</h3>
+              <p>
+                <span class="code">float</span>, <span class="code">position</span>,
+                <span class="code">flex</span>로 탄탄한 레이아웃과
+                <span class="code">animation</span>을 통해 인터랙티브한<br class="br"> 반응형 웹사이트 구현이 가능합니다.
+                <span class="m-hidden">
+                  추후에 유지보수를 위해 CSS를 컴포넌트화하는 방법을 공부해보고 싶습니다.
+                  또한 전처리기인 SCSS에 관심이 많아 공부할 계획을 가지고 있습니다 🔍
+                </span>
+              </p>
+            </li>
+            <li class="skill skill3">
+              <button type="button" class="icon skill-btn">JAVASCRIPT</button>
+              <h3>JAVASCRIPT</h3>
+              <p>
+                Javascript ES6와 라이브러리 JQuery로 다양한 컴포넌트 구현이 가능하고 <br class="br">
+                플러그인 활용 및 커스텀이 가능합니다.
+                <span class="m-hidden">
+                  기본기가 중요하다고 생각되어 지속적으로 프로젝트를 통해
+                  자바스크립트를 학습하며 복습하고 있습니다. 추후에 React, Vue를 배워볼 생각입니다
+                </span>
+              </p>
+            </li>
+            <li class="skill skill4">
+              <button type="button" class="icon skill-btn">OTHERS</button>
+              <h3>OTHERS</h3>
+              <p>
+                Photoshop, Illustrator, <br class="br">Font Awesome, slick, notion등 <br class="br">다양한 툴을 사용할 수 있습니다.
+                <span class="m-hidden">
+                  새로운 툴을 접하는 것을 좋아해 다른 툴을 활용하여 협업하고 공부하는 것도 기대하고 있습니다!
+                </span>
+              </p>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
     <!-- //ABOUT-SECTION -->
@@ -135,7 +214,7 @@
               </div>
             </div>
           </div>
-          <div class="project-row">
+          <div class="project-row project-website">
             <h4>Website</h4>
             <p><a href="https://mdn-clonecoding.netlify.app" target="_blank">mdn-clonecoding.netlify.app</a></p>
           </div>
@@ -167,7 +246,7 @@
               </div>
             </div>
           </div>
-          <div class="project-row">
+          <div class="project-row project-website">
             <h4>Website</h4>
             <p><a href="https://web-accessibility.netlify.app/#" target="_blank">web-accessibility.netlify.app</a></p>
           </div>
@@ -203,9 +282,9 @@
               </div>
             </div>
           </div>
-          <div class="project-row">
+          <div class="project-row project-website">
             <h4>Website</h4>
-            <p><a href="https://ui-components2021.netlify.app/" target="_blank">ui-components2021.<br />netlify.app</a></p>
+            <p><a href="https://ui-components2021.netlify.app/" target="_blank">ui-components2021.<br class="br" />netlify.app</a></p>
           </div>
           <div class="project-row">
             <h4>Description</h4>
@@ -239,7 +318,7 @@
               </div>
             </div>
           </div>
-          <div class="project-row">
+          <div class="project-row project-website">
             <h4>Website</h4>
             <p><a href="https://monet-garden.netlify.app" target="_blank">monet-garden.netlify.app</a></p>
           </div>
@@ -255,19 +334,22 @@
     </section>
     <!-- //PROJECTS-SECTION -->
   </main>
-  <footer class="footer">
-    <ul>
-      <li><a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=yskim940914@gmail.com">E - MAIL</a></li>
-      <li><a target="_blank" href="https://infrequent-fright-2fa.notion.site/da91576eebaa40bf88431c85121ac172">RESUME</a></li>
-      <li><a target="_blank" href="https://velog.io/@yesslkim94">TIL</a></li>
-    </ul>
-    <p>
-      © 2022 yeseulkim
-    </p>
+  <footer class="footer" id="contact">
+    <div class="footer-inner">
+      <ul>
+        <li><a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=yskim940914@gmail.com">E - MAIL</a></li>
+        <li><a target="_blank" href="https://infrequent-fright-2fa.notion.site/da91576eebaa40bf88431c85121ac172">RESUME</a></li>
+        <li><a target="_blank" href="https://velog.io/@yesslkim94">TIL</a></li>
+      </ul>
+      <p>
+        © 2022 yeseulkim
+      </p>
+    </div>
   </footer>
   <!-- //FOOTER -->
   <!-- script -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollToPlugin.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
   <script src="./assets/js/index.js"></script>
 </body>
