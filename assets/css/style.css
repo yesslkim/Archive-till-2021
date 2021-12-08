@@ -245,6 +245,16 @@ body {
   position: absolute;
   bottom: 2px;
   right: 0;
+  animation: spin 10s infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .smile-icon {
@@ -459,16 +469,7 @@ body {
 
   .smile-wrapper {
     bottom: 10px;
-    animation: spin 10s infinite;
-  }
-
-  @keyframes spin {
-    0% {
-      transform: rotate(0);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+    animation: spin 1s infinite;
   }
 
   .smile-icon {

@@ -152,18 +152,18 @@ ScrollTrigger.matchMedia({
 
   // MOBILE
   "(min-width: 320px) and (max-width: 767px)": function () {
-    gsap.to(".smile-wrapper", {
-      scrollTrigger: {
-        trigger: ".header",
-        scrub: true,
-        start: "top top",
-        end: "+=100% 0px",
-        pin: true,
-      },
-      rotate: 360,
-      y: 210,
-      scale: 1.25 / 0.75,
-    });
+    // gsap.to(".smile-wrapper", {
+    //   scrollTrigger: {
+    //     trigger: ".header",
+    //     scrub: true,
+    //     start: "top top",
+    //     end: "+=100% 0px",
+    //     pin: true,
+    //   },
+    //   rotate: 360,
+    //   y: 210,
+    //   scale: 1.25 / 0.75,
+    // });
   },
 
   // DEVICE COMMON
