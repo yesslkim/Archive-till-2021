@@ -5,6 +5,14 @@ window.addEventListener("resize", () => {
   window.location.reload();
 });
 
+const heroAnimation = () => {
+  gsap.from(".hero", {
+    duration: 1,
+    opacity: 0,
+    y: 310,
+  });
+};
+
 const matchMedia = {
   desktop: {
     y:
@@ -130,6 +138,7 @@ ScrollTrigger.matchMedia({
   "(min-width: 1024px)": function () {
     ScrollTrigger.saveStyles(".main, .about, .projects");
     mainTimeline(matchMedia.desktop.y, matchMedia.desktop.otherY);
+    heroAnimation();
     scrollToProject();
   },
 
@@ -137,6 +146,7 @@ ScrollTrigger.matchMedia({
   "(min-width: 768px) and (max-width: 1023px)": function () {
     ScrollTrigger.saveStyles(".main, .about, .projects");
     mainTimeline(matchMedia.tablet.y, matchMedia.tablet.otherY);
+    heroAnimation();
     scrollToProject();
   },
 
@@ -159,12 +169,6 @@ ScrollTrigger.matchMedia({
   // DEVICE COMMON
   all: function () {
     //HEADER
-    tl.from(".hero", {
-      duration: 1,
-      opacity: 0,
-      y: 310,
-    });
-
     ScrollTrigger.saveStyles(".gnb, .gnb li");
 
     headerTop.addEventListener("click", (e) => {
