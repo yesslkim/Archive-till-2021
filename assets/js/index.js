@@ -1,15 +1,17 @@
 let tl = gsap.timeline();
 const headerTop = document.querySelector(".header-top");
 
-window.addEventListener("resize", () => {
-  window.location.reload();
-});
-
 const heroAnimation = () => {
   gsap.from(".hero", {
     duration: 1,
     opacity: 0,
     y: 310,
+  });
+};
+
+const refreshOnResize = () => {
+  window.addEventListener("resize", () => {
+    window.location.reload();
   });
 };
 
@@ -140,6 +142,7 @@ ScrollTrigger.matchMedia({
     mainTimeline(matchMedia.desktop.y, matchMedia.desktop.otherY);
     heroAnimation();
     scrollToProject();
+    refreshOnResize();
   },
 
   // TABLET
@@ -148,6 +151,7 @@ ScrollTrigger.matchMedia({
     mainTimeline(matchMedia.tablet.y, matchMedia.tablet.otherY);
     heroAnimation();
     scrollToProject();
+    refreshOnResize();
   },
 
   // MOBILE

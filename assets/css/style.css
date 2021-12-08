@@ -245,7 +245,7 @@ body {
   position: absolute;
   bottom: 2px;
   right: 0;
-  animation: spin 10s infinite;
+  animation: spin 1s infinite;
 }
 
 @keyframes spin {
@@ -469,7 +469,7 @@ body {
 
   .smile-wrapper {
     bottom: 10px;
-    animation: spin 1s infinite;
+    animation: spin 10s infinite;
   }
 
   .smile-icon {
