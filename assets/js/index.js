@@ -1,14 +1,6 @@
 let tl = gsap.timeline();
 const headerTop = document.querySelector(".header-top");
 
-const heroAnimation = () => {
-  gsap.from(".hero", {
-    duration: 1,
-    opacity: 0,
-    y: 310,
-  });
-};
-
 const refreshOnResize = () => {
   window.addEventListener("resize", () => {
     window.location.reload();
@@ -140,16 +132,19 @@ ScrollTrigger.matchMedia({
   "(min-width: 1024px)": function () {
     ScrollTrigger.saveStyles(".main, .about, .projects");
     mainTimeline(matchMedia.desktop.y, matchMedia.desktop.otherY);
-    heroAnimation();
     scrollToProject();
     refreshOnResize();
+    gsap.from(".hero", {
+      duration: 1,
+      opacity: 0,
+      y: 310,
+    });
   },
 
   // TABLET
   "(min-width: 768px) and (max-width: 1023px)": function () {
     ScrollTrigger.saveStyles(".main, .about, .projects");
     mainTimeline(matchMedia.tablet.y, matchMedia.tablet.otherY);
-    heroAnimation();
     scrollToProject();
     refreshOnResize();
   },
