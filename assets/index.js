@@ -15,24 +15,21 @@ const renderPagination = (totalPages) => {
     if (pageNumber.textContent == 1) pageNumber.classList.add("active");
 
     const pagination = document.querySelector(".pagination");
-    pagination.insertBefore(
-      pageNumber,
-      pagination.lastElementChild.previousSibling
-    );
+    pagination.insertBefore(pageNumber, pagination.lastElementChild);
   }
 };
 
 //BOARD - RENDER PAGE
 const renderPage = (board, numberOfItems, numberPerPage, currentPage) => {
   const pagesWrapper = document.querySelector(".pagination");
-  const pages = document.querySelectorAll(".pagination .num");
+  const pageNums = document.querySelectorAll(".pagination .num");
   pagesWrapper.addEventListener("click", (e) => {
     if (!e.target.classList.contains("num")) return;
-    pages.forEach((page) => {
-      page.classList.remove("active");
+    pageNums.forEach((pageNum) => {
+      pageNum.classList.remove("active");
 
       //Set current-page
-      if (page == e.target) {
+      if (pageNum == e.target) {
         e.target.classList.add("active");
         currentPage = Number(e.target.textContent);
       }
