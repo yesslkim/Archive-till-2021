@@ -47,6 +47,14 @@ button {
   overflow: hidden;
 }
 
+.disable-scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
 body {
   font-family: 'Volkhov','Noto Sans KR', sans-serif;
   overflow-x: hidden;
@@ -101,10 +109,15 @@ body {
 }
 
 .gnb-list {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 0;
   height: 100vh;
   background-color: #000;
+  z-index: 9999;
 }
 
 .list-inner {

@@ -31,7 +31,6 @@ gnb.addEventListener('click', (e) => {
   }
 
   if (e.target.classList.contains('close-btn')) {
-    document.body.classList.remove('disable-scroll');
     tl.to('.list-inner li', {
       duration: .1,
       display: 'block',
@@ -45,6 +44,8 @@ gnb.addEventListener('click', (e) => {
       width:0,
       opacity: 0
     })
+    
+    document.body.classList.remove('disable-scroll');
   }
 })
 
@@ -120,5 +121,3 @@ ScrollTrigger.matchMedia({
     })
   },
 });
-
-
