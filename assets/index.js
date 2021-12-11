@@ -45,6 +45,14 @@ gnb.addEventListener('click', (e) => {
   }
 })
 
+gnb.addEventListener('click', (e) => {
+  if (e.target.tagName !== 'A') return;
+  gsap.to('.gnb-list', {
+    width:0,
+    opacity: 0
+  })
+})
+
 // ABOUT-SECTION
 
 window.addEventListener('resize', () => {
