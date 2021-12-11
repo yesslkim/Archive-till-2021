@@ -8,6 +8,8 @@ gnb.addEventListener('click', (e) => {
   if (e.target.tagName !== 'BUTTON') return; 
   
   if (e.target.classList.contains('gnb-btn')) {
+    document.body.classList.add('disable-scroll');
+
     tl.fromTo('.gnb-list', {
       width:0,
       opacity: 0
@@ -29,6 +31,7 @@ gnb.addEventListener('click', (e) => {
   }
 
   if (e.target.classList.contains('close-btn')) {
+    document.body.classList.remove('disable-scroll');
     tl.to('.list-inner li', {
       duration: .1,
       display: 'block',
@@ -56,7 +59,8 @@ gnb.addEventListener('click', (e) => {
 // ABOUT-SECTION
 
 window.addEventListener('resize', () => {
-  ScrollTrigger.saveStyles("section img, section p, .about-subtitle, section h2, section div")
+  ScrollTrigger.saveStyles("section img, section p, .about-subtitle, section h2, section div");
+  document.body.classList.remove('disable-scroll');
 })
 
 ScrollTrigger.matchMedia({
