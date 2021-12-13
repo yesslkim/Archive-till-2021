@@ -49,14 +49,6 @@ gnb.addEventListener('click', (e) => {
   }
 })
 
-gnb.addEventListener('click', (e) => {
-  if (e.target.tagName !== 'A') return;
-  gsap.to('.gnb-list', {
-    width:0,
-    opacity: 0
-  })
-})
-
 // ABOUT-SECTION
 
 window.addEventListener('resize', () => {
@@ -70,7 +62,6 @@ ScrollTrigger.matchMedia({
       scrollTrigger: {
         trigger: '.header',
         start: `center 100px`,
-        toggleActions: 'restart none none none'
       }
     }).from(".about-section1 img", {
       opacity: 0,
@@ -98,7 +89,6 @@ ScrollTrigger.matchMedia({
       scrollTrigger: {
         trigger: '.gallery',
         start: `top top`,
-        toggleActions: 'restart none none none'
       }
     }).from(".socialwall h2", {
       opacity: 0,
@@ -120,4 +110,15 @@ ScrollTrigger.matchMedia({
       x: 50,
     })
   },
+
+  "(max-width: 1023px)": function () { 
+    gnb.addEventListener('click', (e) => {
+      if (e.target.tagName !== 'A') return;
+      gsap.to('.gnb-list', {
+        width:0,
+        opacity: 0
+      })
+      document.body.classList.remove('disable-scroll');
+    })
+  }
 });
