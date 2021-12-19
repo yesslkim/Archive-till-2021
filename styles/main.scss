@@ -1,0 +1,8 @@
+@import "./constants/colors";
+
+$main-color: #fff;
+
+p {
+  width: 100px;
+  color: $main-color;
+}
