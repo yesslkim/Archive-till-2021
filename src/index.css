@@ -73,3 +73,16 @@ button {
   color: #3d20e0;
   margin-bottom: 8px;
 }
+
+.blog-preview button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #3d20e0;
+  color: #fff;
+  opacity: 0.8;
+  transition: opacity 200ms ease-in-out;
+}
+
+.blog-preview button:hover {
+  opacity: 1;
+}
