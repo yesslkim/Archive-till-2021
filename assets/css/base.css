@@ -1,0 +1,241 @@
+/* 
+ * RESET CSS
+*/
+
+@font-face {
+  font-family: "GmarketSansLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GmarketSansMedium";
+  font-weight: normal;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GmarketSansBold";
+  font-weight: normal;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "alethianext-light";
+  src: url("../font/alethianext-light-webfont.woff2") format("woff2"),
+    url("../font/alethianext-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+li,
+p,
+div,
+a,
+span,
+strong,
+header,
+main,
+section,
+footer,
+img,
+dl,
+dt,
+dd {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  word-break: break-word;
+}
+
+:lang(ko) {
+  word-break: keep-all;
+}
+
+ul,
+li {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  font-family: "GmarketSansMedium", sans-serif;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+strong {
+  font-weight: 400;
+}
+
+/* 
+ * COMMON CSS - TEXT_STYLE
+*/
+
+h4,
+h5 {
+  font-family: "GmarketSansBold", sans-serif;
+  font-weight: 500;
+}
+
+body {
+  font-family: "GmarketSansMedium", sans-serif;
+  font-size: 16px;
+  color: #3f4150;
+}
+
+button {
+  color: #3f4150;
+}
+
+.header h1 {
+  font-family: "alethianext-light", sans-serif;
+}
+
+.section-title {
+  font-family: "GmarketSansBold", sans-serif;
+}
+
+/* 
+ * COMMON CSS - LAYOUT (SECTION_TITLE, COLOR ETC)
+*/
+
+body {
+  background-color: #ecf3ff;
+}
+
+.section {
+  padding: 20px;
+}
+
+.section-title {
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.section-inner {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: transparent 0px 0px 0px 2px inset;
+}
+
+/* 
+ * COMMON CSS - OTHERS
+*/
+
+.disable-scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.icon::before,
+.icon::after {
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 800;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+}
+
+.m-hidden {
+  display: none;
+}
+
+.desktop-only {
+  display: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.smile-wrapper {
+  animation: bounce 2s ease infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    padding: 40px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .section-inner {
+    padding: 40px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .desktop-only {
+    display: block;
+  }
+
+  .section {
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+
+  .section.about,
+  .section.projects {
+    width: 50%;
+    max-width: 500px;
+  }
+
+  .section-inner {
+    height: 650px;
+  }
+}
