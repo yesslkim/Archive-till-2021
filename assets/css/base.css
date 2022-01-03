@@ -4,9 +4,9 @@
 
 @font-face {
   font-family: "GmarketSansLight";
+  font-weight: normal;
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
     format("woff");
-  font-weight: normal;
   font-style: normal;
 }
 
@@ -28,9 +28,9 @@
 
 @font-face {
   font-family: "alethianext-light";
+  font-weight: normal;
   src: url("../font/alethianext-light-webfont.woff2") format("woff2"),
     url("../font/alethianext-light-webfont.woff") format("woff");
-  font-weight: normal;
   font-style: normal;
 }
 
@@ -105,9 +105,9 @@ h5 {
 }
 
 body {
+  color: #3f4150;
   font-family: "GmarketSansMedium", sans-serif;
   font-size: 16px;
-  color: #3f4150;
 }
 
 button {
@@ -135,8 +135,8 @@ body {
 }
 
 .section-title {
-  margin-bottom: 5px;
   font-size: 20px;
+  margin-bottom: 5px;
 }
 
 .section-inner {

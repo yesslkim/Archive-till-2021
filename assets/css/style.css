@@ -38,10 +38,10 @@
   align-items: center;
   width: 40px;
   height: 40px;
-  font-size: 18px;
-  background-color: var(--white-color);
-  border-radius: 5px;
   padding: 10px;
+  background-color: var(--white-color);
+  font-size: 18px;
+  border-radius: 5px;
   transition: box-shadow 0.2s ease-out 0s;
 }
 
@@ -125,12 +125,12 @@
 
 .about-inner::before {
   display: block;
-  content: "";
   width: 100px;
   height: 100px;
-  margin-bottom: 20px;
   background: url(../images/avatar.png) no-repeat;
   background-size: contain;
+  content: "";
+  margin-bottom: 20px;
 }
 
 .about-intro {
@@ -160,22 +160,22 @@
   position: relative;
   width: 100%;
   height: 40px;
-  padding-left: 40px;
   font-size: 16px;
+  padding-left: 40px;
 }
 
 .about-skills .skill-btn::before {
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translateY(-50%);
   display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 30px;
   height: 30px;
-  border-radius: 50%;
   content: "+";
+  transform: translateY(-50%);
+  border-radius: 50%;
 }
 
 .skill-btn > h3 {
@@ -293,14 +293,14 @@
 .project > button::before {
   position: relative;
   top: 2px;
-  padding-right: 10px;
   font-size: 18px;
   content: "<";
+  padding-right: 10px;
 }
 
 .project p {
-  font-size: 14px;
   padding: 10px 5px;
+  font-size: 14px;
 }
 
 .tags {
@@ -319,9 +319,9 @@
   align-items: center;
   height: 22px;
   padding: 3px 9px;
+  margin: 5px;
   font-size: 12px;
   border-radius: 10px;
-  margin: 5px;
 }
 
 .tags .date {
@@ -353,16 +353,16 @@
 }
 
 .website-link {
+  display: flex;
+  align-items: center;
   width: 150px;
   height: 36px;
   padding: 5px 10px;
   margin: 10px 0 10px 5px;
+  border: none;
   border-radius: 18px;
-  display: flex;
-  align-items: center;
   overflow: hidden;
   transition: box-shadow 0.2s ease-out 0s;
-  border: none;
 }
 
 .website-link:hover {
@@ -376,8 +376,8 @@
 .website-link a::after {
   position: relative;
   left: 5px;
-  transform: rotate(45deg);
   content: "\f062";
+  transform: rotate(45deg);
   pointer-events: none;
 }
 
@@ -421,8 +421,8 @@
 
 @media screen and (min-width: 768px) {
   .header {
-    padding: 40px;
     min-height: 1200px;
+    padding: 40px;
   }
 
   .header-top h1 {
@@ -463,8 +463,8 @@
 
   .skill .code {
     padding: 3px 12px;
-    border-radius: 15px;
     font-size: 14px;
+    border-radius: 15px;
   }
 
   /* project-section */
@@ -499,8 +499,8 @@
   }
 
   .project p {
-    font-size: 16px;
     padding: 20px 0;
+    font-size: 16px;
   }
 
   .tags .date,
@@ -512,8 +512,8 @@
   .tags .gsap {
     height: 28px;
     padding: 6px 11px;
-    border-radius: 14px;
     font-size: 14px;
+    border-radius: 14px;
   }
 
   .website-link {
@@ -541,9 +541,9 @@
   }
 
   .header {
-    padding: 40px 40px 0;
     height: auto;
     min-height: 0;
+    padding: 40px 40px 0;
   }
 
   .header-top {
@@ -615,22 +615,22 @@
     width: 637px;
     height: 416px;
     padding: 40px;
-    border-radius: 20px;
     background-color: var(--white-color);
+    border-radius: 20px;
     box-shadow: transparent 0px 0px 0px 2px inset;
   }
 
   .email a {
     display: block;
     padding: 100px 0;
-    text-align: center;
     font-size: 2vw;
+    text-align: center;
     transition: all 200ms ease-in-out;
   }
 
   .email a:hover {
-    font-weight: 800;
     color: #2e6eff;
+    font-weight: 800;
   }
 
   /* WEBSITE-SECTION */
@@ -639,8 +639,8 @@
   .websites > div,
   .websites2 > div {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
+    flex-wrap: wrap;
     width: 240px;
   }
 
@@ -671,12 +671,12 @@
 
   .websites2 .copyright {
     position: relative;
-    padding: 40px;
-    margin: 0 20px 20px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 40px;
+    margin: 0 20px 20px 0;
   }
 
   .copyright img {
@@ -697,8 +697,8 @@
     height: 30px;
     background: url(../images/star1w.svg) no-repeat;
     background-size: cover;
-    content: "";
     animation: pulse 0.8s infinite ease-in-out alternate;
+    content: "";
   }
 
   .copyright::after {
@@ -709,8 +709,8 @@
     height: 40px;
     background: url(../images/star2w.svg) no-repeat;
     background-size: cover;
-    content: "";
     animation: pulse 0.8s infinite ease-in-out alternate;
+    content: "";
   }
 
   @keyframes pulse {
@@ -730,8 +730,8 @@
     align-items: center;
     width: 200px;
     height: 200px;
-    border-radius: 10px;
     margin: 0 auto 20px;
+    border-radius: 10px;
   }
 
   .websites a::before,
@@ -741,21 +741,21 @@
   }
 
   .websites .blog a::before {
+    color: var(--white-color);
     font-size: 40px;
     content: "Velog";
-    color: var(--white-color);
   }
 
   .websites .github a::before {
+    color: #2f3330;
     font-size: 214px;
     content: "\f092";
-    color: #2f3330;
   }
 
   .websites2 .resume a::before {
+    color: var(--white-color);
     font-size: 35px;
     content: "Resume";
-    color: var(--white-color);
   }
 
   .websites a::after,
@@ -768,11 +768,11 @@
     align-items: center;
     width: 30px;
     height: 30px;
-    border-radius: 50%;
     background-color: var(--white-color);
+    content: "\f062";
+    border-radius: 50%;
     transition: box-shadow 0.2s ease-out 0s;
     transform: rotate(45deg);
-    content: "\f062";
   }
 
   .websites a:hover::after,
@@ -792,8 +792,8 @@
     width: 637px;
     height: 420px;
     padding: 40px;
-    border-radius: 20px;
     background-color: var(--white-color);
+    border-radius: 20px;
     box-shadow: transparent 0px 0px 0px 2px inset;
   }
 
@@ -803,27 +803,27 @@
 
   .setting-lists {
     position: relative;
-    background: rgba(0, 0, 0, 0.06);
-    border-radius: 23px;
-    transform: translateX(0px);
     display: flex;
     align-items: center;
     width: 260px;
     height: 40px;
-    font-size: 14px;
     padding: 5px;
+    background: rgba(0, 0, 0, 0.06);
+    font-size: 14px;
+    border-radius: 23px;
+    transform: translateX(0px);
   }
 
   .setting-lists::before {
     position: absolute;
     top: 50%;
     left: 6px;
-    transform: translateY(-50%);
     width: 80px;
     height: 30px;
-    border-radius: 23px;
     background-color: var(--white-color);
     content: "";
+    transform: translateY(-50%);
+    border-radius: 23px;
   }
 
   .setting-lists li {
@@ -911,8 +911,8 @@
   }
 
   .contact {
-    width: 460px;
     flex-wrap: wrap;
+    width: 460px;
   }
 
   .email > div {
@@ -929,13 +929,13 @@
   }
 
   .websites > div {
-    width: 440px;
     flex-direction: row;
+    width: 440px;
   }
 
   .websites2 > div {
-    width: 750px;
     flex-direction: row;
+    width: 750px;
   }
 
   .websites2 .resume,
