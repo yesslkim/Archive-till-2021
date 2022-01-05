@@ -1,0 +1,16 @@
+{
+  "blogs": [
+    {
+      "title": "first blog! 😉",
+      "body": "lorem ipsum this is first blog. \n this is first blog lorem ipsum this is first blog. \n this is first blog lorem ipsum this is first blog. \n this is first blog",
+      "author": "mario",
+      "id": 1
+    },
+    {
+      "title": "second blog! 🎨",
+      "body": "art class art class art class art class art class art class",
+      "author": "kim",
+      "id": 2
+    }
+  ]
+}
