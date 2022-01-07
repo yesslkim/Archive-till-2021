@@ -86,3 +86,61 @@ button {
 .blog-preview button:hover {
   opacity: 1;
 }
+
+/* LOADING MESSAGE */
+
+.loading-msg,
+.err-msg {
+  text-align: center;
+}
+
+.loading-msg::before {
+  display: block;
+  font-size: 100px;
+  content: "👻";
+  animation: bounce2 2s ease infinite;
+}
+
+@keyframes bounce2 {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.err-msg::before {
+  display: block;
+  font-size: 100px;
+  content: "😥";
+  text-align: center;
+  animation: shake 2s ease infinite;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}

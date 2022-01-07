@@ -3,8 +3,8 @@ import BlogList from "./BlogList";
 
 const Home = () => {
   const [blogs, setBlogs] = useState(null);
-
-  const [name, setName] = useState("kim");
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   // const handleDelete = (id) => {
   //   const newBlogs = blogs.filter((blog) => blog.id !== id);
@@ -25,24 +25,27 @@ const Home = () => {
   useEffect(() => {
     fetch("http://localhost:8000/blogs")
       .then((res) => {
+        if (!res.ok) {
+          throw Error("Could not fetch the data");
+        }
         return res.json();
       })
       .then((data) => {
         setBlogs(data);
+        setIsLoading(false);
+        setError(null);
+      })
+      .catch((err) => {
+        setIsLoading(false);
+        setError(err.message);
       });
   }, []);
 
   return (
     <div className="home">
+      {error && <p className="err-msg">{error}</p>}
+      {isLoading && <p className="loading-msg">Loading...</p>}
       {blogs && <BlogList blogs={blogs} />}
-      <button
-        onClick={() => {
-          setName("lee");
-        }}
-      >
-        UseEffect Button 😉
-      </button>
-      <p>{name}</p>
     </div>
   );
 };
