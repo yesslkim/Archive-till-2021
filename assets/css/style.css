@@ -107,7 +107,7 @@
 
 .header-bottom .smile-wrapper.active {
   width: 60%;
-  margin: 100px auto;
+  margin: 10px auto;
 }
 
 .header-bottom p {
@@ -116,7 +116,7 @@
 }
 
 .header-bottom p.active {
-  display: none;
+  font-size: 20px;
 }
 
 /* 

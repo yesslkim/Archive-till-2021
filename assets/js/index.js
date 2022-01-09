@@ -137,25 +137,23 @@ document.querySelector(".setting2").addEventListener("click", (e) => {
 
 // SCREEN OVERFLOW ISSUE
 window.addEventListener("resize", (e) => {
-  //screen
-  if (500 < window.innerWidth < 768) {
-    if (window.innerHeight < 800) {
-      document.querySelector(".smile-wrapper").classList.add("active");
-      document.querySelector(".header-bottom p").classList.add("active");
-    } else {
-      document.querySelector(".smile-wrapper").classList.remove("active");
-      document.querySelector(".header-bottom p").classList.remove("active");
-    }
-  } else if (window.innerWidth > 768) {
-    if (window.innerHeight < 901) {
-      document.querySelector(".smile-wrapper").classList.add("active");
-      document.querySelector(".header-bottom p").classList.add("active");
-    } else {
-      document.querySelector(".smile-wrapper").classList.remove("active");
-      document.querySelector(".header-bottom p").classList.remove("active");
-    }
-  } else if (window.innerWidth < 500) {
-    document.querySelector(".smile-wrapper").classList.remove("active");
+  const headeContHeight =
+    document.querySelector(".header-bottom").getBoundingClientRect().height +
+    document.querySelector(".header-top").getBoundingClientRect().height;
+
+  const headerHeight = document
+    .querySelector(".header")
+    .getBoundingClientRect().height;
+
+  if (headeContHeight > headerHeight) {
+    document
+      .querySelector(".header-bottom .smile-wrapper")
+      .classList.add("active");
+    document.querySelector(".header-bottom p").classList.add("active");
+  } else {
+    document
+      .querySelector(".header-bottom .smile-wrapper")
+      .classList.remove("active");
     document.querySelector(".header-bottom p").classList.remove("active");
   }
 });
