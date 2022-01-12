@@ -2,7 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
 body,
-button {
+button,
+input,
+select,
+textarea {
   font-family: "Poppins", sans-serif;
   color: #333;
 }
@@ -143,4 +146,58 @@ button {
   80% {
     transform: translateX(10px);
   }
+}
+
+/* BLOG-DETAIL */
+
+.blog-detail h2 {
+  color: #3d20e0;
+}
+
+/* BLOG-FORM */
+
+.create h2 {
+  margin-bottom: 40px;
+  color: #3d20e0;
+  text-align: center;
+}
+
+.blog-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.blog-form label {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.blog-form input {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.blog-form textarea {
+  height: 50px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.blog-form select {
+  height: 30px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+.blog-form button {
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 200ms ease-in-out;
+}
+
+.blog-form button:hover {
+  background-color: #4986f8;
+  color: #fff;
 }
