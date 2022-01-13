@@ -154,6 +154,18 @@ button {
   color: #3d20e0;
 }
 
+.blog-detail button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #eee;
+  transition: all 200ms ease-in-out;
+}
+
+.blog-detail button:hover {
+  background-color: #3d20e0;
+  color: #fff;
+}
+
 /* BLOG-FORM */
 
 .create h2 {
