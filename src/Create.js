@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 // const Create = () => {
 //   const [title, setTitle] = useState("");
@@ -9,7 +10,13 @@ import { useState } from "react";
 //     e.preventDefault();
 //     const blog = { title, body, author };
 
-//     console.log(blog);
+//     fetch("http://localhost:8000/blogs", {
+//       method: "POST",
+//       headers: { "Content-Type": "application/json" },
+//       body: JSON.stringify(blog),
+//     }).then(() => {
+//       console.log("ff");
+//     });
 //   };
 
 //   return (
@@ -51,7 +58,9 @@ import { useState } from "react";
 // };
 
 const Create = () => {
-  const [value, setValue] = useState({ title: "", body: "", author: "" });
+  const [value, setValue] = useState({ title: "", body: "", author: "kim" });
+  const [isLoading, setIsLoading] = useState(false);
+  const history = useHistory();
 
   const handleChange = (e) => {
     const updateValue = e.target.value;
@@ -60,7 +69,17 @@ const Create = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(value);
+
+    setIsLoading(true);
+
+    fetch("http://localhost:8000/blogs", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(value),
+    }).then(() => {
+      setIsLoading(false);
+      history.push("/");
+    });
   };
 
   return (
@@ -88,7 +107,8 @@ const Create = () => {
           <option value="lee">lee</option>
           <option value="park">park</option>
         </select>
-        <button type="submit">Add Blog</button>
+        {!isLoading && <button type="submit">Add Blog</button>}
+        {isLoading && <button type="submit">Adding...</button>}
       </form>
     </div>
   );
