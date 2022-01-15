@@ -1,24 +1,65 @@
-%avatar-base {
-  display: block;
-  overflow: hidden;
-  border-radius: 50%;
+@import './typography';
+@import './colors';
 
-  img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.main {
+  width: 600px;
+  margin: 0 auto;
 }
 
-.avatar-32 {
-  @extend %avatar-base;
-  width: 32px;
-  height: 32px;
+h1 {
+  text-align: center;
 }
 
-.avatar-24 {
-  @extend %avatar-base;
-  width: 24px;
-  height: 24px;
+// Design 👉 Colors
+
+.color-p {
+  width: 48px;
+  height: 48px;
+  border-radius: 5px;
+  margin-right: 10px;
 }
+
+.brand-color,
+.color-divider {
+  display: flex;
+}
+
+.brand-color {
+  justify-content: space-between;
+}
+
+.base,
+.primary-contrast,
+.error-contrast,
+.success-contrast {
+  border: 1px solid #d1d1d1;
+  background-color: $white;
+}
+
+.primary {background-color: $primary;}
+.primary-text {background-color: $primary-text;}
+
+.error {background-color: $error;}
+.error-text {background-color: $error-text;}
+
+.success {background-color: $success;}
+.success-text {background-color: $success-text;}
+
+.shade {background-color: $shade;}
+.shade-90 {background-color: $shade-90;}
+.shade-80 {background-color: $shade-80;}
+.shade-70 {background-color: $shade-70;}
+.shade-60 {background-color: $shade-60;}
+.shade-50 {background-color: $shade-50;}
+.shade-40 {background-color: $shade-40;}
+.shade-30 {background-color: $shade-30;}
+.shade-20 {background-color: $shade-20;}
+.shade-10 {background-color: $shade-10;}
+.shade-5 {background-color: $shade-5;}
+
+.heading-text {background-color: $heading-text;}
+.body-text {background-color: $body-text;}
+.secondary-text{background-color: $secondary-text;}
+.tertiary-text{background-color: $tertiary-text;}
+.icon{background-color: $icon;}
+.disabled-text{background-color: $disabled-text;}

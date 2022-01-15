@@ -1,0 +1,33 @@
+// Grayscale
+$white : #fff;
+$shade-5: rgba(25, 59, 103, 0.05);
+$shade-10: rgba(26, 57, 96, 0.1);
+$shade-20: rgba(28, 55, 90, 0.16);
+$shade-30: rgba(28, 52, 84, 0.26);
+$shade-40: rgba(28, 50, 79, 0.38);
+$shade-50: rgba(28, 48, 74, 0.52);
+$shade-60: rgba(28, 46, 69, 0.6);
+$shade-70: rgba(27, 43, 65, 0.69);
+$shade-80: rgba(26, 41, 61, 0.83);
+$shade-90: rgba(24, 39, 57, 0.94);
+$shade: #192434;
+
+//primary 
+$primary: #006af5;
+$primary-text: #005fdb;
+
+//error 
+$error: #e21d12;
+$error-text: #ca150c;
+
+//success
+$success: #158443;
+$success-text: #0a7637;
+
+//text
+$heading-text: $shade;
+$body-text: $shade-90;
+$secondary-text: $shade-70;
+$tertiary-text: $shade-50;
+$icon: $shade-60;
+$disabled-text: $shade-30;
