@@ -1,13 +1,23 @@
 @import './typography';
 @import './colors';
 
+body,
+input,
+button {
+  font-family: $font-main;
+}
+
 .main {
   width: 600px;
   margin: 0 auto;
 }
 
-h1 {
+.title {
   text-align: center;
+}
+
+article {
+  margin-bottom: 50px;
 }
 
 // Design 👉 Colors
@@ -63,3 +73,16 @@ h1 {
 .tertiary-text{background-color: $tertiary-text;}
 .icon{background-color: $icon;}
 .disabled-text{background-color: $disabled-text;}
+
+// Design 👉 Typography
+
+.heading-1 {font-size: $font-size-h1; line-height: $line-height-h}
+.heading-2 {font-size: $font-size-h2; line-height: $line-height-h}
+.heading-3 {font-size: $font-size-h3; line-height: $line-height-h}
+.heading-4 {font-size: $font-size-h4; line-height: $line-height-h}
+.heading-5 {font-size: $font-size-h5; line-height: $line-height-h}
+.heading-6 {font-size: $font-size-h6; line-height: $line-height-h}
+
+.body-1 {font-size: $font-size-16; line-height: $line-height-16;}
+.body-2 {font-size: $font-size-14; line-height: $line-height-14;}
+.body-3 {font-size: $font-size-13; line-height: $line-height-13;}
