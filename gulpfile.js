@@ -15,14 +15,14 @@ const AUTOPREFIXER_BROWSERS = [
 ];
 
 function buildtyles() {
-  return src('index.scss')
+  return src('./scss/main.scss')
     .pipe(sass({ outputStyle: 'compressed' }))
     .pipe(autoprefixer())
     .pipe(dest('css'))
 }
 
 function watchTask() {
-  watch(['index.scss'],buildtyles)
+  watch(['./scss/main.scss'],buildtyles)
 }
 
 exports.default = series(buildtyles, watchTask);
