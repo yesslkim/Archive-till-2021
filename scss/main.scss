@@ -5,10 +5,14 @@
 @import './base/fonts';
 @import './base/reset';
 
+@import './helpers/mixins.scss';
+
 @import './components/icons';
+@import './components/buttons';
 
 @import './sections/library';
 @import './sections/colors-section';
 @import './sections/typo-section';
 @import './sections/shadow-section';
-@import './sections/icons-section'
+@import './sections/icons-section';
+@import './sections/btns-section'
