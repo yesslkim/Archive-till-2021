@@ -1,2 +1,15 @@
 // typography font
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+//icon font
+@font-face {
+  font-family: 'vaadin';
+  src:  url('fonts/vaadin.eot?y31ws6');
+  src:  url('fonts/vaadin.eot?y31ws6#iefix') format('embedded-opentype'),
+    url('fonts/vaadin.ttf?y31ws6') format('truetype'),
+    url('fonts/vaadin.woff?y31ws6') format('woff'),
+    url('fonts/vaadin.svg?y31ws6#vaadin') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
