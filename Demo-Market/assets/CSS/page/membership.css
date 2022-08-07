@@ -1,0 +1,179 @@
+/* 공통 CSS */
+@import url(../base/base.css);
+@import url(../base/common.css);
+
+/*membership*/
+.membership{
+	width: 1050px;
+	width: 95%;
+	margin: 0 auto 60px;
+}
+
+.membership-title {
+	width: 65%;
+	padding-bottom: 20px;
+	margin: 100px auto 20px;
+	border-bottom: 2px solid var(--primary-color);
+	color: var(--secondary-color);
+	font-size: 30px;
+	text-align: center;
+}
+
+.membership-table {
+	margin: 0 auto;
+}
+
+.membership-table > caption {
+	margin-bottom: 20px;
+	color: var(--secondary-color);
+	font-weight: 800;
+}
+
+.membership-table .table-row {
+	height: 100px;
+	text-align: center;
+}
+
+.table-row > th {
+	background-color: var(--primary-color);
+	color: var(--grey-color);
+}
+
+.table-row > th,
+.table-row > td {
+	width: 200px;
+	border-color: var(--primary-color);
+	font-weight: 800;
+}
+
+.table-row div {
+	font-size: 13px;
+	font-weight: 800;
+}
+
+.table-row > .rank::before {
+	display: block;
+	width: 60px;
+	height: 60px;
+	margin: 20px auto;
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: '';
+}
+
+.rank.regular::before {
+	background-image: url(../../image/membership01.png);
+}
+
+.rank.regularplus::before {
+	background-image: url(../../image/membership02.png);
+}
+
+.rank.vip::before {
+	background-image: url(../../image/membership03.png);
+}
+
+.rank.vvip::before {
+	background-image: url(../../image/membership04.png);
+}
+
+/*new member */
+
+.new-membership {
+	position: relative;
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.new-membership > button {
+	position: relative;
+	width: 100%;
+	padding: 10px;
+	border: 5px solid var(--primary-color);
+	color: var(--secondary-color);
+	font-size: 20px;
+	font-weight: 800;
+	text-align: left;
+	transition: opacity .5s linear;
+}
+
+.new-membership > button:first-child {
+	border-bottom: none;
+}
+
+.new-membership > button.acitve {
+	opacity: .8;
+}
+
+.new-membership > button::after {
+	display: inline-block;
+	position: absolute;
+	right: 10px;
+	content: '\f0d7';
+	transform: rotate(0);
+	transition: transform .5s linear;
+}
+
+.new-membership > button.active::after {
+	transform: rotate(180deg);
+}	
+
+.regular-benefits,
+.additional-benefits {
+	display: none;
+	position: relative;
+	padding: 20px;
+	background-color: var(--primary-color);
+	font-size: 15px;
+	font-weight: 800;
+}
+
+.regular-benefits li,
+.additional-benefits li {
+	margin-bottom: 10px;
+}
+
+.regular-benefits span,
+.additional-benefits span {
+	font-size: 13px;
+	font-weight: 800;
+}
+
+.benefit-btn {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: var(--white-color);
+}
+
+.benefit-btn::after {
+	display: inline;
+	content: '?';
+	font-weight: 800;
+}
+
+
+.additional-detail{
+	padding: 20px;
+	margin: 40px 0;
+	opacity: 0;
+	border-radius: 10px;
+	background-color: var(--secondary-color);
+	color: var(--white-color);
+	font-size: 13px;
+	font-weight: 800;
+	transition: opacity .5s linear;
+}
+
+.additional-detail.active {
+	opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+	.table-row > th,
+	.table-row > td {
+		padding: 5px;
+		font-size: 13px;
+	}
+}

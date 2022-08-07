@@ -1,0 +1,82 @@
+/* 공통 CSS */
+@import url(../base/base.css);
+@import url(../base/common.css);
+
+/*membership*/
+.event {
+	width: 1050px;
+	width: 95%;
+	margin: 0 auto 60px;
+}
+
+.event-title {
+	max-width: 1050px;
+	width: 100%;
+	padding-bottom: 20px;
+	margin: 100px auto 20px;
+	border-bottom: 2px solid var(--primary-color);
+	color: var(--secondary-color);
+	font-size: 30px;
+	text-align: center;
+}
+
+.event-subtitles ul {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.event-subtitles button {
+	width: 200px;
+	height: 50px;
+	margin: 0 3px -3px 0;
+	border: 3px solid var(--primary-color);
+	border-bottom: 4px solid #fff;
+	border-radius: 5px 5px 0 0;
+	font-size: 16px;
+	font-weight: 800;
+}
+
+.event-subtitles button.selected {
+	border-bottom: 4px solid var(--primary-color);
+	background-color: var(--primary-color);
+}
+
+/*기획전 이벤트 */
+.event-subtitles,
+.event-wrap {
+	max-width: 1050px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.event-wrap {
+	padding: 10px;
+	border: 3px solid var(--primary-color);
+}
+
+.event-detail {
+	display: none;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	width: 100%;
+	min-height: 800px;
+}
+
+.event-detail li {
+	width: 48%;
+	margin-bottom: 10px;
+}
+
+.event-detail img {
+	width: 100%;
+}
+
+.event-detail.selected {
+	display: flex;
+}
+
+@media screen and (max-width: 768px){
+	.event-wrap li {
+	width: 98%;
+	}
+}

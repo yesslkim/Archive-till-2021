@@ -1,0 +1,138 @@
+/* 공통 CSS */
+@import url(../base/base.css);
+@import url(../base/common.css);
+
+/* login */
+.login {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 1000px;
+	height: 600px;
+	margin: 50px auto;
+}
+
+.login-area {
+	width: 70%;
+	height: 80%;
+	margin-right: 80px;
+}
+
+.login-area > h2 {
+	margin-bottom: 10px;
+	font-size: 25px;
+}
+
+.login-event {
+	margin-bottom: 20px;
+}
+
+.login-event > strong {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.login-form {
+	padding-bottom: 10px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid var(--lightgrey-color);
+}
+
+.login-list {
+	margin-bottom: 10px;
+}
+
+.login-list >label {
+	display: block;
+	width: 80px;
+	font-weight: 800;
+}
+
+.login-list > input {
+	position: relative;
+	top: -2px;
+	width: 100%;
+	height: 40px;
+	border: none;
+	border-bottom: 2px solid var(--lightgrey-color);
+}
+
+.login-btn {
+	width: 100%;
+	height: 40px;
+	margin-bottom: 20px;
+	background-color: var(--primary-color);
+	font-size: 16px;
+	font-weight: 800;
+	transition: background .5s ease-out;
+}
+
+.login-btn:hover {
+	border: 2px solid var(--primary-color);
+	background-color: var(--white-color);
+}
+
+.login-links {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 14px;
+	font-weight: 800;
+}
+
+.login-search > a{
+	display: inline-block;
+	padding: 5px;
+}
+
+.login-social li {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.login-social a {
+	display: block;
+	width: 51px;
+	height: 42px;
+	background-image: url(../../image/sprite.png);
+	background-size: cover;
+}
+
+.login-social .facebook {
+	background-position: 2px 0;
+}
+
+.login-social .kakotalk {
+	background-position: 2px -62px;
+}
+
+.login-social .naver {
+	background-position: 2px -122px;
+}
+
+
+/*aside banner */
+
+.login-banner img {
+	display: block;
+	width: 550px;
+	height: 480px;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 1000px){
+	.t-hide {
+		display: none;
+	}
+	
+	.login {
+		width: 80%;
+	}
+	
+	.login-area {
+		width: 80%;
+		margin-right: 0;
+		margin: 0 auto;
+	}
+	
+}
