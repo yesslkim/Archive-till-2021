@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  background-image: url(../[201012]-Harry-Potter-API/images/background.jpg);
+  background-size: cover;
+  background-position: bottom;
+}
+
+.search-label {
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.searchbar {
+  width: 450px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ecca71;
+}
+
+.searchbar::placeholder {
+  color: #fff;
+}
+
+.characters {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.characters::-webkit-scrollbar {
+  width: 5px;
+}
+.characters::-webkit-scrollbar-thumb {
+  background-color: #000912;
+  border-radius: 10px;
+}
+.characters::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #ecca71;
+  box-shadow: inset 0px 0px 5px #ddd;
+}
+
+.character-list {
+  display: flex;
+  width: 450px;
+  height: 130px;
+  margin: 0 10px 10px 0;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.character-img {
+  display: block;
+  width: 100px;
+  border-radius: 10px 0 0 10px;
+}
+
+.character-desc {
+  padding: 30px;
+}

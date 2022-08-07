@@ -1,0 +1,134 @@
+/* reset  */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+.login-area input::placeholder {
+  font-family: "Poppins", sans-serif;
+  padding: 2px;
+}
+
+/* styling  */
+
+body {
+  font-family: "Poppins", sans-serif;
+  padding: 10px;
+}
+
+.login-btn {
+  padding: 10px 40px;
+  background-color: #1826e0;
+  color: #fff;
+  font-size: 16px;
+}
+
+.login-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.login-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 0;
+  background-color: #fff;
+  width: 35%;
+  height: 600px;
+  margin: 20px auto;
+}
+
+.close-btn {
+  align-self: flex-end;
+  padding: 10px;
+  margin-bottom: 250px;
+  font-size: 20px;
+}
+
+.close-btn::after {
+  position: absolute;
+  left: 50%;
+  top: 70px;
+  transform: translateX(-50%);
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url(./img/avatar.png);
+  background-size: contain;
+  content: "";
+}
+
+.login-area label {
+  display: block;
+}
+
+.login-area input[type="text"] {
+  display: block;
+  width: 100%;
+  height: 30px;
+  padding: 0;
+  margin-bottom: 10px;
+  border: 1px solid #818080;
+}
+
+.submit-btn {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  background-color: #237a3a;
+  color: #fff;
+}
+
+.login-remember {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #818080;
+}
+
+.login-remember input {
+  margin-right: 5px;
+}
+
+.login-remember label {
+  font-size: 14px;
+}
+
+.user-reset {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 40px;
+}
+
+.cancel-btn {
+  padding: 5px 10px;
+  background-color: #cb2843;
+  color: #fff;
+}
+
+.reset-pwd {
+  font-size: 14px;
+}
+
+.hidden {
+  display: none;
+}

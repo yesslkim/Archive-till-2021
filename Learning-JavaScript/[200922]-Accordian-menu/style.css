@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.accordian {
+  width: 50%;
+}
+
+.accordian-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #3f4040;
+  color: #fff;
+}
+
+.accordian-title button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.accordian-title button.open::after {
+  content: "―";
+}
+
+.accordian-title button::after {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  content: "＋";
+}
+
+.accordian-text {
+  display: none;
+  padding: 20px;
+  background-color: #e4e5e6;
+}
+
+.sr-only {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}

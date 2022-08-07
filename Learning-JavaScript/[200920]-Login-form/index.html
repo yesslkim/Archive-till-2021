@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style.css">
+  <script src="https://kit.fontawesome.com/f40f4c7e4a.js" crossorigin="anonymous"></script>
+  <title>Login form</title>
+</head>
+
+<body>
+  <button type="button" class='login-btn'>
+    Login
+  </button>
+  <div class="login-wrap hidden">
+    <form action="#" method="POST" class="login-form">
+      <button type="button" class="close-btn">
+        <span class="sr-only">close button</span>
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="login-area">
+        <label for="user-name" class="username-label">Username</label>
+        <input type="text" id="user-name" name='user-name' placeholder="Enter Username">
+        <label for="user-pwd">Password</label>
+        <input type="text" id="user-pwd" name='user-pwd' placeholder="Enter Password">
+        <button type="submit" class="submit-btn">Login</button>
+      </div>
+      <div class="login-remember">
+        <input type="checkbox" name="remember-info" id="remember-info">
+        <label for="remember-info">Remember me</label>
+      </div>
+      <div class="user-reset">
+        <button type="button" class="cancel-btn">cancel</button>
+        <p class="reset-pwd">
+          Forgot <a href="#">password?</a>
+        </p>
+      </div>
+    </form>
+  </div>
+  <script src="./assets/main.js"></script>
+</body>
+
+</html>
