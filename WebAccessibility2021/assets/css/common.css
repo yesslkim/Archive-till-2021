@@ -1,0 +1,174 @@
+/* 
+ * RESET.CSS  
+*/
+* {
+  box-sizing: border-box;
+}
+
+body,
+header,
+section,
+main,
+ul,
+li,
+div,
+img,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+ul,
+li {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+address {
+  font-style: normal;
+}
+
+/* 
+ * COMMON.CSS  
+*/
+
+body,
+button {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+h2 {
+  color: #121212;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip-path:circle(0);
+  overflow: hidden;
+}
+
+/* section common */
+.main-contents {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.section,
+.sub-section {
+  margin-bottom: 20px;
+}
+
+/* slide controls  */
+
+.controls button {
+  background-image: url("../images/css_sprites.png");
+}
+
+.slide3 .prev,
+.slide3 .next,
+.tech-trends .prev,
+.tech-trends .next,
+.research-section .prev,
+.research-section .next {
+  position: absolute;
+  top: 50%;
+  height: 26px;
+  transform: translateY(-50%);
+  background-color: transparent;
+}
+
+.slide3 .prev,
+.tech-trends .prev,
+.research-section .prev {
+  width: 14px;
+  background-position: -10px -530px;
+}
+
+.slide3 .next,
+.tech-trends .next,
+.research-section .next {
+  width: 16px;
+  background-position: -409px -339px;
+}
+
+/* image-sprite */
+
+.icons::before,
+.icons::after {
+  display: block;
+  content: "";
+  background-image: url("../images/css_sprites.png");
+  transform: scale(0.7);
+}
+
+/* slick custom */
+
+.slick-slide img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* 
+ * 반응형 관련
+*/
+
+.m-hidden {
+  display: none;
+}
+
+.t-hidden {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 22px;
+  }
+
+  .main-contents {
+    width: 90%;
+  }
+
+  .icons::before,
+  .icons::after {
+    transform: scale(1);
+  }
+
+  .m-hidden {
+    display: block;
+  }
+}
+
+/* desktop (1200px) ~  */
+
+@media screen and (min-width: 1200px) {
+  .t-hidden {
+    display: block;
+  }
+}
