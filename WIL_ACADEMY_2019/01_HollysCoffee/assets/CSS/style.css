@@ -1,0 +1,157 @@
+/*layout of page */
+
+
+#header,
+.company_info,
+.company_card,
+.side_banner,
+.customer_review {
+    width: 980px;
+     margin: 0 auto;
+}
+
+/*                                                                                                    header */
+
+.nav-top {
+    height: 20px;
+    margin: 10px  0;
+}
+
+.nav-topleft {
+    float: left;
+}
+
+.nav-topright {
+    float: right;
+
+}
+
+.nav_item-top {
+    float: left;
+    margin-right: 5px;
+    
+}
+
+.title_logo {
+    width: 27.65%;
+    margin: 0 auto 10px;
+}
+
+.nav-main {
+    padding: 0 110px;
+}
+
+.nav_item-main {
+    display: inline-block;
+    margin-right: 40px;
+}
+
+.nav_item-main:last-child {
+    margin-right: 0;
+}
+
+/*                                                                                                    main */
+/*                                                                                                    main banner */
+.main_banner_img { 
+    display: block;
+}
+
+/*                                                                                                    company info*/
+.company_info {
+    padding: 10px 0;
+    height: 250px;
+}
+
+.company_info_item {
+    float: left;
+}
+
+.info_item_1 {
+    width: 24%;
+}
+
+.info_item_2 {
+    width: 48%;
+}
+
+.company_info_title {
+    margin-bottom: 10px;
+}
+
+.company_info_desc {
+    margin-bottom: 40px ;
+    font-size: 0.8rem;
+}
+
+.company_mall_item {
+    float: left;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 0.7em;
+}
+
+.company_mall_item:first-child {
+    margin-left: 90px;
+}
+
+/*                                                                                                    company card */
+
+.company_card_item {
+    float: left;
+    margin: 0 5px 20px 0;
+}
+
+/*                                                                                                  side banner */
+
+.side_banner {
+    height: 400px;
+}
+.side_banner_item {
+    float: left;
+    width: 25%;
+    padding-right: 50px;
+    font-size: 0.7em;
+}
+
+.side_banner_title {
+    margin-bottom: 5px;
+}
+
+.side_banner_desc {
+    margin-bottom: 15px;
+}
+
+.news_date {
+    float: right;
+}
+
+.side_banner_inquiry {
+    float: left;
+    margin-right: 20px;
+    font-size: 0.7em;
+    text-align: center;
+}
+/*                                                                                                 customer-review*/
+.customer_review {
+    height: 150px;
+}
+
+.customer_review_title {
+    margin-bottom: 20px;
+}
+
+.customer_review_list {
+    float: left;
+    width: 25%;
+    font-size: 0.7em;
+}
+
+.customer_review_img {
+    float: left;
+    width: 20%;
+    margin-right: 10px;
+}
+
+.customer_review_date {
+    color: blue;
+}
