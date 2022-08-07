@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="57x57" href="./assets/images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./assets/images/favicon">
+  <link rel="apple-touch-icon" sizes="72x72" href="./assets/images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./assets/images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./assets/images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./assets/images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./assets/images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./assets/images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>YE SEUL KIM PORTFOLIO</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header" id="home">
+      <div class="header-top">
+        <h1>
+          YESEULKIM
+        </h1>
+        <button type="button" class="icon gnb-btn"><span class="sr-only">메뉴열기</span></button>
+        <nav class="gnb">
+          <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#projects" class="project-link">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+          <button type="button" class="icon close-btn"><span class="sr-only">메뉴닫기</span></button>
+        </nav>
+      </div>
+      <div class="header-bottom">
+        <div class="smile-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" class="smile-icon">
+            <g id="Layer_1" data-name="Layer 1">
+              <rect width="60" height="60" rx="5" style="fill:#1d1d1b" />
+            </g>
+            <g id="Layer_2" data-name="Layer 2">
+              <circle cx="39.32" cy="19.98" r="1.53" style="fill:#fff" />
+              <circle cx="20.68" cy="19.98" r="1.53" style="fill:#fff" />
+              <path d="M26,31.31s.45,4.81,9,4.81,9-4.81,9-4.81" transform="translate(-5 -5)" style="fill:none;stroke:#fff;stroke-miterlimit:10" />
+            </g>
+          </svg>
+        </div>
+        <p>
+          안녕하세요 !<br />
+          사용자에게 긍정적인 경험을<br />
+          주고싶은 웹 퍼블리셔<br />
+          <strong>김예슬</strong>입니다.
+        </p>
+      </div>
+    </header>
+    <main class="main">
+      <section class="section about" id="about">
+        <div class="section-inner about-inner">
+          <h2 class="section-title">
+            안녕하세요! 김예슬입니다
+          </h2>
+          <div>
+            <p class="about-intro">
+              사용자가 브랜드에 대한
+              좋은 기억을 플랫폼에서 이어갈 수 있도록
+              탄탄한 코드와 재밌는 UI를 만드는
+              웹퍼블리셔가 되고싶습니다
+              <span class="m-hidden">
+                재밌고 인터랙티브한 웹사이트를 만드는 것도 좋아하지만, 모든 사람들이
+                동등한 기회로 웹사이트를 접할 수 있도록 웹 접근성에 대해 더욱 공부해보고 싶습니다!
+              </span>
+            </p>
+
+            <ul class="about-skills">
+              <li class="skill">
+                <button type="button" class="skill-btn">
+                  <h3>HTML</h3>
+                </button>
+                <p>
+                  웹표준을 준수하며 시맨틱 태그를 적절하게 사용합니다.
+                  또한, 필요한 부분에 WAI-ARIA를 사용합니다.
+                  <span class="m-hidden">
+                    현재는 HTML을 이용한 검색엔진최적화(SEO) 방법에 대해 공부하고 있습니다.
+                    자세한 내용은 하단 TIL에서 확인하실 수 있습니다 😁🌹
+                  </span>
+                </p>
+              </li>
+              <li class="skill">
+                <button type="button" class="skill-btn">
+                  <h3>CSS</h3>
+                </button>
+                <p>
+                  <span class="code">float</span>, <span class="code">position</span>,
+                  <span class="code">flex</span>로 탄탄한 레이아웃과
+                  <span class="code">animation</span>을 통해 인터랙티브한 반응형 웹사이트 구현이 가능합니다.
+                  <span class="m-hidden">
+                    추후에 유지보수를 위해 CSS를 컴포넌트화하는 방법을 공부해보고 싶습니다.
+                    또한 전처리기인 SCSS에 관심이 많아 공부할 계획을 가지고 있습니다 🔍
+                  </span>
+                </p>
+              </li>
+              <li class="skill">
+                <button type="button" class="skill-btn">
+                  <h3>JAVASCRIPT</h3>
+                </button>
+                <p>
+                  Javascript ES6와 라이브러리 JQuery로 다양한 컴포넌트 구현이 가능하고
+                  플러그인 활용 및 커스텀이 가능합니다.
+                  <span class="m-hidden">
+                    기본기가 중요하다고 생각되어 지속적으로 프로젝트를 통해
+                    자바스크립트를 학습하며 복습하고 있습니다. 추후에 React, Vue를 배워볼 생각입니다
+                  </span>
+                </p>
+              </li>
+              <li class="skill">
+                <button type="button" class="skill-btn">
+                  <h3>OTHERS</h3>
+                </button>
+                <p>
+                  Photoshop, Illustrator, Font Awesome, slick, notion등 다양한 툴을 사용할 수 있습니다.
+                  <span class="m-hidden">
+                    새로운 툴을 접하는 것을 좋아해 다른 툴을 활용하여 협업하고 공부하는 것도 기대하고 있습니다!
+                  </span>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- //ABOUT-SECTION -->
+      <section class="section projects" id="projects">
+        <div class="section-inner">
+          <h2 class="section-title">
+            PROJECTS
+          </h2>
+          <p class="project-desc">
+            모든 프로젝트는 100% 기여했으며,
+            01번 프로젝트 외에 모든 웹사이트는
+            반응형으로 만들었습니다.😊
+          </p>
+          <div class="project-contents">
+            <div class="inner">
+              <div class="summary-lists">
+                <button class="summary summary1" type="button" data-target="project-1">
+                  <h4> MDN Clone Coding </h4>
+                  <p>Fullpage.js를 공부하기 위해 클론 코딩한 웹사이트입니다.</p>
+                </button>
+                <button class="summary summary2" type="button" data-target="project-2">
+                  <h4> 공공기관 웹사이트 클론코딩 </h4>
+                  <p>웹접근성, 크로스브라우징을 공부하기 위해 클론 코딩한 웹사이트입니다</p>
+                </button>
+                <button class="summary summary3" type="button" data-target="project-3">
+                  <h4> UI Components </h4>
+                  <p> 자바스크립트 공부 후 웹사이트에 자주 사용되는 UI를 모아서 마크업 했습니다.</p>
+                </button>
+                <button class="summary summary4" type="button" data-target="project-4">
+                  <h4> Monet Garden </h4>
+                  <p>GSAP, ScrollTrigger를 학습하고 만든 웹사이트입니다.</p>
+                </button>
+              </div>
+              <div class="content-lists">
+                <div class="project project1" data-target="project-1">
+                  <button type="button" class="back-btn">All projects</button>
+                  <div class="title">
+                    <h4>MDM웹사이트 클론코딩</h4>
+                  </div>
+                  <div class="contents">
+                    <p>
+                      이 웹사이트를 통해 fullpage.js를 배워보았습니다. 단순히 플러그인을 학습한 것이 아닌,
+                      플러그인의 코드를 직접 뜯어보며 커스텀하고 활용하는 방법을 익혔습니다.
+                      기존 웹사이트는 <a href="http://www.mdmworld.co.kr/">이곳</a>에서 확인할 수 있습니다.😁
+                    </p>
+                    <div class="tags">
+                      <span class="date">3일 소요</span>
+                      <span class="html">HTML</span>
+                      <span class="css">CSS</span>
+                      <span class="js">JQuery</span>
+                      <span class="fullpage-pl">Fullpage.js</span>
+                      <span class="slide-pl">Swiper.js</span>
+                    </div>
+                    <div class="website-link">
+                      <a class="icon" href="https://mdn-clonecoding.netlify.app" target="_blank">
+                        see website
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="project project2" data-target="project-2">
+                  <button type="button" class="back-btn">All projects</button>
+                  <div class="title">
+                    <h4>공공기관 웹사이트 클론코딩</h4>
+                  </div>
+                  <div class="contents">
+                    <p>
+                      해당 프로젝트를 통해 모든 최신 브라우저에 동일하게 웹사이트가 보이도록
+                      크로스브라우징 연습을 해보았고 웹접근성을 위해 tab으로 웹사이트를 이동할 수 있도록 코딩하였습니다.
+                    </p>
+                    <div class="tags">
+                      <span class="date">8일 소요</span>
+                      <span class="html">HTML</span>
+                      <span class="css">CSS</span>
+                      <span class="js">JQuery</span>
+                      <span class="fullpage-pl">Fullpage.js</span>
+                      <span class="slide-pl">Swiper.js</span>
+                    </div>
+                    <div class="website-link">
+                      <a class="icon" href="https://web-accessibility.netlify.app/" target="_blank">
+                        see website
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="project project3" data-target="project-3">
+                  <button type="button" class="back-btn">All projects</button>
+                  <div class="title">
+                    <h4>UI Components</h4>
+                  </div>
+                  <div class="contents">
+                    <p>
+                      자바스크립트 공부를 위해 웹사이트에서 사용되는 다양한 컴포넌트를 마크업해보았습니다.
+                      또한, JSON-placeholder라는 mock api를 통해 데이터를 받아오는 연습을 해보았습니다.
+                    </p>
+                    <div class="tags">
+                      <span class="date">7일 소요</span>
+                      <span class="html">HTML</span>
+                      <span class="css">CSS</span>
+                      <span class="js">JS</span>
+                      <span class="fullpage-pl">Fullpage.js</span>
+                      <span class="slide-pl">Swiper.js</span>
+                    </div>
+                    <div class="website-link">
+                      <a class="icon" href="https://ui-components2021.netlify.app/" target="_blank">
+                        see website
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="project project4" data-target="project-4">
+                  <button type="button" class="back-btn">All projects</button>
+                  <div class="title">
+                    <h4>Monet Garden</h4>
+                  </div>
+                  <div class="contents">
+                    <p>
+                      GSAP과 GSAP 플러그인 ScrollTrigger를 학습하고 만든 웹사이트입니다.
+                      스크롤 시, 컨텐츠에 애니메이션을 넣어보았으며, 랜딩 웹사이트의 기본적인
+                      레이아웃을 마크업해보았습니다.
+                    </p>
+                    <div class="tags">
+                      <span class="date">2일 소요</span>
+                      <span class="html">HTML</span>
+                      <span class="css">CSS</span>
+                      <span class="js">JS</span>
+                      <span class="gsap">GSAP</span>
+                      <span class="gsap">ScrollTrigger</span>
+                    </div>
+                    <div class="website-link">
+                      <a class="icon" href="https://monet-garden.netlify.app" target="_blank">
+                        see website
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- //PROJECTS-SECTION -->
+      <div class="contact desktop-only">
+        <section class="section email">
+          <div>
+            <h2 class="section-title">E-MAIL</h2>
+            <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=yskim940914@gmail.com">yskim940914@gmail.com</a>
+          </div>
+        </section>
+        <!-- //EMAIL-SECTION -->
+        <section class="section websites">
+          <h2 class="sr-only">소셜 미디어 웹사이트</h2>
+          <div>
+            <div class="blog">
+              <a class="icon" href="https://velog.io/@yesslkim94" target="_blank">
+                <span class="sr-only">블로그 바로가기</span>
+              </a>
+            </div>
+            <div class="github">
+              <a class="icon" href="https://github.com/yesslkim4" target="_blank">
+                <span class="sr-only">깃허브 바로가기</span>
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- //WEBSITE-SECTION -->
+      </div>
+      <!-- //CONTACT-SECTION -->
+      <div class="etc desktop-only">
+        <section class="section settings">
+          <div>
+            <h2 class="section-title">Background Settings</h2>
+            <div class="setting-contents">
+              <div class="setting1">
+                <h3>colors</h3>
+                <div>
+                  <button type="button" class="ecf3ff"></button>
+                  <button type="button" class="d8c9fe"></button>
+                  <button type="button" class="f2d7ff"></button>
+                  <button type="button" class="ffd7f2"></button>
+                  <button type="button" class="a1bbb1"></button>
+                  <button type="button" class="e9e480"></button>
+                </div>
+              </div>
+              <div class="setting2">
+                <h3>opacity</h3>
+                <div>
+                  <button type="button" class="opa-20">0.2</button>
+                  <button type="button" class="opa-40">0.4</button>
+                  <button type="button" class="opa-60">0.6</button>
+                  <button type="button" class="opa-80">0.8</button>
+                  <button type="button">1.0</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+        <!-- //SETTING-SECTION -->
+        <section class="section websites2">
+          <h2 class="sr-only">소셜 미디어 웹사이트</h2>
+          <div>
+            <div class="resume">
+              <a class="icon" href="https://www.notion.so/yesslkimportfolio/da91576eebaa40bf88431c85121ac172" target="_blank">
+                <span class="sr-only">이력서 바로가기</span>
+              </a>
+            </div>
+            <div class="copyright">
+              <img src="./assets/images/tech.svg" alt="">
+              <p>© 2022 yeseulkim</p>
+            </div>
+          </div>
+        </section>
+        <!-- //WEBSITE2-SECTION -->
+      </div>
+
+    </main>
+  </div>
+
+  <footer class="footer" id="contact">
+    <div class="footer-inner">
+      <ul>
+        <li><a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=yskim940914@gmail.com">E - MAIL</a></li>
+        <li><a target="_blank" href="https://yesslkimportfolio.notion.site/da91576eebaa40bf88431c85121ac172">RESUME</a></li>
+        <li><a target="_blank" href="https://velog.io/@yesslkim94">TIL</a></li>
+      </ul>
+      <p>
+        © 2022 yeseulkim
+      </p>
+    </div>
+  </footer>
+  <!-- script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollToPlugin.min.js"></script>
+  <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
