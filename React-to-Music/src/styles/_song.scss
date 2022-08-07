@@ -1,0 +1,23 @@
+.song-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+  img {
+    width: 40%;
+    border-radius: 50%;
+  }
+  h3 {
+    padding: 20px 0 5px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .song-container {
+    margin: 40px 0;
+    img {
+      max-width: 307px;
+    }
+  }
+}
