@@ -1,0 +1,243 @@
+%btn-base {
+  @include inline-flexbox;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: $font-size-16;
+  font-weight: 500;
+  transition: opacity 200ms ease-in-out;
+
+  &:disabled {
+    opacity: .5;
+  }
+
+  i {
+    font-size: 20px;
+  }
+
+  i.ic-left {
+    margin-right: 4px
+  }
+
+  i.ic-right {
+    margin-left: 4px
+  } 
+}
+
+%icon-btn-base {
+  @include inline-flexbox;
+  padding: 6px 9px;
+  border-radius: 4px;
+  transition: opacity 200ms ease-in-out;
+
+  &:disabled {
+    opacity: .5;
+  }
+
+  i {
+    font-size: 24px;
+  }
+}
+
+// Btn
+
+.btn-normal-primary {
+  @extend %btn-base;
+  background-color: $primary;
+  color: $white;
+}
+
+.btn-normal-secondary {
+  @extend %btn-base;
+  background-color: $shade-5;
+  color: $primary-text;
+
+  &:disabled {
+    color: $disabled-text
+  }
+}
+
+.btn-normal-tertiary {
+  @extend %btn-base;
+  color: $primary-text;
+  
+  &:disabled {
+    color: $disabled-text
+  }
+}
+
+.btn-error-primary {
+  @extend %btn-base;
+  background-color: $error;
+  color: $white;
+}
+
+.btn-error-secondary {
+  @extend %btn-base;
+  background-color: $shade-5;
+  color: $error-text;
+  
+  &:disabled {
+    color: $disabled-text
+  }
+}
+
+.btn-error-tertiary {
+  @extend %btn-base;
+  color: $error-text;
+  
+  &:disabled {
+    color: $disabled-text
+  }
+}
+
+.btn-success-primary {
+  @extend %btn-base;
+  background-color: $success;
+  color: $white;
+}
+
+.btn-success-secondary {
+  @extend %btn-base;
+  background-color: $shade-5;
+  color: $success-text;
+  
+  &:disabled {
+    color: $disabled-text
+  }
+}
+
+.btn-success-tertiary {
+  @extend %btn-base;
+  color: $success-text;
+  
+  &:disabled {
+    color: $disabled-text
+  }
+}
+
+.btn-contrast-primary {
+  @extend %btn-base;
+  background-color: $shade;
+  color: $white;
+}
+
+.btn-contrast-secondary {
+  @extend %btn-base;
+  background-color: $shade-5;
+  color: $shade;
+  
+  &:disabled {
+    color: $disabled-text
+  }
+}
+
+.btn-contrast-tertiary {
+  @extend %btn-base;
+  color: $shade;
+  
+  &:disabled {
+    color: $disabled-text
+  }
+}
+
+// Icon-only Btn
+
+.icbtn-normal-primary {
+  @extend %icon-btn-base;
+  background-color: $primary;
+  color: $white;
+}
+
+.icbtn-normal-secondary {
+  @extend %icon-btn-base;
+  background-color: $shade-5;
+  color: $primary-text;
+
+  &:disabled {
+    color: $disabled-text
+  }
+}
+
+.icbtn-normal-tertiary {
+  @extend %icon-btn-base;
+  color: $primary-text;
+  
+  &:disabled {
+    color: $disabled-text
+  }
+}
+
+.icbtn-error-primary {
+  @extend %icon-btn-base;
+  background-color: $error;
+  color: $white;
+}
+
+.icbtn-error-secondary {
+  @extend %icon-btn-base;
+  background-color: $shade-5;
+  color: $error-text;
+  
+  &:disabled {
+    color: $disabled-text
+  }
+}
+
+.icbtn-error-tertiary {
+  @extend %icon-btn-base;
+  color: $error-text;
+  
+  &:disabled {
+    color: $disabled-text
+  }
+}
+
+.icbtn-success-primary {
+  @extend %icon-btn-base;
+  background-color: $success;
+  color: $white;
+}
+
+.icbtn-success-secondary {
+  @extend %icon-btn-base;
+  background-color: $shade-5;
+  color: $success-text;
+  
+  &:disabled {
+    color: $disabled-text
+  }
+}
+
+.icbtn-success-tertiary {
+  @extend %icon-btn-base;
+  color: $success-text;
+  
+  &:disabled {
+    color: $disabled-text
+  }
+}
+
+.icbtn-contrast-primary {
+  @extend %icon-btn-base;
+  background-color: $shade;
+  color: $white;
+}
+
+.icbtn-contrast-secondary {
+  @extend %icon-btn-base;
+  background-color: $shade-5;
+  color: $shade;
+  
+  &:disabled {
+    color: $disabled-text
+  }
+}
+
+.icbtn-contrast-tertiary {
+  @extend %icon-btn-base;
+  color: $shade;
+  
+  &:disabled {
+    color: $disabled-text
+  }
+}

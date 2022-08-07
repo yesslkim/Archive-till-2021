@@ -1,0 +1,140 @@
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'vaadin' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ic-align-center:before {
+  content: "\e900";
+}
+.ic-align-left:before {
+  content: "\e901";
+}
+.ic-align-right:before {
+  content: "\e902";
+}
+.ic-angle-down:before {
+  content: "\e903";
+}
+.ic-angle-left:before {
+  content: "\e904";
+}
+.ic-angle-right:before {
+  content: "\e905";
+}
+.ic-angle-up:before {
+  content: "\e906";
+}
+.ic-arrow-down:before {
+  content: "\e907";
+}
+.ic-arrow-left:before {
+  content: "\e908";
+}
+.ic-arrow-right:before {
+  content: "\e909";
+}
+.ic-arrow-up:before {
+  content: "\e90a";
+}
+.ic-bar-chart:before {
+  content: "\e90b";
+}
+.ic-bell:before {
+  content: "\e90c";
+}
+.ic-calendar:before {
+  content: "\e90d";
+}
+.ic-checkmark:before {
+  content: "\e90e";
+}
+.ic-chevron-down:before {
+  content: "\e90f";
+}
+.ic-chevron-left:before {
+  content: "\e910";
+}
+.ic-chevron-right:before {
+  content: "\e911";
+}
+.ic-chevron-up:before {
+  content: "\e912";
+}
+.ic-clock:before {
+  content: "\e913";
+}
+.ic-cog:before {
+  content: "\e914";
+}
+.ic-cross:before {
+  content: "\e915";
+}
+.ic-download:before {
+  content: "\e916";
+}
+.ic-dropdown:before {
+  content: "\e917";
+}
+.ic-edit:before {
+  content: "\e918";
+}
+.ic-error:before {
+  content: "\e919";
+}
+.ic-eye-slash:before {
+  content: "\e91a";
+}
+.ic-eye:before {
+  content: "\e91b";
+}
+.ic-menu:before {
+  content: "\e91c";
+}
+.ic-minus:before {
+  content: "\e91d";
+}
+.ic-ordered-list:before {
+  content: "\e91e";
+}
+.ic-phone:before {
+  content: "\e91f";
+}
+.ic-photo:before {
+  content: "\e920";
+}
+.ic-play:before {
+  content: "\e921";
+}
+.ic-plus:before {
+  content: "\e922";
+}
+.ic-redo:before {
+  content: "\e923";
+}
+.ic-reload:before {
+  content: "\e924";
+}
+.ic-search:before {
+  content: "\e925";
+}
+.ic-undo:before {
+  content: "\e926";
+}
+.ic-unordered-list:before {
+  content: "\e927";
+}
+.ic-upload:before {
+  content: "\e928";
+}
+.ic-user:before {
+  content: "\e929";
+}
