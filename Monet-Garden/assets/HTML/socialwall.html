@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./assets/images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <link rel="stylesheet" href="../CSS/common.css">
+  <link rel="stylesheet" href="../CSS/socialwall.css">
+  <title>모네가든 | 자유게시판</title>
+</head>
+
+<body>
+  <!-- ScrollTop Btn : Start -->
+  <nav>
+    <a href="#home" class="ico scrolltop">
+      <span class="sr-only">맨 위로 가기</span>
+    </a>
+  </nav>
+  <!-- ScrollTop Btn : End -->
+  <!-- Header : Start -->
+  <header class="header">
+    <h1 class="logo">
+      <a href="../../index.html">
+        <img src="../images/logo.png" alt="모네가든로고" class="logo-ico">
+      </a>
+    </h1>
+    <nav class="gnb">
+      <button type="button" class="ico gnb_btn"><span class="sr-only">menu</span></button>
+      <ul class="gnb_list">
+        <li>
+          <a href="../../index.html">Home</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Gallery</a>
+        </li>
+        <li>
+          <a href="#">Social Wall</a>
+        </li>
+        <li>
+          <a href="#">Newsletter</a>
+        </li>
+        <li class="login hidden">
+          <button type="button" class="login_link">
+            Log in
+            <span class="sr-only">로그인, 회원가입</span>
+          </button>
+        </li>
+        <li class="logout hidden">
+          <button type="button" class="logout_link">
+            Log out
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Header : End -->
+  <!-- Main : Start -->
+  <main class="main">
+    <section class="socialwall">
+      <h2>SOCIAL WALL</h2>
+      <p>
+        이곳은 화가 모네와 그의 작품에 대해 이야기하고 공유하는 공간입니다.
+      </p>
+      <button type="button" class="write_btn">글쓰기</button>
+      <table class="socialwall_table">
+        <colgroup>
+          <col />
+          <col style="width: 40%;" />
+          <col />
+          <col />
+          <col />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>작성일</th>
+            <th>조회수</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- socialwall data here  -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <!-- Main : End -->
+  <!-- Footer : Start  -->
+  <footer class="footer">
+    <p>&copy; copyright 2020 김예슬 All rights reserved</p>
+  </footer>
+  <!-- Footer : End  -->
+
+  <!-- Modal  -->
+  <!-- Socialwall Post Container -->
+  <div class="post_wrapper">
+    <!-- fetching social post contents data here -->
+  </div>
+
+  <!-- Socialwall Post Writing form  -->
+  <form action="POST" class="post_form">
+    <button type="button" class="close_btn">닫기</button>
+    <div class="post_form_list title">
+      <label for="post_title">게시글 제목</label>
+      <input type="text" name="post_title" id="post_title">
+    </div>
+    <div class="post_form_list">
+      <p class="sr-only">글꼴 및 정렬 메뉴</p>
+      <ul class="post_navbar">
+        <li>
+          <span class="sr-only">글꼴 </span>
+          <select name="fonts" id="fonts" class="font">
+            <option value="gullim">굴림</option>
+            <option value="dotum">돋움</option>
+            <option value="batang">바탕</option>
+          </select>
+        </li>
+        <li class="space-right">
+          <span class="sr-only">글자 크기 </span>
+          <select name="font_size" id="font_size" class="font">
+            <option value="10">10 pt</option>
+            <option value="11">11 pt</option>
+            <option value="12">12 pt</option>
+          </select>
+        </li>
+        <li>
+          <button type="button" class="ico bold">
+            <span class="sr-only">진하게</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="ico italic">
+            <span class="sr-only">기울임</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="ico underline">
+            <span class="sr-only">밑줄</span>
+          </button>
+        </li>
+        <li class="space-right">
+          <button type="button" class="ico strikethrough">
+            <span class="sr-only">취소선</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="ico align-justify">
+            <span class="sr-only">양쪽 정렬</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="ico align-left">
+            <span class="sr-only">왼쪽 정렬</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="ico align-center">
+            <span class="sr-only">가운데 정렬</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="ico align-right">
+            <span class="sr-only">오른쪽 정렬</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class="post_form_list desc">
+      <label for="post_desc"><span class="sr-only">게시글 내용</span></label>
+      <textarea name="post_desc" id="post_desc"></textarea>
+    </div>
+    <button type="submit">등록하기</button>
+  </form>
+
+  <!-- login Form  -->
+  <div class="login_wrapper">
+    <div class="login_area">
+      <button type="button" class="ico close_btn"><span class="sr-only">닫기</span></button>
+      <div class="login_image">
+        <img src="../images/login.png" alt="">
+      </div>
+      <div class="login_page">
+        <form class="login_form">
+          <h2>Monet Garden</h2>
+          <div class="login_info">
+            <div class="login_list">
+              <label for="login_id">이메일</label>
+              <input type="email" placeholder="이메일 주소" name="login_id" id="login_id">
+            </div>
+            <div class="login_list">
+              <label for="login_pwd">비밀번호</label>
+              <input type="password" placeholder="비밀번호" name="login_pwd" id="login_pwd" minlength="8">
+            </div>
+          </div>
+          <div class="login_search">
+            <a href="#">이메일 찾기</a>
+            <a href="#">비밀번호 찾기</a>
+          </div>
+          <span class="login_error">가입하지 않은 아이디이거나, 잘못된 비밀번호입니다.</span>
+          <button type="submit" class="login_btn">로그인</button>
+        </form>
+        <div class="signup_area">
+          <p>모네가든 계정이 없으세요? <button type="button" class="signup_btn">회원가입</button> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- login Info -->
+  <div class="login_help">
+    <button type="button" class="ico"><span class="sr-only">닫기</span></button>
+    <h3>웹사이트 사용방법</h3>
+    <ol>
+      <li>그냥 로그인해본다 => 안내문이 뜹니다</li>
+      <li>
+        아이디, 비밀번호를 입력하고 이용한다
+        <p>
+          아이디 : test@testing.com <br />
+          비밀번호 : qwer1234
+        </p>
+        <strong>
+          로그인을 해야 게시물쓰기가 가능합니다 :)
+        </strong>
+      </li>
+    </ol>
+  </div>
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+  <!-- js files -->
+  <script src="../JS/firebase.js"></script>
+  <script src="../JS/header.js"></script>
+  <script src="../JS/auth_s.js"></script>
+  <script src="../JS/socialwall.js"></script>
+</body>
+
+</html>
