@@ -1,0 +1,90 @@
+/* reset  */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  font-family: "Noto Sans KR", sans-serif;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style-type: none;
+}
+
+/* styling  */
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+/* header */
+
+#header {
+  background-color: #3ebcea;
+  margin-bottom: 20px;
+}
+
+#header .title {
+  color: #fff;
+  padding: 10px;
+}
+
+#header .title::before {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 10px auto;
+  background-image: url(img/pencil.png);
+  background-size: contain;
+  content: "";
+}
+
+#header .result {
+  display: none;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+}
+
+#header .result span {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+/* main  */
+#main {
+  font-size: 1.5rem;
+}
+
+#main form {
+  width: 25%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#main li {
+  margin-bottom: 10px;
+}
+
+#main .question {
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+#main button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #3531ec;
+  color: #fff;
+}

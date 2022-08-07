@@ -1,0 +1,30 @@
+body {
+  height: 4000px;
+  background-color: black;
+}
+
+.title {
+  color: white;
+  margin-bottom: 500px;
+}
+
+.box {
+  height: 2000px;
+}
+
+.texts {
+  float: left;
+  width: 50%;
+  color: white;
+}
+
+.text {
+  margin-bottom: 500px;
+}
+
+.Penguins {
+  position: sticky;
+  top: 100px;
+  width: 300px;
+  height: auto;
+}
