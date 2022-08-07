@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/reset.css">
+  <link rel="stylesheet" href="./assets/style.css">
+  <title>My UI Library</title>
+</head>
+
+<body>
+  <h1 class="title">My Neumorphism UI Components 💗</h1>
+  <div class="container">
+    <div class="component">
+      <h2>Tooltip</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, laborum perspiciatis! Necessitatibus nesciunt
+        optio qui.<strong class="tooltip" data-message="this is toolip">Hover Here</strong>,Lorem ipsum dolor
+        sit amet
+        consectetur adipisicing elit. Dolorem, suscipit. Atque officia consequuntur alias ipsum iste facilis doloribus,
+        dicta dolor.
+      </p>
+    </div>
+    <div class="component">
+      <h2>Dropdown</h2>
+      <ul>
+        <li class="dropdown">
+          <h3 class="dropdown-title">Dropdown title 1</h3>
+          <div class="dropdown-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptates vel mollitia itaque molestias,
+              incidunt natus aut ducimus animi maiores!</p>
+          </div>
+        </li>
+        <li class="dropdown">
+          <h3 class="dropdown-title">Dropdown title 2</h3>
+          <div class="dropdown-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptates vel mollitia itaque molestias,
+              incidunt natus aut ducimus animi maiores!</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="component">
+      <h2>Tabs</h2>
+      <div class="tab-wrap">
+        <ul class="tab-title">
+          <li><button type="button" class="title-list active" data-target="#about">About</button></li>
+          <li><button type="button" class="title-list" data-target="#skill">Skills</button></li>
+          <li><button type="button" class="title-list" data-target="#contact">Contact</button></li>
+        </ul>
+        <ul class="tab-body">
+          <li id="about" class="content active">
+            <h3>About</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde dolor ratione quo magnam eum maiores
+              voluptates sunt esse quasi quisquam libero, iure soluta ipsam numquam, consectetur laborum, adipisci
+              aliquid
+              laboriosam!
+            </p>
+          </li>
+          <li id="skill" class="content">
+            <h3>Skills</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde dolor ratione quo magnam eum maiores
+              voluptates sunt esse quasi quisquam libero, iure soluta ipsam numquam, consectetur laborum, adipisci
+              aliquid
+              laboriosam!
+            </p>
+          </li>
+          <li id="contact" class="content">
+            <h3>Contact</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde dolor ratione quo magnam eum maiores
+              voluptates sunt esse quasi quisquam libero, iure soluta ipsam numquam, consectetur laborum, adipisci
+              aliquid
+              laboriosam!
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="component">
+      <h2>Small Information Bar</h2>
+      <button type="button" class="info-btn">Click Me :)</button>
+      <p>Information Bar is a container that shows information for seconds and disapper by itself.</p>
+    </div>
+
+  </div>
+  <script src="./assets/main.js"></script>
+</body>
+
+</html>
