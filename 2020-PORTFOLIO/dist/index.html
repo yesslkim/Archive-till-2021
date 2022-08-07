@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>김예슬의 포트폴리오</title>
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="header">
+      <h1 class="title">
+        <a href="#"> &lt;Yeseulkim <span>/</span>&gt;</a>
+      </h1>
+      <nav class="gnb">
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="about-section active">
+        <h2 class="sr-only">김예슬의 프로필 관련 사항</h2>
+        <section class="profile">
+          <h2 class="sr-only">프로필</h2>
+          <img src="./images/profile.jpg" alt="김예슬 프로필 사진">
+          <p>
+            <strong>안녕하세요, 김예슬입니다.</strong>
+
+            처음 웹 개발 공부를 시작했을 때는 단순히 무엇을 구현하는 것에만 몰두했습니다.아직까지도, 새로운 것을
+            공부하고 구현하는 것에는 큰 재미를 느낍니다. 하지만 현재는 더 나아가 이를 통해사용자와 소통하는 사람이 되고 싶습니다.
+            섬세한 배려로 사용자에게 긍정적인 경험을 주고 다양한 경험을 통해 성장하는 사람이 되고 싶습니다.
+          </p>
+          <div class="contacts">
+            <h2>More...</h2>
+            <ul>
+              <li><a href="https://github.com/yesslkim">Github</a></li>
+              <li><a href="https://yesslkim.github.io/TIL/">Blog</a></li>
+              <li><a
+                  href="https://www.notion.so/b8a46c53b5064181ba54c7bb0c5431e3?p=231eead509384697a205a0242b30bca9">Resume
+                </a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="skills">
+          <h2 class="sr-only">웹 기술 스택</h2>
+          <ul>
+            <li class="skill-list">
+              <h3>해당 스킬을 쓰는 것이 익숙해요</h3>
+              <ul>
+                <li class="skill html">HTML</li>
+                <li class="skill css">CSS</li>
+                <li class="skill js">JavaScript</li>
+                <li class="skill jquery">JQuery</li>
+              </ul>
+              <p>
+                W3C 웹 표준 규격에 대한 이해가 있으며, 웹 접근성에 관심이 많아 관련된 스터디 및 WAI-ARIA에 대해 공부했습니다. 제이쿼리는 국비학원에서 공부했으며 대부분은 독학으로 공부한
+                바닐라 자바스크립트를 활용하며 프로젝트를 만들고 있습니다.
+              </p>
+            </li>
+            <li class="skill-list">
+              <h3>경험은 있지만 익숙하진 않아요.</h3>
+              <ul>
+                <li class="skill webpack">Webpack</li>
+                <li class="skill github">Github</li>
+                <li class="skill firebase">Firebase</li>
+              </ul>
+              <p>
+                해당 스킬은 프로젝트에서 여러번 사용했지만 기억이 나지 않는 경우가 종종 있어서 아직까지는 공식문서에 의존합니다. 파이어베이스는 authentication 및 firestore를
+                활용하여 프로젝트를 적용해보았습니다.
+              </p>
+            </li>
+            <li class="skill-list">
+              <h3>현재 열심히 공부하고 있어요!</h3>
+              <ul>
+                <li class="skill react">React</li>
+                <li class="skill scss">SCSS</li>
+              </ul>
+              <p>
+                현재 공부하고 있으며 간단한 미니 프로젝트를 만들면서 사용에 익숙해 지려고 노력하고 있습니다.
+              </p>
+            </li>
+            <li class="skill-list">
+              <h3>그외, 이런걸 할 수 있어요!</h3>
+              <ul>
+                <li class="skill photoshop">Photoshop</li>
+                <li class="skill illustration">Illustration</li>
+                <li class="skill slack">Slack</li>
+                <li class="skill figma">Figma</li>
+              </ul>
+              <p>
+                개발과 관련된 기술은 아니지만 밀접히 관계되어 있는 기술 리스트입니다 :)
+              </p>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section class="projects-section">
+        <h2 class="sr-only">김예슬 포트폴리오 프로젝트 모음</h2>
+        <ul class="projects">
+          <li>
+            <a href="#" class="icon-normal project-link">
+              <img src="./images/project0title.png" alt="뉴모피즘 스타일 컴포넌트">
+              <p>모듈을 사용한 뉴모피즘 라이브러리 <br />(총 1페이지)</p>
+            </a>
+            <div class="project-description hidden">
+              <button type="button" class="icon-normal close-btn">
+                <span class="sr-only">닫기</span>
+              </button>
+              <div class="title-wrap">
+                <img src="./images/project0.png" alt="뉴모피즘 스타일 컴포넌트">
+                <h3><a href="#">My Neumorphism Library</a></h3>
+              </div>
+              <div class="description-wrap">
+                <h5>기획의도</h5>
+                <p>
+                  재사용 할 수 있는 UI 컴포넌트 제작 및 모듈 활용. (기여도 100%)
+                </p>
+                <h5>느낀점</h5>
+                <p>
+                  처음 HTML, CSS, JS를 배울 때 컴포넌트를 어떻게 효율적으로 분리하고,
+                  관리할 수 있는지에 대한 의문이 있었습니다. 모듈은 그런 의미에서
+                  컴포넌트를 관리하는 측면에서 매력적으로 다가왔습니다. 배운점이 있다면
+                  컴포넌트로 분리하고 재사용할 수 있는 점이 매력적이지만 컴포넌트 설계가
+                  견고하지 않으면 오히려 시간을 낭비할 수도 있다는 생각이 들었습니다.
+                  이 웹사이트는 컴포넌트에 대한 여러가지 생각을 가질 수 있게 해준 웹사이트 입니다.
+                </p>
+                <h5>기술스택</h5>
+                <ul class="project-skills">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Vanilla JavaScript</li>
+                </ul>
+                <h5>페이지 디테일</h5>
+                <ul class="page-details">
+                  <li>
+                    <a href="https://neumorphismlibrary.netlify.app/" class="icon-brand website" title="웹사이트 바로가기"
+                      target="_blank">
+                      <span class="sr-only">웹사이트 바로가기</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/yesslkim/My_Neumorphism_Library" class="icon-normal code"
+                      title="코드 바로보기" target="_blank">
+                      <span class="sr-only">코드 바로보기</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="icon-normal project-link">
+              <img src="./images/project1title.png" alt="쇼핑몰 웹사이트">
+              <p>여성 쇼핑몰 사이트 구현 <br /> (총 5페이지)</p>
+            </a>
+            <div class="project-description hidden">
+              <button type="button" class="icon-normal close-btn">
+                <span class="sr-only">닫기</span>
+              </button>
+              <div class="title-wrap">
+                <img src="./images/project1.png" alt="쇼핑몰 웹사이트 목업">
+                <h3><a href="#">Accessories of Demo</a></h3>
+              </div>
+
+              <div class="description-wrap">
+                <h5>기획의도</h5>
+                <p>
+                  다양한 페이지의 퍼블리싱과 인터렉션 구현을 위해 제작. (기여도 100%)
+                </p>
+                <h5>느낀점</h5>
+                <p>
+                  서브페이지 퍼블리싱을 통해 메인페이지에서 할 수 없었던 다양한 컴포넌트를 마크업하는
+                  방식을 터득할 수 있었습니다. 아쉬운 점은 웹팩과 같은 빌드 툴을 활용했더라면 컴포넌트 별로
+                  관리할 수 있었을 것이고 코드가 훨씬 깔끔하지 않았을까란 생각이 들었습니다.
+                  또한, 초반에 깃으로 관리를 하지 않아 코드 관리가 어려웠습니다. 중간에
+                  여러 페이지를 수정하고 다시 작업하는 경우가 있었기 때문에 효율적으로 코드를 관리하기
+                  위해서는 깃으로 관리하는 것이 좋겠다는 생각이 들었습니다.<br />
+                  * 현재 프로젝트를 전체적으로 수정중이어서 커버사진과 다를 수 있습니다 :)
+                  <span>
+                    Pages - 메인 / 회원가입 / 로그인 / 멤버쉽 / 이벤트
+                  </span>
+                </p>
+                <h5>기술스택</h5>
+                <ul class="project-skills">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JQuery</li>
+                </ul>
+                <h5>페이지 디테일</h5>
+                <ul class="page-details">
+                  <li>
+                    <a href="https://yesslkim.github.io/Demo-Market/" class="icon-brand website" title="웹사이트 바로가기"
+                      target="_blank">
+                      <span class="sr-only">웹사이트 바로가기</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/yesslkim/Demo-Market" class="icon-normal code" title="코드 바로보기"
+                      target="_blank">
+                      <span class="sr-only">코드 바로보기</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="icon-normal project-link">
+              <img src="./images/project2title.png" alt="모네가든">
+              <p>화가 모네의 커뮤니티 웹사이트 구현 <br /> (총 2페이지)</p>
+            </a>
+            <div class="project-description hidden">
+              <button type="button" class="icon-normal close-btn">
+                <span class="sr-only">닫기</span>
+              </button>
+              <div class="title-wrap">
+                <img src="./images/project2.png" alt="모네가든 웹사이트 목업">
+                <h3><a href="#">Monet Garden</a></h3>
+              </div>
+              <div class="description-wrap">
+                <h5>기획의도</h5>
+                <p>
+                  Mock API를 통해 REST API를 활용하는 방법을 공부하기 위해 제작하였습니다. (기여도 100%)
+                </p>
+                <h5>느낀점</h5>
+                <p>
+                  Mock API를 활용하여 갤러리 이미지를 받아왔지만, JSON-SERVER을 활용해서는 다양한 기능을 구현하기는
+                  어려움이 있어서 파이어베이스를 통해 로그인 및 게시판을 구현해보았습니다.
+                  <span>
+                    Pages - 메인 / 로그인 / 커뮤니티게시판
+                  </span>
+                </p>
+                <h5>기술스택</h5>
+                <ul class="project-skills">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Vanilla JavaScript</li>
+                  <li>Firebase</li>
+                </ul>
+                <h5>페이지 디테일</h5>
+                <ul class="page-details">
+                  <li>
+                    <a href="https://monetgarden.netlify.app/" class="icon-brand website" title="웹사이트 바로가기"
+                      target="_blank">
+                      <span class="sr-only">웹사이트 바로가기</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/yesslkim/Monet-Garden" class="icon-normal code" title="코드 바로보기"
+                      target="_blank">
+                      <span class="sr-only">코드 바로보기</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="icon-normal project-link">
+              <img src="./images/project3title.png" alt="뮤직플레이어">
+              <p>심플한 뮤직 플레이어 제작 <br /> (총 1페이지)</p>
+            </a>
+            <div class="project-description hidden">
+              <button type="button" class="icon-normal close-btn">
+                <span class="sr-only">닫기</span>
+              </button>
+              <div class="title-wrap">
+                <img src="./images/project3.png" alt="뮤직플레이어 웹사이트">
+                <h3><a href="#">React to Music</a></h3>
+              </div>
+              <div class="description-wrap">
+                <h5>기획의도</h5>
+                <p>
+                  리액트를 활용한 웹사이트 제작. (기여도 100%)
+                </p>
+                <h5>느낀점</h5>
+                <p>
+                  리액트의 함수형 컴포넌트 및 Hooks를 사용하는 방법을 익힐 수 있었습니다.
+                  컴포넌트 별로 관리한다는 말의 의미를 어느정도 이해할 수 있는 계기가 되었습니다. 다만,
+                  데이터 흐름 측면에서는 공부가 많이 필요하다고 느꼈습니다. 규모가 큰 프로젝트에서는
+                  단방향으로 state가 관리 될 수 있는 효율적인 방법을 찾아보는 것이 도움이 될 거라 생각했습니다.
+                </p>
+                <p>
+                  SCSS를 처음 프로젝트에 사용해 보았으며 활용해본것은 nested tag정도입니다. 하지만 partial로 나누어서
+                  관리하는 측면에서 CSS로 바로 작성하는 거 보다 훨씬 효율적이라고 생각했기 때문에 깊게 공부할 예정입니다.
+                </p>
+                <h5>기술스택</h5>
+                <ul class="project-skills">
+                  <li>HTML</li>
+                  <li>SCSS</li>
+                  <li>React</li>
+                </ul>
+                <h5>페이지 디테일</h5>
+                <ul class="page-details">
+                  <li>
+                    <a href="https://react-to-musiccc.netlify.app/" class="icon-brand website" title="웹사이트 바로가기"
+                      target="_blank">
+                      <span class="sr-only">웹사이트 바로가기</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/yesslkim/React-to-Music" class="icon-normal code" title="코드 바로보기"
+                      target="_blank">
+                      <span class="sr-only">코드 바로보기</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="icon-normal project-link">
+              <img src="./images/project4title.png" alt="포트폴리오">
+              <p>2020 포트폴리오 제작 <br /> (총 1페이지)</p>
+            </a>
+            <div class="project-description hidden">
+              <button type="button" class="icon-normal close-btn">
+                <span class="sr-only">닫기</span>
+              </button>
+              <div class="title-wrap">
+                <img src="./images/project4.png" alt="2020년도 김예슬 포트폴리오 목업">
+                <h3><a href="#">2020 김예슬의 포트폴리오</a></h3>
+              </div>
+              <div class="description-wrap">
+                <h5>기획의도</h5>
+                <p>
+                  프로젝트를 모아놓기 위한 포트폴리오 제작. (기여도 100%)
+                </p>
+                <h5>느낀점</h5>
+                <p>
+                  포트폴리오는 바닐라 자바스크립트를 통해 제작되었습니다. 처음으로 GSAP3 라이브러리를 활용한 웹사이트입니다:)
+                </p>
+                <h5>기술스택</h5>
+                <ul class="project-skills">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript ES6</li>
+                  <li>Webpack (Babel) </li>
+                  <li>Library: GSAP3</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="tablet-only">
+            <a href="#" class="icon-normal project-link">
+              <img src="./images/coming.png" alt="">
+              <p>현재 프로젝트를 준비중입니다</p>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="contact-section">
+        <h2 class="sr-only">김예슬의 연락처</h2>
+        <h2 class="contact-title">
+          <span>c</span>
+          <span>o</span>
+          <span>n</span>
+          <span>t</span>
+          <span>a</span>
+          <span>c</span>
+          <span>t</span>
+          <span>&nbsp;</span>
+          <span>m</span>
+          <span>e</span>
+          <span>!</span>
+        </h2>
+        <p class="contact-desc">
+          <strong>
+            함께 나누고 싶은 이야기가 있다면 아래 이메일을 눌러주세요!
+          </strong>
+          <span> 확인 후 바로 답장 드리겠습니다. 감사합니다:)
+          </span>
+        </p>
+        <address class="contact-list">
+          <dl>
+            <dt class="sr-only">Email</dt>
+            <dd><a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=yskim940914@gmail.com&tf=1#" target="_blank"
+                class="email">yskim940914@gmail.com</a></dd>
+            <dt class="sr-only">Phone</dt>
+            <dd>010 - 3747 - 7236</dd>
+          </dl>
+        </address>
+      </section>
+    </main>
+    <footer class="footer">
+      &copy; 2020 김예슬 all rights reserved.
+    </footer>
+  </div>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
