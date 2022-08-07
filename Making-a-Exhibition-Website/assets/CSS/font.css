@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "AppleRegular";
+  src: url(../font/AppleSDGothicNeoB.ttf);
+}
+
+@font-face {
+  font-family: "AppleBold";
+  src: url(../font/AppleSDGothicNeoH.ttf);
+}
+
+body,
+h1,
+h2,
+h3,
+button,
+input {
+  font-family: "AppleRegular";
+}
