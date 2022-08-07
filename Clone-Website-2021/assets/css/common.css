@@ -1,0 +1,102 @@
+/* RESET CSS  */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+li {
+  padding: 0;
+  list-style-type: none;
+}
+
+img {
+  display: block;
+}
+
+address {
+  font-style: normal;
+}
+
+/* COMMON CSS  */
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1 px;
+  height: 1 px;
+  margin: -1 px;
+  clip-path: circle(0);
+  overflow: hidden;
+}
+
+.section-title {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 72px;
+  text-align: center;
+  color: #fff;
+  transition: top 300ms linear;
+}
+
+.section-title > span {
+  display: block;
+  font-weight: 300;
+  font-size: 22px;
+  letter-spacing: 0.2em;
+  margin-bottom: 5px;
+  white-space: nowrap;
+}
+
+/* SWIPER 공통 변경 CSS  */
+/* 1️⃣ 버튼 STYLE 변경  */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.swiper-button-prev::after {
+  content: "";
+}
+
+/* 2️⃣ 페이지네이션 STYLE 변경  */
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: -65px;
+}
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  border: 2px solid #8d8d8d;
+  border-radius: 0;
+  background-color: transparent;
+  transition: width 300ms linear;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 10px;
+}
+
+.swiper-pagination-bullet-active {
+  width: 60px;
+  border: none;
+  background: #ffb400;
+}
