@@ -1,0 +1,31 @@
+%star-base {
+  @include flexbox(start);
+
+  .ic-star {
+    color: $border;
+
+    &.is-active {
+      color: $blue;
+    }
+  }
+}
+
+.star-13 {
+  @extend %star-base;
+  font-size: 13px;
+}
+
+.star-16 {
+  @extend %star-base;
+  font-size: 16px;
+}
+
+.star-20 {
+  @extend %star-base;
+  font-size: 20px;
+}
+
+.star-24 {
+  @extend %star-base;
+  font-size: 24px;
+}
