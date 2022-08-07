@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/CSS/font.css">
+  <link rel="stylesheet" href="./assets/CSS/style.css">
+  <title>Momentum Clock</title>
+</head>
+
+<body>
+  <div class="wrap">
+    <div>
+      <h2 class="sr-only">Location, Place and Time information</h2>
+      <p class="js-weather user-weather"></p>
+      <p class="js-time user-time">00:00:00</p>
+    </div>
+    <main class="main">
+      <form action="#" method="POST" class="js-userinfo user-info">
+        <label for="user-name">What is your name?</label>
+        <input type="text" id="user-name">
+      </form>
+      <p class="js-greetings greetings">Hello</p>
+      <form action="#" method="POST" class="js-todoform user-todoform">
+        <label for="todo-input">Write Todo List here ❣️</label>
+        <input type="text" id="todo-input">
+      </form>
+      <ul class="js-todolist">
+        <li class="todo-item">
+          This is your TODO List
+          <button type="button" class="close-btn" aria-label="close">❌</button>
+        </li>
+      </ul>
+    </main>
+    <footer class="footer">
+      Copyright © 2020 <a href="https://github.com/yesslkim">yesslkim</a>
+    </footer>
+
+  </div>
+
+  <script src="./assets/JS/clock.js"></script>
+  <script src="./assets/JS/greetings.js"></script>
+  <script src="./assets/JS/todolist.js"></script>
+  <script src="./assets/JS/background.js"></script>
+  <script src="./assets/JS/weather.js"></script>
+
+</body>
+
+</html>
